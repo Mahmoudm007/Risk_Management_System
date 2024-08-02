@@ -19,12 +19,12 @@ import pandas as pd
 import plotly.graph_objects as go
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 
-from search import *
-from RiskChat import ChatDialog
-from Dashboard import Dashboard
 from Calendar import CalendarDialog
+from ControlAndRequirement import AddControlClass
+from Dashboard import Dashboard
 from DeviceSelection import DeviceSelected
-from ControlAndRequirement import AddSubSystemReqClass, AddControlClass
+from RiskChat import ChatDialog
+from search import *
 from SortTable import SortableTableWidgetItem
 
 
