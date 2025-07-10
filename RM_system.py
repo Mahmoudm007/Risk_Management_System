@@ -604,7 +604,7 @@ class RiskSystem(QMainWindow, MainUI):
     def web_application(self):
         # Set the URL to a simple web page the user can use any web page he need "e.g. ChatGPT, Gemini,..., etc"
         # https: // www.google.com
-        self.webEngineView.setUrl(QUrl("file:///D:/EzzMedical/Risk_Management_System/Reference/ISO%2014971%20-%202019%20Document.html"))
+        self.webEngineView.setUrl(QUrl("file:///D:/EzzMedical/Risk_Management_System/References/ISO%2014971%20-%202019%20Document.html"))
         self.sideBarFrame.layout().addWidget(self.webEngineView)
 
     def toggle_side_bar(self):
