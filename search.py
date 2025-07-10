@@ -5,9 +5,20 @@ from nltk.stem import PorterStemmer
 from nltk.corpus import wordnet
 import difflib
 from collections import defaultdict
+import json
+import os
+from datetime import datetime
+
 # Download necessary NLTK data
 nltk.download('wordnet')
 nltk.download('punkt')
+
+# File paths for persistent storage
+SEQUENCE_FILE = 'sequence_documents.json'
+HAZARDOUS_FILE = 'hazardous_documents.json'
+CONTROL_FILE = 'control_documents.json'
+HARM_FILE = 'harm_documents.json'
+NOTIFICATIONS_FILE = 'notifications.json'
 
 
 # Functions for the search algorithm
@@ -65,7 +76,8 @@ def rank_and_highlight(results, search_terms, documents, scores):
         score = scores.get(doc_id, 0) + sum(content.lower().count(term) for term in search_terms)
         ranked_results.append((score, doc_id, content))
     ranked_results.sort(reverse=True, key=lambda x: x[0])
-    highlighted_results = [(doc_id, highlight_terms(content, search_terms), score) for score, doc_id, content in ranked_results]
+    highlighted_results = [(doc_id, highlight_terms(content, search_terms), score) for score, doc_id, content in
+                           ranked_results]
     return highlighted_results
 
 
@@ -79,7 +91,109 @@ def highlight_terms(content, search_terms):
     return highlighted_content
 
 
-sequence_of_event_documents = {
+# Functions for dynamic document management
+def load_documents_from_file(file_path, default_documents):
+    """Load documents from JSON file, return default if file doesn't exist"""
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except (json.JSONDecodeError, FileNotFoundError):
+            return default_documents
+    return default_documents
+
+
+def save_documents_to_file(documents, file_path):
+    """Save documents to JSON file"""
+    # Convert integer keys to strings for JSON serialization
+    documents_str_keys = {str(k): v for k, v in documents.items()}
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(documents_str_keys, f, ensure_ascii=False, indent=2)
+
+
+def add_new_document(documents, new_content, file_path, field_type):
+    """Add new document to the collection and save to file - Only add notification if truly new"""
+    # Check if content already exists (case-insensitive comparison)
+    new_content_clean = new_content.strip().lower()
+    for doc_id, content in documents.items():
+        if content.strip().lower() == new_content_clean:
+            return False  # Already exists, no notification needed
+
+    # Find next available ID
+    max_id = max([int(k) for k in documents.keys()]) if documents else 0
+    new_id = max_id + 1
+
+    # Add new document
+    documents[new_id] = new_content.strip()
+
+    # Save to file
+    save_documents_to_file(documents, file_path)
+
+    # Add to notifications - ONLY for truly new content
+    add_notification(new_content.strip(), field_type)
+
+    return True
+
+
+def load_notifications():
+    """Load notifications from file"""
+    if os.path.exists(NOTIFICATIONS_FILE):
+        try:
+            with open(NOTIFICATIONS_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except (json.JSONDecodeError, FileNotFoundError):
+            return []
+    return []
+
+
+def save_notifications(notifications):
+    """Save notifications to file"""
+    with open(NOTIFICATIONS_FILE, 'w', encoding='utf-8') as f:
+        json.dump(notifications, f, ensure_ascii=False, indent=2)
+
+
+def add_notification(content, field_type):
+    """Add a new notification for truly new content only"""
+    notifications = load_notifications()
+
+    # Check if this exact content and field type combination already exists in notifications
+    for existing_notification in notifications:
+        if (existing_notification.get('content', '').strip().lower() == content.strip().lower() and
+                existing_notification.get('field_type', '') == field_type):
+            return  # Don't add duplicate notifications
+
+    notification = {
+        'content': content,
+        'field_type': field_type,
+        'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'id': len(notifications) + 1,
+        'is_new': True  # Mark as new notification
+    }
+    notifications.append(notification)
+    save_notifications(notifications)
+
+
+def get_notification_count():
+    """Get the count of new notifications"""
+    notifications = load_notifications()
+    return len([n for n in notifications if n.get('is_new', True)])
+
+
+def clear_notifications():
+    """Clear all notifications"""
+    save_notifications([])
+
+
+def mark_notifications_as_read():
+    """Mark all notifications as read (not new)"""
+    notifications = load_notifications()
+    for notification in notifications:
+        notification['is_new'] = False
+    save_notifications(notifications)
+
+
+# Default documents (original data)
+default_sequence_of_event_documents = {
     1: "The ventilator utilizes an ultrasonic humidifier to humidify the inspired gases delivered to the patient's airway.",
     2: "Due to inadequate maintenance or cleaning procedures, biofilm accumulates on the surfaces of the ultrasonic components, including the transducer and water reservoir.",
     3: "A ventilator with compromised enclosure integrity experiences an electrical fault within its internal components. As a result of the fault, electrical current leaks from the internal circuitry to the metal enclosure of the ventilator.",
@@ -105,14 +219,14 @@ sequence_of_event_documents = {
     23: "Frequent vibrations from a nearby machinery cause loose connections in the ventilator's wiring.",
     24: "A sudden change in ambient temperature affects the ventilator's internal components, leading to reduced efficiency.",
     25: "A mechanical part in the ventilator, such as a lever or knob, becomes detached during regular use.",
-    26: "The ventilator’s power supply cord is damaged, leading to intermittent power loss.",
+    26: "The ventilator's power supply cord is damaged, leading to intermittent power loss.",
     27: "Improperly sealed ventilator components allow dust and debris to enter and interfere with the device's operation.",
     28: "A software bug introduces delays in the ventilator's response to user commands.",
-    29: "The ventilator’s fan is obstructed by foreign objects, causing overheating of the device.",
-    30: "Water leakage from the humidifier component causes short circuits in the ventilator’s electronics."
+    29: "The ventilator's fan is obstructed by foreign objects, causing overheating of the device.",
+    30: "Water leakage from the humidifier component causes short circuits in the ventilator's electronics."
 }
 
-hazardous_situation_documents = {
+default_hazardous_situation_documents = {
     1: "The patient is exposed to contaminated air.",
     2: "Ventilator is placed near the patient, risking direct exposure.",
     3: "Healthcare provider comes into contact with exposed wiring while handling the ventilator.",
@@ -137,7 +251,7 @@ hazardous_situation_documents = {
     22: "Inhalation of dust particles released from malfunctioning ventilator components.",
     23: "Electrical shorts caused by water ingress in the ventilator.",
     24: "Exposure to high levels of noise from malfunctioning ventilator fans.",
-    25: "Risk of fire due to overheating of the ventilator’s power supply.",
+    25: "Risk of fire due to overheating of the ventilator's power supply.",
     26: "Physical injury from sharp edges of broken ventilator components.",
     27: "Health hazards from exposure to chemical fumes during cleaning procedures.",
     28: "Risk of infection from improperly sterilized ventilator parts.",
@@ -145,7 +259,7 @@ hazardous_situation_documents = {
     30: "Accidental ingestion of small parts or components by the patient or healthcare provider."
 }
 
-control_documents = {
+default_control_documents = {
     1: "Hazardous situation in software design requires careful planning and execution.",
     2: "Risk analysis should be an integral part of hazardous situation design.",
     3: "Electrical hazards must be identified and mitigated.",
@@ -183,35 +297,55 @@ control_documents = {
     35: "Develop contingency plans for handling unforeseen equipment failures or emergencies."
 }
 
-
-harm_description_documents = {
-    1: "Hearing impairmnet ",
+default_harm_description_documents = {
+    1: "Hearing impairment",
     2: "Respiratory infections",
-    3: "Electric shock ",
-    4: "Burn ",
-    5: "respiratory distress",
-    6: "malfunctions",
+    3: "Electric shock",
+    4: "Burn",
+    5: "Respiratory distress",
+    6: "Malfunctions",
     7: "Complete failure of the ventilator.",
-    8: "striking the patient's body, limbs, or face.",
-    9: "tissue damage",
-    10: "Deterioration of health ",
-    11: "repetitive strain injuries (RSIs)/ discomfort",
-    12: "Hypoxia ",
-    13: "respiratory failure",
-    14: "cuts",
-    15: "fever ",
-    16: "respiratory irritation",
+    8: "Striking the patient's body, limbs, or face.",
+    9: "Tissue damage",
+    10: "Deterioration of health",
+    11: "Repetitive strain injuries (RSIs)/ discomfort",
+    12: "Hypoxia",
+    13: "Respiratory failure",
+    14: "Cuts",
+    15: "Fever",
+    16: "Respiratory irritation",
     17: "Neurological damage",
     18: "Silicosis",
     19: "Anaphylaxis",
-    20: "damage to the healthcare provider's reputation.",
+    20: "Damage to the healthcare provider's reputation."
 }
+
+# Load documents from files or use defaults
+sequence_of_event_documents = load_documents_from_file(SEQUENCE_FILE, default_sequence_of_event_documents)
+hazardous_situation_documents = load_documents_from_file(HAZARDOUS_FILE, default_hazardous_situation_documents)
+control_documents = load_documents_from_file(CONTROL_FILE, default_control_documents)
+harm_description_documents = load_documents_from_file(HARM_FILE, default_harm_description_documents)
+
+# Convert string keys back to integers for compatibility
+sequence_of_event_documents = {int(k): v for k, v in sequence_of_event_documents.items()}
+hazardous_situation_documents = {int(k): v for k, v in hazardous_situation_documents.items()}
+control_documents = {int(k): v for k, v in control_documents.items()}
+harm_description_documents = {int(k): v for k, v in harm_description_documents.items()}
 
 # Create separate inverted indices for each set of documents
 sequence_of_event_inverted_index = create_inverted_index(sequence_of_event_documents)
 hazardous_situation_inverted_index = create_inverted_index(hazardous_situation_documents)
 control_inverted_index = create_inverted_index(control_documents)
 harm_description_inverted_index = create_inverted_index(harm_description_documents)
+
 # Scores for ranking
 scores = defaultdict(int)
 
+
+# Function to refresh indices after adding new documents
+def refresh_indices():
+    global sequence_of_event_inverted_index, hazardous_situation_inverted_index, control_inverted_index, harm_description_inverted_index
+    sequence_of_event_inverted_index = create_inverted_index(sequence_of_event_documents)
+    hazardous_situation_inverted_index = create_inverted_index(hazardous_situation_documents)
+    control_inverted_index = create_inverted_index(control_documents)
+    harm_description_inverted_index = create_inverted_index(harm_description_documents)

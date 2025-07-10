@@ -1,13 +1,13 @@
-from PyQt5.QtGui import QColor
+from PyQt5.QtGui import QColor, QFont
 from PyQt5.QtWidgets import *
-from PyQt5.QtWidgets import (QPushButton, QLabel,QApplication, QMainWindow, QWidget, QVBoxLayout,
-                             QAbstractItemView, QMenu)
+from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout,
+                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QTextEdit, QScrollArea)
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from PyQt5.uic import loadUiType
 import os
 import random
 import json
-from PyQt5.QtCore import QDateTime, QPropertyAnimation, QEasingCurve, QUrl
+from PyQt5.QtCore import QDateTime, QPropertyAnimation, QEasingCurve, QUrl, QTimer
 from collections import Counter
 from matplotlib.figure import Figure
 from reportlab.lib.pagesizes import landscape, letter
@@ -25,11 +25,228 @@ from Dashboard import Dashboard
 from DeviceSelection import DeviceSelected
 from RiskChat import ChatDialog
 from search import *
+from sequence_widget import SequenceEventWidget
 from SortTable import SortableTableWidgetItem
+import sys
+from PyQt5 import QtWidgets, QtCore
 
-
-URRENT_DIR = os.path.dirname(os.path.realpath(__file__))
+CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 MainUI, _ = loadUiType('mainWindowui.ui')
+
+
+class NotificationDialog(QDialog):
+    """Dialog to display notifications of newly added sentences"""
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("New Additions Notifications")
+        self.setGeometry(200, 200, 800, 600)
+        self.setupUI()
+        self.load_notifications()
+
+    def setupUI(self):
+        layout = QVBoxLayout(self)
+
+        # Title
+        title_label = QLabel("Recently Added New Content")
+        title_label.setStyleSheet("font-size: 16px; font-weight: bold; margin-bottom: 10px; color: #2c3e50;")
+        layout.addWidget(title_label)
+
+        # Info label
+        info_label = QLabel("These are new additions that were not previously in the database:")
+        info_label.setStyleSheet("font-size: 12px; color: #7f8c8d; margin-bottom: 10px;")
+        layout.addWidget(info_label)
+
+        # Scroll area for notifications
+        scroll_area = QScrollArea()
+        scroll_widget = QWidget()
+        self.scroll_layout = QVBoxLayout(scroll_widget)
+        scroll_area.setWidget(scroll_widget)
+        scroll_area.setWidgetResizable(True)
+        layout.addWidget(scroll_area)
+
+        # Buttons
+        button_layout = QHBoxLayout()
+
+        clear_button = QPushButton("Clear All Notifications")
+        clear_button.setStyleSheet("""
+            QPushButton {
+                background-color: #e74c3c;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+            QPushButton:hover {
+                background-color: #c0392b;
+            }
+        """)
+        clear_button.clicked.connect(self.clear_notifications)
+        button_layout.addWidget(clear_button)
+
+        mark_read_button = QPushButton("Mark as Read")
+        mark_read_button.setStyleSheet("""
+            QPushButton {
+                background-color: #3498db;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+            QPushButton:hover {
+                background-color: #2980b9;
+            }
+        """)
+        mark_read_button.clicked.connect(self.mark_as_read)
+        button_layout.addWidget(mark_read_button)
+
+        close_button = QPushButton("Close")
+        close_button.setStyleSheet("""
+            QPushButton {
+                background-color: #95a5a6;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+            QPushButton:hover {
+                background-color: #7f8c8d;
+            }
+        """)
+        close_button.clicked.connect(self.close)
+        button_layout.addWidget(close_button)
+
+        layout.addLayout(button_layout)
+
+    def load_notifications(self):
+        """Load and display notifications"""
+        notifications = load_notifications()
+
+        if not notifications:
+            no_notifications_label = QLabel("No new additions to display.")
+            no_notifications_label.setStyleSheet("color: gray; font-style: italic; padding: 20px; text-align: center;")
+            self.scroll_layout.addWidget(no_notifications_label)
+            return
+
+        # Sort notifications by timestamp (newest first)
+        notifications.sort(key=lambda x: x['timestamp'], reverse=True)
+
+        for notification in notifications:
+            self.add_notification_widget(notification)
+
+    def add_notification_widget(self, notification):
+        """Add a single notification widget"""
+        # Create container widget
+        container = QWidget()
+        is_new = notification.get('is_new', True)
+
+        if is_new:
+            container.setStyleSheet("""
+                QWidget {
+                    border: 2px solid #e74c3c;
+                    border-radius: 8px;
+                    margin: 5px;
+                    padding: 12px;
+                    background-color: #fff5f5;
+                }
+            """)
+        else:
+            container.setStyleSheet("""
+                QWidget {
+                    border: 1px solid #bdc3c7;
+                    border-radius: 8px;
+                    margin: 5px;
+                    padding: 12px;
+                    background-color: #f8f9fa;
+                }
+            """)
+
+        layout = QVBoxLayout(container)
+
+        # Header with field type and timestamp
+        header_layout = QHBoxLayout()
+
+        # New badge
+        if is_new:
+            new_badge = QLabel("NEW")
+            new_badge.setStyleSheet("""
+                background-color: #e74c3c;
+                color: white;
+                padding: 2px 8px;
+                border-radius: 10px;
+                font-size: 10px;
+                font-weight: bold;
+            """)
+            new_badge.setMaximumWidth(40)
+            header_layout.addWidget(new_badge)
+
+        field_label = QLabel(f"Field: {notification['field_type']}")
+        field_label.setStyleSheet("font-weight: bold; color: #2c3e50; background: transparent; border: none;")
+        header_layout.addWidget(field_label)
+
+        header_layout.addStretch()
+
+        timestamp_label = QLabel(notification['timestamp'])
+        timestamp_label.setStyleSheet("color: #7f8c8d; font-size: 11px; background: transparent; border: none;")
+        header_layout.addWidget(timestamp_label)
+
+        layout.addLayout(header_layout)
+
+        # Content
+        content_label = QLabel(notification['content'])
+        content_label.setWordWrap(True)
+        content_label.setStyleSheet("""
+            margin-top: 8px; 
+            padding: 8px; 
+            background-color: white; 
+            border-radius: 4px;
+            border: 1px solid #ecf0f1;
+        """)
+        layout.addWidget(content_label)
+
+        self.scroll_layout.addWidget(container)
+
+    def clear_notifications(self):
+        """Clear all notifications"""
+        reply = QMessageBox.question(self, 'Clear Notifications',
+                                     'Are you sure you want to clear all notifications?',
+                                     QMessageBox.Yes | QMessageBox.No,
+                                     QMessageBox.No)
+
+        if reply == QMessageBox.Yes:
+            clear_notifications()
+            # Clear the display
+            for i in reversed(range(self.scroll_layout.count())):
+                self.scroll_layout.itemAt(i).widget().setParent(None)
+
+            # Show empty message
+            no_notifications_label = QLabel("No new additions to display.")
+            no_notifications_label.setStyleSheet("color: gray; font-style: italic; padding: 20px; text-align: center;")
+            self.scroll_layout.addWidget(no_notifications_label)
+
+            # Update parent's notification count
+            if hasattr(self.parent(), 'update_notification_count'):
+                self.parent().update_notification_count()
+
+    def mark_as_read(self):
+        """Mark all notifications as read"""
+        reply = QMessageBox.question(self, 'Mark as Read',
+                                     'Mark all notifications as read?',
+                                     QMessageBox.Yes | QMessageBox.No,
+                                     QMessageBox.No)
+
+        if reply == QMessageBox.Yes:
+            mark_notifications_as_read()
+            # Update parent's notification count
+            if hasattr(self.parent(), 'update_notification_count'):
+                self.parent().update_notification_count()
+            # Reload the display
+            for i in reversed(range(self.scroll_layout.count())):
+                self.scroll_layout.itemAt(i).widget().setParent(None)
+            self.load_notifications()
 
 
 class RiskSystem(QMainWindow, MainUI):
@@ -52,11 +269,28 @@ class RiskSystem(QMainWindow, MainUI):
         self.first_axis = QComboBox()
         self.second_axis = QComboBox()
         self.webEngineView = QWebEngineView()
-        
+
         self.seq_list_widget = QtWidgets.QListWidget()
         self.sit_list_widget = QtWidgets.QListWidget()
         self.harm_list_widget = QtWidgets.QListWidget()
-        
+
+        # Initialize notification system
+        self.notification_counter_label = None
+        self.setup_notification_counter()
+
+        # Initialize auto-hide timers for search layouts
+        self.seq_hide_timer = QTimer()
+        self.seq_hide_timer.setSingleShot(True)
+        self.seq_hide_timer.timeout.connect(lambda: self.hide_search_widget(self.seq_list_widget))
+
+        self.sit_hide_timer = QTimer()
+        self.sit_hide_timer.setSingleShot(True)
+        self.sit_hide_timer.timeout.connect(lambda: self.hide_search_widget(self.sit_list_widget))
+
+        self.harm_hide_timer = QTimer()
+        self.harm_hide_timer.setSingleShot(True)
+        self.harm_hide_timer.timeout.connect(lambda: self.hide_search_widget(self.harm_list_widget))
+
         self.init_search_lists()
         self.init_combos()
         self.buttons_signals()
@@ -71,15 +305,106 @@ class RiskSystem(QMainWindow, MainUI):
 
         self.matrix_file = 'matrix_state.json'
 
+        # Timer to update notification count periodically
+        self.notification_timer = QTimer()
+        self.notification_timer.timeout.connect(self.update_notification_count)
+        self.notification_timer.start(5000)  # Update every 5 seconds
+
+        # Initial notification count update
+        self.update_notification_count()
+
+    def setup_notification_counter(self):
+        """Setup the notification counter badge for existing notification_btn"""
+        try:
+            if hasattr(self, 'notification_btn') and self.notification_btn is not None:
+                # Get the parent widget of the notification button
+                parent_widget = self.notification_btn.parent()
+
+                if parent_widget:
+                    # Create notification counter label
+                    self.notification_counter_label = QLabel("0")
+                    self.notification_counter_label.setFixedSize(20, 20)  # Width: 15, Height: 10
+                    self.notification_counter_label.setStyleSheet("""
+                                            QLabel {
+                                                background-color: #e74c3c;
+                                                color: white;
+                                                border-radius: 7px;
+                                                font-size: 10px;
+                                                font-weight: bold;
+                                                text-align: center;
+                                            }
+                                        """)
+                    self.notification_counter_label.setAlignment(QtCore.Qt.AlignCenter)
+                    self.notification_counter_label.hide()  # Initially hidden
+
+                    # Position the counter relative to the notification button
+                    self.notification_counter_label.setParent(parent_widget)
+
+                    # Position the counter above and to the right of the button
+                    def position_counter():
+                        if self.notification_btn and self.notification_counter_label:
+                            btn_pos = self.notification_btn.pos()
+                            btn_size = self.notification_btn.size()
+                            counter_x = btn_pos.x() + btn_size.width() - 15
+                            counter_y = btn_pos.y() - 5
+                            self.notification_counter_label.move(counter_x, counter_y)
+
+                    # Position initially and whenever the button moves
+                    position_counter()
+                    self.notification_btn.installEventFilter(self)
+
+        except Exception as e:
+            print(f"Error setting up notification counter: {e}")
+
+    def eventFilter(self, obj, event):
+        """Event filter to reposition notification counter when button moves"""
+        if obj == self.notification_btn and hasattr(self, 'notification_counter_label'):
+            if event.type() == QtCore.QEvent.Move or event.type() == QtCore.QEvent.Resize:
+                if self.notification_counter_label:
+                    btn_pos = self.notification_btn.pos()
+                    btn_size = self.notification_btn.size()
+                    counter_x = btn_pos.x() + btn_size.width() - 15
+                    counter_y = btn_pos.y() - 5
+                    self.notification_counter_label.move(counter_x, counter_y)
+        return super().eventFilter(obj, event)
+
+    def update_notification_count(self):
+        """Update the notification counter display"""
+        try:
+            count = get_notification_count()
+            if self.notification_counter_label:
+                if count > 0:
+                    self.notification_counter_label.setText(str(count))
+                    self.notification_counter_label.show()
+                    self.notification_counter_label.raise_()  # Bring to front
+                else:
+                    self.notification_counter_label.hide()
+        except Exception as e:
+            print(f"Error updating notification count: {e}")
+
+    def hide_search_widget(self, widget):
+        """Hide search widget after timeout"""
+        if widget.isVisible():
+            widget.hide()
+
+    def start_hide_timer(self, timer, widget):
+        """Start or restart the hide timer for a search widget"""
+        timer.stop()  # Stop any existing timer
+        if widget.isVisible() and widget.count() > 0:
+            timer.start(8000)  # 8 seconds
+
     def buttons_signals(self):
         self.hazardous_situation_edit.textChanged.connect(self.update_sit_ver_layout)
         self.sit_list_widget.itemDoubleClicked.connect(self.add_to_hazardous_situation_edit)
+        self.sit_list_widget.itemClicked.connect(lambda: self.sit_hide_timer.stop())  # Stop timer on interaction
 
         self.sequence_of_event_edit.textChanged.connect(self.update_seq_ver_layout)
         self.seq_list_widget.itemDoubleClicked.connect(self.add_to_sequence_of_event_edit)
+        self.seq_list_widget.itemClicked.connect(lambda: self.seq_hide_timer.stop())  # Stop timer on interaction
 
         self.harm_desc_line.textChanged.connect(self.update_harm_vec_layout)
         self.harm_list_widget.itemDoubleClicked.connect(self.add_to_harm_desc_line)
+        self.harm_list_widget.itemClicked.connect(lambda: self.harm_hide_timer.stop())  # Stop timer on interaction
 
         self.hazard_category_combo.currentIndexChanged.connect(self.update_hazard_sources)
 
@@ -116,6 +441,14 @@ class RiskSystem(QMainWindow, MainUI):
         self.accept_meeting.clicked.connect(self.toggle_meeting_frame)
 
         self.add_devices_affected.clicked.connect(self.select_devices_widget)
+        self.notification_btn.clicked.connect(self.show_notifications)
+
+    def show_notifications(self):
+        """Show the notifications dialog"""
+        dialog = NotificationDialog(self)
+        dialog.exec_()
+        # Update notification count after dialog closes
+        self.update_notification_count()
 
     def select_devices_widget(self):
         dialog = DeviceSelected(self)
@@ -130,7 +463,8 @@ class RiskSystem(QMainWindow, MainUI):
 
     def set_date_time_label(self, date_str, time_str):
         # Update the label with the selected date and time
-        self.date_time_label.setText(f"A Meeting will be held to discuss the risk analysis within : {date_str} {time_str}")
+        self.date_time_label.setText(
+            f"A Meeting will be held to discuss the risk analysis within : {date_str} {time_str}")
 
     def update_counts(self):
         self.num_unapproved_risks = abs(self.num_risks - self.num_approved_risks - self.num_rejected_risks)
@@ -176,16 +510,27 @@ class RiskSystem(QMainWindow, MainUI):
         hazardous_situation = self.hazardous_situation_edit.text()
         self.table_widget.setItem(row_position, 6, QTableWidgetItem(hazardous_situation))
 
-        sequence_of_event = self.sequence_of_event_edit.text()
-        self.table_widget.setItem(row_position, 7, QTableWidgetItem(sequence_of_event))
-        sequence_widget = QWidget()
-        sequence_layout = QVBoxLayout(sequence_widget)
-        sequence_layout.addWidget(self.create_control_action_widget(sequence_of_event))
+        # Check and add new hazardous situation to dynamic list
+        if hazardous_situation.strip():
+            self.check_and_add_new_content(hazardous_situation, "Hazardous Situation")
 
-        add_button = QPushButton("+")
-        add_button.clicked.connect(lambda: self.add_new_line_edit(sequence_layout))
-        sequence_layout.addWidget(add_button)
+        # Handle sequence of events with the new sequential widget
+        sequence_of_event = self.sequence_of_event_edit.text()
+
+        # Create the sequence widget for the table cell
+        sequence_widget = SequenceEventWidget(sequence_of_event)
+        sequence_widget.sequence_updated.connect(lambda events: self.update_sequence_in_table(row_position, events))
+
+        # Set the widget in the table cell
         self.table_widget.setCellWidget(row_position, 7, sequence_widget)
+
+        # Also set the text item for compatibility with existing functionality
+        sequence_text = sequence_widget.get_sequence_text()
+        self.table_widget.setItem(row_position, 7, QTableWidgetItem(sequence_text))
+
+        # Check and add new sequence of event to dynamic list
+        if sequence_of_event.strip():
+            self.check_and_add_new_content(sequence_of_event, "Sequence of Event")
 
         harm_influenced = self.harm_influenced_combo.currentText()
         self.table_widget.setItem(row_position, 8, QTableWidgetItem(harm_influenced))
@@ -193,7 +538,11 @@ class RiskSystem(QMainWindow, MainUI):
         harm_desc = self.harm_desc_line.text()
         self.table_widget.setItem(row_position, 9, QTableWidgetItem(harm_desc))
 
-        # Add custom widget to the fifth column
+        # Check and add new harm description to dynamic list
+        if harm_desc.strip():
+            self.check_and_add_new_content(harm_desc, "Harm Description")
+
+        # Add custom widget to the risk control column
         tree_widget_cell = AddControlClass()
         self.table_widget.setCellWidget(row_position, 13, tree_widget_cell)
 
@@ -206,26 +555,51 @@ class RiskSystem(QMainWindow, MainUI):
         RPN = self.update_rpn_value()
         self.table_widget.setItem(row_position, 12, QTableWidgetItem(RPN))
 
-        # req_widget = QWidget()
-        # req_layout = QVBoxLayout(req_widget)
-        #
-        # add_button = QPushButton("+")
-        # add_button.clicked.connect(lambda: self.add_new_line_edit(req_layout))
-        # req_layout.addWidget(add_button)
-        # self.table_widget.setCellWidget(row_position, 15, req_widget)
-
-        self.table_widget.setRowHeight(row_position, 300)
+        # Set row height to accommodate the sequence widget
+        self.table_widget.setRowHeight(row_position, 350)
 
         current_datetime = QDateTime.currentDateTime().toString("yyyy-MM-dd HH:mm:ss")
         self.table_widget.setItem(row_position, 14, QTableWidgetItem(current_datetime))
-
-        add_button.clicked.connect(self.generate_risk_number)
-        add_button.clicked.connect(self.set_risk_number)
 
         self.num_risks += 1
 
         self.generate_and_set_id()
         self.update_rsk_number_combo()
+
+        # Update notification count after adding entry
+        self.update_notification_count()
+
+    def update_sequence_in_table(self, row, events_list):
+        """Update the sequence text in the table when the sequence widget is updated"""
+        if events_list:
+            formatted_sequence = []
+            for i, event in enumerate(events_list):
+                formatted_sequence.append(f"Seq {i + 1}: {event}")
+            sequence_text = " → ".join(formatted_sequence)
+
+            # Update the table item
+            item = self.table_widget.item(row, 7)
+            if item:
+                item.setText(sequence_text)
+            else:
+                self.table_widget.setItem(row, 7, QTableWidgetItem(sequence_text))
+
+    def check_and_add_new_content(self, content, field_type):
+        """Check if content is new and add it to the appropriate dynamic list"""
+        global sequence_of_event_documents, hazardous_situation_documents, harm_description_documents
+
+        if field_type == "Sequence of Event":
+            if add_new_document(sequence_of_event_documents, content, SEQUENCE_FILE, field_type):
+                refresh_indices()
+                print(f"Added new sequence of event: {content}")
+        elif field_type == "Hazardous Situation":
+            if add_new_document(hazardous_situation_documents, content, HAZARDOUS_FILE, field_type):
+                refresh_indices()
+                print(f"Added new hazardous situation: {content}")
+        elif field_type == "Harm Description":
+            if add_new_document(harm_description_documents, content, HARM_FILE, field_type):
+                refresh_indices()
+                print(f"Added new harm description: {content}")
 
     def web_application(self):
         # Set the URL to a simple web page the user can use any web page he need "e.g. ChatGPT, Gemini,..., etc"
@@ -286,8 +660,9 @@ class RiskSystem(QMainWindow, MainUI):
 
         self.source_combo.addItems(["   ", "BrainStorming", "Adverse Event Reports", "Device Characteristics",
                                     "Usability tests", "International Standards", "Clinical Investigations"
-                                    "Literature Review", "Clinical Equivalences", "Verification/Validation Results "
-                                    "Post-Market Surveillance"])
+                                                                                  "Literature Review",
+                                    "Clinical Equivalences", "Verification/Validation Results "
+                                                             "Post-Market Surveillance"])
         self.standards_combo.addItems([
             "ISO 13485: Medical devices — Quality management systems — Requirements for regulatory purposes.",
             "ISO 14971: Medical devices — Application of risk management to medical devices.",
@@ -312,7 +687,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.table_widget.setColumnCount(16)
         self.table_widget.setHorizontalHeaderLabels([
             "Risk No.", "Department", "Device Affected", "Lifecycle", "Hazard Category", "Hazard Source",
-            "Hazardous Situation", "Sequence of event", "Harm Influenced", "Harm Description", "Severity",
+            "Hazardous Situation", "Sequence of Events", "Harm Influenced", "Harm Description", "Severity",
             "Probability", "RPN", "Risk Control Actions", "Date", "Approved By"
         ])
 
@@ -325,13 +700,13 @@ class RiskSystem(QMainWindow, MainUI):
 
         self.severity_spinbox.setMinimum(1)
         self.severity_spinbox.setMaximum(5)
-        self.severity_spinbox.setValue(1)  
-        self.severity_description_label.setText('Discomfort')  
+        self.severity_spinbox.setValue(1)
+        self.severity_description_label.setText('Discomfort')
 
         self.probability_spinbox.setMinimum(1)
         self.probability_spinbox.setMaximum(5)
-        self.probability_spinbox.setValue(1)  
-        self.probability_description_label.setText('Improbable')  
+        self.probability_spinbox.setValue(1)
+        self.probability_description_label.setText('Improbable')
 
         self.rpn_value_label.setStyleSheet("background-color: lightgray;")
         self.table_widget.horizontalHeader().setMinimumSectionSize(400)
@@ -407,19 +782,19 @@ class RiskSystem(QMainWindow, MainUI):
 
         elif department == "Electrical Department":
             if flag == "remove":
-                 self.elc_counter -= 1
+                self.elc_counter -= 1
             elif flag == "add":
                 self.elc_counter += 1
 
         elif department == "Mechanical Department":
             if flag == "remove":
-                self.mec_counter -=1
+                self.mec_counter -= 1
             elif flag == "add":
                 self.mec_counter += 1
 
         elif department == "Usability Team":
             if flag == "remove":
-                self.us_counter -=1
+                self.us_counter -= 1
             elif flag == "add":
                 self.us_counter += 1
 
@@ -438,22 +813,29 @@ class RiskSystem(QMainWindow, MainUI):
         self.seq_list_widget.show()
         line_edit_type = "sequence"
         self.update_layout(self.sequence_of_event_edit, self.seq_list_widget, line_edit_type)
+        # Start auto-hide timer
+        self.start_hide_timer(self.seq_hide_timer, self.seq_list_widget)
 
     def update_sit_ver_layout(self):
         self.sit_list_widget.show()
         line_edit_type = "situation"
         self.update_layout(self.hazardous_situation_edit, self.sit_list_widget, line_edit_type)
+        # Start auto-hide timer
+        self.start_hide_timer(self.sit_hide_timer, self.sit_list_widget)
 
     def update_harm_vec_layout(self):
         self.harm_list_widget.show()
         line_edit_type = "harm_desc"
         self.update_layout(self.harm_desc_line, self.harm_list_widget, line_edit_type)
+        # Start auto-hide timer
+        self.start_hide_timer(self.harm_hide_timer, self.harm_list_widget)
 
     def update_layout(self, line_edit, list_widget, line_edit_type):
         search_terms = line_edit.text()
         highlighted_results = []
         if not search_terms:
             list_widget.clear()
+            list_widget.hide()
             return
         if line_edit_type == "harm_desc":
             results = search_documents(search_terms, harm_description_inverted_index, harm_description_documents)
@@ -477,41 +859,21 @@ class RiskSystem(QMainWindow, MainUI):
     def add_to_sequence_of_event_edit(self, item):
         self.sequence_of_event_edit.setText(item.text())
         self.seq_list_widget.hide()
+        self.seq_hide_timer.stop()
 
     def add_to_hazardous_situation_edit(self, item):
         self.hazardous_situation_edit.setText(item.text())
         self.sit_list_widget.hide()
+        self.sit_hide_timer.stop()
 
     def add_to_harm_desc_line(self, item):
         self.harm_desc_line.setText(item.text())
         self.harm_list_widget.hide()
-
-    # def add_to_risk_control_action_edit(self, item):
-    #     self.risk_control_action_edit.setText(item.text())
-    #     self.control_list_widget.hide()
-
-    # def update_models_affected(self):
-    #     if self.device_affected_combo.currentIndex() == 0:
-    #         self.model_affected_combo.clear()
-    #         self.model_affected_label.hide()
-    #         self.model_affected_combo.hide()
-    #     elif self.device_affected_combo.currentIndex() == 1:
-    #         self.model_affected_combo.addItems(["EzVent M-101", "EzVent M-201", "EzVent M-202"])
-    #         self.model_affected_label.show()
-    #         self.model_affected_combo.show()
+        self.harm_hide_timer.stop()
 
     def add_new_line_edit(self, layout):
         new_widget = self.create_control_action_widget()
         layout.insertWidget(layout.count() - 1, new_widget)
-
-    # def add_new_control_action(self, layout, row_position):
-    #     new_control_action_widget = self.create_control_action_widget()
-    #     layout.insertWidget(layout.count() - 1, new_control_action_widget)
-    #
-    #     new_combo = QComboBox()
-    #     new_combo.addItems(["  ", "Inherently safe design", "Protective measure", "Information for safety"])
-    #     self.type_of_control_layout.addWidget(new_combo)
-    #     self.table_widget.setCellWidget(row_position, 14, self.type_of_control_widget)
 
     def create_control_action_widget(self, text=""):
         widget = QWidget()
@@ -539,7 +901,7 @@ class RiskSystem(QMainWindow, MainUI):
             layout.insertWidget(0, control_action_label)
 
             control_action_edit.clear()
-            control_action_edit.setVisible(False)  
+            control_action_edit.setVisible(False)
             ok_button.setVisible(False)
 
     def show_context_menu(self, position):
@@ -566,7 +928,8 @@ class RiskSystem(QMainWindow, MainUI):
             return
 
         row = selected_items[0].row()
-        row_data = [self.table_widget.item(row, col).text() if self.table_widget.item(row, col) else "" for col in range(self.table_widget.columnCount())]
+        row_data = [self.table_widget.item(row, col).text() if self.table_widget.item(row, col) else "" for col in
+                    range(self.table_widget.columnCount())]
 
         options = QFileDialog.Options()
         file_path, _ = QFileDialog.getSaveFileName(self, "Save PDF", "", "PDF Files (*.pdf)", options=options)
@@ -690,7 +1053,7 @@ class RiskSystem(QMainWindow, MainUI):
         approved_btn = QPushButton("Approve")
         layout.addWidget(approved_btn)
 
-        approved_btn.clicked.connect(lambda :self.add_approval(dialog))
+        approved_btn.clicked.connect(lambda: self.add_approval(dialog))
         dialog.exec_()
         self.num_approved_risks += 1
 
@@ -827,7 +1190,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.first_axis.addItems(['Department', 'Lifecycle', 'Device affected', 'Hazard Category', 'Hazard Source',
                                   'Harm Influenced'])
         self.second_axis.addItems(['Department', 'Lifecycle', 'Device affected', 'Hazard Category', 'Hazard Source',
-                                  'Harm Influenced'])
+                                   'Harm Influenced'])
 
         # Create a horizontal layout for the combo boxes
         comboLayout = QHBoxLayout()
@@ -923,7 +1286,6 @@ class RiskSystem(QMainWindow, MainUI):
         # Generate the HTML representation of the Plotly chart
         html = fig.to_html(include_plotlyjs='cdn')
         return html
-
 
     def sort_table_by_rpn(self):
         priorities = {"HIGH": 0, "MEDIUM": 1, "LOW": 2, "": 3}
@@ -1086,7 +1448,7 @@ class RiskSystem(QMainWindow, MainUI):
             7: 'Improbable',
             8: 'Rare',
             9: 'Negligible',
-            10:'Impossible'
+            10: 'Impossible'
         }
         value = self.dectability_spin_box.value()
         self.dectaility_label.setText(dectability_map.get(value, ''))

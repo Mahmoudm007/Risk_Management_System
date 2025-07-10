@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QTreeWidgetItem, QTreeWidget, QPushButton, QComboBox
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import *
 # from qtpy import QtWidgets
-from search import *
+# from search import *
 
 class AddSubSystemReqClass(QDialog):
     def __init__(self, parent=None):
@@ -99,16 +99,16 @@ class AddControlClass(QWidget):
             list_widget.clear()
             return
 
-        if line_edit_type == "control":
-            results = search_documents(search_terms, control_inverted_index, control_documents)
-            highlighted_results = rank_and_highlight(results, search_terms, control_documents, scores)
+        # if line_edit_type == "control":
+        #     results = search_documents(search_terms, control_inverted_index, control_documents)
+        #     highlighted_results = rank_and_highlight(results, search_terms, control_documents, scores)
 
         list_widget.clear()
-        if not highlighted_results:
-            list_widget.addItem("No results found")
-        else:
-            for doc_id, content, score in highlighted_results:
-                list_widget.addItem(f"ID: {doc_id} \n{content}")
+        # if not highlighted_results:
+        #     list_widget.addItem("No results found")
+        # else:
+        #     for doc_id, content, score in highlighted_results:
+        #         list_widget.addItem(f"ID: {doc_id} \n{content}")
 
     def add_parent(self):
         parent_text = self.parent_text_line_edit.text()
