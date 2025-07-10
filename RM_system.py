@@ -391,7 +391,7 @@ class RiskSystem(QMainWindow, MainUI):
         """Start or restart the hide timer for a search widget"""
         timer.stop()  # Stop any existing timer
         if widget.isVisible() and widget.count() > 0:
-            timer.start(8000)  # 8 seconds
+            timer.start(5000)  # 5 seconds
 
     def buttons_signals(self):
         self.hazardous_situation_edit.textChanged.connect(self.update_sit_ver_layout)
@@ -638,10 +638,13 @@ class RiskSystem(QMainWindow, MainUI):
 
     def init_search_lists(self):
         self.ser_ver_layout.addWidget(self.seq_list_widget)
+        self.seq_list_widget.setFixedHeight(150)
         self.seq_list_widget.hide()
         self.sit_ver_layout.addWidget(self.sit_list_widget)
+        self.sit_list_widget.setFixedHeight(150)
         self.sit_list_widget.hide()
         self.harm_ver_layout.addWidget(self.harm_list_widget)
+        self.harm_list_widget.setFixedHeight(150)
         self.harm_list_widget.hide()
 
     def init_combos(self):
