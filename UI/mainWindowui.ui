@@ -301,7 +301,7 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>icons/search.png</normaloff>icons/search.png</iconset>
+                  <normaloff>../icons/search.png</normaloff>../icons/search.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -352,7 +352,7 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>icons/dashboard.png</normaloff>icons/dashboard.png</iconset>
+                  <normaloff>../icons/dashboard.png</normaloff>../icons/dashboard.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -544,7 +544,7 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>icons/board-meeting (2).png</normaloff>icons/board-meeting (2).png</iconset>
+                <normaloff>../icons/board-meeting (2).png</normaloff>../icons/board-meeting (2).png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -763,7 +763,7 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>icons/bell.png</normaloff>icons/bell.png</iconset>
+                <normaloff>../icons/bell.png</normaloff>../icons/bell.png</iconset>
               </property>
              </widget>
             </item>

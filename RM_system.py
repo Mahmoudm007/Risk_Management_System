@@ -31,7 +31,7 @@ import sys
 from PyQt5 import QtWidgets, QtCore
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
-MainUI, _ = loadUiType('mainWindowui.ui')
+MainUI, _ = loadUiType('UI/mainWindowui.ui')
 
 
 class NotificationDialog(QDialog):
@@ -303,7 +303,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.num_unapproved_risks = 0
         self.num_rejected_risks = 0
 
-        self.matrix_file = 'matrix_state.json'
+        self.matrix_file = 'Risk Matrix/matrix_state.json'
 
         # Timer to update notification count periodically
         self.notification_timer = QTimer()
@@ -604,7 +604,7 @@ class RiskSystem(QMainWindow, MainUI):
     def web_application(self):
         # Set the URL to a simple web page the user can use any web page he need "e.g. ChatGPT, Gemini,..., etc"
         # https: // www.google.com
-        self.webEngineView.setUrl(QUrl("file:///D:/EzzMedical/Risk_Management_System/ISO%2014971%20-%202019%20Document.html"))
+        self.webEngineView.setUrl(QUrl("file:///D:/EzzMedical/Risk_Management_System/Reference/ISO%2014971%20-%202019%20Document.html"))
         self.sideBarFrame.layout().addWidget(self.webEngineView)
 
     def toggle_side_bar(self):

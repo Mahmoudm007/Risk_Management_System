@@ -14,11 +14,11 @@ nltk.download('wordnet')
 nltk.download('punkt')
 
 # File paths for persistent storage
-SEQUENCE_FILE = 'sequence_documents.json'
-HAZARDOUS_FILE = 'hazardous_documents.json'
-CONTROL_FILE = 'control_documents.json'
-HARM_FILE = 'harm_documents.json'
-NOTIFICATIONS_FILE = 'notifications.json'
+SEQUENCE_FILE = 'Database/sequence_documents.json'
+HAZARDOUS_FILE = 'Database/hazardous_documents.json'
+CONTROL_FILE = 'Database/control_documents.json'
+HARM_FILE = 'Database/harm_documents.json'
+NOTIFICATIONS_FILE = 'Database/notifications.json'
 
 
 # Functions for the search algorithm

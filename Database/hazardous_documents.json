@@ -29,15 +29,5 @@
   "28": "Risk of infection from improperly sterilized ventilator parts.",
   "29": "Inadequate patient ventilation due to obstructed airways in the device.",
   "30": "Accidental ingestion of small parts or components by the patient or healthcare provider.",
-  "31": "dasd",
-  "32": "ID: 8 \n An  *ESD*  event  occurs  near  sensitive  electronic  components  of  the  ventilator,  causing  damage  to  the  electronic  circuitry.",
-  "33": "ff",
-  "34": "ID: 9 \n The  overvoltage  *condition*  can  cause  *damage*  to  the  electrical  components  of  the  ventilator,  *including*  circuit  *boards,*  sensors,  *and*  control  mechanisms.",
-  "35": "ID: 15 \n *As*  a  *result*  of  the  *compressed*  power  cord,  the  electrical  connection  to  the  ventilator  *is*  *disrupted.*  *This*  *leads*  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  down  unexpectedly  and  interrupting  *respiratory*  *support*  to  the  patient.",
-  "36": "ID: 17 \n Impaired  monitor  functionality,  *readability,*  or  structural  integrity.  This  could  affect  the  accuracy  of  patient  monitoring  *data*  displayed  on  the  screen,  leading  to  potential  errors  in  clinical  decision-making.",
-  "37": "ID: 35 \n ID:  15  *As*  a  *result*  of  the  *compressed*  *power*  cord,  the  electrical  connection  to  the  ventilator  *is*  *disrupted.*  *This*  *leads*  to  a  *loss*  of  *power*  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  down  unexpectedly  and  interrupting  *respiratory*  *support*  to  the  patient.",
-  "38": "ds",
-  "39": "dasdasd",
-  "40": "dsdada",
-  "41": "h"
+  "31": "ID: 15 \n As  a  *result*  of  *the*  compressed  power  cord,  *the*  *electrical*  *connection*  *to*  *the*  *ventilator*  is  *disrupted.*  *This*  leads  *to*  a  loss  of  power  supply  *to*  *the*  *ventilator,*  causing  *it*  *to*  *shut*  down  *unexpectedly*  and  *interrupting*  *respiratory*  *support*  *to*  *the*  *patient.*"
 }
