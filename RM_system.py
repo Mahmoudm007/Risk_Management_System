@@ -1,4 +1,4 @@
-from PyQt5.QtGui import QColor, QFont
+from PyQt5.QtGui import QColor, QFont, QIcon
 from PyQt5.QtWidgets import *
 from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout,
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QTextEdit, QScrollArea)
@@ -254,7 +254,8 @@ class RiskSystem(QMainWindow, MainUI):
         super(RiskSystem, self).__init__()
         self.setupUi(self)
         self.setGeometry(0, 0, 1900, 950)
-
+        self.setWindowTitle("Risk Management System")  # Sets the window title
+        self.setWindowIcon(QIcon("UI/icons/measurement.png"))  # Sets the window icon
         self.sw_counter = 0
         self.elc_counter = 0
         self.mec_counter = 0
