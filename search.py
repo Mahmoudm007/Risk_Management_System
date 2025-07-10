@@ -9,9 +9,9 @@ import json
 import os
 from datetime import datetime
 
-# Download necessary NLTK data
-nltk.download('wordnet')
-nltk.download('punkt')
+# # Download necessary NLTK data
+# nltk.download('wordnet')
+# nltk.download('punkt')
 
 # File paths for persistent storage
 SEQUENCE_FILE = 'Database/sequence_documents.json'
