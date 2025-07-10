@@ -1022,11 +1022,11 @@ class RiskSystem(QMainWindow, MainUI):
 
     def approved_by(self):
         manager_names = {
-            1111: 'Eng: Ahmed El-Argawy',
-            2222: 'Dr: Ayman',
-            3333: 'Dr: Hamdi',
-            4444: 'Eng: Aya Al-Mowafy',
-            5555: 'Ahmed El-Rays'
+            1111: 'Eng. Ahmed El-Argawy',
+            2222: 'Eng. Khaled',
+            3333: 'Dr: Hamdi Abd El-fadel',
+            4444: 'Eng. Aya Al-Mowafy',
+            5555: 'Eng. Ahmed El-Rays'
         }
 
         def update_label():
