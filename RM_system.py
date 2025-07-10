@@ -1,12 +1,10 @@
-from PyQt5.QtGui import QColor, QFont, QIcon
+from PyQt5.QtGui import QColor, QIcon
 from PyQt5.QtWidgets import *
 from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout,
-                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QTextEdit, QScrollArea)
+                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea)
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from PyQt5.uic import loadUiType
-import os
 import random
-import json
 from PyQt5.QtCore import QDateTime, QPropertyAnimation, QEasingCurve, QUrl, QTimer
 from collections import Counter
 from matplotlib.figure import Figure
@@ -18,7 +16,6 @@ from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Spacer
 import pandas as pd
 import plotly.graph_objects as go
 from PyQt5.QtWebEngineWidgets import QWebEngineView
-
 from Calendar import CalendarDialog
 from ControlAndRequirement import AddControlClass
 from Dashboard import Dashboard
@@ -26,7 +23,6 @@ from DeviceSelection import DeviceSelected
 from RiskChat import ChatDialog
 from search import *
 from sequence_widget import SequenceEventWidget
-from SortTable import SortableTableWidgetItem
 import sys
 from PyQt5 import QtWidgets, QtCore
 
