@@ -45,6 +45,7 @@ from pdf_dialog import EnhancedPDFDialog
 from risk_history_dialog import RiskHistoryDialog
 from user_input_dialog import UserInputDialog
 from notification_dialog import NotificationDialog
+from traceability_dialog import TraceabilityDialog
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 MainUI, _ = loadUiType('UI/mainWindowui.ui')
@@ -294,6 +295,11 @@ class RiskSystem(QMainWindow, MainUI):
         dialog = FilterDialog(self)
         dialog.exec_()
 
+    def open_traceability_dialog(self):
+        """Open the traceability dialog"""
+        dialog = TraceabilityDialog(self)
+        dialog.exec_()
+
     def open_component_selection_dialog(self):
         if not self.selected_device:
             QMessageBox.warning(self, "No Device Selected", "Please select a device first.")
@@ -432,6 +438,9 @@ class RiskSystem(QMainWindow, MainUI):
         self.add_devices_affected.clicked.connect(self.select_devices_widget)
         self.component_btn.clicked.connect(self.open_component_selection_dialog)
         self.notification_btn.clicked.connect(self.show_notifications)
+        
+        # Add traceability button signal
+        self.trace_btn.clicked.connect(self.open_traceability_dialog)
 
     def show_notifications(self):
         """Show the notifications dialog"""

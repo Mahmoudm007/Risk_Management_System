@@ -145,5 +145,19 @@
     "timestamp": "2025-07-13 15:47:18",
     "id": 21,
     "is_new": false
+  },
+  {
+    "content": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient.",
+    "field_type": "Hazardous Situation",
+    "timestamp": "2025-07-13 16:18:27",
+    "id": 22,
+    "is_new": true
+  },
+  {
+    "content": "ID: 14 \n Cuts",
+    "field_type": "Harm Description",
+    "timestamp": "2025-07-13 16:18:27",
+    "id": 23,
+    "is_new": true
   }
 ]

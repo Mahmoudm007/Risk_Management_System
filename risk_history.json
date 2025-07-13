@@ -1,0 +1,3448 @@
+{
+  "RSK_MEC_0": [
+    {
+      "timestamp": "2025-07-13 14:59:41",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_0"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:47",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_0"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:48",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:49",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:49",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 101"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:50",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 101"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:51",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Batteries, Circuit Boards"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:52",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Batteries, Circuit Boards"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:52",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:53",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:54",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:54",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:55",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "suspended mass"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:55",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "suspended mass"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:56",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 15 \n As  a  result  of  *the*  compressed  power  cord,  *the*  electrical  connection  to  *the*  ventilator  is  disrupted.  This  leads  to  a  loss  of  power  supply  to  *the*  ventilator,  causing  it  to  shut  down  unexpectedly  and  interrupting  respiratory  support  to  *the*  patient."
+    },
+    {
+      "timestamp": "2025-07-13 14:59:57",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 15 \n As  a  result  of  *the*  compressed  power  cord,  *the*  electrical  connection  to  *the*  ventilator  is  disrupted.  This  leads  to  a  loss  of  power  supply  to  *the*  ventilator,  causing  it  to  shut  down  unexpectedly  and  interrupting  respiratory  support  to  *the*  patient."
+    },
+    {
+      "timestamp": "2025-07-13 14:59:58",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:59",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 14:59:59",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 15:00:00",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 15:00:01",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 15:00:02",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 15:00:02",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-13 15:00:03",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-13 15:00:04",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 15:00:05",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 15:00:06",
+      "user": "degla",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 15:00:08",
+      "user": "degla",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 15:00:38",
+      "user": "v",
+      "field": "RPN",
+      "previous_value": "HIGH",
+      "new_value": "Medium"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:18:45"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_0"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:18:45",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_US_0": [
+    {
+      "timestamp": "2025-07-13 15:15:21",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_0"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:24",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_0"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:24",
+      "user": "Eng. Mahmoud",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:25",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:26",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:26",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:27",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:28",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:28",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:29",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:29",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:30",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:30",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:31",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "moving parts"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:32",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "moving parts"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:32",
+      "user": "v",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 6 \n A  *healthcare*  provider,  unaware  of  *the*  electrical  fault,  *touches*  *the*  external  surface  of  *the*  ventilator  enclosure  while  adjusting  settings."
+    },
+    {
+      "timestamp": "2025-07-13 15:15:33",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 6 \n A  *healthcare*  provider,  unaware  of  *the*  electrical  fault,  *touches*  *the*  external  surface  of  *the*  ventilator  enclosure  while  adjusting  settings."
+    },
+    {
+      "timestamp": "2025-07-13 15:15:34",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:34",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:35",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n ID:  4  **Burn**"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:36",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n ID:  4  **Burn**"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:37",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:37",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:38",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:39",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:39",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:40",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:41",
+      "user": "Eng. Mahmoud",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 15:15:42",
+      "user": "Eng. Mahmoud",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 15:15:50",
+      "user": "Eng. Mahmoud",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "Eng. Ahmed El-Argawy"
+    },
+    {
+      "timestamp": "2025-07-13 15:15:53",
+      "user": "Eng. Mahmoud",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "Eng. Ahmed El-Argawy"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:18:38"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_0"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:18:38",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_SW_0": [
+    {
+      "timestamp": "2025-07-13 15:35:40",
+      "user": "Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_0"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:40",
+      "user": "Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_0"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:41",
+      "user": "Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:41",
+      "user": "Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:42",
+      "user": "Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 101"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:42",
+      "user": "Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 101"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:42",
+      "user": "Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Batteries, Circuit Boards"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:43",
+      "user": "Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Batteries, Circuit Boards"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:43",
+      "user": "Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:44",
+      "user": "Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:44",
+      "user": "Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:45",
+      "user": "Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:45",
+      "user": "Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:45",
+      "user": "Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:46",
+      "user": "Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "harm influenced"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:46",
+      "user": "Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "harm influenced"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:47",
+      "user": "Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:48",
+      "user": "Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:48",
+      "user": "Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n ID:  4  **Burn**"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:49",
+      "user": "Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n ID:  4  **Burn**"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:49",
+      "user": "Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:50",
+      "user": "Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:50",
+      "user": "Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:51",
+      "user": "Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:51",
+      "user": "Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 15:35:32"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_0"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 101"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Batteries, Circuit Boards"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "harm influenced"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 47 \n ID:  42  **powe** "
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n ID:  4  **Burn** "
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 15:35:52",
+      "user": "Mahmoud",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 15:35:53",
+      "user": "Mahmoud",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 15:36:05",
+      "user": "Mahmoud",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "Seq 1: ID: 47 \n ID:  42  **powe** \u2192 Seq 2: The  ventilator's  power  supply  cord  is  damaged,  leading  to  intermittent  power  loss."
+    },
+    {
+      "timestamp": "2025-07-13 15:36:06",
+      "user": "Mahmoud",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "Seq 1: ID: 47 \n ID:  42  **powe** \u2192 Seq 2: The  ventilator's  power  supply  cord  is  damaged,  leading  to  intermittent  power  loss."
+    },
+    {
+      "timestamp": "2025-07-13 15:47:44",
+      "user": "Degla",
+      "field": "Risk No.",
+      "previous_value": "RSK_ELC_0",
+      "new_value": "RSK_SW_0"
+    },
+    {
+      "timestamp": "2025-07-13 15:49:49",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "Eng. Ahmed El-Argawy"
+    },
+    {
+      "timestamp": "2025-07-13 15:49:49",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "Eng. Ahmed El-Argawy"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:19:36"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_0"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:19:36",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_SW_2": [
+    {
+      "timestamp": "2025-07-13 15:36:43",
+      "user": "MahmoudMahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_2"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:43",
+      "user": "Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_2"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:44",
+      "user": "Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:44",
+      "user": "Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:45",
+      "user": "Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 101"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:45",
+      "user": "Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 101"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:46",
+      "user": "Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Batteries, Circuit Boards"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:47",
+      "user": "Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Batteries, Circuit Boards"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:47",
+      "user": "Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:48",
+      "user": "v",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:48",
+      "user": "Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:49",
+      "user": "Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:50",
+      "user": "Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:50",
+      "user": "Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:51",
+      "user": "Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "harm influenced"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:51",
+      "user": "Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "harm influenced"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:52",
+      "user": "Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:52",
+      "user": "Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:53",
+      "user": "Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n ID:  4  **Burn**"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:53",
+      "user": "Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n ID:  4  **Burn**"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:54",
+      "user": "Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:55",
+      "user": "Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:55",
+      "user": "Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "2"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:56",
+      "user": "Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "2"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 15:36:40"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_2"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 101"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Batteries, Circuit Boards"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "harm influenced"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 47 \n ID:  42  **powe** "
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n ID:  4  **Burn** "
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "2"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:57",
+      "user": "Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 15:36:58",
+      "user": "Mahmoud",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 15:36:58",
+      "user": "Mahmoud",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:19:41"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_2"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:19:41",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_ELC_0": [
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 15:47:18"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_0"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Leakage current"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 34 \n ID:  15  As  a  result  of  the  compressed  **power**  cord,  the  electrical  connection  to  the  ventilator  is  disrupted.  This  leads  to  a  loss  of  **power**  supply  to  the  ventilator,  causing  it  to  shut  down  unexpectedly  and  interrupting  respiratory  support  to  the  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 3 \n A  *ventilator*  with  compromised  enclosure  integrity  experiences  an  electrical  fault  within  its  internal  components.  As  a  result  of  the  fault,  electrical  current  leaks  from  the  internal  circuitry  to  the  metal  enclosure  of  the  *ventilator.* "
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "burn"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 15:47:18",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:18:27"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_0"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:18:27",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_ELC_1": [
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 15:48:01"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_1"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Leakage current"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 34 \n ID:  15  As  a  result  of  the  compressed  **power**  cord,  the  electrical  connection  to  the  ventilator  is  disrupted.  This  leads  to  a  loss  of  **power**  supply  to  the  ventilator,  causing  it  to  shut  down  unexpectedly  and  interrupting  respiratory  support  to  the  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 3 \n A  *ventilator*  with  compromised  enclosure  integrity  experiences  an  electrical  fault  within  its  internal  components.  As  a  result  of  the  fault,  electrical  current  leaks  from  the  internal  circuitry  to  the  metal  enclosure  of  the  *ventilator.* "
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "burn"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "Degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 15:48:01",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:18:32"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_1"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:18:32",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_ELC_2": [
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 15:48:31"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_2"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Leakage current"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 34 \n ID:  15  As  a  result  of  the  compressed  **power**  cord,  the  electrical  connection  to  the  ventilator  is  disrupted.  This  leads  to  a  loss  of  **power**  supply  to  the  ventilator,  causing  it  to  shut  down  unexpectedly  and  interrupting  respiratory  support  to  the  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 3 \n A  *ventilator*  with  compromised  enclosure  integrity  experiences  an  electrical  fault  within  its  internal  components.  As  a  result  of  the  fault,  electrical  current  leaks  from  the  internal  circuitry  to  the  metal  enclosure  of  the  *ventilator.* "
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "burn"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 15:48:31",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:19:28"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_2"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:19:28",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_ELC_3": [
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 15:48:49"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_3"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Leakage current"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 34 \n ID:  15  As  a  result  of  the  compressed  **power**  cord,  the  electrical  connection  to  the  ventilator  is  disrupted.  This  leads  to  a  loss  of  **power**  supply  to  the  ventilator,  causing  it  to  shut  down  unexpectedly  and  interrupting  respiratory  support  to  the  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 3 \n A  *ventilator*  with  compromised  enclosure  integrity  experiences  an  electrical  fault  within  its  internal  components.  As  a  result  of  the  fault,  electrical  current  leaks  from  the  internal  circuitry  to  the  metal  enclosure  of  the  *ventilator.* "
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "burn"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 15:48:49",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:19:30"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_3"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:19:30",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "": [
+    {
+      "timestamp": "2025-07-13 15:52:37",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 15:52:37",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 15:52:37"
+    },
+    {
+      "timestamp": "2025-07-13 15:52:37",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 15:52:37",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 101"
+    },
+    {
+      "timestamp": "2025-07-13 15:52:37",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Mechanical, Screws, Stands"
+    },
+    {
+      "timestamp": "2025-07-13 15:52:37",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 15:52:37",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 15:52:37",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 15:52:37",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 15:52:37",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 15:52:37",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    }
+  ],
+  "RSK_US_1": [
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:18:41"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_1"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:18:41",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_MEC_1": [
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:18:48"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_1"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:18:48",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_US_2": [
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:19:04"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_2"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:19:04",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_US_3": [
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:19:24"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_3"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:19:24",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_SW_1": [
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:19:38"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_1"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:19:38",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_ELC_4": [
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:19:44"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_4"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment. "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 14 \n Cuts "
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:19:44",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ]
+}
