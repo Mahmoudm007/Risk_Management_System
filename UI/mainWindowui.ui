@@ -737,10 +737,16 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
               <property name="font">
                <font>
                 <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <property name="text">
                <string>Devices affected</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>icons/ventilation.png</normaloff>icons/ventilation.png</iconset>
               </property>
              </widget>
             </item>
@@ -752,13 +758,33 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
                 <height>45</height>
                </size>
               </property>
+              <property name="font">
+               <font>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>Component</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>icons/motherboard.png</normaloff>icons/motherboard.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QPushButton" name="notification_btn">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -770,6 +796,9 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
                 <width>45</width>
                 <height>16777215</height>
                </size>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
               </property>
               <property name="text">
                <string/>

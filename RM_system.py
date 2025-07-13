@@ -310,6 +310,8 @@ class RiskSystem(QMainWindow, MainUI):
         self.us_counter = 0
         self.test_counter = 0
         
+        self.table_widget.setFixedHeight(400)
+
         self.table_widget.setEditTriggers(QAbstractItemView.DoubleClicked | QAbstractItemView.SelectedClicked)
         self.table_widget.itemChanged.connect(self.handle_item_changed)
 
@@ -636,7 +638,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.table_widget.setCellWidget(row_position, 15, tree_widget_cell)
 
         # Set row height to accommodate the sequence widget
-        self.table_widget.setRowHeight(row_position, 350)
+        self.table_widget.setRowHeight(row_position, 200)
 
         self.num_risks += 1
         
