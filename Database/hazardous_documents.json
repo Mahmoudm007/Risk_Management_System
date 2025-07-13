@@ -40,5 +40,6 @@
   "39": "ID: 15 \n As  a  result  of  *the*  compressed  power  cord,  *the*  electrical  connection  to  *the*  ventilator  is  disrupted.  This  leads  to  a  loss  of  power  supply  to  *the*  ventilator,  causing  it  to  shut  down  unexpectedly  and  interrupting  respiratory  support  to  *the*  patient.",
   "40": "ID: 6 \n A  *healthcare*  provider,  unaware  of  *the*  electrical  fault,  *touches*  *the*  external  surface  of  *the*  ventilator  enclosure  while  adjusting  settings.",
   "41": "harm influenced",
-  "42": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient."
+  "42": "ID: 14 \n *This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient.",
+  "43": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry."
 }

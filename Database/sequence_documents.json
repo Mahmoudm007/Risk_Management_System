@@ -50,5 +50,6 @@
   "49": "ID:  32  ID:  12  During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment.",
   "50": "ID: 4 \n Ventilator  is  placed  near  a  magnetic  resonance  imaging  (MRI)  machine  during  routine  patient  care.  *The*  proximity  of  *the*  ventilator  to  *the*  MRI  machine  exposes  its  electronic  components  to  *the*  magnetic  fields.",
   "51": "ID: 47 \n ID:  42  **powe**",
-  "52": "ID: 3 \n A  *ventilator*  with  compromised  enclosure  integrity  experiences  an  electrical  fault  within  its  internal  components.  As  a  result  of  the  fault,  electrical  current  leaks  from  the  internal  circuitry  to  the  metal  enclosure  of  the  *ventilator.*"
+  "52": "ID: 3 \n A  *ventilator*  with  compromised  enclosure  integrity  experiences  an  electrical  fault  within  its  internal  components.  As  a  result  of  the  fault,  electrical  current  leaks  from  the  internal  circuitry  to  the  metal  enclosure  of  the  *ventilator.*",
+  "53": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system."
 }

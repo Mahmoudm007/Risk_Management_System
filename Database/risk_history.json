@@ -328,6 +328,132 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:35:04"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_0"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC Power Inlet, Check Valve, Fittings, Gas Manifold"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry. "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system. "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 24 \n ID:  1  *Hearing*  impairment "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:35:04",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "RSK_US_0": [
@@ -669,6 +795,132 @@
     },
     {
       "timestamp": "2025-07-13 16:18:38",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:35:22"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_0"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC Power Inlet, Check Valve, Fittings, Gas Manifold"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry. "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system. "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 24 \n ID:  1  *Hearing*  impairment "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:35:22",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
@@ -1140,6 +1392,132 @@
     },
     {
       "timestamp": "2025-07-13 16:19:36",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:34:08"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_0"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC Power Inlet, Check Valve, Fittings, Gas Manifold"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry. "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system. "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 24 \n ID:  1  *Hearing*  impairment "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "Degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:34:08",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
@@ -1834,6 +2212,132 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:34:48"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_0"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC Power Inlet, Check Valve, Fittings, Gas Manifold"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry. "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system. "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 24 \n ID:  1  *Hearing*  impairment "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:34:48",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "RSK_ELC_1": [
@@ -2084,6 +2588,132 @@
     },
     {
       "timestamp": "2025-07-13 16:18:32",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:34:50"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_1"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC Power Inlet, Check Valve, Fittings, Gas Manifold"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry. "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system. "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 24 \n ID:  1  *Hearing*  impairment "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:34:50",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
@@ -2342,6 +2972,132 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:34:51"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_2"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC Power Inlet, Check Valve, Fittings, Gas Manifold"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry. "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system. "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 24 \n ID:  1  *Hearing*  impairment "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:34:51",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "RSK_ELC_3": [
@@ -2596,6 +3352,132 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:34:53"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_3"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC Power Inlet, Check Valve, Fittings, Gas Manifold"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry. "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system. "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 24 \n ID:  1  *Hearing*  impairment "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:34:53",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "": [
@@ -2672,6 +3554,1189 @@
     {
       "timestamp": "2025-07-13 15:52:37",
       "user": "degla",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:04",
+      "user": "c",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:04",
+      "user": "c",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:39:04"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:04",
+      "user": "c",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:04",
+      "user": "c",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:04",
+      "user": "c",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:04",
+      "user": "c",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:04",
+      "user": "c",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:04",
+      "user": "c",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:04",
+      "user": "c",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:06",
+      "user": "c",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:06",
+      "user": "c",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:39:06"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:06",
+      "user": "c",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:06",
+      "user": "c",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:06",
+      "user": "c",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:06",
+      "user": "c",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:06",
+      "user": "c",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:06",
+      "user": "c",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:06",
+      "user": "c",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:08",
+      "user": "c",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:08",
+      "user": "c",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:39:08"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:08",
+      "user": "c",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:08",
+      "user": "c",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:08",
+      "user": "c",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:08",
+      "user": "c",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:08",
+      "user": "c",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:08",
+      "user": "c",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:08",
+      "user": "c",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:11",
+      "user": "c",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:11",
+      "user": "c",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:39:11"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:11",
+      "user": "c",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:11",
+      "user": "c",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:11",
+      "user": "c",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:11",
+      "user": "c",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:11",
+      "user": "c",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:11",
+      "user": "c",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:11",
+      "user": "c",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:13",
+      "user": "c",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:13",
+      "user": "c",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:39:13"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:13",
+      "user": "c",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:13",
+      "user": "c",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:13",
+      "user": "c",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:13",
+      "user": "c",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:13",
+      "user": "c",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:13",
+      "user": "c",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:13",
+      "user": "c",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:14",
+      "user": "c",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:14",
+      "user": "c",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:39:14"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:14",
+      "user": "c",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:14",
+      "user": "c",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:14",
+      "user": "c",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:14",
+      "user": "c",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:14",
+      "user": "c",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:14",
+      "user": "c",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:14",
+      "user": "c",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:16",
+      "user": "c",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:16",
+      "user": "c",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:39:16"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:16",
+      "user": "c",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:16",
+      "user": "c",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:16",
+      "user": "c",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:16",
+      "user": "c",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:16",
+      "user": "c",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:16",
+      "user": "c",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:16",
+      "user": "c",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:20",
+      "user": "x",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:20",
+      "user": "x",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:39:20"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:20",
+      "user": "x",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:20",
+      "user": "x",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:20",
+      "user": "x",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:20",
+      "user": "x",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:20",
+      "user": "x",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:20",
+      "user": "x",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:20",
+      "user": "x",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:22",
+      "user": "x",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:22",
+      "user": "x",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:39:22"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:22",
+      "user": "x",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:22",
+      "user": "x",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:22",
+      "user": "x",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:22",
+      "user": "x",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:22",
+      "user": "x",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:22",
+      "user": "x",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:22",
+      "user": "x",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:24",
+      "user": "x",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:24",
+      "user": "x",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:39:24"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:24",
+      "user": "x",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:24",
+      "user": "x",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:24",
+      "user": "x",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:24",
+      "user": "x",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:24",
+      "user": "x",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:24",
+      "user": "x",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:24",
+      "user": "x",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:26",
+      "user": "x",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:26",
+      "user": "x",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:39:26"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:26",
+      "user": "x",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:26",
+      "user": "x",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:26",
+      "user": "x",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:26",
+      "user": "x",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:26",
+      "user": "x",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:26",
+      "user": "x",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:26",
+      "user": "x",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:57",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:57",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:39:57"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:57",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:57",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:57",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:57",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "vibrating parts"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:57",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:57",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:57",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:57",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:59",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:59",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:39:59"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:59",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:59",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:59",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:59",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "vibrating parts"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:59",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:39:59",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:59",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:39:59",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:00",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:00",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:40:00"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:00",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:00",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:00",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:00",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "vibrating parts"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:00",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:00",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:00",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:00",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:02",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:02",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:40:02"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:02",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:02",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:02",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:02",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "vibrating parts"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:02",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:02",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:02",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:02",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:06",
+      "user": "s",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:06",
+      "user": "s",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:40:06"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:06",
+      "user": "s",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:06",
+      "user": "s",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:06",
+      "user": "s",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:06",
+      "user": "s",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "tension"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:06",
+      "user": "s",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:06",
+      "user": "s",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:06",
+      "user": "s",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:06",
+      "user": "s",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:09",
+      "user": "s",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:09",
+      "user": "s",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:40:09"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:09",
+      "user": "s",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:09",
+      "user": "s",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:09",
+      "user": "s",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:09",
+      "user": "s",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "tension"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:09",
+      "user": "s",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:09",
+      "user": "s",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:09",
+      "user": "s",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:09",
+      "user": "s",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:12",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:12",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:40:12"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:12",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:12",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:12",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:12",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "torsion"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:12",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-13 16:40:12",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:12",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:40:12",
+      "user": "d",
       "field": "RPN",
       "previous_value": "",
       "new_value": "LOW"
@@ -2927,6 +4992,132 @@
     },
     {
       "timestamp": "2025-07-13 16:18:48",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:35:07"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_1"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC Power Inlet, Check Valve, Fittings, Gas Manifold"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry. "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system. "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 24 \n ID:  1  *Hearing*  impairment "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "LOW"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:35:07",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
@@ -3315,6 +5506,132 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:34:32"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_1"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC Power Inlet, Check Valve, Fittings, Gas Manifold"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry. "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system. "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 24 \n ID:  1  *Hearing*  impairment "
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "Deg",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:34:32",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "RSK_ELC_4": [
@@ -3439,6 +5756,390 @@
     },
     {
       "timestamp": "2025-07-13 16:19:44",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_MEC_2": [
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:35:11"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_2"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC Power Inlet, Check Valve, Fittings, Gas Manifold"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry. "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system. "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 24 \n ID:  1  *Hearing*  impairment "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:35:11",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_MEC_3": [
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:35:13"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_3"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC Power Inlet, Check Valve, Fittings, Gas Manifold"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry. "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system. "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 24 \n ID:  1  *Hearing*  impairment "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "dd",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "MEDIUM"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:35:14",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_MEC_4": [
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-13 16:35:17"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_4"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC Power Inlet, Check Valve, Fittings, Gas Manifold"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "earth leakage"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry. "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system. "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 24 \n ID:  1  *Hearing*  impairment "
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "HIGH"
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-13 16:35:17",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",

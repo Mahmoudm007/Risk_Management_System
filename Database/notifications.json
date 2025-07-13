@@ -159,5 +159,26 @@
     "timestamp": "2025-07-13 16:18:27",
     "id": 23,
     "is_new": true
+  },
+  {
+    "content": "ID: 8 \n An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry.",
+    "field_type": "Hazardous Situation",
+    "timestamp": "2025-07-13 16:34:08",
+    "id": 24,
+    "is_new": true
+  },
+  {
+    "content": "ID: 22 \n An  incorrect  software  *update*  causes  a  malfunction  in  the  ventilator's  alarm  system.",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-13 16:34:08",
+    "id": 25,
+    "is_new": true
+  },
+  {
+    "content": "ID: 24 \n ID:  1  *Hearing*  impairment",
+    "field_type": "Harm Description",
+    "timestamp": "2025-07-13 16:34:08",
+    "id": 26,
+    "is_new": true
   }
 ]

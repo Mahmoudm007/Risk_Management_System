@@ -15,7 +15,7 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtCore import QDateTime, QPropertyAnimation, QEasingCurve, QUrl, QTimer
 from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox,
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
-                             QCheckBox, QGroupBox)
+                             QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
 from PyQt5 import QtCore
 
 # Reporting imports
@@ -1252,8 +1252,8 @@ class RiskSystem(QMainWindow, MainUI):
         rpn_values = []
 
         for row in range(row_count):
-            hazard_source_item = self.table_widget.item(row, 5)
-            rpn_item = self.table_widget.item(row, 12)
+            hazard_source_item = self.table_widget.item(row, 7)
+            rpn_item = self.table_widget.item(row, 14)
 
             if hazard_source_item and rpn_item:
                 hazards.append(hazard_source_item.text())

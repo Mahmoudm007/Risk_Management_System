@@ -5,6 +5,9 @@ import matplotlib.patches as patches
 from matplotlib.backends.backend_pdf import PdfPages
 import numpy as np
 from collections import defaultdict
+from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox,
+                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
+                             QCheckBox, QGroupBox, QMessageBox, QFileDialog)
 
 
 class TraceabilityDialog(QDialog):
