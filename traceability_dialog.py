@@ -11,7 +11,7 @@ class TraceabilityDialog(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle("Traceability Network Generator")
-        self.setGeometry(200, 200, 500, 400)
+        self.setGeometry(200, 200, 600, 700)
         self.parent_window = parent
         self.setupUI()
 

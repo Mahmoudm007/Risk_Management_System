@@ -61,7 +61,7 @@ class RiskSystem(QMainWindow, MainUI):
         
         # Initialize risk history storage
         self.risk_history = {}  # Store history for each row
-        self.history_file = 'risk_history.json'
+        self.history_file = 'Database/risk_history.json'
         self.load_risk_history()
         
         # Store original table data for filtering
@@ -578,7 +578,7 @@ class RiskSystem(QMainWindow, MainUI):
         tree_widget_cell = AddControlClass()
         self.table_widget.setCellWidget(row_position, 15, tree_widget_cell)
 
-        self.table_widget.setRowHeight(row_position, 200)
+        self.table_widget.setRowHeight(row_position, 180)
 
         # Record all initial field values with the same user name (NO additional prompts)
         self.record_initial_risk_creation(rsk_no, user_name, field_data)
@@ -806,7 +806,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.probability_description_label.setText('Improbable')
 
         self.rpn_value_label.setStyleSheet("background-color: light gray;")
-        self.table_widget.horizontalHeader().setMinimumSectionSize(400)
+        self.table_widget.horizontalHeader().setMinimumSectionSize(350)
         self.update_rpn_value()
         self.generate_and_set_id()
 

@@ -6,7 +6,7 @@ class FilterDialog(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle("Filter Risks")
-        self.setGeometry(200, 200, 400, 300)
+        self.setGeometry(200, 200, 500, 600)
         self.parent_window = parent
         self.setupUI()
 
