@@ -1599,6 +1599,13 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <item>
+           <widget class="QPushButton" name="trace_btn">
+            <property name="text">
+             <string>Tracability Network</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="pdf_gen">
             <property name="font">
              <font>

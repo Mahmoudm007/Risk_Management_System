@@ -74,6 +74,76 @@
     "field_type": "Sequence of Event",
     "timestamp": "2025-07-13 13:58:29",
     "id": 11,
-    "is_new": true
+    "is_new": false
+  },
+  {
+    "content": "ID: 15 \n As  a  result  of  *the*  compressed  power  cord,  *the*  electrical  connection  to  *the*  ventilator  is  disrupted.  This  leads  to  a  loss  of  power  supply  to  *the*  ventilator,  causing  it  to  shut  down  unexpectedly  and  interrupting  respiratory  support  to  *the*  patient.",
+    "field_type": "Hazardous Situation",
+    "timestamp": "2025-07-13 14:59:57",
+    "id": 12,
+    "is_new": false
+  },
+  {
+    "content": "ID: 42 \n *powe*",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-13 14:59:57",
+    "id": 13,
+    "is_new": false
+  },
+  {
+    "content": "During  an  emergency  situation,  a  healthcare  provider  accidentally  pushes  the  ventilator.  The  monitor  screen,  extending  beyond  the  ventilator's  body,  strikes  the  wall  with  force.",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-13 15:10:36",
+    "id": 14,
+    "is_new": false
+  },
+  {
+    "content": "ID:  32  ID:  12  During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment.",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-13 15:10:45",
+    "id": 15,
+    "is_new": false
+  },
+  {
+    "content": "ID: 6 \n A  *healthcare*  provider,  unaware  of  *the*  electrical  fault,  *touches*  *the*  external  surface  of  *the*  ventilator  enclosure  while  adjusting  settings.",
+    "field_type": "Hazardous Situation",
+    "timestamp": "2025-07-13 15:15:33",
+    "id": 16,
+    "is_new": false
+  },
+  {
+    "content": "ID: 4 \n Ventilator  is  placed  near  a  magnetic  resonance  imaging  (MRI)  machine  during  routine  patient  care.  *The*  proximity  of  *the*  ventilator  to  *the*  MRI  machine  exposes  its  electronic  components  to  *the*  magnetic  fields.",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-13 15:15:33",
+    "id": 17,
+    "is_new": false
+  },
+  {
+    "content": "ID: 26 \n ID:  4  **Burn**",
+    "field_type": "Harm Description",
+    "timestamp": "2025-07-13 15:15:36",
+    "id": 18,
+    "is_new": false
+  },
+  {
+    "content": "harm influenced",
+    "field_type": "Hazardous Situation",
+    "timestamp": "2025-07-13 15:35:46",
+    "id": 19,
+    "is_new": false
+  },
+  {
+    "content": "ID: 47 \n ID:  42  **powe**",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-13 15:35:47",
+    "id": 20,
+    "is_new": false
+  },
+  {
+    "content": "ID: 3 \n A  *ventilator*  with  compromised  enclosure  integrity  experiences  an  electrical  fault  within  its  internal  components.  As  a  result  of  the  fault,  electrical  current  leaks  from  the  internal  circuitry  to  the  metal  enclosure  of  the  *ventilator.*",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-13 15:47:18",
+    "id": 21,
+    "is_new": false
   }
 ]

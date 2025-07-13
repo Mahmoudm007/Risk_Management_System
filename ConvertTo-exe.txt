@@ -1,1 +1,1 @@
-pyinstaller --onefile --windowed --icon=UI/icons/measurement.png RM_system.py
+pyinstaller --onefile --windowed --icon=UI/icons/investigation.png RM_system.py

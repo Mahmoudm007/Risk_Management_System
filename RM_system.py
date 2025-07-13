@@ -4,6 +4,8 @@ import os
 import random
 import pandas as pd
 from collections import Counter
+import json
+from datetime import datetime
 
 # PyQt5 imports
 from PyQt5.QtWidgets import *
@@ -12,7 +14,9 @@ from PyQt5.QtGui import QColor, QIcon
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtCore import QDateTime, QPropertyAnimation, QEasingCurve, QUrl, QTimer
 from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox,
-                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem)
+                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
+                             QCheckBox, QGroupBox)
+from PyQt5 import QtCore
 
 # Reporting imports
 from reportlab.lib import colors
@@ -34,267 +38,16 @@ from DeviceSelection import DeviceSelected
 from sequence_widget import SequenceEventWidget
 from ControlAndRequirement import AddControlClass
 
+# Import modular dialogs
+from component_selection_dialog import ComponentSelectionDialog
+from filter_dialog import FilterDialog
+from pdf_dialog import EnhancedPDFDialog
+from risk_history_dialog import RiskHistoryDialog
+from user_input_dialog import UserInputDialog
+from notification_dialog import NotificationDialog
+
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 MainUI, _ = loadUiType('UI/mainWindowui.ui')
-
-DEVICE_COMPONENTS = {
-    "EzVent 101": ["Screws", "Stands", "Batteries"],
-    "EzVent 201": ["Screws", "Stands", "Batteries"],
-    "EzVent 202": ["AC Power Cord", "AC Power Inlet", "AC-DC Power Supply", "Charging controller IC", "Check Valve", "Fittings", "Gas Manifold"],
-    "SleepEZ": ["Component A", "Component B", "Component C"],
-    "Syringe pump": ["Module 1", "Module 2", "Module 3"],
-    "Oxygen concentrator": ["Filter", "Compressor", "Sensor"],
-}
-
-
-class NotificationDialog(QDialog):
-    """Dialog to display notifications of newly added sentences"""
-
-    def __init__(self, parent=None):
-        super().__init__(parent)
-        self.setWindowTitle("New Additions Notifications")
-        self.setGeometry(200, 200, 800, 600)
-        self.setupUI()
-        self.load_notifications()
-
-    def setupUI(self):
-        layout = QVBoxLayout(self)
-
-        # Title
-        title_label = QLabel("Recently Added New Content")
-        title_label.setStyleSheet("font-size: 16px; font-weight: bold; margin-bottom: 10px; color: #2c3e50;")
-        layout.addWidget(title_label)
-
-        # Info label
-        info_label = QLabel("These are new additions that were not previously in the database:")
-        info_label.setStyleSheet("font-size: 12px; color: #7f8c8d; margin-bottom: 10px;")
-        layout.addWidget(info_label)
-
-        # Scroll area for notifications
-        scroll_area = QScrollArea()
-        scroll_widget = QWidget()
-        self.scroll_layout = QVBoxLayout(scroll_widget)
-        scroll_area.setWidget(scroll_widget)
-        scroll_area.setWidgetResizable(True)
-        layout.addWidget(scroll_area)
-
-        # Buttons
-        button_layout = QHBoxLayout()
-
-        clear_button = QPushButton("Clear All Notifications")
-        clear_button.setStyleSheet("""
-            QPushButton {
-                background-color: #e74c3c;
-                color: white;
-                border: none;
-                padding: 8px 16px;
-                border-radius: 4px;
-                font-weight: bold;
-            }
-            QPushButton:hover {
-                background-color: #c0392b;
-            }
-        """)
-        clear_button.clicked.connect(self.clear_notifications)
-        button_layout.addWidget(clear_button)
-
-        mark_read_button = QPushButton("Mark as Read")
-        mark_read_button.setStyleSheet("""
-            QPushButton {
-                background-color: #3498db;
-                color: white;
-                border: none;
-                padding: 8px 16px;
-                border-radius: 4px;
-                font-weight: bold;
-            }
-            QPushButton:hover {
-                background-color: #2980b9;
-            }
-        """)
-        mark_read_button.clicked.connect(self.mark_as_read)
-        button_layout.addWidget(mark_read_button)
-
-        close_button = QPushButton("Close")
-        close_button.setStyleSheet("""
-            QPushButton {
-                background-color: #95a5a6;
-                color: white;
-                border: none;
-                padding: 8px 16px;
-                border-radius: 4px;
-                font-weight: bold;
-            }
-            QPushButton:hover {
-                background-color: #7f8c8d;
-            }
-        """)
-        close_button.clicked.connect(self.close)
-        button_layout.addWidget(close_button)
-
-        layout.addLayout(button_layout)
-
-    def load_notifications(self):
-        """Load and display notifications"""
-        notifications = load_notifications()
-
-        if not notifications:
-            no_notifications_label = QLabel("No new additions to display.")
-            no_notifications_label.setStyleSheet("color: gray; font-style: italic; padding: 20px; text-align: center;")
-            self.scroll_layout.addWidget(no_notifications_label)
-            return
-
-        # Sort notifications by timestamp (newest first)
-        notifications.sort(key=lambda x: x['timestamp'], reverse=True)
-
-        for notification in notifications:
-            self.add_notification_widget(notification)
-
-    def add_notification_widget(self, notification):
-        """Add a single notification widget"""
-        # Create container widget
-        container = QWidget()
-        is_new = notification.get('is_new', True)
-
-        if is_new:
-            container.setStyleSheet("""
-                QWidget {
-                    border: 2px solid #e74c3c;
-                    border-radius: 8px;
-                    margin: 5px;
-                    padding: 12px;
-                    background-color: #fff5f5;
-                }
-            """)
-        else:
-            container.setStyleSheet("""
-                QWidget {
-                    border: 1px solid #bdc3c7;
-                    border-radius: 8px;
-                    margin: 5px;
-                    padding: 12px;
-                    background-color: #f8f9fa;
-                }
-            """)
-
-        layout = QVBoxLayout(container)
-
-        # Header with field type and timestamp
-        header_layout = QHBoxLayout()
-
-        # New badge
-        if is_new:
-            new_badge = QLabel("NEW")
-            new_badge.setStyleSheet("""
-                background-color: #e74c3c;
-                color: white;
-                padding: 2px 8px;
-                border-radius: 10px;
-                font-size: 10px;
-                font-weight: bold;
-            """)
-            new_badge.setMaximumWidth(40)
-            header_layout.addWidget(new_badge)
-
-        field_label = QLabel(f"Field: {notification['field_type']}")
-        field_label.setStyleSheet("font-weight: bold; color: #2c3e50; background: transparent; border: none;")
-        header_layout.addWidget(field_label)
-
-        header_layout.addStretch()
-
-        timestamp_label = QLabel(notification['timestamp'])
-        timestamp_label.setStyleSheet("color: #7f8c8d; font-size: 11px; background: transparent; border: none;")
-        header_layout.addWidget(timestamp_label)
-
-        layout.addLayout(header_layout)
-
-        # Content
-        content_label = QLabel(notification['content'])
-        content_label.setWordWrap(True)
-        content_label.setStyleSheet("""
-            margin-top: 8px; 
-            padding: 8px; 
-            background-color: white; 
-            border-radius: 4px;
-            border: 1px solid #ecf0f1;
-        """)
-        layout.addWidget(content_label)
-
-        self.scroll_layout.addWidget(container)
-
-    def clear_notifications(self):
-        """Clear all notifications"""
-        reply = QMessageBox.question(self, 'Clear Notifications',
-                                     'Are you sure you want to clear all notifications?',
-                                     QMessageBox.Yes | QMessageBox.No,
-                                     QMessageBox.No)
-
-        if reply == QMessageBox.Yes:
-            clear_notifications()
-            # Clear the display
-            for i in reversed(range(self.scroll_layout.count())):
-                self.scroll_layout.itemAt(i).widget().setParent(None)
-
-            # Show empty message
-            no_notifications_label = QLabel("No new additions to display.")
-            no_notifications_label.setStyleSheet("color: gray; font-style: italic; padding: 20px; text-align: center;")
-            self.scroll_layout.addWidget(no_notifications_label)
-
-            # Update parent's notification count
-            if hasattr(self.parent(), 'update_notification_count'):
-                self.parent().update_notification_count()
-
-    def mark_as_read(self):
-        """Mark all notifications as read"""
-        reply = QMessageBox.question(self, 'Mark as Read',
-                                     'Mark all notifications as read?',
-                                     QMessageBox.Yes | QMessageBox.No,
-                                     QMessageBox.No)
-
-        if reply == QMessageBox.Yes:
-            mark_notifications_as_read()
-            # Update parent's notification count
-            if hasattr(self.parent(), 'update_notification_count'):
-                self.parent().update_notification_count()
-            # Reload the display
-            for i in reversed(range(self.scroll_layout.count())):
-                self.scroll_layout.itemAt(i).widget().setParent(None)
-            self.load_notifications()
-
-
-class ComponentSelectionDialog(QDialog):
-    def __init__(self, parent=None, device=None):
-        super().__init__(parent)
-        self.setWindowTitle("Component Selection")
-        self.setGeometry(100, 100, 800, 600)
-        self.layout = QVBoxLayout(self)
-        self.tree = QTreeWidget()
-        self.tree.setColumnCount(1)
-        self.tree.setHeaderLabels(['Components'])
-        self.populate_tree(device)
-        self.layout.addWidget(self.tree)
-        self.add_button = QPushButton('Save Selected Components')
-        self.add_button.clicked.connect(self.save_selected_components)
-        self.layout.addWidget(self.add_button)
-        self.selected_components = []
-
-    def populate_tree(self, device):
-        components = DEVICE_COMPONENTS.get(device, [])
-        for component in components:
-            item = QTreeWidgetItem(self.tree, [component])
-            item.setCheckState(0, 0)
-
-    def save_selected_components(self):
-        self.selected_components = self.get_checked_items(self.tree.invisibleRootItem())
-        self.accept()
-
-    def get_checked_items(self, item):
-        checked_items = []
-        if item.checkState(0) == 2:
-            checked_items.append(item.text(0))
-        for i in range(item.childCount()):
-            checked_items.extend(self.get_checked_items(item.child(i)))
-        return checked_items
 
 
 class RiskSystem(QMainWindow, MainUI):
@@ -302,8 +55,22 @@ class RiskSystem(QMainWindow, MainUI):
         super(RiskSystem, self).__init__()
         self.setupUi(self)
         self.setGeometry(0, 0, 1900, 950)
-        self.setWindowTitle("Risk Management System")  # Sets the window title
-        self.setWindowIcon(QIcon("UI/icons/measurement.png"))  # Sets the window icon
+        self.setWindowTitle("Risk Management System")
+        self.setWindowIcon(QIcon("UI/icons/measurement.png"))
+        
+        # Initialize risk history storage
+        self.risk_history = {}  # Store history for each row
+        self.history_file = 'risk_history.json'
+        self.load_risk_history()
+        
+        # Store original table data for filtering
+        self.original_table_data = []
+        self.current_user_name = None  # Store current user name for the session
+        
+        # Flags for initial creation mode
+        self.is_initial_creation = False
+        self.current_session_user = None
+        
         self.sw_counter = 0
         self.elc_counter = 0
         self.mec_counter = 0
@@ -315,9 +82,9 @@ class RiskSystem(QMainWindow, MainUI):
         self.table_widget.setEditTriggers(QAbstractItemView.DoubleClicked | QAbstractItemView.SelectedClicked)
         self.table_widget.itemChanged.connect(self.handle_item_changed)
 
-        self.component_btn.setEnabled(False)  # Disable the button initially
-        self.selected_device = None  # Store the selected device
-        self.selected_components = []  # Store the selected components
+        self.component_btn.setEnabled(False)
+        self.selected_device = None
+        self.selected_components = []
 
         self.chat_data = {}
         self.chat_widgets = {}
@@ -366,18 +133,174 @@ class RiskSystem(QMainWindow, MainUI):
         # Timer to update notification count periodically
         self.notification_timer = QTimer()
         self.notification_timer.timeout.connect(self.update_notification_count)
-        self.notification_timer.start(5000)  # Update every 5 seconds
+        self.notification_timer.start(5000)
 
         # Initial notification count update
         self.update_notification_count()
+
+    def load_risk_history(self):
+        """Load risk history from file"""
+        try:
+            if os.path.exists(self.history_file):
+                with open(self.history_file, 'r') as f:
+                    self.risk_history = json.load(f)
+        except Exception as e:
+            print(f"Error loading risk history: {e}")
+            self.risk_history = {}
+
+    def save_risk_history(self):
+        """Save risk history to file"""
+        try:
+            with open(self.history_file, 'w') as f:
+                json.dump(self.risk_history, f, indent=2)
+        except Exception as e:
+            print(f"Error saving risk history: {e}")
+
+    def get_user_name_for_edit(self):
+        """Get user name for edit tracking"""
+        dialog = UserInputDialog(self, "Edit Confirmation", "Please enter your name to confirm this edit:")
+        if dialog.exec_() == QDialog.Accepted:
+            return dialog.user_name
+        return None
+
+    def get_user_name_for_new_risk(self):
+        """Get user name for new risk entry"""
+        dialog = UserInputDialog(self, "New Risk Entry", "Please enter your name to confirm adding this risk:")
+        if dialog.exec_() == QDialog.Accepted:
+            return dialog.user_name
+        return None
+
+    def record_initial_risk_creation(self, risk_id, user_name, field_data):
+        """Record all initial field values for a new risk with the same user name"""
+        if risk_id not in self.risk_history:
+            self.risk_history[risk_id] = []
+
+        # Record creation entry
+        creation_entry = {
+            'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            'user': user_name,
+            'field': 'Risk Created',
+            'previous_value': '',
+            'new_value': 'New risk entry created'
+        }
+        self.risk_history[risk_id].append(creation_entry)
+
+        # Record all initial field values with the same user name
+        field_names = [
+            "Date", "Risk No.", "Department", "Device Affected", "Components", "Lifecycle", 
+            "Hazard Category", "Hazard Source", "Hazardous Situation", "Sequence of Events", 
+            "Harm Influenced", "Harm Description", "Severity", "Probability", "RPN"
+        ]
+
+        for i, field_name in enumerate(field_names):
+            if i < len(field_data) and field_data[i]:
+                field_entry = {
+                    'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    'user': user_name,
+                    'field': field_name,
+                    'previous_value': '',
+                    'new_value': str(field_data[i])
+                }
+                self.risk_history[risk_id].append(field_entry)
+
+    def record_edit_history(self, row, column, previous_value, new_value, user_name):
+        """Record edit history for a cell"""
+        risk_id = self.get_risk_id_for_row(row)
+        if not risk_id:
+            return
+
+        if risk_id not in self.risk_history:
+            self.risk_history[risk_id] = []
+
+        # Get field name from column header
+        field_name = self.table_widget.horizontalHeaderItem(column).text()
+
+        history_entry = {
+            'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            'user': user_name,
+            'field': field_name,
+            'previous_value': previous_value,
+            'new_value': new_value
+        }
+
+        self.risk_history[risk_id].append(history_entry)
+        self.save_risk_history()
+
+    def get_risk_id_for_row(self, row):
+        """Get risk ID for a given row"""
+        risk_no_item = self.table_widget.item(row, 1)  # Risk No. is in column 1
+        if risk_no_item:
+            return risk_no_item.text()
+        return None
+
+    def show_risk_history(self, row):
+        """Show history dialog for a specific risk"""
+        risk_id = self.get_risk_id_for_row(row)
+        if not risk_id:
+            QMessageBox.information(self, "No History", "No risk ID found for this row.")
+            return
+
+        history_data = self.risk_history.get(risk_id, [])
+        dialog = RiskHistoryDialog(risk_id, history_data, self)
+        dialog.exec_()
+
+    def apply_single_filter(self, filter_type, filter_value):
+        """Apply single filter to the table"""
+        # Hide all rows first
+        for row in range(self.table_widget.rowCount()):
+            self.table_widget.setRowHidden(row, True)
+
+        # Show rows that match the filter criteria
+        for row in range(self.table_widget.rowCount()):
+            show_row = False
+
+            if filter_type == "Device":
+                device_item = self.table_widget.item(row, 3)  # Device Affected column
+                if device_item and filter_value in device_item.text():
+                    show_row = True
+
+            elif filter_type == "Risk Level":
+                risk_item = self.table_widget.item(row, 14)  # RPN column
+                if risk_item and risk_item.text() == filter_value:
+                    show_row = True
+
+            elif filter_type == "Approval Status":
+                approval_item = self.table_widget.item(row, 16)  # Approved By column
+                approval_status = "Pending"  # Default status
+                if approval_item and approval_item.text().strip():
+                    if "rejected" in approval_item.text().lower():
+                        approval_status = "Rejected"
+                    else:
+                        approval_status = "Approved"
+                
+                if approval_status == filter_value:
+                    show_row = True
+
+            elif filter_type == "Department":
+                dept_item = self.table_widget.item(row, 2)  # Department column
+                if dept_item and dept_item.text() == filter_value:
+                    show_row = True
+
+            # Show/hide the row based on filter results
+            self.table_widget.setRowHidden(row, not show_row)
+
+    def clear_table_filters(self):
+        """Clear all table filters and show all rows"""
+        for row in range(self.table_widget.rowCount()):
+            self.table_widget.setRowHidden(row, False)
+
+    def open_filter_dialog(self):
+        """Open the filter dialog"""
+        dialog = FilterDialog(self)
+        dialog.exec_()
 
     def open_component_selection_dialog(self):
         if not self.selected_device:
             QMessageBox.warning(self, "No Device Selected", "Please select a device first.")
             return
-        dialog = ComponentSelectionDialog(self, self.selected_device)
+        dialog = ComponentSelectionDialog(self.selected_device, self)
         if dialog.exec_() == QDialog.Accepted:
-            self.selected_components = dialog.selected_components
+            self.selected_components = dialog.checked_items
 
     def setup_notification_counter(self):
         """Setup the notification counter badge for existing notification_btn"""
@@ -389,7 +312,7 @@ class RiskSystem(QMainWindow, MainUI):
                 if parent_widget:
                     # Create notification counter label
                     self.notification_counter_label = QLabel("0")
-                    self.notification_counter_label.setFixedSize(20, 20)  # Width: 15, Height: 10
+                    self.notification_counter_label.setFixedSize(20, 20)
                     self.notification_counter_label.setStyleSheet("""
                                             QLabel {
                                                 background-color: #e74c3c;
@@ -401,7 +324,7 @@ class RiskSystem(QMainWindow, MainUI):
                                             }
                                         """)
                     self.notification_counter_label.setAlignment(QtCore.Qt.AlignCenter)
-                    self.notification_counter_label.hide()  # Initially hidden
+                    self.notification_counter_label.hide()
 
                     # Position the counter relative to the notification button
                     self.notification_counter_label.setParent(parent_widget)
@@ -442,7 +365,7 @@ class RiskSystem(QMainWindow, MainUI):
                 if count > 0:
                     self.notification_counter_label.setText(str(count))
                     self.notification_counter_label.show()
-                    self.notification_counter_label.raise_()  # Bring to front
+                    self.notification_counter_label.raise_()
                 else:
                     self.notification_counter_label.hide()
         except Exception as e:
@@ -455,22 +378,22 @@ class RiskSystem(QMainWindow, MainUI):
 
     def start_hide_timer(self, timer, widget):
         """Start or restart the hide timer for a search widget"""
-        timer.stop()  # Stop any existing timer
+        timer.stop()
         if widget.isVisible() and widget.count() > 0:
-            timer.start(5000)  # 5 seconds
+            timer.start(5000)
 
     def buttons_signals(self):
         self.hazardous_situation_edit.textChanged.connect(self.update_sit_ver_layout)
         self.sit_list_widget.itemDoubleClicked.connect(self.add_to_hazardous_situation_edit)
-        self.sit_list_widget.itemClicked.connect(lambda: self.sit_hide_timer.stop())  # Stop timer on interaction
+        self.sit_list_widget.itemClicked.connect(lambda: self.sit_hide_timer.stop())
 
         self.sequence_of_event_edit.textChanged.connect(self.update_seq_ver_layout)
         self.seq_list_widget.itemDoubleClicked.connect(self.add_to_sequence_of_event_edit)
-        self.seq_list_widget.itemClicked.connect(lambda: self.seq_hide_timer.stop())  # Stop timer on interaction
+        self.seq_list_widget.itemClicked.connect(lambda: self.seq_hide_timer.stop())
 
         self.harm_desc_line.textChanged.connect(self.update_harm_vec_layout)
         self.harm_list_widget.itemDoubleClicked.connect(self.add_to_harm_desc_line)
-        self.harm_list_widget.itemClicked.connect(lambda: self.harm_hide_timer.stop())  # Stop timer on interaction
+        self.harm_list_widget.itemClicked.connect(lambda: self.harm_hide_timer.stop())
 
         self.hazard_category_combo.currentIndexChanged.connect(self.update_hazard_sources)
 
@@ -487,7 +410,7 @@ class RiskSystem(QMainWindow, MainUI):
 
         self.dectability_spin_box.valueChanged.connect(self.update_dectability_label)
         self.show_charts_button.clicked.connect(self.show_charts)
-        self.pdf_gen.clicked.connect(self.open_pdf_dialog)
+        self.pdf_gen.clicked.connect(self.open_enhanced_pdf_dialog)
 
         self.table_widget.customContextMenuRequested.connect(self.show_context_menu)
         self.source_combo.currentIndexChanged.connect(self.check_standards)
@@ -514,7 +437,6 @@ class RiskSystem(QMainWindow, MainUI):
         """Show the notifications dialog"""
         dialog = NotificationDialog(self)
         dialog.exec_()
-        # Update notification count after dialog closes
         self.update_notification_count()
 
     def select_devices_widget(self):
@@ -529,13 +451,11 @@ class RiskSystem(QMainWindow, MainUI):
                 self.component_btn.setEnabled(False)
 
     def open_calendar_dialog(self):
-        # Create and open the calendar dialog
         self.calendar_dialog = CalendarDialog(self)
         self.toggle_meeting_label()
         self.calendar_dialog.exec_()
 
     def set_date_time_label(self, date_str, time_str):
-        # Update the label with the selected date and time
         self.date_time_label.setText(
             f"A Meeting will be held to discuss the risk analysis within : {date_str} {time_str}")
 
@@ -552,93 +472,107 @@ class RiskSystem(QMainWindow, MainUI):
         row_id = item.row()
         print(f"Opening chat dialog for row: {row_id}")
 
-        # Create and show the chat dialog
         chat_dialog = ChatDialog(row_id, self.chat_data, self)
         chat_dialog.setGeometry(100, 100, 400, 300)
-        chat_dialog.exec_()  # Show dialog as modal window
+        chat_dialog.exec_()
         print(f"Chat dialog should be visible now.")
 
     def add_entry(self):
+        # Get user name ONCE at the very beginning for the entire risk entry
+        user_name = self.get_user_name_for_new_risk()
+        if not user_name:
+            return  # User cancelled, don't add the entry
+
+        # Set flag to indicate we're in initial creation mode
+        self.is_initial_creation = True
+        self.current_session_user = user_name
+
         row_position = self.table_widget.rowCount()
         self.table_widget.insertRow(row_position)
 
+        # Collect all field data for history recording
+        field_data = []
+
         current_datetime = QDateTime.currentDateTime().toString("yyyy-MM-dd HH:mm:ss")
         self.table_widget.setItem(row_position, 0, QTableWidgetItem(current_datetime))
+        field_data.append(current_datetime)
 
         rsk_no = self.risk_no_line_edit.text()
         self.table_widget.setItem(row_position, 1, QTableWidgetItem(rsk_no))
+        field_data.append(rsk_no)
 
-        # get data
         department = self.department_combo.currentText()
         self.table_widget.setItem(row_position, 2, QTableWidgetItem(department))
+        field_data.append(department)
 
-        # Device affected
-        self.table_widget.setItem(row_position, 3, QTableWidgetItem(', '.join(self.checked_items)))
+        devices_text = ', '.join(self.checked_items)
+        self.table_widget.setItem(row_position, 3, QTableWidgetItem(devices_text))
+        field_data.append(devices_text)
 
-        # Add selected components to the row
         components_text = ", ".join(self.selected_components)
         self.table_widget.setItem(row_position, 4, QTableWidgetItem(components_text))
+        field_data.append(components_text)
 
         lifecycle = self.lifecycle_combo.currentText()
         self.table_widget.setItem(row_position, 5, QTableWidgetItem(lifecycle))
+        field_data.append(lifecycle)
 
         hazard_category = self.hazard_category_combo.currentText()
         self.table_widget.setItem(row_position, 6, QTableWidgetItem(hazard_category))
+        field_data.append(hazard_category)
 
         hazard_source = self.hazard_source_combo.currentText()
         self.table_widget.setItem(row_position, 7, QTableWidgetItem(hazard_source))
+        field_data.append(hazard_source)
 
         hazardous_situation = self.hazardous_situation_edit.text()
         self.table_widget.setItem(row_position, 8, QTableWidgetItem(hazardous_situation))
+        field_data.append(hazardous_situation)
 
-        # Check and add new hazardous situation to dynamic list
         if hazardous_situation.strip():
             self.check_and_add_new_content(hazardous_situation, "Hazardous Situation")
 
-        # Handle sequence of events with the new sequential widget
         sequence_of_event = self.sequence_of_event_edit.text()
 
-        # Create the sequence widget for the table cell
         sequence_widget = SequenceEventWidget(sequence_of_event)
         sequence_widget.sequence_updated.connect(lambda events: self.update_sequence_in_table(row_position, events))
 
-        # Set the widget in the table cell
         self.table_widget.setCellWidget(row_position, 9, sequence_widget)
+        field_data.append(sequence_of_event)
 
-        # Also set the text item for compatibility with existing functionality
-        sequence_text = sequence_widget.get_sequence_text()
-        # self.table_widget.setItem(row_position, 7, QTableWidgetItem(sequence_text))
-
-
-        # Check and add new sequence of event to dynamic list
         if sequence_of_event.strip():
             self.check_and_add_new_content(sequence_of_event, "Sequence of Event")
 
         harm_influenced = self.harm_influenced_combo.currentText()
         self.table_widget.setItem(row_position, 10, QTableWidgetItem(harm_influenced))
+        field_data.append(harm_influenced)
 
         harm_desc = self.harm_desc_line.text()
         self.table_widget.setItem(row_position, 11, QTableWidgetItem(harm_desc))
+        field_data.append(harm_desc)
 
-        # Check and add new harm description to dynamic list
         if harm_desc.strip():
             self.check_and_add_new_content(harm_desc, "Harm Description")
 
         severity = self.severity_spinbox.value()
         self.table_widget.setItem(row_position, 12, QTableWidgetItem(str(severity)))
+        field_data.append(str(severity))
 
         probability = self.probability_spinbox.value()
         self.table_widget.setItem(row_position, 13, QTableWidgetItem(str(probability)))
+        field_data.append(str(probability))
 
         RPN = self.update_rpn_value()
         self.table_widget.setItem(row_position, 14, QTableWidgetItem(RPN))
+        field_data.append(RPN)
 
-        # Add custom widget to the risk control column
         tree_widget_cell = AddControlClass()
         self.table_widget.setCellWidget(row_position, 15, tree_widget_cell)
 
-        # Set row height to accommodate the sequence widget
         self.table_widget.setRowHeight(row_position, 200)
+
+        # Record all initial field values with the same user name (NO additional prompts)
+        self.record_initial_risk_creation(rsk_no, user_name, field_data)
 
         self.num_risks += 1
         
@@ -646,28 +580,82 @@ class RiskSystem(QMainWindow, MainUI):
         
         self.generate_and_set_id()
         self.update_rsk_number_combo()
-        # Update notification count after adding entry
         self.update_notification_count()
+        
+        # Save the history after adding the entry
+        self.save_risk_history()
 
+        # Clear the session flags
+        self.is_initial_creation = False
+        self.current_session_user = None
 
     def highlight_missing_cells(self, row):
-            for col in range(self.table_widget.columnCount()):
-                item = self.table_widget.item(row, col)
-                # Only highlight if cell is empty and not a widget cell
-                if (item is None or not item.text().strip()) and self.table_widget.cellWidget(row, col) is None:
-                    if item is None:
-                        item = QTableWidgetItem("")
-                        self.table_widget.setItem(row, col, item)
-                    item.setBackground(QColor('yellow'))
+        for col in range(self.table_widget.columnCount()):
+            item = self.table_widget.item(row, col)
+            if (item is None or not item.text().strip()) and self.table_widget.cellWidget(row, col) is None:
+                if item is None:
+                    item = QTableWidgetItem("")
+                    self.table_widget.setItem(row, col, item)
+                item.setBackground(QColor('yellow'))
 
     def handle_item_changed(self, item):
-        # If cell is filled, remove yellow highlight
-        if item.text().strip():
+        row = item.row()
+        column = item.column()
+        
+        # Get field name from column header
+        field_name = self.table_widget.horizontalHeaderItem(column).text()
+        
+        # Special handling for "Approved By" column - don't ask for user name
+        if field_name == "Approved By":
+            previous_value = getattr(item, '_previous_value', '')
+            new_value = item.text().strip()
+            
+            # Record without asking for user name
+            risk_id = self.get_risk_id_for_row(row)
+            if risk_id:
+                history_entry = {
+                    'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    'user': 'System',  # Use 'System' for approval changes
+                    'field': field_name,
+                    'previous_value': previous_value,
+                    'new_value': new_value
+                }
+                
+                if risk_id not in self.risk_history:
+                    self.risk_history[risk_id] = []
+                self.risk_history[risk_id].append(history_entry)
+                self.save_risk_history()
+            
+            # Handle highlighting
+            if new_value:
+                item.setBackground(QColor('white'))
+            else:
+                item.setBackground(QColor('yellow'))
+            return
+
+        # For all other fields during editing (not initial creation)
+        if not getattr(self, 'is_initial_creation', False):
+            # Get user name before processing the edit
+            user_name = self.get_user_name_for_edit()
+            if not user_name:
+                # If user cancels, revert the change
+                item.setText(getattr(item, '_previous_value', ''))
+                return
+
+            # Get previous value if stored
+            previous_value = getattr(item, '_previous_value', '')
+            new_value = item.text().strip()
+
+            # Record the edit in history
+            self.record_edit_history(row, column, previous_value, new_value, user_name)
+
+        # Handle highlighting
+        new_value = item.text().strip()
+        if new_value:
             item.setBackground(QColor('white'))
         else:
             item.setBackground(QColor('yellow'))
-            
-            
+
     def update_sequence_in_table(self, row, events_list):
         """Update the sequence text in the table when the sequence widget is updated"""
         if events_list:
@@ -676,7 +664,6 @@ class RiskSystem(QMainWindow, MainUI):
                 formatted_sequence.append(f"Seq {i + 1}: {event}")
             sequence_text = " → ".join(formatted_sequence)
 
-            # Update the table item
             item = self.table_widget.item(row, 9)
             if item:
                 item.setText(sequence_text)
@@ -701,8 +688,6 @@ class RiskSystem(QMainWindow, MainUI):
                 print(f"Added new harm description: {content}")
 
     def web_application(self):
-        # Set the URL to a simple web page the user can use any web page he need "e.g. ChatGPT, Gemini,..., etc"
-        # https: // www.google.com
         self.webEngineView.setUrl(QUrl("file:///D:/EzzMedical/Risk_Management_System/References/ISO%2014971%20-%202019%20Document.html"))
         self.sideBarFrame.layout().addWidget(self.webEngineView)
 
@@ -811,7 +796,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.probability_spinbox.setValue(1)
         self.probability_description_label.setText('Improbable')
 
-        self.rpn_value_label.setStyleSheet("background-color: lightgray;")
+        self.rpn_value_label.setStyleSheet("background-color: light gray;")
         self.table_widget.horizontalHeader().setMinimumSectionSize(400)
         self.update_rpn_value()
         self.generate_and_set_id()
@@ -916,21 +901,18 @@ class RiskSystem(QMainWindow, MainUI):
         self.seq_list_widget.show()
         line_edit_type = "sequence"
         self.update_layout(self.sequence_of_event_edit, self.seq_list_widget, line_edit_type)
-        # Start auto-hide timer
         self.start_hide_timer(self.seq_hide_timer, self.seq_list_widget)
 
     def update_sit_ver_layout(self):
         self.sit_list_widget.show()
         line_edit_type = "situation"
         self.update_layout(self.hazardous_situation_edit, self.sit_list_widget, line_edit_type)
-        # Start auto-hide timer
         self.start_hide_timer(self.sit_hide_timer, self.sit_list_widget)
 
     def update_harm_vec_layout(self):
         self.harm_list_widget.show()
         line_edit_type = "harm_desc"
         self.update_layout(self.harm_desc_line, self.harm_list_widget, line_edit_type)
-        # Start auto-hide timer
         self.start_hide_timer(self.harm_hide_timer, self.harm_list_widget)
 
     def update_layout(self, line_edit, list_widget, line_edit_type):
@@ -1014,12 +996,18 @@ class RiskSystem(QMainWindow, MainUI):
         reject_by = menu.addAction("Reject")
         extract_action = menu.addAction("Extract")
         remove_action = menu.addAction("Remove")
+        history_action = menu.addAction("See History")
+        filter_action = menu.addAction("Filter Risks")
 
         action = menu.exec_(self.table_widget.mapToGlobal(position))
         if action == edit_action:
             index = self.table_widget.indexAt(position)
             if index.isValid():
-                self.table_widget.editItem(self.table_widget.item(index.row(), index.column()))
+                # Store previous value before editing
+                item = self.table_widget.item(index.row(), index.column())
+                if item:
+                    item._previous_value = item.text()
+                self.table_widget.editItem(item)
         elif action == extract_action:
             self.extract_row()
         elif action == remove_action:
@@ -1028,7 +1016,12 @@ class RiskSystem(QMainWindow, MainUI):
             self.approved_by()
         elif action == reject_by:
             self.reject_process()
-            
+        elif action == history_action:
+            index = self.table_widget.indexAt(position)
+            if index.isValid():
+                self.show_risk_history(index.row())
+        elif action == filter_action:
+            self.open_filter_dialog()
 
     def extract_row(self):
         selected_items = self.table_widget.selectedItems()
@@ -1073,25 +1066,96 @@ class RiskSystem(QMainWindow, MainUI):
         self.set_risk_number()
         self.num_risks -= 1
 
-    def open_pdf_dialog(self):
-        dialog = QDialog(self)
-        dialog.setWindowTitle("Generate PDF")
-        layout = QVBoxLayout(dialog)
-
-        label = QLabel("Select Department:")
-        layout.addWidget(label)
-
-        department_combo = QComboBox()
-        department_combo.addItems(
-            ["Software Department", "Electrical Department", "Mechanical Department", "Usability Team", "Testing Team"])
-        layout.addWidget(department_combo)
-
-        generate_button = QPushButton("Generate PDF")
-        layout.addWidget(generate_button)
-
-        generate_button.clicked.connect(lambda: self.generate_pdf(department_combo.currentText(), dialog))
-
+    def open_enhanced_pdf_dialog(self):
+        """Open the enhanced PDF generation dialog"""
+        dialog = EnhancedPDFDialog(self)
         dialog.exec_()
+
+    def generate_filtered_pdf(self, filter_type, filter_value):
+        """Generate PDF based on filter criteria"""
+        data = []
+        row_count = self.table_widget.rowCount()
+        
+        for row in range(row_count):
+            include_row = False
+            
+            if filter_type == "Department":
+                dept_item = self.table_widget.item(row, 2)  # Department column
+                if dept_item and dept_item.text() == filter_value:
+                    include_row = True
+                    
+            elif filter_type == "Device":
+                device_item = self.table_widget.item(row, 3)  # Device Affected column
+                if device_item and filter_value in device_item.text():
+                    include_row = True
+                    
+            elif filter_type == "Risk Level":
+                rpn_item = self.table_widget.item(row, 14)  # RPN column
+                if rpn_item and rpn_item.text() == filter_value:
+                    include_row = True
+                    
+            elif filter_type == "Approval Status":
+                approval_item = self.table_widget.item(row, 16)  # Approved By column
+                approval_status = "Pending"  # Default status
+                if approval_item and approval_item.text().strip():
+                    if "rejected" in approval_item.text().lower():
+                        approval_status = "Rejected"
+                    else:
+                        approval_status = "Approved"
+                
+                if approval_status == filter_value:
+                    include_row = True
+            
+            if include_row:
+                row_data = []
+                for column in range(self.table_widget.columnCount()):
+                    item = self.table_widget.item(row, column)
+                    row_data.append(item.text() if item is not None else "")
+                data.append(row_data)
+
+        if not data:
+            QMessageBox.information(self, "No Data", f"No data found for {filter_type}: {filter_value}")
+            return
+
+        # Generate PDF filename
+        filename = f"{filter_type}_{filter_value.replace(' ', '_')}_Risk_Report.pdf"
+        
+        pdf = SimpleDocTemplate(filename, pagesize=landscape(A4))
+        elements = []
+
+        def create_table_with_limited_columns(data, headers):
+            tables = []
+            columns_per_page = 3
+            risk_no_idx = 0
+            for start_col in range(1, len(headers), columns_per_page):
+                end_col = start_col + columns_per_page
+                sub_data = [[headers[risk_no_idx]] + headers[start_col:end_col]]
+                for row in data:
+                    sub_data.append([row[risk_no_idx]] + row[start_col:end_col])
+
+                table = Table(sub_data)
+                table.setStyle(TableStyle([
+                    ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+                    ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+                    ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+                    ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                    ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+                    ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+                    ('GRID', (0, 0), (-1, -1), 1, colors.black),
+                    ('COLWIDTHS', (0, 0), (-1, -1), 200 / columns_per_page),
+                ]))
+                tables.append(table)
+            return tables
+
+        headers = [self.table_widget.horizontalHeaderItem(col).text() for col in range(self.table_widget.columnCount())]
+        tables = create_table_with_limited_columns(data, headers)
+
+        for table in tables:
+            elements.append(table)
+            elements.append(Spacer(1, 20))
+
+        pdf.build(elements)
+        QMessageBox.information(self, "PDF Generated", f"PDF for {filter_type}: {filter_value} has been generated as {filename}")
 
     def reject_process(self):
         selected_items = self.table_widget.selectedItems()
@@ -1105,7 +1169,7 @@ class RiskSystem(QMainWindow, MainUI):
             if reason:
                 reason_item = QTableWidgetItem(reason)
                 reason_item.setBackground(QColor('black'))
-                self.table_widget.setItem(row, 16, QTableWidgetItem(reason_item))  # Assuming 15th column for reason
+                self.table_widget.setItem(row, 16, QTableWidgetItem(reason_item))
                 dialog.accept()
 
         dialog = QDialog(self)
@@ -1173,77 +1237,19 @@ class RiskSystem(QMainWindow, MainUI):
         row = selected_items[0].row()
         self.table_widget.setItem(row, 16, QTableWidgetItem(self.name_of_the_approval))
 
-    # Generate a PDF for a specific department with all risks related from this department
-    def generate_pdf(self, department, dialog):
-        dialog.close()
-
-        data = []
-        row_count = self.table_widget.rowCount()
-        for row in range(row_count):
-            if self.table_widget.item(row, 1).text() == department:
-                row_data = []
-                for column in range(self.table_widget.columnCount()):
-                    item = self.table_widget.item(row, column)
-                    row_data.append(item.text() if item is not None else "")
-                data.append(row_data)
-
-        if not data:
-            QMessageBox.information(self, "No Data", f"No data found for {department}")
-            return
-
-        pdf = SimpleDocTemplate(f"{department.replace(' ', '_')}_Risk_Report.pdf", pagesize=landscape(A4))
-        elements = []
-
-        # Function to create a table with at most 3 columns (excluding the "Risk No." column which is always included)
-        def create_table_with_limited_columns(data, headers):
-            tables = []
-            columns_per_page = 3
-            risk_no_idx = 0
-            for start_col in range(1, len(headers), columns_per_page):  # Start from 1 to exclude "Risk No."
-                end_col = start_col + columns_per_page
-                sub_data = [[headers[risk_no_idx]] + headers[start_col:end_col]]
-                for row in data:
-                    sub_data.append([row[risk_no_idx]] + row[start_col:end_col])
-
-                table = Table(sub_data)
-                table.setStyle(TableStyle([
-                    ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
-                    ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
-                    ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-                    ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-                    ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
-                    ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
-                    ('GRID', (0, 0), (-1, -1), 1, colors.black),
-                    ('COLWIDTHS', (0, 0), (-1, -1), 200 / columns_per_page),
-                ]))
-                tables.append(table)
-            return tables
-
-        headers = [self.table_widget.horizontalHeaderItem(col).text() for col in range(self.table_widget.columnCount())]
-        tables = create_table_with_limited_columns(data, headers)
-
-        for table in tables:
-            elements.append(table)
-            elements.append(Spacer(1, 20))
-
-        pdf.build(elements)
-        QMessageBox.information(self, "PDF Generated", f"PDF for {department} has been generated.")
-
-    # Show the carts of most frequent hazard source and the RPN values
     def show_charts(self):
         row_count = self.table_widget.rowCount()
         hazards = []
         rpn_values = []
 
         for row in range(row_count):
-            hazard_source_item = self.table_widget.item(row, 5)  # Assuming hazard sources are in column 5
-            rpn_item = self.table_widget.item(row, 12)  # RPN values are in column 14
+            hazard_source_item = self.table_widget.item(row, 5)
+            rpn_item = self.table_widget.item(row, 12)
 
             if hazard_source_item and rpn_item:
                 hazards.append(hazard_source_item.text())
                 rpn_values.append(rpn_item.text())
 
-        # Plot most frequent hazard sources
         hazard_counts = Counter(hazards)
         sorted_hazard_counts = sorted(hazard_counts.items(), key=lambda x: x[1], reverse=True)
         hazard_labels, hazard_values = zip(*sorted_hazard_counts) if sorted_hazard_counts else ([], [])
@@ -1259,7 +1265,6 @@ class RiskSystem(QMainWindow, MainUI):
         for bar in bars_hazard:
             ax_hazard.text(bar.get_width() + 0.1, bar.get_y() + bar.get_height() / 2, int(bar.get_width()), va='center')
 
-        # Plot RPN counts with fixed order
         rpn_counts = Counter(rpn_values)
         rpn_fixed_order = ['HIGH', 'MEDIUM', 'LOW']
         rpn_labels = []
@@ -1293,14 +1298,12 @@ class RiskSystem(QMainWindow, MainUI):
         dialog = QDialog(self)
         dialog.setWindowTitle("Generate PDF")
         layout = QVBoxLayout(dialog)
-        # Create a QWebEngineView widget
 
         self.first_axis.addItems(['Department', 'Lifecycle', 'Device affected', 'Hazard Category', 'Hazard Source',
                                   'Harm Influenced'])
         self.second_axis.addItems(['Department', 'Lifecycle', 'Device affected', 'Hazard Category', 'Hazard Source',
                                    'Harm Influenced'])
 
-        # Create a horizontal layout for the combo boxes
         comboLayout = QHBoxLayout()
         comboLayout.addWidget(self.first_axis)
         comboLayout.addWidget(self.second_axis)
@@ -1316,13 +1319,10 @@ class RiskSystem(QMainWindow, MainUI):
         dialog.exec_()
 
     def display_plotly_chart(self):
-        # Generate the Plotly chart as HTML
         html = self.generate_plotly_chart()
-        # Load the HTML into the QWebEngineView
         self.webEngineView.setHtml(html)
 
     def generate_plotly_chart(self):
-        # Collect data from the table widget
         data = {
             'Department': [],
             'Lifecycle': [],
@@ -1340,22 +1340,17 @@ class RiskSystem(QMainWindow, MainUI):
             data['Hazard Source'].append(self.table_widget.item(row, 5).text())
             data['Harm Influenced'].append(self.table_widget.item(row, 8).text())
 
-        # Create a DataFrame
         df = pd.DataFrame(data)
-        # Get the selected keys from the combo boxes
         key1 = self.first_axis.currentText()
         key2 = self.second_axis.currentText()
 
-        # Grouping by the selected keys, then counting
         group_counts = df.groupby([key1, key2]).size().reset_index(name='Count')
 
-        # Creating the sunburst chart
         labels = []
         parents = []
         values = []
         colors = []
 
-        # Add first level keys to labels and calculate totals per first level key
         level1_totals = group_counts.groupby(key1)['Count'].sum().reset_index()
         for lvl1 in level1_totals[key1]:
             labels.append(lvl1)
@@ -1363,19 +1358,16 @@ class RiskSystem(QMainWindow, MainUI):
             values.append(level1_totals[level1_totals[key1] == lvl1]['Count'].values[0])
             colors.append(lvl1)
 
-        # Add second level keys under each first level key
         for idx, row in group_counts.iterrows():
             labels.append(row[key2])
             parents.append(row[key1])
             values.append(row['Count'])
             colors.append(row[key1])
 
-        # Define colors for the first level keys
         unique_keys1 = df[key1].unique()
         color_palette = ['lightblue', 'lightgreen', 'lightcoral', 'lightyellow', 'lightpink', 'lightgray', 'lightcyan']
         key1_colors = {key: color_palette[i % len(color_palette)] for i, key in enumerate(unique_keys1)}
 
-        # Map colors to the corresponding first level keys
         color_list = [key1_colors[key] for key in colors]
 
         fig = go.Figure(go.Sunburst(
@@ -1388,10 +1380,9 @@ class RiskSystem(QMainWindow, MainUI):
 
         fig.update_layout(
             margin=dict(t=0, l=0, r=0, b=0),
-            paper_bgcolor='white',  # Set the background color of the entire figure
-            plot_bgcolor='white'  # Set the background color of the plot area
+            paper_bgcolor='white',
+            plot_bgcolor='white'
         )
-        # Generate the HTML representation of the Plotly chart
         html = fig.to_html(include_plotlyjs='cdn')
         return html
 
@@ -1411,7 +1402,6 @@ class RiskSystem(QMainWindow, MainUI):
             rpn_value = row_data[14]
             data.append((row_data, priorities[rpn_value]))
 
-        # Sort data based on RPN priorities
         data.sort(key=lambda x: x[1])
 
         self.table_widget.setRowCount(0)
@@ -1432,13 +1422,10 @@ class RiskSystem(QMainWindow, MainUI):
         self.matrix_table.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
         self.matrix_table.customContextMenuRequested.connect(self.show_menu)
 
-        # Set the table headers
         self.matrix_table.setHorizontalHeaderLabels(
             ['Improbable (1)', 'Remote (2)', 'Occasional (3)', 'Probable (4)', 'Frequent (5)'])
         self.matrix_table.setVerticalHeaderLabels(
             ['Discomfort (1)', 'Minor (2)', 'Serious (3)', 'Critical (4)', 'Catastrophic (5)'])
-
-        # Set the cell colors and text based on the row and column specifications
 
         self.set_cell_properties()
         self.load_matrix_state()
@@ -1449,35 +1436,30 @@ class RiskSystem(QMainWindow, MainUI):
         dialog.exec_()
 
     def set_cell_properties(self):
-        # Row 1
         self.set_cell(0, 0, 'Low', QColor('green'))
         self.set_cell(0, 1, 'Low', QColor('green'))
         self.set_cell(0, 2, 'Low', QColor('green'))
         self.set_cell(0, 3, 'Low', QColor('green'))
         self.set_cell(0, 4, 'Medium', QColor('yellow'))
 
-        # Row 2
         self.set_cell(1, 0, 'Low', QColor('green'))
         self.set_cell(1, 1, 'Low', QColor('green'))
         self.set_cell(1, 2, 'Medium', QColor('yellow'))
         self.set_cell(1, 3, 'Medium', QColor('yellow'))
         self.set_cell(1, 4, 'Medium', QColor('yellow'))
 
-        # Row 3
         self.set_cell(2, 0, 'Low', QColor('green'))
         self.set_cell(2, 1, 'Medium', QColor('yellow'))
         self.set_cell(2, 2, 'Medium', QColor('yellow'))
         self.set_cell(2, 3, 'High', QColor('red'))
         self.set_cell(2, 4, 'High', QColor('red'))
 
-        # Row 4
         self.set_cell(3, 0, 'Low', QColor('green'))
         self.set_cell(3, 1, 'Medium', QColor('yellow'))
         self.set_cell(3, 2, 'High', QColor('red'))
         self.set_cell(3, 3, 'High', QColor('red'))
         self.set_cell(3, 4, 'High', QColor('red'))
 
-        # Row 5
         self.set_cell(4, 0, 'Medium', QColor('yellow'))
         self.set_cell(4, 1, 'Medium', QColor('yellow'))
         self.set_cell(4, 2, 'High', QColor('red'))
@@ -1511,7 +1493,7 @@ class RiskSystem(QMainWindow, MainUI):
         for item in selected_items:
             item.setText(value)
             item.setBackground(color)
-        self.save_matrix_state()  # Save changes after editing
+        self.save_matrix_state()
 
     def save_matrix_state(self):
         matrix_state = {}
@@ -1528,7 +1510,6 @@ class RiskSystem(QMainWindow, MainUI):
                         'text': item.text(),
                         'color': item.background().color().name()
                     }
-                    # print(f"matrix state: {matrix_state[(row, col)]}")
 
         with open(self.matrix_file, 'w') as file:
             json.dump(matrix_state, file)
