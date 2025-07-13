@@ -1,30 +1,38 @@
-from PyQt5.QtGui import QColor, QIcon
+# General imports
+import sys
+import os
+import random
+import pandas as pd
+from collections import Counter
+
+# PyQt5 imports
 from PyQt5.QtWidgets import *
+from PyQt5.uic import loadUiType
+from PyQt5.QtGui import QColor, QIcon
+from PyQt5.QtWebEngineWidgets import QWebEngineView
+from PyQt5.QtCore import QDateTime, QPropertyAnimation, QEasingCurve, QUrl, QTimer
 from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout,
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea)
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from PyQt5.uic import loadUiType
-import random
-from PyQt5.QtCore import QDateTime, QPropertyAnimation, QEasingCurve, QUrl, QTimer
-from collections import Counter
-from matplotlib.figure import Figure
-from reportlab.lib.pagesizes import landscape, letter
-from reportlab.lib.pagesizes import A4
+
+# Reporting imports
 from reportlab.lib import colors
 from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import landscape, letter, A4
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Spacer
-import pandas as pd
+
+# Canvas imports
 import plotly.graph_objects as go
-from PyQt5.QtWebEngineWidgets import QWebEngineView
-from Calendar import CalendarDialog
-from ControlAndRequirement import AddControlClass
-from Dashboard import Dashboard
-from DeviceSelection import DeviceSelected
-from RiskChat import ChatDialog
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
+
+# Project Classes
 from search import *
+from RiskChat import ChatDialog
+from Dashboard import Dashboard
+from Calendar import CalendarDialog
+from DeviceSelection import DeviceSelected
 from sequence_widget import SequenceEventWidget
-import sys
-from PyQt5 import QtWidgets, QtCore
+from ControlAndRequirement import AddControlClass
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 MainUI, _ = loadUiType('UI/mainWindowui.ui')
@@ -243,7 +251,6 @@ class NotificationDialog(QDialog):
             for i in reversed(range(self.scroll_layout.count())):
                 self.scroll_layout.itemAt(i).widget().setParent(None)
             self.load_notifications()
-
 
 class RiskSystem(QMainWindow, MainUI):
     def __init__(self):

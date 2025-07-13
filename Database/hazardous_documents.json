@@ -29,5 +29,9 @@
   "28": "Risk of infection from improperly sterilized ventilator parts.",
   "29": "Inadequate patient ventilation due to obstructed airways in the device.",
   "30": "Accidental ingestion of small parts or components by the patient or healthcare provider.",
-  "31": "ID: 15 \n As  a  *result*  of  *the*  compressed  power  cord,  *the*  *electrical*  *connection*  *to*  *the*  *ventilator*  is  *disrupted.*  *This*  leads  *to*  a  loss  of  power  supply  *to*  *the*  *ventilator,*  causing  *it*  *to*  *shut*  down  *unexpectedly*  and  *interrupting*  *respiratory*  *support*  *to*  *the*  *patient.*"
+  "31": "ID: 15 \n As  a  *result*  of  *the*  compressed  power  cord,  *the*  *electrical*  *connection*  *to*  *the*  *ventilator*  is  *disrupted.*  *This*  leads  *to*  a  loss  of  power  supply  *to*  *the*  *ventilator,*  causing  *it*  *to*  *shut*  down  *unexpectedly*  and  *interrupting*  *respiratory*  *support*  *to*  *the*  *patient.*",
+  "32": "ID: 18 \n The  valve  mechanism  fails  to  operate  properly,  causing  irregularities  in  the  flow  of  respiratory  gases.",
+  "33": "ID: 1 \n The  patient  is  exposed  to  contaminated  air.",
+  "34": "ID: 15 \n As  a  result  of  the  compressed  *power*  cord,  the  electrical  connection  to  the  ventilator  is  disrupted.  This  leads  to  a  loss  of  *power*  supply  to  the  ventilator,  causing  it  to  shut  down  unexpectedly  and  interrupting  respiratory  support  to  the  patient.",
+  "35": "open"
 }

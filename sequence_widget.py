@@ -125,7 +125,7 @@ class SequenceEventWidget(QWidget):
                     border: none;
                     border-radius: 3px;
                     font-weight: bold;
-                    font-size: 10px;
+                    font-size: 20px;
                 }
                 QPushButton:hover {
                     background-color: #da190b;
