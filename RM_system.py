@@ -39,8 +39,8 @@ MainUI, _ = loadUiType('UI/mainWindowui.ui')
 
 DEVICE_COMPONENTS = {
     "EzVent 101": ["Screws", "Stands", "Batteries"],
-    "EzVent 202": ["Screws", "Stands", "Batteries"],
     "EzVent 201": ["Screws", "Stands", "Batteries"],
+    "EzVent 202": ["AC Power Cord", "AC Power Inlet", "AC-DC Power Supply", "Charging controller IC", "Check Valve", "Fittings", "Gas Manifold"],
     "SleepEZ": ["Component A", "Component B", "Component C"],
     "Syringe pump": ["Module 1", "Module 2", "Module 3"],
     "Oxygen concentrator": ["Filter", "Compressor", "Sensor"],
