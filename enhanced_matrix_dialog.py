@@ -12,7 +12,7 @@ class EnhancedMatrixDialog(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle("Device-Specific Risk Matrix")
-        self.setGeometry(200, 200, 900, 400)
+        self.setGeometry(200, 200, 900, 700)
         self.parent_window = parent
         self.current_device = None
         self.matrix_data = {}
@@ -30,11 +30,12 @@ class EnhancedMatrixDialog(QDialog):
 
         # Title
         title_label = QLabel("Device-Specific Risk Matrix Configuration")
-        title_label.setStyleSheet("font-size: 18px; font-weight: bold; margin-bottom: 15px; color: #2c3e50;")
+        title_label.setStyleSheet("font-size: 22px; font-weight: bold; margin-bottom: 15px; color: #2c3e50;")
         main_layout.addWidget(title_label)
 
         # Device Selection
-        device_group = QGroupBox("Select Device")
+        device_group = QGroupBox("")
+        device_group.setFixedSize(900, 100)  # Fixed width and height
         device_layout = QHBoxLayout(device_group)
 
         device_label = QLabel("Device:")
@@ -60,12 +61,12 @@ class EnhancedMatrixDialog(QDialog):
         main_layout.addWidget(device_group)
 
         # Matrix Table
-        matrix_group = QGroupBox("Risk Matrix")
+        matrix_group = QGroupBox("")
         matrix_layout = QVBoxLayout(matrix_group)
 
         # Info label
         info_label = QLabel("Right-click on any cell to change its risk level. Changes are automatically saved.")
-        info_label.setStyleSheet("font-size: 11px; color: #7f8c8d; margin-bottom: 10px;")
+        info_label.setStyleSheet("font-size: 18px; color: #7f8c8d; margin-bottom: 8px;")
         matrix_layout.addWidget(info_label)
 
         self.matrix_table = QTableWidget()
@@ -105,11 +106,12 @@ class EnhancedMatrixDialog(QDialog):
         main_layout.addWidget(matrix_group)
 
         # Current Selection Info
-        info_group = QGroupBox("Current Selection Info")
+        info_group = QGroupBox("")
+        info_group.setFixedSize(900, 100)  # Fixed width and height
         info_layout = QVBoxLayout(info_group)
 
         self.selection_info = QLabel("Select a cell to see its current risk level")
-        self.selection_info.setStyleSheet("font-size: 12px; color: #2c3e50;")
+        self.selection_info.setStyleSheet("font-size: 17px; color: #2c3e50;")
         info_layout.addWidget(self.selection_info)
 
         main_layout.addWidget(info_group)
