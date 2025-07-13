@@ -745,6 +745,19 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
              </widget>
             </item>
             <item>
+             <widget class="QPushButton" name="component_btn">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>45</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Component</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QPushButton" name="notification_btn">
               <property name="minimumSize">
                <size>

@@ -29,5 +29,19 @@
   "28": "A software bug introduces delays in the ventilator's response to user commands.",
   "29": "The ventilator's fan is obstructed by foreign objects, causing overheating of the device.",
   "30": "Water leakage from the humidifier component causes short circuits in the ventilator's electronics.",
-  "31": "ID: 4 \n Ventilator  is  placed  near  a  *magnetic*  resonance  *imaging*  (MRI)  machine  *during*  routine  patient  care.  The  proximity  of  the  ventilator  to  the  MRI  machine  exposes  its  electronic  components  to  the  *magnetic*  fields."
+  "31": "ID: 4 \n Ventilator  is  placed  near  a  *magnetic*  resonance  *imaging*  (MRI)  machine  *during*  routine  patient  care.  The  proximity  of  the  ventilator  to  the  MRI  machine  exposes  its  electronic  components  to  the  *magnetic*  fields.",
+  "32": "ID: 12 \n During  patient  *repositioning*  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment.",
+  "33": "ID: 6 \n During  a  *power*  surge  or  electrical  malfunction,  the  voltage  supplied  to  the  ventilator  exceeds  safe  levels,  leading  to  an  overvoltage  condition  in  the  device.",
+  "34": "A  ventilator  with  compromised  enclosure  integrity  experiences  an  electrical  fault  within  its  internal  components.  As  a  result  of  the  fault,  electrical  current  leaks  from  the  internal  circuitry  to  the  metal  enclosure  of  the  ventilator.",
+  "35": "Ventilator  is  placed  near  a  magnetic  resonance  imaging  (MRI)  machine  during  routine  patient  care.  The  proximity  of  the  ventilator  to  the  MRI  machine  exposes  its  electronic  components  to  the  magnetic  fields.",
+  "36": "First",
+  "37": "Second",
+  "38": "ID:  12  During  patient  repositioning  or  movement  within  the  healthcare  facility,  a  ventilator's  *power*  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment.",
+  "39": "The  ventilator's  power  supply  cord  is  damaged,  leading  to  intermittent  power  loss.",
+  "40": "ID: 33 \n ID:  6  During  a  *power*  surge  or  electrical  malfunction,  the  voltage  supplied  to  the  ventilator  exceeds  safe  levels,  leading  to  an  condition  in  the  device.",
+  "41": "ID: 32 \n ID:  12  During  patient  **repositioning**  or  movement  within  the  healthcare  facility,  a  ventilator's  **power**  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment.",
+  "42": "powe",
+  "43": "ID: 3 \n A  ventilator  with  compromised  enclosure  integrity  experiences  an  electrical  fault  within  its  internal  components.  As  a  result  of  *the*  fault,  electrical  current  leaks  from  *the*  internal  circuitry  to  *the*  metal  enclosure  of  *the*  ventilator.",
+  "44": "ID: 39 \n The  ventilator's  *power*  supply  cord  is  damaged,  leading  to  intermittent  *power*  loss.",
+  "45": "ID: 33 \n ID:  6  During  a  *power*  surge  or  electrical  malfunction,  the  voltage  supplied  to  the  ventilator  exceeds  safe  levels,  leading  to  an  overvoltage  condition  in  the  device."
 }

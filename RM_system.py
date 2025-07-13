@@ -37,6 +37,15 @@ from ControlAndRequirement import AddControlClass
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 MainUI, _ = loadUiType('UI/mainWindowui.ui')
 
+DEVICE_COMPONENTS = {
+    "EzVent 101": ["Screws", "Stands", "Batteries"],
+    "EzVent 202": ["Screws", "Stands", "Batteries"],
+    "EzVent 201": ["Screws", "Stands", "Batteries"],
+    "SleepEZ": ["Component A", "Component B", "Component C"],
+    "Syringe pump": ["Module 1", "Module 2", "Module 3"],
+    "Oxygen concentrator": ["Filter", "Compressor", "Sensor"],
+}
+
 
 class NotificationDialog(QDialog):
     """Dialog to display notifications of newly added sentences"""
@@ -252,6 +261,42 @@ class NotificationDialog(QDialog):
                 self.scroll_layout.itemAt(i).widget().setParent(None)
             self.load_notifications()
 
+
+class ComponentSelectionDialog(QDialog):
+    def __init__(self, parent=None, device=None):
+        super().__init__(parent)
+        self.setWindowTitle("Component Selection")
+        self.setGeometry(100, 100, 800, 600)
+        self.layout = QVBoxLayout(self)
+        self.tree = QTreeWidget()
+        self.tree.setColumnCount(1)
+        self.tree.setHeaderLabels(['Components'])
+        self.populate_tree(device)
+        self.layout.addWidget(self.tree)
+        self.add_button = QPushButton('Save Selected Components')
+        self.add_button.clicked.connect(self.save_selected_components)
+        self.layout.addWidget(self.add_button)
+        self.selected_components = []
+
+    def populate_tree(self, device):
+        components = DEVICE_COMPONENTS.get(device, [])
+        for component in components:
+            item = QTreeWidgetItem(self.tree, [component])
+            item.setCheckState(0, 0)
+
+    def save_selected_components(self):
+        self.selected_components = self.get_checked_items(self.tree.invisibleRootItem())
+        self.accept()
+
+    def get_checked_items(self, item):
+        checked_items = []
+        if item.checkState(0) == 2:
+            checked_items.append(item.text(0))
+        for i in range(item.childCount()):
+            checked_items.extend(self.get_checked_items(item.child(i)))
+        return checked_items
+
+
 class RiskSystem(QMainWindow, MainUI):
     def __init__(self):
         super(RiskSystem, self).__init__()
@@ -264,6 +309,10 @@ class RiskSystem(QMainWindow, MainUI):
         self.mec_counter = 0
         self.us_counter = 0
         self.test_counter = 0
+
+        self.component_btn.setEnabled(False)  # Disable the button initially
+        self.selected_device = None  # Store the selected device
+        self.selected_components = []  # Store the selected components
 
         self.chat_data = {}
         self.chat_widgets = {}
@@ -316,6 +365,14 @@ class RiskSystem(QMainWindow, MainUI):
 
         # Initial notification count update
         self.update_notification_count()
+
+    def open_component_selection_dialog(self):
+        if not self.selected_device:
+            QMessageBox.warning(self, "No Device Selected", "Please select a device first.")
+            return
+        dialog = ComponentSelectionDialog(self, self.selected_device)
+        if dialog.exec_() == QDialog.Accepted:
+            self.selected_components = dialog.selected_components
 
     def setup_notification_counter(self):
         """Setup the notification counter badge for existing notification_btn"""
@@ -445,6 +502,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.accept_meeting.clicked.connect(self.toggle_meeting_frame)
 
         self.add_devices_affected.clicked.connect(self.select_devices_widget)
+        self.component_btn.clicked.connect(self.open_component_selection_dialog)
         self.notification_btn.clicked.connect(self.show_notifications)
 
     def show_notifications(self):
@@ -458,6 +516,12 @@ class RiskSystem(QMainWindow, MainUI):
         dialog = DeviceSelected(self)
         if dialog.exec_() == QDialog.Accepted:
             self.checked_items = dialog.checked_items
+            if self.checked_items:
+                self.selected_device = self.checked_items[0]
+                self.component_btn.setEnabled(True)
+            else:
+                self.selected_device = None
+                self.component_btn.setEnabled(False)
 
     def open_calendar_dialog(self):
         # Create and open the calendar dialog
@@ -493,26 +557,34 @@ class RiskSystem(QMainWindow, MainUI):
         row_position = self.table_widget.rowCount()
         self.table_widget.insertRow(row_position)
 
+        current_datetime = QDateTime.currentDateTime().toString("yyyy-MM-dd HH:mm:ss")
+        self.table_widget.setItem(row_position, 0, QTableWidgetItem(current_datetime))
+
         rsk_no = self.risk_no_line_edit.text()
-        self.table_widget.setItem(row_position, 0, QTableWidgetItem(rsk_no))
+        self.table_widget.setItem(row_position, 1, QTableWidgetItem(rsk_no))
 
         # get data
         department = self.department_combo.currentText()
-        self.table_widget.setItem(row_position, 1, QTableWidgetItem(department))
+        self.table_widget.setItem(row_position, 2, QTableWidgetItem(department))
 
-        self.table_widget.setItem(row_position, 2, QTableWidgetItem(', '.join(self.checked_items)))
+        # Device affected
+        self.table_widget.setItem(row_position, 3, QTableWidgetItem(', '.join(self.checked_items)))
+
+        # Add selected components to the row
+        components_text = ", ".join(self.selected_components)
+        self.table_widget.setItem(row_position, 4, QTableWidgetItem(components_text))
 
         lifecycle = self.lifecycle_combo.currentText()
-        self.table_widget.setItem(row_position, 3, QTableWidgetItem(lifecycle))
+        self.table_widget.setItem(row_position, 5, QTableWidgetItem(lifecycle))
 
         hazard_category = self.hazard_category_combo.currentText()
-        self.table_widget.setItem(row_position, 4, QTableWidgetItem(hazard_category))
+        self.table_widget.setItem(row_position, 6, QTableWidgetItem(hazard_category))
 
         hazard_source = self.hazard_source_combo.currentText()
-        self.table_widget.setItem(row_position, 5, QTableWidgetItem(hazard_source))
+        self.table_widget.setItem(row_position, 7, QTableWidgetItem(hazard_source))
 
         hazardous_situation = self.hazardous_situation_edit.text()
-        self.table_widget.setItem(row_position, 6, QTableWidgetItem(hazardous_situation))
+        self.table_widget.setItem(row_position, 8, QTableWidgetItem(hazardous_situation))
 
         # Check and add new hazardous situation to dynamic list
         if hazardous_situation.strip():
@@ -526,50 +598,47 @@ class RiskSystem(QMainWindow, MainUI):
         sequence_widget.sequence_updated.connect(lambda events: self.update_sequence_in_table(row_position, events))
 
         # Set the widget in the table cell
-        self.table_widget.setCellWidget(row_position, 7, sequence_widget)
+        self.table_widget.setCellWidget(row_position, 9, sequence_widget)
 
         # Also set the text item for compatibility with existing functionality
         sequence_text = sequence_widget.get_sequence_text()
-        self.table_widget.setItem(row_position, 7, QTableWidgetItem(sequence_text))
+        # self.table_widget.setItem(row_position, 7, QTableWidgetItem(sequence_text))
+
 
         # Check and add new sequence of event to dynamic list
         if sequence_of_event.strip():
             self.check_and_add_new_content(sequence_of_event, "Sequence of Event")
 
         harm_influenced = self.harm_influenced_combo.currentText()
-        self.table_widget.setItem(row_position, 8, QTableWidgetItem(harm_influenced))
+        self.table_widget.setItem(row_position, 10, QTableWidgetItem(harm_influenced))
 
         harm_desc = self.harm_desc_line.text()
-        self.table_widget.setItem(row_position, 9, QTableWidgetItem(harm_desc))
+        self.table_widget.setItem(row_position, 11, QTableWidgetItem(harm_desc))
 
         # Check and add new harm description to dynamic list
         if harm_desc.strip():
             self.check_and_add_new_content(harm_desc, "Harm Description")
 
-        # Add custom widget to the risk control column
-        tree_widget_cell = AddControlClass()
-        self.table_widget.setCellWidget(row_position, 13, tree_widget_cell)
-
         severity = self.severity_spinbox.value()
-        self.table_widget.setItem(row_position, 10, QTableWidgetItem(str(severity)))
+        self.table_widget.setItem(row_position, 12, QTableWidgetItem(str(severity)))
 
         probability = self.probability_spinbox.value()
-        self.table_widget.setItem(row_position, 11, QTableWidgetItem(str(probability)))
+        self.table_widget.setItem(row_position, 13, QTableWidgetItem(str(probability)))
 
         RPN = self.update_rpn_value()
-        self.table_widget.setItem(row_position, 12, QTableWidgetItem(RPN))
+        self.table_widget.setItem(row_position, 14, QTableWidgetItem(RPN))
+
+        # Add custom widget to the risk control column
+        tree_widget_cell = AddControlClass()
+        self.table_widget.setCellWidget(row_position, 15, tree_widget_cell)
 
         # Set row height to accommodate the sequence widget
         self.table_widget.setRowHeight(row_position, 350)
-
-        current_datetime = QDateTime.currentDateTime().toString("yyyy-MM-dd HH:mm:ss")
-        self.table_widget.setItem(row_position, 14, QTableWidgetItem(current_datetime))
 
         self.num_risks += 1
 
         self.generate_and_set_id()
         self.update_rsk_number_combo()
-
         # Update notification count after adding entry
         self.update_notification_count()
 
@@ -582,11 +651,11 @@ class RiskSystem(QMainWindow, MainUI):
             sequence_text = " → ".join(formatted_sequence)
 
             # Update the table item
-            item = self.table_widget.item(row, 7)
+            item = self.table_widget.item(row, 9)
             if item:
                 item.setText(sequence_text)
             else:
-                self.table_widget.setItem(row, 7, QTableWidgetItem(sequence_text))
+                self.table_widget.setItem(row, 9, QTableWidgetItem(sequence_text))
 
     def check_and_add_new_content(self, content, field_type):
         """Check if content is new and add it to the appropriate dynamic list"""
@@ -691,11 +760,12 @@ class RiskSystem(QMainWindow, MainUI):
 
         ])
         self.standards_combo.hide()
-        self.table_widget.setColumnCount(16)
+
+        self.table_widget.setColumnCount(17)
         self.table_widget.setHorizontalHeaderLabels([
-            "Risk No.", "Department", "Device Affected", "Lifecycle", "Hazard Category", "Hazard Source",
-            "Hazardous Situation", "Sequence of Events", "Harm Influenced", "Harm Description", "Severity",
-            "Probability", "RPN", "Risk Control Actions", "Date", "Approved By"
+            "Date", "Risk No.", "Department", "Device Affected", "Components", "Lifecycle", "Hazard Category",
+            "Hazard Source", "Hazardous Situation", "Sequence of Events", "Harm Influenced", "Harm Description",
+            "Severity", "Probability", "RPN", "Risk Control Actions",  "Approved By"
         ])
 
         self.table_widget.setEditTriggers(QAbstractItemView.NoEditTriggers)
@@ -1004,7 +1074,7 @@ class RiskSystem(QMainWindow, MainUI):
             if reason:
                 reason_item = QTableWidgetItem(reason)
                 reason_item.setBackground(QColor('black'))
-                self.table_widget.setItem(row, 15, QTableWidgetItem(reason_item))  # Assuming 15th column for reason
+                self.table_widget.setItem(row, 16, QTableWidgetItem(reason_item))  # Assuming 15th column for reason
                 dialog.accept()
 
         dialog = QDialog(self)
@@ -1070,7 +1140,7 @@ class RiskSystem(QMainWindow, MainUI):
         if not selected_items:
             return
         row = selected_items[0].row()
-        self.table_widget.setItem(row, 15, QTableWidgetItem(self.name_of_the_approval))
+        self.table_widget.setItem(row, 16, QTableWidgetItem(self.name_of_the_approval))
 
     # Generate a PDF for a specific department with all risks related from this department
     def generate_pdf(self, department, dialog):
