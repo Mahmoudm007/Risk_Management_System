@@ -11,8 +11,8 @@ from PyQt5.uic import loadUiType
 from PyQt5.QtGui import QColor, QIcon
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtCore import QDateTime, QPropertyAnimation, QEasingCurve, QUrl, QTimer
-from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout,
-                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea)
+from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox,
+                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem)
 
 # Reporting imports
 from reportlab.lib import colors
@@ -309,6 +309,9 @@ class RiskSystem(QMainWindow, MainUI):
         self.mec_counter = 0
         self.us_counter = 0
         self.test_counter = 0
+        
+        self.table_widget.setEditTriggers(QAbstractItemView.DoubleClicked | QAbstractItemView.SelectedClicked)
+        self.table_widget.itemChanged.connect(self.handle_item_changed)
 
         self.component_btn.setEnabled(False)  # Disable the button initially
         self.selected_device = None  # Store the selected device
@@ -636,12 +639,33 @@ class RiskSystem(QMainWindow, MainUI):
         self.table_widget.setRowHeight(row_position, 350)
 
         self.num_risks += 1
-
+        
+        self.highlight_missing_cells(row_position)
+        
         self.generate_and_set_id()
         self.update_rsk_number_combo()
         # Update notification count after adding entry
         self.update_notification_count()
 
+
+    def highlight_missing_cells(self, row):
+            for col in range(self.table_widget.columnCount()):
+                item = self.table_widget.item(row, col)
+                # Only highlight if cell is empty and not a widget cell
+                if (item is None or not item.text().strip()) and self.table_widget.cellWidget(row, col) is None:
+                    if item is None:
+                        item = QTableWidgetItem("")
+                        self.table_widget.setItem(row, col, item)
+                    item.setBackground(QColor('yellow'))
+
+    def handle_item_changed(self, item):
+        # If cell is filled, remove yellow highlight
+        if item.text().strip():
+            item.setBackground(QColor('white'))
+        else:
+            item.setBackground(QColor('yellow'))
+            
+            
     def update_sequence_in_table(self, row, events_list):
         """Update the sequence text in the table when the sequence widget is updated"""
         if events_list:
@@ -983,14 +1007,18 @@ class RiskSystem(QMainWindow, MainUI):
 
     def show_context_menu(self, position):
         menu = QMenu(self)
-
+        edit_action = menu.addAction("Edit Cell")
         approved_by = menu.addAction("Approve")
         reject_by = menu.addAction("Reject")
         extract_action = menu.addAction("Extract")
         remove_action = menu.addAction("Remove")
 
         action = menu.exec_(self.table_widget.mapToGlobal(position))
-        if action == extract_action:
+        if action == edit_action:
+            index = self.table_widget.indexAt(position)
+            if index.isValid():
+                self.table_widget.editItem(self.table_widget.item(index.row(), index.column()))
+        elif action == extract_action:
             self.extract_row()
         elif action == remove_action:
             self.remove_row()
@@ -998,6 +1026,7 @@ class RiskSystem(QMainWindow, MainUI):
             self.approved_by()
         elif action == reject_by:
             self.reject_process()
+            
 
     def extract_row(self):
         selected_items = self.table_widget.selectedItems()
