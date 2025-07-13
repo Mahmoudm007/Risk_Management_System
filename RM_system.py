@@ -46,6 +46,7 @@ from risk_history_dialog import RiskHistoryDialog
 from user_input_dialog import UserInputDialog
 from notification_dialog import NotificationDialog
 from traceability_dialog import TraceabilityDialog
+from enhanced_matrix_dialog import EnhancedMatrixDialog
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 MainUI, _ = loadUiType('UI/mainWindowui.ui')
@@ -1421,119 +1422,10 @@ class RiskSystem(QMainWindow, MainUI):
                 self.table_widget.setItem(row_position, col, QTableWidgetItem(item_text))
 
     def show_rpn_matrix(self):
-        dialog = QDialog(self)
-        dialog.setWindowTitle("Risk Matrix")
-        layout = QVBoxLayout(dialog)
-
-        self.matrix_table = QTableWidget()
-        self.matrix_table.setRowCount(5)
-        self.matrix_table.setColumnCount(5)
-        self.matrix_table.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
-        self.matrix_table.customContextMenuRequested.connect(self.show_menu)
-
-        self.matrix_table.setHorizontalHeaderLabels(
-            ['Improbable (1)', 'Remote (2)', 'Occasional (3)', 'Probable (4)', 'Frequent (5)'])
-        self.matrix_table.setVerticalHeaderLabels(
-            ['Discomfort (1)', 'Minor (2)', 'Serious (3)', 'Critical (4)', 'Catastrophic (5)'])
-
-        self.set_cell_properties()
-        self.load_matrix_state()
-
-        layout.addWidget(self.matrix_table)
-        dialog.setLayout(layout)
-        dialog.resize(785, 260)
+        """Show enhanced device-specific risk matrix dialog"""
+        dialog = EnhancedMatrixDialog(self)
         dialog.exec_()
 
-    def set_cell_properties(self):
-        self.set_cell(0, 0, 'Low', QColor('green'))
-        self.set_cell(0, 1, 'Low', QColor('green'))
-        self.set_cell(0, 2, 'Low', QColor('green'))
-        self.set_cell(0, 3, 'Low', QColor('green'))
-        self.set_cell(0, 4, 'Medium', QColor('yellow'))
-
-        self.set_cell(1, 0, 'Low', QColor('green'))
-        self.set_cell(1, 1, 'Low', QColor('green'))
-        self.set_cell(1, 2, 'Medium', QColor('yellow'))
-        self.set_cell(1, 3, 'Medium', QColor('yellow'))
-        self.set_cell(1, 4, 'Medium', QColor('yellow'))
-
-        self.set_cell(2, 0, 'Low', QColor('green'))
-        self.set_cell(2, 1, 'Medium', QColor('yellow'))
-        self.set_cell(2, 2, 'Medium', QColor('yellow'))
-        self.set_cell(2, 3, 'High', QColor('red'))
-        self.set_cell(2, 4, 'High', QColor('red'))
-
-        self.set_cell(3, 0, 'Low', QColor('green'))
-        self.set_cell(3, 1, 'Medium', QColor('yellow'))
-        self.set_cell(3, 2, 'High', QColor('red'))
-        self.set_cell(3, 3, 'High', QColor('red'))
-        self.set_cell(3, 4, 'High', QColor('red'))
-
-        self.set_cell(4, 0, 'Medium', QColor('yellow'))
-        self.set_cell(4, 1, 'Medium', QColor('yellow'))
-        self.set_cell(4, 2, 'High', QColor('red'))
-        self.set_cell(4, 3, 'High', QColor('red'))
-        self.set_cell(4, 4, 'High', QColor('red'))
-
-    def set_cell(self, row, col, text, color):
-        item = QTableWidgetItem(text)
-        item.setBackground(color)
-        self.matrix_table.setItem(row, col, item)
-
-    def show_menu(self, position):
-        menu = QMenu(self)
-
-        high_action = QAction('High', self)
-        high_action.triggered.connect(lambda: self.set_cell_value('High', QColor('red')))
-        menu.addAction(high_action)
-
-        medium_action = QAction('Medium', self)
-        medium_action.triggered.connect(lambda: self.set_cell_value('Medium', QColor('yellow')))
-        menu.addAction(medium_action)
-
-        low_action = QAction('Low', self)
-        low_action.triggered.connect(lambda: self.set_cell_value('Low', QColor('green')))
-        menu.addAction(low_action)
-
-        menu.exec_(self.matrix_table.viewport().mapToGlobal(position))
-
-    def set_cell_value(self, value, color):
-        selected_items = self.matrix_table.selectedItems()
-        for item in selected_items:
-            item.setText(value)
-            item.setBackground(color)
-        self.save_matrix_state()
-
-    def save_matrix_state(self):
-        matrix_state = {}
-
-        for row in range(self.matrix_table.rowCount()):
-            print(f"rows: {row}")
-            for col in range(self.matrix_table.columnCount()):
-                print(f"column: {col}")
-                item = self.matrix_table.item(row, col)
-                print(f"item: {item}")
-                if item:
-                    key = f"{row},{col}"
-                    matrix_state[key] = {
-                        'text': item.text(),
-                        'color': item.background().color().name()
-                    }
-
-        with open(self.matrix_file, 'w') as file:
-            json.dump(matrix_state, file)
-
-    def load_matrix_state(self):
-        if not os.path.exists(self.matrix_file):
-            return
-
-        with open(self.matrix_file, 'r') as file:
-            matrix_state = json.load(file)
-
-        for key, properties in matrix_state.items():
-            row, col = map(int, key.split(','))
-            color = QColor(properties['color'])
-            self.set_cell(row, col, properties['text'], color)
 
     def update_dectability_label(self):
         dectability_map = {
@@ -1574,26 +1466,73 @@ class RiskSystem(QMainWindow, MainUI):
         self.probability_description_label.setText(probability_map.get(value, ''))
 
     def update_rpn_value(self):
+        """Update RPN value based on current device matrix"""
         severity = self.severity_spinbox.value()
         probability = self.probability_spinbox.value()
-        if (severity >= 4 and probability >= 3) or (severity == 3 and probability >= 4):
-            rpn = 'HIGH'
-            color = 'red'
-        elif ((severity >= 4 and probability <= 3) or (severity < 3 and probability == 5)
-              or (severity == 2 and probability >= 3) or (severity == 3 and probability in [2, 3])):
-            rpn = 'MEDIUM'
-            color = 'yellow'
-        elif ((severity == 1 and probability <= 4) or (severity == 2 and probability in [1, 2]) or
-              (severity == 3 and probability == 1)):
-            rpn = 'LOW'
-            color = 'green'
+        
+        # Get current device from the selected devices
+        current_device = None
+        if self.checked_items:
+            current_device = self.checked_items[0]  # Use first selected device
+        
+        if current_device:
+            rpn = self.get_rpn_from_matrix(current_device, severity, probability)
         else:
-            rpn = ''
-            color = 'lightgray'
-
+            # Fallback to hardcoded values if no device selected
+            rpn = self.get_hardcoded_rpn(severity, probability)
+        
+        # Set color based on RPN value
+        colors = {"High": "red", "Medium": "yellow", "Low": "green"}
+        color = colors.get(rpn, "lightgray")
+        
         self.rpn_value_label.setText(rpn)
         self.rpn_value_label.setStyleSheet(f"background-color: {color}; color: black;")
         return rpn
+    
+    def get_rpn_from_matrix(self, device, severity, probability):
+        """Get RPN from device-specific matrix"""
+        matrix_file = os.path.join('Risk Matrix', f"{device.replace(' ', '_')}_matrix.json")
+        
+        try:
+            if os.path.exists(matrix_file):
+                with open(matrix_file, 'r') as f:
+                    matrix_data = json.load(f)
+                
+                # Convert to 0-based indices
+                row = severity - 1
+                col = probability - 1
+                
+                if 0 <= row <= 4 and 0 <= col <= 4:
+                    key = f"{row},{col}"
+                    if key in matrix_data:
+                        return matrix_data[key]["text"]
+            
+            # If file doesn't exist or key not found, return default
+            return self.get_hardcoded_rpn(severity, probability)
+            
+        except Exception as e:
+            print(f"Error reading matrix for {device}: {e}")
+            return self.get_hardcoded_rpn(severity, probability)
+
+    def get_hardcoded_rpn(self, severity, probability):
+        """Fallback hardcoded RPN calculation"""
+        if (severity >= 4 and probability >= 3) or (severity == 3 and probability >= 4):
+            return 'High'
+        elif ((severity >= 4 and probability <= 3) or (severity < 3 and probability == 5)
+              or (severity == 2 and probability >= 3) or (severity == 3 and probability in [2, 3])):
+            return 'Medium'
+        elif ((severity == 1 and probability <= 4) or (severity == 2 and probability in [1, 2]) or
+              (severity == 3 and probability == 1)):
+            return 'Low'
+        else:
+            return 'Unknown'
+
+    def on_matrix_updated(self, device):
+        """Called when matrix is updated for a device"""
+        # Refresh RPN if current device matches updated device
+        if self.checked_items and device in self.checked_items:
+            self.update_rpn_value()
+            print(f"RPN updated for device: {device}")
 
 
 def main():
