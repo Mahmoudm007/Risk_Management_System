@@ -47,9 +47,25 @@ from user_input_dialog import UserInputDialog
 from notification_dialog import NotificationDialog
 from traceability_dialog import TraceabilityDialog
 from enhanced_matrix_dialog import EnhancedMatrixDialog
-
+from Gemini_app import ChatDialog, BulletproofGeminiWorker, ConnectionTestWorker
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 MainUI, _ = loadUiType('UI/mainWindowui.ui')
+
+
+
+# === API Configuration ===
+API_KEY = "AIzaSyBQrgcLg3Y7RAt4xQLf_rHAutLiObt1XIw"
+
+# Multiple endpoints to try
+ENDPOINTS = [
+    f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={API_KEY}",
+    f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={API_KEY}",
+    f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={API_KEY}",
+    # f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={API_KEY}",
+    # f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key={API_KEY}",
+]
+
+TEST_URL = f"https://generativelanguage.googleapis.com/v1beta/models?key={API_KEY}"
 
 
 class RiskSystem(QMainWindow, MainUI):
@@ -58,7 +74,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.setupUi(self)
         self.setGeometry(0, 0, 1900, 950)
         self.setWindowTitle("Risk Management System")
-        self.setWindowIcon(QIcon("UI/icons/measurement.png"))
+        self.setWindowIcon(QIcon("UI/icons/ezz.png"))
         
         # Initialize risk history storage
         self.risk_history = {}  # Store history for each row
@@ -90,6 +106,9 @@ class RiskSystem(QMainWindow, MainUI):
 
         self.chat_data = {}
         self.chat_widgets = {}
+        
+        self.chat_dialog = None
+        self.chat_history = ""
 
         self.checked_items = []
 
@@ -390,6 +409,7 @@ class RiskSystem(QMainWindow, MainUI):
             timer.start(5000)
 
     def buttons_signals(self):
+        self.open_chat_button.clicked.connect(self.open_chat)
         self.hazardous_situation_edit.textChanged.connect(self.update_sit_ver_layout)
         self.sit_list_widget.itemDoubleClicked.connect(self.add_to_hazardous_situation_edit)
         self.sit_list_widget.itemClicked.connect(lambda: self.sit_hide_timer.stop())
@@ -443,6 +463,25 @@ class RiskSystem(QMainWindow, MainUI):
         # Add traceability button signal
         self.trace_btn.clicked.connect(self.open_traceability_dialog)
 
+    def open_chat(self):
+        if self.chat_dialog and self.chat_dialog.isVisible():
+            self.chat_dialog.raise_()
+            self.chat_dialog.activateWindow()
+            return
+
+        if self.chat_history:
+            choice = QMessageBox.question(self, "Continue Chat", "Continue previous conversation?", QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
+            if choice == QMessageBox.No:
+                self.chat_history = ""
+
+        self.chat_dialog = ChatDialog(existing_history=self.chat_history, parent=self)
+        self.chat_dialog.finished.connect(self.save_chat_history)
+        self.chat_dialog.show()
+
+    def save_chat_history(self):
+        if self.chat_dialog:
+            self.chat_history = self.chat_dialog.get_history()
+            
     def show_notifications(self):
         """Show the notifications dialog"""
         dialog = NotificationDialog(self)
@@ -1537,6 +1576,7 @@ class RiskSystem(QMainWindow, MainUI):
 
 def main():
     app = QApplication(sys.argv)
+    # app.setStyle('Fusion')  # Modern look
     window = RiskSystem()
     window.show()
     sys.exit(app.exec_())

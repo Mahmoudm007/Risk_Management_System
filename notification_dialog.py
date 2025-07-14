@@ -1,7 +1,9 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import Qt
 from search import *
-
+from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox,
+                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
+                             QCheckBox, QGroupBox, QMessageBox, QFileDialog)
 
 class NotificationDialog(QDialog):
     """Dialog to display notifications of newly added sentences"""

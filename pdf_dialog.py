@@ -2,7 +2,9 @@ from PyQt5.QtWidgets import *
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import landscape, A4
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Spacer
-
+from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox,
+                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
+                             QCheckBox, QGroupBox, QMessageBox, QFileDialog)
 
 class EnhancedPDFDialog(QDialog):
     def __init__(self, parent=None):

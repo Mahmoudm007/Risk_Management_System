@@ -3,7 +3,10 @@ from PyQt5.QtCore import Qt, pyqtSignal
 from PyQt5.QtGui import QFont, QPalette
 import json
 from search import *
-
+from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox,
+                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
+                             QCheckBox, QGroupBox, QMessageBox, QFileDialog, QLineEdit, QDialogButtonBox, QTableWidget, QTableWidgetItem, 
+                             QFrame, QListWidget)
 
 class SequenceEventWidget(QWidget):
     """Widget to manage a chain of sequential events"""

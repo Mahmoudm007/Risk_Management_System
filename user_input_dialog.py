@@ -1,5 +1,7 @@
 from PyQt5.QtWidgets import *
-
+from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox,
+                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
+                             QCheckBox, QGroupBox, QMessageBox, QFileDialog, QLineEdit, QDialogButtonBox)
 
 class UserInputDialog(QDialog):
     def __init__(self, parent=None, title="User Identification", message="Please enter your name:"):

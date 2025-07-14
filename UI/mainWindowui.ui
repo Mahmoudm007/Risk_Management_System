@@ -1697,6 +1697,41 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
             </property>
            </widget>
           </item>
+          <item>
+           <widget class="QPushButton" name="open_chat_button">
+            <property name="minimumSize">
+             <size>
+              <width>55</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="mouseTracking">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>icons/chat-app.png</normaloff>icons/chat-app.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>65</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
