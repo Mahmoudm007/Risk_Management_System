@@ -8,6 +8,7 @@ import json
 from datetime import datetime
 
 # PyQt5 imports
+from PyQt5 import QtCore
 from PyQt5.QtWidgets import *
 from PyQt5.uic import loadUiType
 from PyQt5.QtGui import QColor, QIcon
@@ -16,7 +17,6 @@ from PyQt5.QtCore import QDateTime, QPropertyAnimation, QEasingCurve, QUrl, QTim
 from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox,
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
                              QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
-from PyQt5 import QtCore
 
 # Reporting imports
 from reportlab.lib import colors
@@ -39,33 +39,67 @@ from sequence_widget import SequenceEventWidget
 from ControlAndRequirement import AddControlClass
 
 # Import modular dialogs
-from component_selection_dialog import ComponentSelectionDialog
 from filter_dialog import FilterDialog
 from pdf_dialog import EnhancedPDFDialog
-from risk_history_dialog import RiskHistoryDialog
 from user_input_dialog import UserInputDialog
+from risk_history_dialog import RiskHistoryDialog
 from notification_dialog import NotificationDialog
 from traceability_dialog import TraceabilityDialog
 from enhanced_matrix_dialog import EnhancedMatrixDialog
-from Gemini_app import ChatDialog, BulletproofGeminiWorker, ConnectionTestWorker
+from component_selection_dialog import ComponentSelectionDialog
+from Gemini_app import ChatDialog as GeminiChatDialog
+
+# Import database manager
+from database_manager import DatabaseManager
+
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 MainUI, _ = loadUiType('UI/mainWindowui.ui')
 
-
-
-# === API Configuration ===
-API_KEY = "AIzaSyBQrgcLg3Y7RAt4xQLf_rHAutLiObt1XIw"
-
-# Multiple endpoints to try
-ENDPOINTS = [
-    f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={API_KEY}",
-    f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={API_KEY}",
-    f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={API_KEY}",
-    # f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={API_KEY}",
-    # f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key={API_KEY}",
-]
-
-TEST_URL = f"https://generativelanguage.googleapis.com/v1beta/models?key={API_KEY}"
+# Enhanced device components with categories
+DEVICE_COMPONENTS = {
+    "EzVent 101": {
+        "Mechanical": ["Screws", "Stands", "Casing", "Valves", "Tubing", "Pressure Relief Valve"],
+        "Electrical": ["Batteries", "Circuit Boards", "Sensors", "Wires", "Display Unit", "Power Supply"],
+        "Software": ["Firmware", "User Interface Software", "Control Algorithms", "Safety Monitoring"],
+        "Consumables": ["Filters", "Masks", "Hoses", "Breathing Circuits"],
+        "Others": ["Labels", "Documentation", "Packaging", "Accessories"]
+    },
+    "EzVent 201": {
+        "Mechanical": ["Screws", "Stands", "Casing", "Valves", "Tubing", "Flow Sensors"],
+        "Electrical": ["Batteries", "Circuit Boards", "Sensors", "Wires", "Display Unit", "AC Power Cord"],
+        "Software": ["Firmware", "User Interface Software", "Control Algorithms", "Data Logging"],
+        "Consumables": ["Filters", "Masks", "Hoses", "Breathing Circuits"],
+        "Others": ["Labels", "Documentation", "Packaging", "Calibration Tools"]
+    },
+    "EzVent 202": {
+        "Mechanical": ["AC Power Inlet", "Check Valve", "Fittings", "Gas Manifold", "Pressure Regulators"],
+        "Electrical": ["AC-DC Power Supply", "Charging controller IC", "Control Boards", "Sensors"],
+        "Software": ["Advanced Control Software", "Network Interface", "Remote Monitoring"],
+        "Consumables": ["Filters", "Tubing", "Connectors"],
+        "Others": ["Mounting Hardware", "Service Tools", "User Manuals"]
+    },
+    "SleepEZ": {
+        "Mechanical": ["Housing", "Motor Assembly", "Pressure Sensors", "Valves"],
+        "Electrical": ["Power Supply", "Control Electronics", "Display", "Connectivity Module"],
+        "Software": ["Sleep Monitoring Software", "Data Analysis", "Mobile App Interface"],
+        "Consumables": ["Masks", "Tubing", "Filters", "Headgear"],
+        "Others": ["Carrying Case", "SD Card", "User Guide"]
+    },
+    "Syringe pump": {
+        "Mechanical": ["Syringe Holder", "Plunger Drive", "Motor Assembly", "Chassis"],
+        "Electrical": ["Control Board", "Display", "Alarm System", "Power Supply"],
+        "Software": ["Infusion Control Software", "Safety Algorithms", "User Interface"],
+        "Consumables": ["Syringes", "IV Tubing", "Connectors"],
+        "Others": ["Mounting Bracket", "Battery Pack", "Service Kit"]
+    },
+    "Oxygen concentrator": {
+        "Mechanical": ["Compressor", "Molecular Sieve", "Cooling Fan", "Pressure Vessels"],
+        "Electrical": ["Control Electronics", "Oxygen Sensor", "Flow Meter", "Power Supply"],
+        "Software": ["Concentration Control", "Flow Management", "Alarm System"],
+        "Consumables": ["Filters", "Tubing", "Cannulas"],
+        "Others": ["Wheels", "Handle", "Maintenance Kit", "User Manual"]
+    }
+}
 
 
 class RiskSystem(QMainWindow, MainUI):
@@ -73,8 +107,11 @@ class RiskSystem(QMainWindow, MainUI):
         super(RiskSystem, self).__init__()
         self.setupUi(self)
         self.setGeometry(0, 0, 1900, 950)
-        self.setWindowTitle("Risk Management System")
+        self.setWindowTitle("Risk Management System - Enhanced with Database")
         self.setWindowIcon(QIcon("UI/icons/ezz.png"))
+        
+        # Initialize database manager
+        self.db_manager = DatabaseManager()
         
         # Initialize risk history storage
         self.risk_history = {}  # Store history for each row
@@ -89,22 +126,22 @@ class RiskSystem(QMainWindow, MainUI):
         self.is_initial_creation = False
         self.current_session_user = None
         
-        self.sw_counter = 0
-        self.elc_counter = 0
-        self.mec_counter = 0
-        self.us_counter = 0
-        self.test_counter = 0
+        # Load counters from database
+        self.sw_counter, self.elc_counter, self.mec_counter, self.us_counter, self.test_counter = self.db_manager.load_counters()
         
         self.table_widget.setFixedHeight(400)
 
         self.table_widget.setEditTriggers(QAbstractItemView.DoubleClicked | QAbstractItemView.SelectedClicked)
-        self.table_widget.itemChanged.connect(self.handle_item_changed)
+        
+        # TODO: Fix the issues that appears in the program starting if there is a database saved, because its handled as itemChanged in the table_widget
+        self.table_widget.itemChanged.connect(self.handle_item_changed) # Ask for the name multiple times if there are a data saved in the database.
 
         self.component_btn.setEnabled(False)
         self.selected_device = None
         self.selected_components = []
 
-        self.chat_data = {}
+        # Load chat data from database
+        self.chat_data = self.db_manager.load_chat_data()
         self.chat_widgets = {}
         
         self.chat_dialog = None
@@ -156,8 +193,117 @@ class RiskSystem(QMainWindow, MainUI):
         self.notification_timer.timeout.connect(self.update_notification_count)
         self.notification_timer.start(5000)
 
+        # Auto-save timer (save every 5 minutes)
+        self.auto_save_timer = QTimer()
+        self.auto_save_timer.timeout.connect(self.auto_save_data)
+        self.auto_save_timer.start(300000)  # 5 minutes
+
+        # Load existing data from database
+        self.load_data_from_database()
+
         # Initial notification count update
         self.update_notification_count()
+
+        # Show database stats on startup
+        self.show_database_stats()
+
+    def show_database_stats(self):
+        """Show database statistics on startup"""
+        stats = self.db_manager.get_database_stats()
+        if stats['total_risks'] > 0:
+            print(f"📊 Database loaded: {stats['total_risks']} risks")
+            print(f"📁 Database size: {stats['database_size']} bytes")
+            if stats['last_modified']:
+                print(f"🕒 Last modified: {stats['last_modified']}")
+
+    def load_data_from_database(self):
+        """Load all data from database on startup"""
+        try:
+            # Load risks
+            if self.db_manager.load_all_risks(self.table_widget):
+                self.num_risks = self.table_widget.rowCount()
+                print(f"✅ Loaded {self.num_risks} risks from database")
+                
+                # Update counters based on loaded data
+                self.update_counters_from_table()
+            else:
+                print("📝 No existing risks found, starting fresh")
+                
+        except Exception as e:
+            print(f"❌ Error loading data from database: {e}")
+            QMessageBox.warning(self, "Database Error", 
+                              f"Error loading data from database:\n{e}\n\nStarting with empty database.")
+
+    def update_counters_from_table(self):
+        """Update risk counters based on loaded table data"""
+        dept_counts = {'Software Department': 0, 'Electrical Department': 0, 
+                      'Mechanical Department': 0, 'Usability Team': 0, 'Testing Team': 0}
+        
+        for row in range(self.table_widget.rowCount()):
+            dept_item = self.table_widget.item(row, 2)
+            if dept_item:
+                dept = dept_item.text()
+                if dept in dept_counts:
+                    dept_counts[dept] += 1
+        
+        # Update counters to be at least as high as existing risks
+        self.sw_counter = max(self.sw_counter, dept_counts['Software Department'])
+        self.elc_counter = max(self.elc_counter, dept_counts['Electrical Department'])
+        self.mec_counter = max(self.mec_counter, dept_counts['Mechanical Department'])
+        self.us_counter = max(self.us_counter, dept_counts['Usability Team'])
+        self.test_counter = max(self.test_counter, dept_counts['Testing Team'])
+
+    def auto_save_data(self):
+        """Auto-save data every 5 minutes"""
+        try:
+            self.save_data_to_database()
+            print("💾 Auto-save completed")
+        except Exception as e:
+            print(f"❌ Auto-save failed: {e}")
+
+    def save_data_to_database(self):
+        """Save all current data to database"""
+        try:
+            # Save risks
+            self.db_manager.save_all_risks(self.table_widget)
+            
+            # Save chat data
+            self.db_manager.save_chat_data(self.chat_data)
+            
+            # Save counters
+            self.db_manager.save_counters(
+                self.sw_counter, self.elc_counter, self.mec_counter, 
+                self.us_counter, self.test_counter
+            )
+            
+            # Save risk history
+            self.save_risk_history()
+            
+            return True
+            
+        except Exception as e:
+            print(f"❌ Error saving data to database: {e}")
+            return False
+
+    def closeEvent(self, event):
+        """Handle application close event"""
+        # Ask user if they want to save before closing
+        reply = QMessageBox.question(self, 'Save Before Exit', 
+                                   'Do you want to save your work before exiting?',
+                                   QMessageBox.Yes | QMessageBox.No | QMessageBox.Cancel,
+                                   QMessageBox.Yes)
+        
+        if reply == QMessageBox.Yes:
+            if self.save_data_to_database():
+                QMessageBox.information(self, "Saved", "All data has been saved successfully!")
+                event.accept()
+            else:
+                QMessageBox.critical(self, "Save Error", "Failed to save data!")
+                event.ignore()
+        elif reply == QMessageBox.No:
+            event.accept()
+        else:  # Cancel
+            event.ignore()
 
     def load_risk_history(self):
         """Load risk history from file"""
@@ -172,6 +318,7 @@ class RiskSystem(QMainWindow, MainUI):
     def save_risk_history(self):
         """Save risk history to file"""
         try:
+            os.makedirs(os.path.dirname(self.history_file), exist_ok=True)
             with open(self.history_file, 'w') as f:
                 json.dump(self.risk_history, f, indent=2)
         except Exception as e:
@@ -474,7 +621,7 @@ class RiskSystem(QMainWindow, MainUI):
             if choice == QMessageBox.No:
                 self.chat_history = ""
 
-        self.chat_dialog = ChatDialog(existing_history=self.chat_history, parent=self)
+        self.chat_dialog = GeminiChatDialog(existing_history=self.chat_history, parent=self)
         self.chat_dialog.finished.connect(self.save_chat_history)
         self.chat_dialog.show()
 
@@ -524,6 +671,9 @@ class RiskSystem(QMainWindow, MainUI):
         chat_dialog = ChatDialog(row_id, self.chat_data, self)
         chat_dialog.setGeometry(100, 100, 400, 300)
         chat_dialog.exec_()
+        
+        # Save chat data after dialog closes
+        self.db_manager.save_chat_data(self.chat_data)
         print(f"Chat dialog should be visible now.")
 
     def add_entry(self):
@@ -634,6 +784,9 @@ class RiskSystem(QMainWindow, MainUI):
         # Save the history after adding the entry
         self.save_risk_history()
 
+        # Auto-save to database after adding new risk
+        self.save_data_to_database()
+
         # Clear the session flags
         self.is_initial_creation = False
         self.current_session_user = None
@@ -685,7 +838,11 @@ class RiskSystem(QMainWindow, MainUI):
         # For all other fields during editing (not initial creation)
         if not getattr(self, 'is_initial_creation', False):
             # Get user name before processing the edit
-            user_name = self.get_user_name_for_edit()
+
+            # user_name = self.get_user_name_for_edit()
+            
+            #TODO: Hardcoded user name for testing purposes, until fixing the itemChanged issue in table_widget, when a database is saved
+            user_name = "Eng. Mahmoud"  # For testing purposes, use a fixed name   
             if not user_name:
                 # If user cancels, revert the change
                 item.setText(getattr(item, '_previous_value', ''))
@@ -704,6 +861,8 @@ class RiskSystem(QMainWindow, MainUI):
             item.setBackground(QColor('white'))
         else:
             item.setBackground(QColor('yellow'))
+        # Auto-save after edit
+        self.save_data_to_database()
 
     def update_sequence_in_table(self, row, events_list):
         """Update the sequence text in the table when the sequence widget is updated"""
@@ -718,6 +877,9 @@ class RiskSystem(QMainWindow, MainUI):
                 item.setText(sequence_text)
             else:
                 self.table_widget.setItem(row, 9, QTableWidgetItem(sequence_text))
+
+        # Auto-save after sequence update
+        self.save_data_to_database()
 
     def check_and_add_new_content(self, content, field_type):
         """Check if content is new and add it to the appropriate dynamic list"""
@@ -1047,6 +1209,8 @@ class RiskSystem(QMainWindow, MainUI):
         remove_action = menu.addAction("Remove")
         history_action = menu.addAction("See History")
         filter_action = menu.addAction("Filter Risks")
+        save_action = menu.addAction("💾 Save to Database")
+        backup_action = menu.addAction("🔄 Create Backup")
 
         action = menu.exec_(self.table_widget.mapToGlobal(position))
         if action == edit_action:
@@ -1071,6 +1235,16 @@ class RiskSystem(QMainWindow, MainUI):
                 self.show_risk_history(index.row())
         elif action == filter_action:
             self.open_filter_dialog()
+        elif action == save_action:
+            if self.save_data_to_database():
+                QMessageBox.information(self, "Saved", "All data has been saved to database!")
+            else:
+                QMessageBox.critical(self, "Save Error", "Failed to save data to database!")
+        elif action == backup_action:
+            if self.db_manager.backup_database():
+                QMessageBox.information(self, "Backup Created", "Database backup has been created successfully!")
+            else:
+                QMessageBox.critical(self, "Backup Error", "Failed to create database backup!")
 
     def extract_row(self):
         selected_items = self.table_widget.selectedItems()
@@ -1110,10 +1284,29 @@ class RiskSystem(QMainWindow, MainUI):
             return
 
         row = selected_items[0].row()
-        self.table_widget.removeRow(row)
-        self.generate_risk_number(flag="remove")
-        self.set_risk_number()
-        self.num_risks -= 1
+        
+        # Get risk ID before removing
+        risk_id = self.get_risk_id_for_row(row)
+        
+        # Confirm deletion
+        reply = QMessageBox.question(self, 'Remove Risk', 
+                                   f'Are you sure you want to remove risk {risk_id}?',
+                                   QMessageBox.Yes | QMessageBox.No,
+                                   QMessageBox.No)
+        
+        if reply == QMessageBox.Yes:
+            self.table_widget.removeRow(row)
+            self.generate_risk_number(flag="remove")
+            self.set_risk_number()
+            self.num_risks -= 1
+            
+            # Remove from risk history
+            if risk_id and risk_id in self.risk_history:
+                del self.risk_history[risk_id]
+                self.save_risk_history()
+            
+            # Auto-save after removal
+            self.save_data_to_database()
 
     def open_enhanced_pdf_dialog(self):
         """Open the enhanced PDF generation dialog"""
@@ -1220,6 +1413,8 @@ class RiskSystem(QMainWindow, MainUI):
                 reason_item.setBackground(QColor('black'))
                 self.table_widget.setItem(row, 16, QTableWidgetItem(reason_item))
                 dialog.accept()
+                # Auto-save after rejection
+                self.save_data_to_database()
 
         dialog = QDialog(self)
         dialog.setWindowTitle("Reject the process")
@@ -1285,6 +1480,8 @@ class RiskSystem(QMainWindow, MainUI):
             return
         row = selected_items[0].row()
         self.table_widget.setItem(row, 16, QTableWidgetItem(self.name_of_the_approval))
+        # Auto-save after approval
+        self.save_data_to_database()
 
     def show_charts(self):
         row_count = self.table_widget.rowCount()

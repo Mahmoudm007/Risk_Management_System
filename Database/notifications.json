@@ -180,5 +180,40 @@
     "timestamp": "2025-07-13 16:34:08",
     "id": 26,
     "is_new": true
+  },
+  {
+    "content": "ID: 15 \n *As*  a  *result*  of  the  *compressed*  power  cord,  the  electrical  connection  to  the  ventilator  *is*  *disrupted.*  *This*  *leads*  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  down  unexpectedly  and  interrupting  *respiratory*  *support*  to  the  patient.",
+    "field_type": "Hazardous Situation",
+    "timestamp": "2025-07-14 13:09:31",
+    "id": 27,
+    "is_new": true
+  },
+  {
+    "content": "ID: 41 \n *ID:*  32  *ID:*  12  *During*  patient  **repositioning**  or  movement  within  the  healthcare  facility,  a  ventilator's  **power**  *cord*  becomes  *compressed*  or  *pinched*  between  the  patient's  *bed*  *and*  a  heavy  piece  of  *medical*  equipment.",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-14 13:09:31",
+    "id": 28,
+    "is_new": true
+  },
+  {
+    "content": "ID: 11 \n Repetitive  strain  injuries  (RSIs)/  discomfort",
+    "field_type": "Harm Description",
+    "timestamp": "2025-07-14 13:09:31",
+    "id": 29,
+    "is_new": true
+  },
+  {
+    "content": "ID:  12  During  patient  repositioning  or  movement  within  the  healthcare  facility,  a  ventilator's  power  cord  becomes  compressed  or  pinched  between  the  patient's  bed  and  a  heavy  piece  of  medical  equipment.",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-14 13:10:21",
+    "id": 30,
+    "is_new": true
+  },
+  {
+    "content": "ID: 33 \n ID:  6  During  a  *power*  surge  or  electrical  malfunction,  the  voltage  supplied  to  the  ventilator  *exceeds*  safe  levels,  leading  to  an  overvoltage  condition  in  the  device.",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-14 13:13:34",
+    "id": 31,
+    "is_new": true
   }
 ]
