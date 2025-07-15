@@ -1514,11 +1514,13 @@ class RiskSystem(QMainWindow, MainUI):
         rpn_fixed_order = ['HIGH', 'MEDIUM', 'LOW']
         rpn_labels = []
         rpn_values = []
-
+        
         for rpn in rpn_fixed_order:
             rpn_labels.append(rpn)
             rpn_values.append(rpn_counts.get(rpn, 0))
 
+        print(rpn_values)
+        print(rpn_labels)
         fig_rpn = Figure()
         canvas_rpn = FigureCanvas(fig_rpn)
         ax_rpn = fig_rpn.add_subplot(111)
@@ -1544,10 +1546,10 @@ class RiskSystem(QMainWindow, MainUI):
         dialog.setWindowTitle("Generate PDF")
         layout = QVBoxLayout(dialog)
 
-        self.first_axis.addItems(['Department', 'Lifecycle', 'Device affected', 'Hazard Category', 'Hazard Source',
-                                  'Harm Influenced'])
-        self.second_axis.addItems(['Department', 'Lifecycle', 'Device affected', 'Hazard Category', 'Hazard Source',
-                                   'Harm Influenced'])
+        self.first_axis.addItems(['Department', 'Lifecycle', 'Components', 'Device affected', 'Hazard Category', 'Hazard Source',
+                                  'Harm Influenced', 'RPN'])
+        self.second_axis.addItems(['Department', 'Lifecycle','Components', 'Device affected', 'Hazard Category', 'Hazard Source',
+                                   'Harm Influenced', 'RPN'])
 
         comboLayout = QHBoxLayout()
         comboLayout.addWidget(self.first_axis)
@@ -1571,19 +1573,23 @@ class RiskSystem(QMainWindow, MainUI):
         data = {
             'Department': [],
             'Lifecycle': [],
+            'Components': [],
             'Device affected': [],
             'Hazard Category': [],
             'Hazard Source': [],
-            'Harm Influenced': []
+            'Harm Influenced': [],
+            'RPN': [],
         }
 
         for row in range(self.table_widget.rowCount()):
-            data['Department'].append(self.table_widget.item(row, 1).text())
-            data['Device affected'].append(self.table_widget.item(row, 2).text())
-            data['Lifecycle'].append(self.table_widget.item(row, 3).text())
-            data['Hazard Category'].append(self.table_widget.item(row, 4).text())
-            data['Hazard Source'].append(self.table_widget.item(row, 5).text())
-            data['Harm Influenced'].append(self.table_widget.item(row, 8).text())
+            data['Department'].append(self.table_widget.item(row, 2).text())
+            data['Device affected'].append(self.table_widget.item(row, 3).text())
+            data['Components'].append(self.table_widget.item(row, 4).text())
+            data['Lifecycle'].append(self.table_widget.item(row, 5).text())
+            data['Hazard Category'].append(self.table_widget.item(row, 6).text())
+            data['Hazard Source'].append(self.table_widget.item(row, 7).text())
+            data['Harm Influenced'].append(self.table_widget.item(row, 10).text())
+            data['RPN'].append(self.table_widget.item(row, 14).text())
 
         df = pd.DataFrame(data)
         key1 = self.first_axis.currentText()

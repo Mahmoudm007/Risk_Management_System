@@ -50,16 +50,16 @@ class DatabaseManager:
         try:
             with open(self.risks_file, 'w', encoding='utf-8') as f:
                 json.dump(risks_data, f, indent=2, ensure_ascii=False)
-            print(f"✅ Saved {len(risks_data)} risks to database")
+            # print(f"✅ Saved {len(risks_data)} risks to database")
             return True
         except Exception as e:
-            print(f"❌ Error saving risks: {e}")
+            # print(f"❌ Error saving risks: {e}")
             return False
 
     def load_all_risks(self, table_widget):
         """Load all risks from JSON database to table"""
         if not os.path.exists(self.risks_file):
-            print("📝 No existing risks database found")
+            # print("📝 No existing risks database found")
             return False
         
         try:
@@ -114,11 +114,11 @@ class DatabaseManager:
                 # Set row height
                 table_widget.setRowHeight(row_position, 180)
             
-            print(f"✅ Loaded {len(risks_data)} risks from database")
+            # print(f"✅ Loaded {len(risks_data)} risks from database")
             return True
             
         except Exception as e:
-            print(f"❌ Error loading risks: {e}")
+            # print(f"❌ Error loading risks: {e}")
             return False
 
     def save_chat_data(self, chat_data):
@@ -126,10 +126,10 @@ class DatabaseManager:
         try:
             with open(self.chat_file, 'w', encoding='utf-8') as f:
                 json.dump(chat_data, f, indent=2, ensure_ascii=False)
-            print("✅ Chat data saved to database")
+            # print("✅ Chat data saved to database")
             return True
         except Exception as e:
-            print(f"❌ Error saving chat data: {e}")
+            # print(f"❌ Error saving chat data: {e}")
             return False
 
     def load_chat_data(self):
@@ -140,10 +140,10 @@ class DatabaseManager:
         try:
             with open(self.chat_file, 'r', encoding='utf-8') as f:
                 chat_data = json.load(f)
-            print("✅ Chat data loaded from database")
+            # print("✅ Chat data loaded from database")
             return chat_data
         except Exception as e:
-            print(f"❌ Error loading chat data: {e}")
+            # print(f"❌ Error loading chat data: {e}")
             return {}
 
     def save_counters(self, sw_counter, elc_counter, mec_counter, us_counter, test_counter):
@@ -160,7 +160,7 @@ class DatabaseManager:
         try:
             with open(self.counters_file, 'w', encoding='utf-8') as f:
                 json.dump(counters_data, f, indent=2)
-            print("✅ Counters saved to database")
+            # print("✅ Counters saved to database")
             return True
         except Exception as e:
             print(f"❌ Error saving counters: {e}")
@@ -181,7 +181,7 @@ class DatabaseManager:
             us_counter = counters_data.get('us_counter', 0)
             test_counter = counters_data.get('test_counter', 0)
             
-            print("✅ Counters loaded from database")
+            # print("✅ Counters loaded from database")
             return sw_counter, elc_counter, mec_counter, us_counter, test_counter
             
         except Exception as e:
@@ -274,7 +274,7 @@ class DatabaseManager:
                 except Exception as e:
                     print(f"❌ Error backing up {source_file}: {e}")
         
-        print(f"✅ Created backup of {backup_count} database files")
+        # print(f"✅ Created backup of {backup_count} database files")
         return backup_count > 0
 
     def get_database_stats(self):
