@@ -52,53 +52,6 @@ from component_selection_dialog import ComponentSelectionDialog
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 MainUI, _ = loadUiType('UI/mainWindowui.ui')
 
-# Enhanced device components with categories
-DEVICE_COMPONENTS = {
-    "EzVent 101": {
-        "Mechanical": ["Screws", "Stands", "Casing", "Valves", "Tubing", "Pressure Relief Valve"],
-        "Electrical": ["Batteries", "Circuit Boards", "Sensors", "Wires", "Display Unit", "Power Supply"],
-        "Software": ["Firmware", "User Interface Software", "Control Algorithms", "Safety Monitoring"],
-        "Consumables": ["Filters", "Masks", "Hoses", "Breathing Circuits"],
-        "Others": ["Labels", "Documentation", "Packaging", "Accessories"]
-    },
-    "EzVent 201": {
-        "Mechanical": ["Screws", "Stands", "Casing", "Valves", "Tubing", "Flow Sensors"],
-        "Electrical": ["Batteries", "Circuit Boards", "Sensors", "Wires", "Display Unit", "AC Power Cord"],
-        "Software": ["Firmware", "User Interface Software", "Control Algorithms", "Data Logging"],
-        "Consumables": ["Filters", "Masks", "Hoses", "Breathing Circuits"],
-        "Others": ["Labels", "Documentation", "Packaging", "Calibration Tools"]
-    },
-    "EzVent 202": {
-        "Mechanical": ["AC Power Inlet", "Check Valve", "Fittings", "Gas Manifold", "Pressure Regulators"],
-        "Electrical": ["AC-DC Power Supply", "Charging controller IC", "Control Boards", "Sensors"],
-        "Software": ["Advanced Control Software", "Network Interface", "Remote Monitoring"],
-        "Consumables": ["Filters", "Tubing", "Connectors"],
-        "Others": ["Mounting Hardware", "Service Tools", "User Manuals"]
-    },
-    "SleepEZ": {
-        "Mechanical": ["Housing", "Motor Assembly", "Pressure Sensors", "Valves"],
-        "Electrical": ["Power Supply", "Control Electronics", "Display", "Connectivity Module"],
-        "Software": ["Sleep Monitoring Software", "Data Analysis", "Mobile App Interface"],
-        "Consumables": ["Masks", "Tubing", "Filters", "Headgear"],
-        "Others": ["Carrying Case", "SD Card", "User Guide"]
-    },
-    "Syringe pump": {
-        "Mechanical": ["Syringe Holder", "Plunger Drive", "Motor Assembly", "Chassis"],
-        "Electrical": ["Control Board", "Display", "Alarm System", "Power Supply"],
-        "Software": ["Infusion Control Software", "Safety Algorithms", "User Interface"],
-        "Consumables": ["Syringes", "IV Tubing", "Connectors"],
-        "Others": ["Mounting Bracket", "Battery Pack", "Service Kit"]
-    },
-    "Oxygen concentrator": {
-        "Mechanical": ["Compressor", "Molecular Sieve", "Cooling Fan", "Pressure Vessels"],
-        "Electrical": ["Control Electronics", "Oxygen Sensor", "Flow Meter", "Power Supply"],
-        "Software": ["Concentration Control", "Flow Management", "Alarm System"],
-        "Consumables": ["Filters", "Tubing", "Cannulas"],
-        "Others": ["Wheels", "Handle", "Maintenance Kit", "User Manual"]
-    }
-}
-
-
 class RiskSystem(QMainWindow, MainUI):
     def __init__(self):
         super(RiskSystem, self).__init__()
@@ -171,7 +124,6 @@ class RiskSystem(QMainWindow, MainUI):
         self.harm_hide_timer.setSingleShot(True)
         self.harm_hide_timer.timeout.connect(lambda: self.hide_search_widget(self.harm_list_widget))
         
-
         self.init_search_lists()
         self.init_combos()
         self.buttons_signals()
@@ -897,9 +849,31 @@ class RiskSystem(QMainWindow, MainUI):
                 refresh_indices()
                 print(f"Added new harm description: {content}")
 
+    def load_selected_webpage(self, selected_text):
+        url = self.web_links.get(selected_text)
+        if url:
+            self.webEngineView.setUrl(QUrl(url))
+
     def web_application(self):
-        self.webEngineView.setUrl(QUrl("file:///D:/EzzMedical/Risk_Management_System/References/ISO%2014971%20-%202019%20Document.html"))
-        self.sideBarFrame.layout().addWidget(self.webEngineView)
+        self.web_combo = QComboBox()
+        self.web_combo.addItems(self.web_links.keys())
+        self.web_combo.MaximumWidth = 150
+        self.web_combo.currentTextChanged.connect(self.load_selected_webpage)
+        
+        web_layout = QVBoxLayout()
+        web_layout.addWidget(self.web_combo)
+        web_layout.addWidget(self.webEngineView)
+
+        container = QWidget()
+        
+        container.setLayout(web_layout)
+        self.sideBarFrame.layout().addWidget(container)
+        
+        self.web_combo.setCurrentText("ISO 14971")
+        
+        # ISO_14971 = "file:///D:/EzzMedical/Risk_Management_System/References/ISO%2014971%20-%202019%20Document.html"
+        # self.webEngineView.setUrl(QUrl(ISO_14971))
+        # self.sideBarFrame.layout().addWidget(self.webEngineView)
 
     def toggle_side_bar(self):
         if self.modeSideBar.isChecked():
@@ -942,6 +916,13 @@ class RiskSystem(QMainWindow, MainUI):
         self.harm_list_widget.hide()
 
     def init_combos(self):
+        self.web_links = {
+        "Google": "https://www.google.com",
+        "Scholar": "https://scholar.google.com",
+        "ECRI": "https://www.ecri.org",
+        "ISO 14971": "file:///D:/EzzMedical/Risk_Management_System/References/ISO%2014971%20-%202019%20Document.html"
+        }
+        
         self.department_combo.addItems(["  ", "Software Department", "Electrical Department", "Mechanical Department",
                                         "Usability Team", "Testing Team"])
 

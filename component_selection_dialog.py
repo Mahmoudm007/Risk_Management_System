@@ -4,7 +4,6 @@ from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWi
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
                              QCheckBox, QGroupBox, QMessageBox, QFileDialog, QLineEdit, QDialogButtonBox)
 
-
 # Enhanced device components with categories
 DEVICE_COMPONENTS = {
     "EzVent 101": {
