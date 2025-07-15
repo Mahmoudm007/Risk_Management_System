@@ -12,8 +12,12 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtGui import QFont
 
-# === API Configuration ===
-API_KEY = "AIzaSyBQrgcLg3Y7RAt4xQLf_rHAutLiObt1XIw"
+# Read the API key from the file
+with open('Gemini_API.txt', 'r') as file:
+    API_KEY = file.read().strip()
+
+# Now you can use GEMINI_API_KEY in your code
+print("Your API Key is:", API_KEY)  # Optional: for debugging (avoid in production)
 
 # Multiple endpoints to try
 ENDPOINTS = [

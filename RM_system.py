@@ -1,11 +1,11 @@
 # General imports
-import sys
 import os
+import sys
+import json
 import random
 import pandas as pd
-from collections import Counter
-import json
 from datetime import datetime
+from collections import Counter
 
 # PyQt5 imports
 from PyQt5 import QtCore
@@ -29,28 +29,25 @@ import plotly.graph_objects as go
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
 
-# Project Classes
+# Project Modular Classes
 from search import *
 from RiskChat import ChatDialog
 from Dashboard import Dashboard
 from Calendar import CalendarDialog
-from DeviceSelection import DeviceSelected
-from sequence_widget import SequenceEventWidget
-from ControlAndRequirement import AddControlClass
-
-# Import modular dialogs
 from filter_dialog import FilterDialog
 from pdf_dialog import EnhancedPDFDialog
+from DeviceSelection import DeviceSelected
+from database_manager import DatabaseManager
 from user_input_dialog import UserInputDialog
+from sequence_widget import SequenceEventWidget
+from ControlAndRequirement import AddControlClass
 from risk_history_dialog import RiskHistoryDialog
 from notification_dialog import NotificationDialog
 from traceability_dialog import TraceabilityDialog
+from Gemini_app import ChatDialog as GeminiChatDialog
 from enhanced_matrix_dialog import EnhancedMatrixDialog
 from component_selection_dialog import ComponentSelectionDialog
-from Gemini_app import ChatDialog as GeminiChatDialog
 
-# Import database manager
-from database_manager import DatabaseManager
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 MainUI, _ = loadUiType('UI/mainWindowui.ui')
@@ -107,7 +104,7 @@ class RiskSystem(QMainWindow, MainUI):
         super(RiskSystem, self).__init__()
         self.setupUi(self)
         self.setGeometry(0, 0, 1900, 950)
-        self.setWindowTitle("Risk Management System - Enhanced with Database")
+        self.setWindowTitle("Risk Management System")
         self.setWindowIcon(QIcon("UI/icons/ezz.png"))
         
         # Initialize database manager
@@ -134,7 +131,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.table_widget.setEditTriggers(QAbstractItemView.DoubleClicked | QAbstractItemView.SelectedClicked)
         
         # TODO: Fix the issues that appears in the program starting if there is a database saved, because its handled as itemChanged in the table_widget
-        self.table_widget.itemChanged.connect(self.handle_item_changed) # Ask for the name multiple times if there are a data saved in the database.
+        self.table_widget.itemChanged.connect(self.handle_item_changed) # Ask for the name multiple times if there are a data saved in the database
 
         self.component_btn.setEnabled(False)
         self.selected_device = None
@@ -173,6 +170,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.harm_hide_timer = QTimer()
         self.harm_hide_timer.setSingleShot(True)
         self.harm_hide_timer.timeout.connect(lambda: self.hide_search_widget(self.harm_list_widget))
+        
 
         self.init_search_lists()
         self.init_combos()
@@ -861,6 +859,7 @@ class RiskSystem(QMainWindow, MainUI):
             item.setBackground(QColor('white'))
         else:
             item.setBackground(QColor('yellow'))
+
         # Auto-save after edit
         self.save_data_to_database()
 

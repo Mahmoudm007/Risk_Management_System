@@ -24,8 +24,8 @@
     "color": "#2ecc71"
   },
   "1,1": {
-    "text": "Medium",
-    "color": "#f1c40f"
+    "text": "Low",
+    "color": "#2ecc71"
   },
   "1,2": {
     "text": "Medium",
@@ -80,8 +80,8 @@
     "color": "#e74c3c"
   },
   "4,0": {
-    "text": "High",
-    "color": "#e74c3c"
+    "text": "Low",
+    "color": "#2ecc71"
   },
   "4,1": {
     "text": "High",

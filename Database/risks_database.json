@@ -1,1 +1,567 @@
-[]
+[
+  {
+    "row_id": 0,
+    "date": "2025-07-14 15:30:06",
+    "risk_no": "RSK_TEST_0",
+    "department": "Ele",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Production",
+    "hazard_category": "Radiation energy",
+    "hazard_source": "x-ray",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion.",
+        "In  a  ventilator,  silica  gel  desiccants  are  incorporated  into  the  device's  internal  compartments  or  filter  housings  to  prevent  moisture  buildup.  Silica  gel  desiccants  release  fine  silica  particles  into  the  air.",
+        "A  ventilator's  internal  fan,  responsible  for  generating  airflow,  develops  an  imbalance,  leading  to  excessive  vibration  of  the  fan  blades  and  surrounding  components.  Over  time,  the  vibration  becomes  more  pronounced,  causing  the  ventilator  housing  and  nearby  components  to  vibrate  noticeably  during  use.",
+        "Due  to  inadequate  maintenance  or  cleaning  procedures,  biofilm  accumulates  on  the  surfaces  of  the  ultrasonic  components,  including  the  transducer  and  water  reservoir."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion. → Seq 2: In  a  ventilator,  silica  gel  desiccants  are  incorporated  into  the  device's  internal  compartments  or  filter  housings  to  prevent  moisture  buildup.  Silica  gel  desiccants  release  fine  silica  particles  into  the  air. → Seq 3: A  ventilator's  internal  fan,  responsible  for  generating  airflow,  develops  an  imbalance,  leading  to  excessive  vibration  of  the  fan  blades  and  surrounding  components.  Over  time,  the  vibration  becomes  more  pronounced,  causing  the  ventilator  housing  and  nearby  components  to  vibrate  noticeably  during  use. → Seq 4: Due  to  inadequate  maintenance  or  cleaning  procedures,  biofilm  accumulates  on  the  surfaces  of  the  ultrasonic  components,  including  the  transducer  and  water  reservoir."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "4",
+    "rpn": "High",
+    "risk_control_actions": {
+      "controls": [
+        {
+          "text": "ID: 30 \n Develop  guidelines  for  maintaining  and  testing  backup  power  supplies  to  ensure  reliability  *during*  outages. ",
+          "type": "Inherently safe design",
+          "children": []
+        },
+        {
+          "text": "ID: 12 \n Verify  the  accuracy  of  all  monitoring  *devices*  through  regular  calibration. ",
+          "type": "Protective measure",
+          "children": []
+        }
+      ]
+    },
+    "approved_by": "Eng. Khaled",
+    "created_timestamp": "2025-07-15T10:47:40.624411",
+    "last_modified": "2025-07-15T10:47:40.624411"
+  },
+  {
+    "row_id": 1,
+    "date": "2025-07-14 15:39:56",
+    "risk_no": "RSK_TEST_2",
+    "department": "Testing Team",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Production",
+    "hazard_category": "Mechanical energy",
+    "hazard_source": "falling objects",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "4",
+    "rpn": "High",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.624411",
+    "last_modified": "2025-07-15T10:47:40.624411"
+  },
+  {
+    "row_id": 2,
+    "date": "2025-07-14 15:39:59",
+    "risk_no": "RSK_TEST_3",
+    "department": "Testing Team",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Production",
+    "hazard_category": "Mechanical energy",
+    "hazard_source": "falling objects",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "4",
+    "rpn": "High",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.624411",
+    "last_modified": "2025-07-15T10:47:40.624411"
+  },
+  {
+    "row_id": 3,
+    "date": "2025-07-14 15:40:01",
+    "risk_no": "RSK_TEST_4",
+    "department": "Testing Team",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Production",
+    "hazard_category": "Mechanical energy",
+    "hazard_source": "falling objects",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "4",
+    "rpn": "High",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.624411",
+    "last_modified": "2025-07-15T10:47:40.624411"
+  },
+  {
+    "row_id": 4,
+    "date": "2025-07-14 15:40:06",
+    "risk_no": "RSK_TEST_5",
+    "department": "Testing Team",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Storage",
+    "hazard_category": "Mechanical energy",
+    "hazard_source": "falling objects",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "3",
+    "rpn": "Medium",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.624411",
+    "last_modified": "2025-07-15T10:47:40.624411"
+  },
+  {
+    "row_id": 5,
+    "date": "2025-07-14 15:43:38",
+    "risk_no": "RSK_TEST_6",
+    "department": "Testing Team",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Storage",
+    "hazard_category": "Mechanical energy",
+    "hazard_source": "falling objects",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "1",
+    "rpn": "Low",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.624411",
+    "last_modified": "2025-07-15T10:47:40.624411"
+  },
+  {
+    "row_id": 6,
+    "date": "2025-07-14 15:43:42",
+    "risk_no": "RSK_ELC_0",
+    "department": "Electrical Department",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Storage",
+    "hazard_category": "Mechanical energy",
+    "hazard_source": "falling objects",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "1",
+    "rpn": "Low",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.624411",
+    "last_modified": "2025-07-15T10:47:40.624411"
+  },
+  {
+    "row_id": 7,
+    "date": "2025-07-14 15:43:44",
+    "risk_no": "RSK_MEC_1",
+    "department": "Mechanical Department",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Storage",
+    "hazard_category": "Mechanical energy",
+    "hazard_source": "falling objects",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "1",
+    "rpn": "Low",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.624411",
+    "last_modified": "2025-07-15T10:47:40.624411"
+  },
+  {
+    "row_id": 8,
+    "date": "2025-07-14 15:43:48",
+    "risk_no": "RSK_MEC_2",
+    "department": "Mechanical Department",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Storage",
+    "hazard_category": "Mechanical energy",
+    "hazard_source": "falling objects",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "1",
+    "rpn": "Low",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.625418",
+    "last_modified": "2025-07-15T10:47:40.625418"
+  },
+  {
+    "row_id": 9,
+    "date": "2025-07-14 15:43:56",
+    "risk_no": "RSK_MEC_3",
+    "department": "Mechanical Department",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Validation",
+    "hazard_category": "Acoustic energy",
+    "hazard_source": "infrasound",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "5",
+    "probability": "1",
+    "rpn": "Medium",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.625418",
+    "last_modified": "2025-07-15T10:47:40.625418"
+  },
+  {
+    "row_id": 10,
+    "date": "2025-07-14 15:43:58",
+    "risk_no": "RSK_MEC_4",
+    "department": "Mechanical Department",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Validation",
+    "hazard_category": "Acoustic energy",
+    "hazard_source": "infrasound",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "5",
+    "probability": "3",
+    "rpn": "High",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.625418",
+    "last_modified": "2025-07-15T10:47:40.625418"
+  },
+  {
+    "row_id": 11,
+    "date": "2025-07-14 15:43:59",
+    "risk_no": "RSK_MEC_5",
+    "department": "Mechanical Department",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Validation",
+    "hazard_category": "Acoustic energy",
+    "hazard_source": "infrasound",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "5",
+    "probability": "3",
+    "rpn": "High",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.625418",
+    "last_modified": "2025-07-15T10:47:40.625418"
+  },
+  {
+    "row_id": 12,
+    "date": "2025-07-14 15:44:02",
+    "risk_no": "RSK_MEC_6",
+    "department": "Mechanical Department",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Validation",
+    "hazard_category": "Acoustic energy",
+    "hazard_source": "infrasound",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "3",
+    "rpn": "Medium",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.625418",
+    "last_modified": "2025-07-15T10:47:40.625418"
+  },
+  {
+    "row_id": 13,
+    "date": "2025-07-14 15:44:14",
+    "risk_no": "RSK_MEC_7",
+    "department": "Mechanical Department",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Validation",
+    "hazard_category": "Biological agents",
+    "hazard_source": "Bacteria",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "5",
+    "rpn": "High",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.625418",
+    "last_modified": "2025-07-15T10:47:40.625418"
+  },
+  {
+    "row_id": 14,
+    "date": "2025-07-14 15:44:24",
+    "risk_no": "RSK_US_0",
+    "department": "Usability Team",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Validation",
+    "hazard_category": "Biological agents",
+    "hazard_source": "Bacteria",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "5",
+    "rpn": "High",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.625418",
+    "last_modified": "2025-07-15T10:47:40.625418"
+  },
+  {
+    "row_id": 15,
+    "date": "2025-07-14 15:44:26",
+    "risk_no": "RSK_US_1",
+    "department": "Usability Team",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Validation",
+    "hazard_category": "Biological agents",
+    "hazard_source": "Bacteria",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "1",
+    "probability": "5",
+    "rpn": "Medium",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.625418",
+    "last_modified": "2025-07-15T10:47:40.625418"
+  },
+  {
+    "row_id": 16,
+    "date": "2025-07-14 15:44:30",
+    "risk_no": "RSK_US_2",
+    "department": "Usability Team",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Validation",
+    "hazard_category": "Biological agents",
+    "hazard_source": "Bacteria",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "1",
+    "probability": "3",
+    "rpn": "Low",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.625418",
+    "last_modified": "2025-07-15T10:47:40.625418"
+  },
+  {
+    "row_id": 17,
+    "date": "2025-07-14 15:44:36",
+    "risk_no": "RSK_US_3",
+    "department": "Usability Team",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Validation",
+    "hazard_category": "Chemical agents",
+    "hazard_source": "Carcinogenic, mutagenic, reproductive",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "3",
+    "rpn": "Medium",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.625418",
+    "last_modified": "2025-07-15T10:47:40.625418"
+  },
+  {
+    "row_id": 18,
+    "date": "2025-07-14 15:44:39",
+    "risk_no": "RSK_US_4",
+    "department": "Usability Team",
+    "device_affected": "EzVent 202",
+    "components": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC",
+    "lifecycle": "Validation",
+    "hazard_category": "Chemical agents",
+    "hazard_source": "Carcinogenic, mutagenic, reproductive",
+    "hazardous_situation": "hazard",
+    "sequence_of_events": {
+      "events": [
+        "ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+      ],
+      "formatted_text": "Seq 1: ID: 20 \n In  the  manufacturing  process  of  a  ventilator,  lead-based  solder  is  used  to  join  electronic  components  on  circuit  boards  and  coatings  on  metal  parts.  Coatings  degrade  over  time  *due*  to  wear  and  corrosion."
+    },
+    "harm_influenced": "User",
+    "harm_description": "ID: 26 \n *Burn* ",
+    "severity": "3",
+    "probability": "4",
+    "rpn": "High",
+    "risk_control_actions": {
+      "controls": []
+    },
+    "approved_by": "",
+    "created_timestamp": "2025-07-15T10:47:40.625418",
+    "last_modified": "2025-07-15T10:47:40.625418"
+  }
+]

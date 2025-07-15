@@ -22,11 +22,12 @@
   "21": "harm description",
   "22": "daddddd",
   "23": "Add new harm description",
-  "24": "ID: 1 \n Hearing  impairment",
+  "24": "Hearing  impairment",
   "25": "add new one",
-  "26": "ID: 4 \n *Burn*",
-  "27": "ID: 26 \n ID:  4  **Burn**",
-  "28": "ID: 14 \n Cuts",
-  "29": "ID: 24 \n ID:  1  *Hearing*  impairment",
-  "30": "ID: 11 \n Repetitive  strain  injuries  (RSIs)/  discomfort"
+  "26": "Burn",
+  "27": "Burn",
+  "28": "Cuts",
+  "29": "Hearing*  impairment",
+  "30": "Repetitive  strain  injuries  (RSIs)/  discomfort",
+  "31": "ID: 26 \n *Burn*"
 }

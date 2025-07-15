@@ -4,7 +4,8 @@ from PyQt5.QtWidgets import QTreeWidgetItem, QTreeWidget, QPushButton, QComboBox
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import *
 # from qtpy import QtWidgets
-# from search import *
+from search import *
+from PyQt5.QtCore import QDateTime, QPropertyAnimation, QEasingCurve, QUrl, QTimer
 
 class AddSubSystemReqClass(QDialog):
     def __init__(self, parent=None):
@@ -77,13 +78,30 @@ class AddControlClass(QWidget):
         self.layout.addWidget(self.tree)
 
         self.add_parent_button.clicked.connect(self.add_parent)
+        
+        self.control_hide_timer = QTimer()
+        self.control_hide_timer.setSingleShot(True)
+        self.control_hide_timer.timeout.connect(lambda: self.hide_search_widget(self.control_list_widget))
+        
+        
+    def hide_search_widget(self, widget):
+        """Hide search widget after timeout"""
+        if widget.isVisible():
+            widget.hide()
 
+    def start_control_hide_timer(self, timer, widget):
+        """Start or restart the hide timer for a search widget"""
+        timer.stop()
+        if widget.isVisible() and widget.count() > 0:
+            timer.start(5000)
+            
     def update_control_ver_layout(self):
         line_edit_type = "control"
         self.control_list_widget.show()
         text = self.parent_text_line_edit.text()
         self.update_layout_of_control_tree(self.parent_text_line_edit,self.control_list_widget, line_edit_type)
-
+        self.start_control_hide_timer(self.control_hide_timer, self.control_list_widget)
+        
     def add_to_risk_control_action_edit(self, item):
         self.parent_text_line_edit.setText(item.text())
         parent_text = self.parent_text_line_edit.text()
@@ -92,6 +110,7 @@ class AddControlClass(QWidget):
             self.tree.addTopLevelItem(item)
             self.parent_text_line_edit.clear()
         self.control_list_widget.hide()
+        self.control_hide_timer.stop()
 
     def update_layout_of_control_tree(self, line_edit, list_widget, line_edit_type):
         search_terms = line_edit.text()
@@ -99,16 +118,16 @@ class AddControlClass(QWidget):
             list_widget.clear()
             return
 
-        # if line_edit_type == "control":
-        #     results = search_documents(search_terms, control_inverted_index, control_documents)
-        #     highlighted_results = rank_and_highlight(results, search_terms, control_documents, scores)
+        if line_edit_type == "control":
+            results = search_documents(search_terms, control_inverted_index, control_documents)
+            highlighted_results = rank_and_highlight(results, search_terms, control_documents, scores)
 
         list_widget.clear()
-        # if not highlighted_results:
-        #     list_widget.addItem("No results found")
-        # else:
-        #     for doc_id, content, score in highlighted_results:
-        #         list_widget.addItem(f"ID: {doc_id} \n{content}")
+        if not highlighted_results:
+            list_widget.addItem("No results found")
+        else:
+            for doc_id, content, score in highlighted_results:
+                list_widget.addItem(f"ID: {doc_id} \n{content}")
 
     def add_parent(self):
         parent_text = self.parent_text_line_edit.text()
