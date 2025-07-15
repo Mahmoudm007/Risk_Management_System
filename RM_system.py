@@ -1493,7 +1493,7 @@ class RiskSystem(QMainWindow, MainUI):
 
             if hazard_source_item and rpn_item:
                 hazards.append(hazard_source_item.text())
-                rpn_values.append(rpn_item.text())
+                rpn_values.append(rpn_item.text().strip().upper())
 
         hazard_counts = Counter(hazards)
         sorted_hazard_counts = sorted(hazard_counts.items(), key=lambda x: x[1], reverse=True)
@@ -1511,6 +1511,7 @@ class RiskSystem(QMainWindow, MainUI):
             ax_hazard.text(bar.get_width() + 0.1, bar.get_y() + bar.get_height() / 2, int(bar.get_width()), va='center')
 
         rpn_counts = Counter(rpn_values)
+        print(f"RPN_Values Counting{rpn_values}")
         rpn_fixed_order = ['HIGH', 'MEDIUM', 'LOW']
         rpn_labels = []
         rpn_values = []
@@ -1519,8 +1520,8 @@ class RiskSystem(QMainWindow, MainUI):
             rpn_labels.append(rpn)
             rpn_values.append(rpn_counts.get(rpn, 0))
 
-        print(rpn_values)
-        print(rpn_labels)
+        print(f"RPN_Values after appending{rpn_values}")
+        print(f"RPN Labels {rpn_labels}")
         fig_rpn = Figure()
         canvas_rpn = FigureCanvas(fig_rpn)
         ax_rpn = fig_rpn.add_subplot(111)
