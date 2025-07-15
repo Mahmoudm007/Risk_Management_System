@@ -870,10 +870,6 @@ class RiskSystem(QMainWindow, MainUI):
         self.sideBarFrame.layout().addWidget(container)
         
         self.web_combo.setCurrentText("ISO 14971")
-        
-        # ISO_14971 = "file:///D:/EzzMedical/Risk_Management_System/References/ISO%2014971%20-%202019%20Document.html"
-        # self.webEngineView.setUrl(QUrl(ISO_14971))
-        # self.sideBarFrame.layout().addWidget(self.webEngineView)
 
     def toggle_side_bar(self):
         if self.modeSideBar.isChecked():

@@ -2458,6 +2458,202 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": "Eng. Khaled"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:39",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_TEST_0"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:40",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_TEST_0"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:40",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Ele"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:40",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Ele"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:40",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:40",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:41",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:41",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:41",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:41",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:41",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:42",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Radiation energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:42",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:42",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "x-ray"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:42",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:42",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:43",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:43",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:43",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:43",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:43",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:44",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:44",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:44",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:44",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:44",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:45",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "Eng. Khaled"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:45",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "Eng. Khaled"
     }
   ],
   "RSK_TEST_2": [
@@ -4738,6 +4934,202 @@
     },
     {
       "timestamp": "2025-07-15 13:21:30",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:25:45",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_TEST_2"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:45",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_TEST_2"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:46",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Testing Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:46",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Testing Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:46",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:46",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:46",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:47",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:47",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:47",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:47",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:47",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:48",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:48",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:48",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:48",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:48",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:49",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:49",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:49",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:49",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:49",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:50",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:50",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:50",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:50",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:51",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:25:51",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
@@ -7026,6 +7418,202 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:25:51",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_TEST_3"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:51",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_TEST_3"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:51",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Testing Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:51",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Testing Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:52",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:52",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:52",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:52",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:53",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:53",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:53",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:53",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:53",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:53",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:54",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:54",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:54",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:54",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:55",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:55",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:55",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:55",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:55",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:55",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:56",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:56",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:56",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:25:56",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "RSK_TEST_4": [
@@ -9306,6 +9894,202 @@
     },
     {
       "timestamp": "2025-07-15 13:21:40",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:25:57",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_TEST_4"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:57",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_TEST_4"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:57",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Testing Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:57",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Testing Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:57",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:57",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:58",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:58",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:58",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:58",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:59",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:59",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:59",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:59",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:59",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:25:59",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:00",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:00",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:00",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:00",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:01",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:01",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:01",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:01",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:01",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:02",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:02",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:02",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
@@ -11594,6 +12378,202 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:02",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_TEST_5"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:02",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_TEST_5"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:03",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Testing Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:03",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Testing Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:03",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:03",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:04",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:04",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:04",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Storage"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:04",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Storage"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:05",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:05",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:05",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:05",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:06",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:06",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:06",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:06",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:06",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:07",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:07",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:07",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:07",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:07",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:08",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Medium"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:08",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Medium"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:08",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:08",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "RSK_TEST_6": [
@@ -13874,6 +14854,202 @@
     },
     {
       "timestamp": "2025-07-15 13:21:51",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:09",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_TEST_6"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:09",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_TEST_6"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:09",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Testing Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:09",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Testing Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:09",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:10",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:10",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:10",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:10",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Storage"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:10",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Storage"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:11",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:11",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:11",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:11",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:12",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:12",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:12",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:12",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:12",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:12",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:13",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:13",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:13",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:13",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:14",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:14",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:14",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:14",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
@@ -16162,6 +17338,202 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:14",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_0"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:14",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_0"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:15",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:15",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:15",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:15",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:16",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:16",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:16",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Storage"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:16",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Storage"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:16",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:17",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:17",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:17",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:17",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:17",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:18",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:18",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:18",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:18",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:19",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:19",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:19",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:19",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:19",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:20",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:20",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:20",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "RSK_MEC_1": [
@@ -18442,6 +19814,202 @@
     },
     {
       "timestamp": "2025-07-15 13:22:02",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:20",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_1"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:20",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_1"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:21",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:21",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:21",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:21",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:22",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:22",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:22",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Storage"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:22",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Storage"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:22",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:22",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:23",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:23",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:23",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:23",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:24",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:24",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:24",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:24",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:24",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:24",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:25",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:25",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:25",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:25",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:26",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:26",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
@@ -20730,6 +22298,202 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:26",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_2"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:26",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_2"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:26",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:27",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:27",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:27",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:27",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:27",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:28",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Storage"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:28",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Storage"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:28",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:28",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:28",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:29",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:29",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:29",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:29",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:29",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:30",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:30",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:30",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:30",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:31",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:31",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:31",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:31",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:31",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:31",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "RSK_MEC_3": [
@@ -23010,6 +24774,202 @@
     },
     {
       "timestamp": "2025-07-15 13:22:13",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:32",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:32",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:32",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:32",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:33",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:33",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:33",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:33",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:33",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:33",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:34",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Acoustic energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:34",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Acoustic energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:34",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "infrasound"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:34",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "infrasound"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:35",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:35",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:35",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:35",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:35",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:36",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:36",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:36",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:36",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:36",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:37",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Medium"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:37",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Medium"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:37",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:37",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
@@ -25298,6 +27258,202 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:37",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_4"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:38",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_4"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:38",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:38",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:38",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:38",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:39",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:39",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:39",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:39",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:40",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Acoustic energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:40",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Acoustic energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:40",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "infrasound"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:40",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "infrasound"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:40",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:40",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:41",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:41",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:41",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:41",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:42",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:42",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:42",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:42",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:42",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:43",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:43",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:43",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "RSK_MEC_5": [
@@ -27578,6 +29734,202 @@
     },
     {
       "timestamp": "2025-07-15 13:22:23",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:43",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_5"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:43",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_5"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:44",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:44",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:44",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:44",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:45",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:45",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:45",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:45",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:45",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Acoustic energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:45",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Acoustic energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:46",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "infrasound"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:46",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "infrasound"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:46",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:46",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:47",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:47",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:47",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:47",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:47",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:47",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:48",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:48",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:48",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:48",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:49",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:49",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
@@ -29866,6 +32218,202 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:49",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_6"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:49",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_6"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:49",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:50",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:50",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:50",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:50",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:50",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:51",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:51",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:51",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Acoustic energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:51",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Acoustic energy"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:52",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "infrasound"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:52",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "infrasound"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:52",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:52",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:52",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:52",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:53",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:53",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:53",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:53",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:54",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:54",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:54",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Medium"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:54",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Medium"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:54",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:55",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "RSK_MEC_7": [
@@ -32146,6 +34694,202 @@
     },
     {
       "timestamp": "2025-07-15 13:22:34",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:26:55",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_7"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:55",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_7"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:55",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:55",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:56",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:56",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:56",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:56",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:57",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:57",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:57",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Biological agents"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:57",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Biological agents"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:57",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Bacteria"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:57",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Bacteria"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:58",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:58",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:58",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:58",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:59",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:59",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:59",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:59",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:26:59",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:00",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:00",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:00",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:00",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:27:00",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
@@ -34434,6 +37178,202 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:27:01",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_0"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:01",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_0"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:01",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:01",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:02",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:02",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:02",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:02",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:02",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:02",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:03",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Biological agents"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:03",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Biological agents"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:03",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Bacteria"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:03",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Bacteria"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:04",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:04",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:04",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:04",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:04",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:05",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:05",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:05",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:05",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:05",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:06",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:06",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:06",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:27:06",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "RSK_US_1": [
@@ -36714,6 +39654,202 @@
     },
     {
       "timestamp": "2025-07-15 13:22:45",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:27:07",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_1"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:07",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_1"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:07",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:07",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:07",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:08",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:08",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:08",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:08",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:08",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:09",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Biological agents"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:09",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Biological agents"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:09",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Bacteria"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:09",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Bacteria"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:10",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:10",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:10",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:10",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:11",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:11",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:11",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:11",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:11",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:11",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:12",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Medium"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:12",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Medium"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:12",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:27:12",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
@@ -39002,6 +42138,202 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:27:13",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_2"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:13",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_2"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:13",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:13",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:14",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:14",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:14",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:14",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:14",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:15",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:15",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Biological agents"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:15",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Biological agents"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:15",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Bacteria"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:15",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Bacteria"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:16",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:16",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:16",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:16",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:17",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:17",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:17",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:17",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:17",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:18",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:18",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:18",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:18",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:27:19",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "RSK_US_3": [
@@ -41286,6 +44618,202 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:27:19",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_3"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:19",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_3"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:19",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:19",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:20",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:20",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:20",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:20",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:21",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:21",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:21",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Chemical agents"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:21",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Chemical agents"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:21",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Carcinogenic, mutagenic, reproductive"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:22",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Carcinogenic, mutagenic, reproductive"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:22",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:22",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:22",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:22",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:23",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:23",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:23",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:23",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:24",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:24",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:24",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Medium"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:24",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Medium"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:25",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:27:25",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
     }
   ],
   "RSK_US_4": [
@@ -43566,6 +47094,202 @@
     },
     {
       "timestamp": "2025-07-15 13:23:01",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:27:25",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_4"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:25",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_4"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:26",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:26",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:26",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:26",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:27",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:27",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Fittings, Gas Manifold, AC-DC Power Supply, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:27",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:27",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:27",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Chemical agents"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:28",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Chemical agents"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:28",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Carcinogenic, mutagenic, reproductive"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:28",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Carcinogenic, mutagenic, reproductive"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:28",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:28",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "hazard"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:29",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:29",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:29",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:29",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 26 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:30",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:30",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:30",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:30",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:31",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:31",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-15 13:27:31",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-15 13:27:31",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
