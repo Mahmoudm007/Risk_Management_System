@@ -717,8 +717,9 @@ class RiskSystem(QMainWindow, MainUI):
 
         tree_widget_cell = AddControlClass()
         self.table_widget.setCellWidget(row_position, 15, tree_widget_cell)
-
-        self.table_widget.setRowHeight(row_position, 180)
+        
+                
+        self.table_widget.setRowHeight(row_position, 200)
 
         # Record all initial field values with the same user name (NO additional prompts)
         self.record_initial_risk_creation(rsk_no, user_name, field_data)
@@ -965,9 +966,10 @@ class RiskSystem(QMainWindow, MainUI):
             "Hazard Source", "Hazardous Situation", "Sequence of Events", "Harm Influenced", "Harm Description",
             "Severity", "Probability", "RPN", "Risk Control Actions",  "Approved By"
         ])
-
+        self.table_widget.setColumnWidth(15, 800)
+        
         self.table_widget.setEditTriggers(QAbstractItemView.NoEditTriggers)
-
+        
         self.dectability_spin_box.setMinimum(1)
         self.dectability_spin_box.setMaximum(10)
         self.dectability_spin_box.setValue(1)
@@ -1756,7 +1758,7 @@ class RiskSystem(QMainWindow, MainUI):
 
 def main():
     app = QApplication(sys.argv)
-    # app.setStyle('Fusion')  # Modern look
+    # app.setStyle('Fusion')  
     window = RiskSystem()
     window.show()
     sys.exit(app.exec_())

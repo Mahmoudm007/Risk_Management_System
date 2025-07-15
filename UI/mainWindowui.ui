@@ -301,7 +301,7 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>icons/iso-symbol.png</normaloff>icons/iso-symbol.png</iconset>
+                  <normaloff>icons/www.png</normaloff>icons/www.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
