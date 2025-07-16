@@ -309,6 +309,9 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
                   <height>40</height>
                  </size>
                 </property>
+                <property name="shortcut">
+                 <string>Ctrl+S</string>
+                </property>
                 <property name="checkable">
                  <bool>true</bool>
                 </property>
@@ -359,6 +362,9 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
                   <width>40</width>
                   <height>40</height>
                  </size>
+                </property>
+                <property name="shortcut">
+                 <string>Ctrl+D</string>
                 </property>
                 <property name="checkable">
                  <bool>true</bool>
@@ -803,6 +809,9 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
                <iconset>
                 <normaloff>icons/bell.png</normaloff>icons/bell.png</iconset>
               </property>
+              <property name="shortcut">
+               <string>Ctrl+N</string>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1110,6 +1119,9 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
                 <width>60</width>
                 <height>55</height>
                </size>
+              </property>
+              <property name="shortcut">
+               <string>Ctrl+M</string>
               </property>
              </widget>
             </item>
