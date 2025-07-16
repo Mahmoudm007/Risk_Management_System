@@ -1,7 +1,7 @@
 import json
 import os
 from datetime import datetime
-from PyQt5.QtWidgets import QTableWidgetItem
+from PyQt5.QtWidgets import QTableWidgetItem, QTableWidget
 from sequence_widget import SequenceEventWidget
 from ControlAndRequirement import AddControlClass
 

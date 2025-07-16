@@ -87,7 +87,7 @@ class SequenceEventWidget(QWidget):
         layout.setContentsMargins(5, 5, 5, 5)
 
         # Sequence number
-        seq_label = QLabel(f"Seq {index + 1}:")
+        seq_label = QLabel(f"Event {index + 1}:")
         seq_label.setFont(QFont("Arial", 9, QFont.Bold))
         seq_label.setStyleSheet("color: #2c5aa0; background: transparent; border: none;")
         seq_label.setMinimumWidth(50)

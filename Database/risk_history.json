@@ -63,5 +63,550 @@
       "previous_value": "",
       "new_value": "Low"
     }
+  ],
+  "RSK_TEST_4": [
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-16 13:11:48"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_TEST_4"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Testing Team"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "AC-DC Power Supply"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Validation"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Mechanical energy"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "falling objects"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 15 \n *As*  a  *result*  of  the  *compressed*  power  cord,  the  electrical  connection  to  the  ventilator  *is*  *disrupted.*  *This*  *leads*  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  down  unexpectedly  and  interrupting  *respiratory*  *support*  to  the  patient. "
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 57 \n *ID:*  20  In  the  manufacturing  process  of  a  ventilator,  *lead-based*  *solder*  is  *used*  to  join  electronic  components  on  circuit  *boards*  *and*  coatings  on  metal  parts.  Coatings  *degrade*  over  time  **due**  to  wear  *and*  corrosion. "
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "No results found"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Medium"
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:11:49",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_MEC_8": [
+    {
+      "timestamp": "2025-07-16 13:44:07",
+      "user": "c",
+      "field": "Enhanced Risk Created",
+      "previous_value": "",
+      "new_value": "New enhanced risk entry created"
+    },
+    {
+      "timestamp": "2025-07-16 13:44:07",
+      "user": "c",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-16 13:44:07"
+    },
+    {
+      "timestamp": "2025-07-16 13:44:07",
+      "user": "c",
+      "field": "Base Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_MEC_8"
+    },
+    {
+      "timestamp": "2025-07-16 13:44:07",
+      "user": "c",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Mechanical Department"
+    },
+    {
+      "timestamp": "2025-07-16 13:44:07",
+      "user": "c",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Production"
+    },
+    {
+      "timestamp": "2025-07-16 13:44:07",
+      "user": "c",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 13:44:07",
+      "user": "c",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 19 \n In  the  *assembly*  of  a  ventilator,  *adhesive*  *solvents*  are  *used*  to  bond  *various*  *components*  together,  *such*  *as*  *plastic*  *housing*  *panels*  or  electronic  circuitry.  *Solvent*  *vapors*  accumulate  in  the  air. "
+    },
+    {
+      "timestamp": "2025-07-16 13:44:07",
+      "user": "c",
+      "field": "Hazardous Situations",
+      "previous_value": "",
+      "new_value": "ID: 47 \n *ID:*  15  *As*  a  *result*  of  the  **compressed**  power  *cord,*  the  electrical  connection  to  the  ventilator  *is*  **disrupted.**  *This*  **leads**  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  *down*  *unexpectedly*  *and*  interrupting  *respiratory*  *support*  to  the  patient. "
+    },
+    {
+      "timestamp": "2025-07-16 13:44:07",
+      "user": "c",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Patient"
+    },
+    {
+      "timestamp": "2025-07-16 13:44:07",
+      "user": "c",
+      "field": "Harm Descriptions",
+      "previous_value": "",
+      "new_value": "ID: 32 \n No  results  found "
+    },
+    {
+      "timestamp": "2025-07-16 13:44:07",
+      "user": "c",
+      "field": "Generated Risk Numbers",
+      "previous_value": "",
+      "new_value": "\nRisk Number: RSK_MEC_DEFAULT_1_1_1\n\u251c\u2500 Department: MEC\n\u251c\u2500 Component: DEFAULT\n\u251c\u2500 Sequence ID: 1 \u2192 ID: 19 \n In  the  *assembly*  of  a  ventilator,  ...\n\u251c\u2500 Situation ID: 1 \u2192 ID: 47 \n *ID:*  15  *As*  a  *result*  of  the  **...\n\u2514\u2500 Harm ID: 1 \u2192 ID: 32 \n No  results  found"
+    },
+    {
+      "timestamp": "2025-07-16 13:44:07",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:44:07",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:44:19",
+      "user": "d",
+      "field": "Generated Risk Numbers",
+      "previous_value": "",
+      "new_value": "Risk Number: RSK_MEC_DEFAULT_1_1_1\n\u251c\u2500 Department: MEC\n\u251c\u2500 Component: DEFAULT\n\u251c\u2500 Sequence ID: 1 \u2192 ID: 19 \n In  the  *assembly*  of  a  ventilator,  ...\n\u251c\u2500 Situation ID: 1 \u2192 ID: 47 \n *ID:*  15  *As*  a  *result*  of  the  **...\n\u2514\u2500 Harm ID: 1 \u2192 ID: 32 \n No  results  found"
+    },
+    {
+      "timestamp": "2025-07-16 13:44:21",
+      "user": "d",
+      "field": "Generated Risk Numbers",
+      "previous_value": "",
+      "new_value": "Risk Number: RSK_MEC_DEFAULT_1_1_1\n\u251c\u2500 Department: MEC\n\u251c\u2500 Component: DEFAULT\n\u251c\u2500 Sequence ID: 1 \u2192 ID: 19 \n In  the  *assembly*  of  a  ventilator,  ...\n\u251c\u2500 Situation ID: 1 \u2192 ID: 47 \n *ID:*  15  *As*  a  *result*  of  the  **...\n\u2514\u2500 Harm ID: 1 \u2192 ID: 32 \n No  results  found"
+    }
+  ],
+  "RSK_ELC_3": [
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-16 13:45:48"
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_3"
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Potential energy"
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "bending"
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 15 \n *As*  a  *result*  of  the  *compressed*  power  cord,  the  electrical  connection  to  the  ventilator  *is*  *disrupted.*  *This*  *leads*  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  down  unexpectedly  and  interrupting  *respiratory*  *support*  to  the  patient. "
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 61 \n *ID:*  57  **ID:**  20  In  the  manufacturing  process  of  a  ventilator,  **lead-based**  **solder**  is  **used**  to  join  electronic  components  on  circuit  **boards**  **and**  coatings  on  metal  parts.  Coatings  **degrade**  over  time  ***due***  to  wear  **and**  corrosion. "
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Property"
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 34 \n Damage  to  the  healthcare  *provider's*  reputation. "
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "d",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:45:48",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_3"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_3"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Potential energy"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Potential energy"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "bending"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "bending"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 15 \n *As*  a  *result*  of  the  *compressed*  power  cord,  the  electrical  connection  to  the  ventilator  *is*  *disrupted.*  *This*  *leads*  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  down  unexpectedly  and  interrupting  *respiratory*  *support*  to  the  patient."
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 15 \n *As*  a  *result*  of  the  *compressed*  power  cord,  the  electrical  connection  to  the  ventilator  *is*  *disrupted.*  *This*  *leads*  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  down  unexpectedly  and  interrupting  *respiratory*  *support*  to  the  patient."
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Property"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Property"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 34 \n Damage  to  the  healthcare  *provider's*  reputation."
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 34 \n Damage  to  the  healthcare  *provider's*  reputation."
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:46:35",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
   ]
 }

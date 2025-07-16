@@ -43,5 +43,8 @@
   "42": "This*  bending  restricts  *the*  flow  of  air  or  oxygen  *through*  *the*  tubing,  compromising  *the*  delivery  of  respiratory  support  to  *the*  patient.",
   "43": "An  ESD  *event*  occurs  near  sensitive  electronic  components  of  the  *ventilator,*  causing  damage  to  the  electronic  circuitry.",
   "44": "*As*  a  *result*  of  the  *compressed*  power  cord,  the  electrical  connection  to  the  ventilator  *is*  *disrupted.*  *This*  *leads*  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  down  unexpectedly  and  interrupting  *respiratory*  *support*  to  the  patient.",
-  "45": "hazard"
+  "45": "hazard",
+  "46": "Risk  of  infection  from  improperly  sterilized  ventilator  parts.",
+  "47": "ID: 15 \n *As*  a  *result*  of  the  *compressed*  power  cord,  the  electrical  connection  to  the  ventilator  *is*  *disrupted.*  *This*  *leads*  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  down  unexpectedly  and  interrupting  *respiratory*  *support*  to  the  patient.",
+  "48": "ID: 47 \n *ID:*  15  *As*  a  *result*  of  the  **compressed**  power  *cord,*  the  electrical  connection  to  the  ventilator  *is*  **disrupted.**  *This*  **leads**  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  *down*  *unexpectedly*  *and*  interrupting  *respiratory*  *support*  to  the  patient."
 }

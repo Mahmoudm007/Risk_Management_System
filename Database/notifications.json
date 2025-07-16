@@ -1,1 +1,72 @@
-[]
+[
+  {
+    "content": "ID: 15 \n *As*  a  *result*  of  the  *compressed*  power  cord,  the  electrical  connection  to  the  ventilator  *is*  *disrupted.*  *This*  *leads*  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  down  unexpectedly  and  interrupting  *respiratory*  *support*  to  the  patient.",
+    "field_type": "Hazardous Situation",
+    "timestamp": "2025-07-16 13:11:48",
+    "id": 1,
+    "is_new": true
+  },
+  {
+    "content": "ID: 57 \n *ID:*  20  In  the  manufacturing  process  of  a  ventilator,  *lead-based*  *solder*  is  *used*  to  join  electronic  components  on  circuit  *boards*  *and*  coatings  on  metal  parts.  Coatings  *degrade*  over  time  **due**  to  wear  *and*  corrosion.",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-16 13:11:49",
+    "id": 2,
+    "is_new": true
+  },
+  {
+    "content": "No results found",
+    "field_type": "Harm Description",
+    "timestamp": "2025-07-16 13:11:49",
+    "id": 3,
+    "is_new": true
+  },
+  {
+    "content": "ID:  26  Burn",
+    "field_type": "Harm Description",
+    "timestamp": "2025-07-16 13:13:22",
+    "id": 4,
+    "is_new": true
+  },
+  {
+    "content": "Damage  to  the  healthcare  provider's  reputation.",
+    "field_type": "Harm Description",
+    "timestamp": "2025-07-16 13:13:29",
+    "id": 5,
+    "is_new": true
+  },
+  {
+    "content": "ID: 19 \n In  the  *assembly*  of  a  ventilator,  *adhesive*  *solvents*  are  *used*  to  bond  *various*  *components*  together,  *such*  *as*  *plastic*  *housing*  *panels*  or  electronic  circuitry.  *Solvent*  *vapors*  accumulate  in  the  air.",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-16 13:44:07",
+    "id": 6,
+    "is_new": true
+  },
+  {
+    "content": "ID: 47 \n *ID:*  15  *As*  a  *result*  of  the  **compressed**  power  *cord,*  the  electrical  connection  to  the  ventilator  *is*  **disrupted.**  *This*  **leads**  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  *down*  *unexpectedly*  *and*  interrupting  *respiratory*  *support*  to  the  patient.",
+    "field_type": "Hazardous Situation",
+    "timestamp": "2025-07-16 13:44:07",
+    "id": 7,
+    "is_new": true
+  },
+  {
+    "content": "ID: 32 \n No  results  found",
+    "field_type": "Harm Description",
+    "timestamp": "2025-07-16 13:44:07",
+    "id": 8,
+    "is_new": true
+  },
+  {
+    "content": "ID: 61 \n *ID:*  57  **ID:**  20  In  the  manufacturing  process  of  a  ventilator,  **lead-based**  **solder**  is  **used**  to  join  electronic  components  on  circuit  **boards**  **and**  coatings  on  metal  parts.  Coatings  **degrade**  over  time  ***due***  to  wear  **and**  corrosion.",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-16 13:45:48",
+    "id": 9,
+    "is_new": true
+  },
+  {
+    "content": "ID: 34 \n Damage  to  the  healthcare  *provider's*  reputation.",
+    "field_type": "Harm Description",
+    "timestamp": "2025-07-16 13:45:48",
+    "id": 10,
+    "is_new": true
+  }
+]
