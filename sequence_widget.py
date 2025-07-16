@@ -10,8 +10,7 @@ from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWi
 
 class SequenceEventWidget(QWidget):
     """Widget to manage a chain of sequential events"""
-
-    sequence_updated = pyqtSignal(list)  # Signal emitted when sequence is updated
+    sequence_updated = pyqtSignal(list)
 
     def __init__(self, initial_event="", parent=None):
         super().__init__(parent)

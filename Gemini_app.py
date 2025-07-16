@@ -694,6 +694,7 @@ class ChatDialog(QDialog):
         """
         
         self.replace_typing_message(gemini_message_html)
+        print("Reply text:", reply_text)  # Debugging output
         self.reset_ui_state()
         self.status_label.setText("✅ Message sent successfully!")
         

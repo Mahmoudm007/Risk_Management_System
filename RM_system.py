@@ -1058,7 +1058,7 @@ class RiskSystem(QMainWindow, MainUI):
 
         # Add sorted list of unique risk numbers to the combo box
         self.rsk_no_combo.addItems(sorted(risk_numbers))
-        print("Risk numbers updated in combo box.")
+        # print("Risk numbers updated in combo box.")
 
 
     def generate_risk_number(self, flag):
@@ -1502,7 +1502,7 @@ class RiskSystem(QMainWindow, MainUI):
             ax_hazard.text(bar.get_width() + 0.1, bar.get_y() + bar.get_height() / 2, int(bar.get_width()), va='center')
 
         rpn_counts = Counter(rpn_values)
-        print(f"RPN_Values Counting{rpn_values}")
+        # print(f"RPN_Values Counting{rpn_values}")
         rpn_fixed_order = ['HIGH', 'MEDIUM', 'LOW']
         rpn_labels = []
         rpn_values = []
@@ -1511,8 +1511,8 @@ class RiskSystem(QMainWindow, MainUI):
             rpn_labels.append(rpn)
             rpn_values.append(rpn_counts.get(rpn, 0))
 
-        print(f"RPN_Values after appending{rpn_values}")
-        print(f"RPN Labels {rpn_labels}")
+        # print(f"RPN_Values after appending{rpn_values}")
+        # print(f"RPN Labels {rpn_labels}")
         fig_rpn = Figure()
         canvas_rpn = FigureCanvas(fig_rpn)
         ax_rpn = fig_rpn.add_subplot(111)
@@ -1765,7 +1765,7 @@ class RiskSystem(QMainWindow, MainUI):
         # Refresh RPN if current device matches updated device
         if self.checked_items and device in self.checked_items:
             self.update_rpn_value()
-            print(f"RPN updated for device: {device}")
+            # print(f"RPN updated for device: {device}")
 
 
 def main():
