@@ -47,6 +47,8 @@ from traceability_dialog import TraceabilityDialog
 from Gemini_app import ChatDialog as GeminiChatDialog
 from enhanced_matrix_dialog import EnhancedMatrixDialog
 from component_selection_dialog import ComponentSelectionDialog
+from hazardous_situation_widget import HazardousSituationWidget
+from harm_description_widget import HarmDescriptionWidget
 
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -57,8 +59,9 @@ class RiskSystem(QMainWindow, MainUI):
         super(RiskSystem, self).__init__()
         self.setupUi(self)
         self.setGeometry(0, 0, 1900, 950)
-        self.setWindowTitle("Risk Management System")
+        self.setWindowTitle("Risk Management System")   
         self.setWindowIcon(QIcon("UI/icons/ezz.png"))
+        
         
         # Initialize database manager
         self.db_manager = DatabaseManager()
@@ -914,10 +917,11 @@ class RiskSystem(QMainWindow, MainUI):
 
     def init_combos(self):
         self.web_links = {
+        "ISO 14971": "file:///D:/EzzMedical/Risk_Management_System/References/ISO%2014971%20-%202019%20Document.html",
         "Google": "https://www.google.com",
         "Scholar": "https://scholar.google.com",
         "ECRI": "https://www.ecri.org",
-        "ISO 14971": "file:///D:/EzzMedical/Risk_Management_System/References/ISO%2014971%20-%202019%20Document.html"
+        "ERA" : "https://era.ezzmedical.com/"
         }
         
         self.department_combo.addItems(["  ", "Software Department", "Electrical Department", "Mechanical Department",
