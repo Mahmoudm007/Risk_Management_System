@@ -46,9 +46,10 @@ from notification_dialog import NotificationDialog
 from traceability_dialog import TraceabilityDialog
 from Gemini_app import ChatDialog as GeminiChatDialog
 from enhanced_matrix_dialog import EnhancedMatrixDialog
-from component_selection_dialog import ComponentSelectionDialog
-from hazardous_situation_widget import HazardousSituationWidget
 from harm_description_widget import HarmDescriptionWidget
+from hazardous_situation_widget import HazardousSituationWidget
+from component_selection_dialog import ComponentSelectionDialog
+
 
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -131,6 +132,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.init_combos()
         self.buttons_signals()
         self.web_application()
+        
         self.table_widget.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
 
         # Initialize counters
@@ -159,6 +161,7 @@ class RiskSystem(QMainWindow, MainUI):
 
         # Show database stats on startup
         self.show_database_stats()
+        self.update_rsk_number_combo()
 
     def show_database_stats(self):
         """Show database statistics on startup"""
@@ -915,7 +918,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.harm_list_widget.setFixedHeight(150)
         self.harm_list_widget.hide()
 
-    def init_combos(self):
+    def init_combos(self):        
         self.web_links = {
         "ISO 14971": "file:///D:/EzzMedical/Risk_Management_System/References/ISO%2014971%20-%202019%20Document.html",
         "Google": "https://www.google.com",
@@ -1041,17 +1044,22 @@ class RiskSystem(QMainWindow, MainUI):
             self.risk_no_line_edit.setText(f"RSK_TEST_{self.test_counter}")
 
     def update_rsk_number_combo(self):
-        department = self.department_combo.currentText()
-        if department == "Software Department":
-            self.rsk_no_combo.addItems([f"RSK_SW_{self.sw_counter}"])
-        elif department == "Electrical Department":
-            self.rsk_no_combo.addItems([f"RSK_ELC_{self.elc_counter}"])
-        elif department == "Mechanical Department":
-            self.rsk_no_combo.addItems([f"RSK_MEC_{self.mec_counter}"])
-        elif department == "Usability Team":
-            self.rsk_no_combo.addItems([f"RSK_US_{self.us_counter}"])
-        elif department == "Testing Team":
-            self.rsk_no_combo.addItems([f"RSK_TEST_{self.test_counter}"])
+        # Clear the combo box first to avoid duplication
+        self.rsk_no_combo.clear()
+
+        # Iterate over all rows in the table and collect Risk No. values from column 1
+        risk_numbers = set()  # Use a set to avoid duplicates
+        for row in range(self.table_widget.rowCount()):
+            item = self.table_widget.item(row, 1)  # Column 1 is "Risk No."
+            if item:
+                risk_no = item.text().strip()
+                if risk_no:
+                    risk_numbers.add(risk_no)
+
+        # Add sorted list of unique risk numbers to the combo box
+        self.rsk_no_combo.addItems(sorted(risk_numbers))
+        print("Risk numbers updated in combo box.")
+
 
     def generate_risk_number(self, flag):
         department = self.department_combo.currentText()
