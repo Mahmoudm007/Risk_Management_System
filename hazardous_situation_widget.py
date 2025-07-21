@@ -3,7 +3,7 @@ from PyQt5.QtCore import Qt, pyqtSignal
 from PyQt5.QtGui import QFont, QPalette
 import json
 from search import *
-from enhanced_hazardous_situation_dialog import EnhancedHazardousSituationDialog
+from hazardous_situation_dialog import HazardousSituationDialog
 from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox,
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
                              QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
@@ -130,7 +130,7 @@ class HazardousSituationCardWidget(QWidget):
 
     def open_management_dialog(self):
         """Open the management dialog for situations"""
-        dialog = EnhancedHazardousSituationDialog(self.parent_window, self.situations.copy())
+        dialog = HazardousSituationDialog(self.parent_window, self.situations.copy())
         if dialog.exec_() == QDialog.Accepted:
             self.situations = dialog.get_situations()
             self.update_display()

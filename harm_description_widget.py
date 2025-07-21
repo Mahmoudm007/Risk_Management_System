@@ -4,7 +4,7 @@ from PyQt5.QtGui import QFont, QColor
 import json
 import os
 from search import *
-from enhanced_harm_description_dialog import EnhancedHarmDescriptionDialog
+from harm_description_dialog import HarmDescriptionDialog
 from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox,
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
                              QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
@@ -242,7 +242,7 @@ class HarmDescriptionCardWidget(QWidget):
 
     def open_management_dialog(self):
         """Open the management dialog for harm descriptions"""
-        dialog = EnhancedHarmDescriptionDialog(
+        dialog = HarmDescriptionDialog(
             self.parent_window, 
             self.harms.copy(), 
             self.selected_device

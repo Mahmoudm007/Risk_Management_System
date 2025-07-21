@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWi
                              QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog, QInputDialog)
 from PyQt5 import QtCore
 
-class EnhancedMatrixDialog(QDialog):
+class MatrixDialog(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle("Device-Specific Risk Matrix")

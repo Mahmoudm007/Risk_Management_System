@@ -8,8 +8,8 @@ from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWi
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
                              QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
 
-class EnhancedHarmDescriptionDialog(QDialog):
-    """Enhanced dialog for managing multiple harm descriptions with RPN calculation"""
+class HarmDescriptionDialog(QDialog):
+    """dialog for managing multiple harm descriptions with RPN calculation"""
     harms_updated = pyqtSignal(list, dict)  # harms list, rpn_data dict
 
     def __init__(self, parent=None, existing_harms=None, selected_device=None):

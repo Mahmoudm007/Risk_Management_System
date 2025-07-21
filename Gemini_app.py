@@ -75,7 +75,7 @@ def markdown_to_html(text):
     return text
 
 
-# === Enhanced Connection Test Worker ===
+# === Connection Test Worker ===
 class ConnectionTestWorker(QThread):
     finished = pyqtSignal(bool, str, dict)
 
@@ -330,7 +330,7 @@ class BulletproofGeminiWorker(QThread):
         self.error.emit("All connection attempts failed. The Gemini API service appears to be overloaded or temporarily unavailable. Please try again in a few minutes.")
 
 
-# === Enhanced Chat Dialog ===
+# === Chat Dialog ===
 class ChatDialog(QDialog):
     def __init__(self, existing_history=None, parent=None):
         super().__init__(parent)

@@ -21,7 +21,7 @@ class DatabaseManager:
         os.makedirs(self.matrix_dir, exist_ok=True)
 
     def save_all_risks(self, table_widget):
-        """Save all risks from the table to JSON database - ENHANCED for card widgets"""
+        """Save all risks from the table to JSON database"""
         risks_data = []
         
         for row in range(table_widget.rowCount()):
@@ -59,7 +59,7 @@ class DatabaseManager:
             return False
 
     def load_all_risks(self, table_widget):
-        """Load all risks from JSON database to table - ENHANCED for card widgets"""
+        """Load all risks from JSON database to table"""
         if not os.path.exists(self.risks_file):
             return False
         
@@ -161,9 +161,8 @@ class DatabaseManager:
             }
         return {}
 
-    # All other functions remain the same as original...
     def save_chat_data(self, chat_data):
-        """Save chat data to JSON database - This function is same as original"""
+        """Save chat data to JSON database"""
         try:
             with open(self.chat_file, 'w', encoding='utf-8') as f:
                 json.dump(chat_data, f, indent=2, ensure_ascii=False)
@@ -172,7 +171,7 @@ class DatabaseManager:
             return False
 
     def load_chat_data(self):
-        """Load chat data from JSON database - This function is same as original"""
+        """Load chat data from JSON database"""
         if not os.path.exists(self.chat_file):
             return {}
         
@@ -184,7 +183,7 @@ class DatabaseManager:
             return {}
 
     def save_counters(self, sw_counter, elc_counter, mec_counter, us_counter, test_counter):
-        """Save department counters to database - This function is same as original"""
+        """Save department counters to database"""
         counters_data = {
             'sw_counter': sw_counter,
             'elc_counter': elc_counter,
@@ -203,7 +202,7 @@ class DatabaseManager:
             return False
 
     def load_counters(self):
-        """Load department counters from database - This function is same as original"""
+        """Load department counters from database"""
         if not os.path.exists(self.counters_file):
             return 0, 0, 0, 0, 0
         
@@ -224,16 +223,16 @@ class DatabaseManager:
             return 0, 0, 0, 0, 0
 
     def get_cell_text(self, table_widget, row, col):
-        """Get text from table cell - This function is same as original"""
+        """Get text from table cell"""
         item = table_widget.item(row, col)
         return item.text() if item else ""
 
     def set_cell_text(self, table_widget, row, col, text):
-        """Set text to table cell - This function is same as original"""
+        """Set text to table cell"""
         table_widget.setItem(row, col, QTableWidgetItem(str(text)))
 
     def get_sequence_data(self, table_widget, row, col):
-        """Get sequence data from sequence widget - This function is same as original"""
+        """Get sequence data from sequence widget"""
         widget = table_widget.cellWidget(row, col)
         if isinstance(widget, SequenceEventWidget):
             return {
@@ -243,7 +242,7 @@ class DatabaseManager:
         return {}
 
     def get_control_data(self, table_widget, row, col):
-        """Get control data from control widget - This function is same as original"""
+        """Get control data from control widget"""
         widget = table_widget.cellWidget(row, col)
         if isinstance(widget, AddControlClass):
             controls = []
@@ -270,7 +269,7 @@ class DatabaseManager:
         return {}
 
     def restore_control_widget(self, control_widget, controls_data):
-        """Restore control widget from saved data - This function is same as original"""
+        """Restore control widget from saved data"""
         from PyQt5.QtWidgets import QTreeWidgetItem
         
         for control_data in controls_data:
@@ -286,7 +285,7 @@ class DatabaseManager:
             parent_item.setExpanded(True)
 
     def backup_database(self):
-        """Create a backup of the current database - This function is same as original"""
+        """Create a backup of the current database"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         backup_dir = os.path.join(self.database_dir, "backups")
         os.makedirs(backup_dir, exist_ok=True)
@@ -312,7 +311,7 @@ class DatabaseManager:
         return backup_count > 0
 
     def get_database_stats(self):
-        """Get statistics about the database - This function is same as original"""
+        """Get statistics about the database"""
         stats = {
             'total_risks': 0,
             'database_size': 0,

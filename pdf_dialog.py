@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWi
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
                              QCheckBox, QGroupBox, QMessageBox, QFileDialog)
 
-class EnhancedPDFDialog(QDialog):
+class PDFDialog(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle("Generate PDF Report")

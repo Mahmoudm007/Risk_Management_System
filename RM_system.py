@@ -35,7 +35,7 @@ from RiskChat import ChatDialog
 from Dashboard import Dashboard
 from Calendar import CalendarDialog
 from filter_dialog import FilterDialog
-from pdf_dialog import EnhancedPDFDialog
+from pdf_dialog import PDFDialog
 from DeviceSelection import DeviceSelected
 from database_manager import DatabaseManager
 from user_input_dialog import UserInputDialog
@@ -45,12 +45,12 @@ from risk_history_dialog import RiskHistoryDialog
 from notification_dialog import NotificationDialog
 from traceability_dialog import TraceabilityDialog
 from Gemini_app import ChatDialog as GeminiChatDialog
-from enhanced_matrix_dialog import EnhancedMatrixDialog
+from matrix_dialog import MatrixDialog
 from harm_description_widget import HarmDescriptionCardWidget
 from component_selection_dialog import ComponentSelectionDialog
 from hazardous_situation_widget import HazardousSituationCardWidget
-from enhanced_harm_description_dialog import EnhancedHarmDescriptionDialog
-from enhanced_hazardous_situation_dialog import EnhancedHazardousSituationDialog
+from harm_description_dialog import HarmDescriptionDialog
+from hazardous_situation_dialog import HazardousSituationDialog
 
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -164,7 +164,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.update_rsk_number_combo()
 
     def show_database_stats(self):
-        """Show database statistics on startup - This function is same as original"""
+        """Show database statistics on startup"""
         stats = self.db_manager.get_database_stats()
         if stats['total_risks'] > 0:
             print(f"📊 Database loaded: {stats['total_risks']} risks")
@@ -173,7 +173,7 @@ class RiskSystem(QMainWindow, MainUI):
                 print(f"🕒 Last modified: {stats['last_modified']}")
 
     def load_data_from_database(self):
-        """Load all data from database on startup - This function is same as original"""
+        """Load all data from database on startup"""
         try:
             # Load risks
             if self.db_manager.load_all_risks(self.table_widget):
@@ -191,7 +191,7 @@ class RiskSystem(QMainWindow, MainUI):
                               f"Error loading data from database:\n{e}\n\nStarting with empty database.")
 
     def update_counters_from_table(self):
-        """Update risk counters based on loaded table data - This function is same as original"""
+        """Update risk counters based on loaded table data"""
         dept_counts = {'Software Department': 0, 'Electrical Department': 0, 
                       'Mechanical Department': 0, 'Usability Team': 0, 'Testing Team': 0}
         
@@ -210,7 +210,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.test_counter = max(self.test_counter, dept_counts['Testing Team'])
 
     def auto_save_data(self):
-        """Auto-save data every 5 minutes - This function is same as original"""
+        """Auto-save data every 5 minutes"""
         try:
             self.save_data_to_database()
             print("💾 Auto-save completed")
@@ -540,7 +540,7 @@ class RiskSystem(QMainWindow, MainUI):
 
         self.dectability_spin_box.valueChanged.connect(self.update_dectability_label)
         self.show_charts_button.clicked.connect(self.show_charts)
-        self.pdf_gen.clicked.connect(self.open_enhanced_pdf_dialog)
+        self.pdf_gen.clicked.connect(self.open_pdf_dialog)
 
         self.table_widget.customContextMenuRequested.connect(self.show_context_menu)
         self.source_combo.currentIndexChanged.connect(self.check_standards)
@@ -1040,7 +1040,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.generate_and_set_id()
 
     def handle_cell_click(self, row, column):
-        """Handle clicks on specific cells to open enhanced dialogs"""
+        """Handle clicks on specific cells to open dialogs"""
         # Column 8 is Hazardous Situation
         if column == 8:
             self.open_hazardous_situation_dialog(row)
@@ -1049,7 +1049,7 @@ class RiskSystem(QMainWindow, MainUI):
             self.open_harm_description_dialog(row)
             
     def open_hazardous_situation_dialog(self, row):
-        """Open enhanced hazardous situation dialog for the specified row"""
+        """Open hazardous situation dialog for the specified row"""
         # Get existing situations from the cell
         item = self.table_widget.item(row, 8)
         existing_text = item.text() if item else ""
@@ -1067,7 +1067,7 @@ class RiskSystem(QMainWindow, MainUI):
                 existing_situations.append(clean_sit)
 
         # Open dialog
-        dialog = EnhancedHazardousSituationDialog(self, existing_situations)
+        dialog = HazardousSituationDialog(self, existing_situations)
         if dialog.exec_() == QDialog.Accepted:
             situations = dialog.get_situations()
             situations_text = dialog.get_situations_text()
@@ -1088,7 +1088,7 @@ class RiskSystem(QMainWindow, MainUI):
             self.save_data_to_database()
             
     def open_harm_description_dialog(self, row):
-        """Open enhanced harm description dialog for the specified row"""
+        """Open harm description dialog for the specified row"""
         # Get existing harms from the cell
         item = self.table_widget.item(row, 11)
         existing_text = item.text() if item else ""
@@ -1110,7 +1110,7 @@ class RiskSystem(QMainWindow, MainUI):
             selected_device = self.checked_items[0]
 
         # Open dialog
-        dialog = EnhancedHarmDescriptionDialog(self, existing_harms, selected_device)
+        dialog = HarmDescriptionDialog(self, existing_harms, selected_device)
         if dialog.exec_() == QDialog.Accepted:
             harms = dialog.get_harms()
             harms_text = dialog.get_harms_text()
@@ -1438,9 +1438,9 @@ class RiskSystem(QMainWindow, MainUI):
             # Auto-save after removal
             self.save_data_to_database()
 
-    def open_enhanced_pdf_dialog(self):
-        """Open the enhanced PDF generation dialog"""
-        dialog = EnhancedPDFDialog(self)
+    def open_pdf_dialog(self):
+        """Open PDF generation dialog"""
+        dialog = PDFDialog(self)
         dialog.exec_()
 
     def generate_filtered_pdf(self, filter_type, filter_value):
@@ -1795,8 +1795,8 @@ class RiskSystem(QMainWindow, MainUI):
                 self.table_widget.setItem(row_position, col, QTableWidgetItem(item_text))
 
     def show_rpn_matrix(self):
-        """Show enhanced device-specific risk matrix dialog"""
-        dialog = EnhancedMatrixDialog(self)
+        """Show device-specific risk matrix dialog"""
+        dialog = MatrixDialog(self)
         dialog.exec_()
 
 

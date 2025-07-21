@@ -7,8 +7,8 @@ from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWi
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem, QListWidget,
                              QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
 
-class EnhancedHazardousSituationDialog(QDialog):
-    """Enhanced dialog for managing multiple hazardous situations with search"""
+class HazardousSituationDialog(QDialog):
+    """dialog for managing multiple hazardous situations with search"""
     situations_updated = pyqtSignal(list)
 
     def __init__(self, parent=None, existing_situations=None):
