@@ -4,9 +4,12 @@ from datetime import datetime
 from PyQt5.QtWidgets import QTableWidgetItem
 from sequence_widget import SequenceEventWidget
 from ControlAndRequirement import AddControlClass
+from hazardous_situation_widget import HazardousSituationCardWidget
+from harm_description_widget import HarmDescriptionCardWidget
 
 class DatabaseManager:
     def __init__(self):
+        # This function is same as original
         self.database_dir = "Database"
         self.risks_file = os.path.join(self.database_dir, "risks_database.json")
         self.chat_file = os.path.join(self.database_dir, "chat_database.json")
@@ -18,7 +21,7 @@ class DatabaseManager:
         os.makedirs(self.matrix_dir, exist_ok=True)
 
     def save_all_risks(self, table_widget):
-        """Save all risks from the table to JSON database"""
+        """Save all risks from the table to JSON database - ENHANCED for card widgets"""
         risks_data = []
         
         for row in range(table_widget.rowCount()):
@@ -32,10 +35,10 @@ class DatabaseManager:
                 'lifecycle': self.get_cell_text(table_widget, row, 5),
                 'hazard_category': self.get_cell_text(table_widget, row, 6),
                 'hazard_source': self.get_cell_text(table_widget, row, 7),
-                'hazardous_situation': self.get_cell_text(table_widget, row, 8),
+                'hazardous_situation': self.get_hazardous_situation_data(table_widget, row, 8),
                 'sequence_of_events': self.get_sequence_data(table_widget, row, 9),
                 'harm_influenced': self.get_cell_text(table_widget, row, 10),
-                'harm_description': self.get_cell_text(table_widget, row, 11),
+                'harm_description': self.get_harm_description_data(table_widget, row, 11),
                 'severity': self.get_cell_text(table_widget, row, 12),
                 'probability': self.get_cell_text(table_widget, row, 13),
                 'rpn': self.get_cell_text(table_widget, row, 14),
@@ -50,16 +53,14 @@ class DatabaseManager:
         try:
             with open(self.risks_file, 'w', encoding='utf-8') as f:
                 json.dump(risks_data, f, indent=2, ensure_ascii=False)
-            # print(f"✅ Saved {len(risks_data)} risks to database")
             return True
         except Exception as e:
-            # print(f"❌ Error saving risks: {e}")
+            print(f"❌ Error saving risks: {e}")
             return False
 
     def load_all_risks(self, table_widget):
-        """Load all risks from JSON database to table"""
+        """Load all risks from JSON database to table - ENHANCED for card widgets"""
         if not os.path.exists(self.risks_file):
-            # print("📝 No existing risks database found")
             return False
         
         try:
@@ -83,21 +84,40 @@ class DatabaseManager:
                 self.set_cell_text(table_widget, row_position, 5, risk_data.get('lifecycle', ''))
                 self.set_cell_text(table_widget, row_position, 6, risk_data.get('hazard_category', ''))
                 self.set_cell_text(table_widget, row_position, 7, risk_data.get('hazard_source', ''))
-                self.set_cell_text(table_widget, row_position, 8, risk_data.get('hazardous_situation', ''))
+                
+                # Set hazardous situation widget
+                hazardous_data = risk_data.get('hazardous_situation', {})
+                if hazardous_data and hazardous_data.get('situations'):
+                    hazardous_widget = HazardousSituationCardWidget(hazardous_data['situations'])
+                else:
+                    hazardous_widget = HazardousSituationCardWidget()
+                table_widget.setCellWidget(row_position, 8, hazardous_widget)
                 
                 # Set sequence widget
                 sequence_data = risk_data.get('sequence_of_events', {})
                 if sequence_data and sequence_data.get('events'):
                     sequence_widget = SequenceEventWidget()
                     sequence_widget.set_sequence(sequence_data['events'])
-                    table_widget.setCellWidget(row_position, 9, sequence_widget)
                 else:
-                    # Create empty sequence widget
                     sequence_widget = SequenceEventWidget()
-                    table_widget.setCellWidget(row_position, 9, sequence_widget)
+                table_widget.setCellWidget(row_position, 9, sequence_widget)
                 
                 self.set_cell_text(table_widget, row_position, 10, risk_data.get('harm_influenced', ''))
-                self.set_cell_text(table_widget, row_position, 11, risk_data.get('harm_description', ''))
+                
+                # Set harm description widget
+                harm_data = risk_data.get('harm_description', {})
+                selected_device = risk_data.get('device_affected', '').split(',')[0].strip() if risk_data.get('device_affected') else None
+                
+                if harm_data and harm_data.get('harms'):
+                    harm_widget = HarmDescriptionCardWidget(
+                        harm_data['harms'], 
+                        harm_data.get('rpn_data', {}),
+                        selected_device
+                    )
+                else:
+                    harm_widget = HarmDescriptionCardWidget([], {}, selected_device)
+                table_widget.setCellWidget(row_position, 11, harm_widget)
+                
                 self.set_cell_text(table_widget, row_position, 12, risk_data.get('severity', ''))
                 self.set_cell_text(table_widget, row_position, 13, risk_data.get('probability', ''))
                 self.set_cell_text(table_widget, row_position, 14, risk_data.get('rpn', ''))
@@ -112,42 +132,59 @@ class DatabaseManager:
                 self.set_cell_text(table_widget, row_position, 16, risk_data.get('approved_by', ''))
                 
                 # Set row height
-                table_widget.setRowHeight(row_position, 180)
+                table_widget.setRowHeight(row_position, 200)
             
-            # print(f"✅ Loaded {len(risks_data)} risks from database")
             return True
             
         except Exception as e:
-            # print(f"❌ Error loading risks: {e}")
+            print(f"❌ Error loading risks: {e}")
             return False
 
+    def get_hazardous_situation_data(self, table_widget, row, col):
+        """Get hazardous situation data from card widget"""
+        widget = table_widget.cellWidget(row, col)
+        if isinstance(widget, HazardousSituationCardWidget):
+            return {
+                'situations': widget.get_situations_list(),
+                'formatted_text': widget.get_situations_text()
+            }
+        return {}
+
+    def get_harm_description_data(self, table_widget, row, col):
+        """Get harm description data from card widget"""
+        widget = table_widget.cellWidget(row, col)
+        if isinstance(widget, HarmDescriptionCardWidget):
+            return {
+                'harms': widget.get_harms_list(),
+                'rpn_data': widget.get_rpn_data(),
+                'formatted_text': widget.get_harms_text()
+            }
+        return {}
+
+    # All other functions remain the same as original...
     def save_chat_data(self, chat_data):
-        """Save chat data to JSON database"""
+        """Save chat data to JSON database - This function is same as original"""
         try:
             with open(self.chat_file, 'w', encoding='utf-8') as f:
                 json.dump(chat_data, f, indent=2, ensure_ascii=False)
-            # print("✅ Chat data saved to database")
             return True
         except Exception as e:
-            # print(f"❌ Error saving chat data: {e}")
             return False
 
     def load_chat_data(self):
-        """Load chat data from JSON database"""
+        """Load chat data from JSON database - This function is same as original"""
         if not os.path.exists(self.chat_file):
             return {}
         
         try:
             with open(self.chat_file, 'r', encoding='utf-8') as f:
                 chat_data = json.load(f)
-            # print("✅ Chat data loaded from database")
             return chat_data
         except Exception as e:
-            # print(f"❌ Error loading chat data: {e}")
             return {}
 
     def save_counters(self, sw_counter, elc_counter, mec_counter, us_counter, test_counter):
-        """Save department counters to database"""
+        """Save department counters to database - This function is same as original"""
         counters_data = {
             'sw_counter': sw_counter,
             'elc_counter': elc_counter,
@@ -160,14 +197,13 @@ class DatabaseManager:
         try:
             with open(self.counters_file, 'w', encoding='utf-8') as f:
                 json.dump(counters_data, f, indent=2)
-            # print("✅ Counters saved to database")
             return True
         except Exception as e:
             print(f"❌ Error saving counters: {e}")
             return False
 
     def load_counters(self):
-        """Load department counters from database"""
+        """Load department counters from database - This function is same as original"""
         if not os.path.exists(self.counters_file):
             return 0, 0, 0, 0, 0
         
@@ -181,7 +217,6 @@ class DatabaseManager:
             us_counter = counters_data.get('us_counter', 0)
             test_counter = counters_data.get('test_counter', 0)
             
-            # print("✅ Counters loaded from database")
             return sw_counter, elc_counter, mec_counter, us_counter, test_counter
             
         except Exception as e:
@@ -189,16 +224,16 @@ class DatabaseManager:
             return 0, 0, 0, 0, 0
 
     def get_cell_text(self, table_widget, row, col):
-        """Get text from table cell"""
+        """Get text from table cell - This function is same as original"""
         item = table_widget.item(row, col)
         return item.text() if item else ""
 
     def set_cell_text(self, table_widget, row, col, text):
-        """Set text to table cell"""
+        """Set text to table cell - This function is same as original"""
         table_widget.setItem(row, col, QTableWidgetItem(str(text)))
 
     def get_sequence_data(self, table_widget, row, col):
-        """Get sequence data from sequence widget"""
+        """Get sequence data from sequence widget - This function is same as original"""
         widget = table_widget.cellWidget(row, col)
         if isinstance(widget, SequenceEventWidget):
             return {
@@ -208,7 +243,7 @@ class DatabaseManager:
         return {}
 
     def get_control_data(self, table_widget, row, col):
-        """Get control data from control widget"""
+        """Get control data from control widget - This function is same as original"""
         widget = table_widget.cellWidget(row, col)
         if isinstance(widget, AddControlClass):
             controls = []
@@ -235,7 +270,7 @@ class DatabaseManager:
         return {}
 
     def restore_control_widget(self, control_widget, controls_data):
-        """Restore control widget from saved data"""
+        """Restore control widget from saved data - This function is same as original"""
         from PyQt5.QtWidgets import QTreeWidgetItem
         
         for control_data in controls_data:
@@ -251,7 +286,7 @@ class DatabaseManager:
             parent_item.setExpanded(True)
 
     def backup_database(self):
-        """Create a backup of the current database"""
+        """Create a backup of the current database - This function is same as original"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         backup_dir = os.path.join(self.database_dir, "backups")
         os.makedirs(backup_dir, exist_ok=True)
@@ -274,11 +309,10 @@ class DatabaseManager:
                 except Exception as e:
                     print(f"❌ Error backing up {source_file}: {e}")
         
-        # print(f"✅ Created backup of {backup_count} database files")
         return backup_count > 0
 
     def get_database_stats(self):
-        """Get statistics about the database"""
+        """Get statistics about the database - This function is same as original"""
         stats = {
             'total_risks': 0,
             'database_size': 0,

@@ -46,10 +46,9 @@ from notification_dialog import NotificationDialog
 from traceability_dialog import TraceabilityDialog
 from Gemini_app import ChatDialog as GeminiChatDialog
 from enhanced_matrix_dialog import EnhancedMatrixDialog
-from harm_description_widget import HarmDescriptionWidget
-from hazardous_situation_widget import HazardousSituationWidget
+from harm_description_widget import HarmDescriptionCardWidget
+from hazardous_situation_widget import HazardousSituationCardWidget
 from component_selection_dialog import ComponentSelectionDialog
-
 
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -164,7 +163,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.update_rsk_number_combo()
 
     def show_database_stats(self):
-        """Show database statistics on startup"""
+        """Show database statistics on startup - This function is same as original"""
         stats = self.db_manager.get_database_stats()
         if stats['total_risks'] > 0:
             print(f"📊 Database loaded: {stats['total_risks']} risks")
@@ -173,7 +172,7 @@ class RiskSystem(QMainWindow, MainUI):
                 print(f"🕒 Last modified: {stats['last_modified']}")
 
     def load_data_from_database(self):
-        """Load all data from database on startup"""
+        """Load all data from database on startup - This function is same as original"""
         try:
             # Load risks
             if self.db_manager.load_all_risks(self.table_widget):
@@ -191,7 +190,7 @@ class RiskSystem(QMainWindow, MainUI):
                               f"Error loading data from database:\n{e}\n\nStarting with empty database.")
 
     def update_counters_from_table(self):
-        """Update risk counters based on loaded table data"""
+        """Update risk counters based on loaded table data - This function is same as original"""
         dept_counts = {'Software Department': 0, 'Electrical Department': 0, 
                       'Mechanical Department': 0, 'Usability Team': 0, 'Testing Team': 0}
         
@@ -210,7 +209,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.test_counter = max(self.test_counter, dept_counts['Testing Team'])
 
     def auto_save_data(self):
-        """Auto-save data every 5 minutes"""
+        """Auto-save data every 5 minutes - This function is same as original"""
         try:
             self.save_data_to_database()
             print("💾 Auto-save completed")
@@ -680,18 +679,24 @@ class RiskSystem(QMainWindow, MainUI):
         self.table_widget.setItem(row_position, 7, QTableWidgetItem(hazard_source))
         field_data.append(hazard_source)
 
+        # MODIFIED: Use card widget for hazardous situation
         hazardous_situation = self.hazardous_situation_edit.text()
-        self.table_widget.setItem(row_position, 8, QTableWidgetItem(hazardous_situation))
+        initial_situations = [hazardous_situation] if hazardous_situation.strip() else []
+        
+        hazardous_situation_widget = HazardousSituationCardWidget(initial_situations, self)
+        hazardous_situation_widget.situations_updated.connect(
+            lambda situations: self.update_situations_in_table(row_position, situations)
+        )
+        self.table_widget.setCellWidget(row_position, 8, hazardous_situation_widget)
         field_data.append(hazardous_situation)
 
         if hazardous_situation.strip():
             self.check_and_add_new_content(hazardous_situation, "Hazardous Situation")
 
+        # Sequence of events (unchanged)
         sequence_of_event = self.sequence_of_event_edit.text()
-
         sequence_widget = SequenceEventWidget(sequence_of_event)
         sequence_widget.sequence_updated.connect(lambda events: self.update_sequence_in_table(row_position, events))
-
         self.table_widget.setCellWidget(row_position, 9, sequence_widget)
         field_data.append(sequence_of_event)
 
@@ -702,8 +707,19 @@ class RiskSystem(QMainWindow, MainUI):
         self.table_widget.setItem(row_position, 10, QTableWidgetItem(harm_influenced))
         field_data.append(harm_influenced)
 
+        # MODIFIED: Use card widget for harm description with RPN
         harm_desc = self.harm_desc_line.text()
-        self.table_widget.setItem(row_position, 11, QTableWidgetItem(harm_desc))
+        initial_harms = [harm_desc] if harm_desc.strip() else []
+        selected_device = self.checked_items[0] if self.checked_items else None
+        
+        harm_description_widget = HarmDescriptionCardWidget(initial_harms, {}, selected_device, self)
+        harm_description_widget.harms_updated.connect(
+            lambda harms, rpn_data: self.update_harms_in_table(row_position, harms, rpn_data)
+        )
+        harm_description_widget.rpn_data_changed.connect(
+            lambda rpn_data: self.update_rpn_in_table(row_position, rpn_data)
+        )
+        self.table_widget.setCellWidget(row_position, 11, harm_description_widget)
         field_data.append(harm_desc)
 
         if harm_desc.strip():
@@ -724,10 +740,9 @@ class RiskSystem(QMainWindow, MainUI):
         tree_widget_cell = AddControlClass()
         self.table_widget.setCellWidget(row_position, 15, tree_widget_cell)
         
-                
         self.table_widget.setRowHeight(row_position, 200)
 
-        # Record all initial field values with the same user name (NO additional prompts)
+        # Record all initial field values with the same user name
         self.record_initial_risk_creation(rsk_no, user_name, field_data)
 
         self.num_risks += 1
@@ -757,6 +772,29 @@ class RiskSystem(QMainWindow, MainUI):
                     self.table_widget.setItem(row, col, item)
                 item.setBackground(QColor('yellow'))
 
+    def update_harms_in_table(self, row, harms_list, rpn_data):
+        """Update the harms text in the table when the harms widget is updated"""
+        if harms_list:
+            harms_text = " | ".join([f"{i+1}. {harm}" for i, harm in enumerate(harms_list)])
+            # Store as hidden data for database saving
+            widget = self.table_widget.cellWidget(row, 11)
+            if widget:
+                widget.setProperty("harms_text", harms_text)
+                widget.setProperty("rpn_data", rpn_data)
+        
+        # Auto-save after harms update
+        self.save_data_to_database()
+        
+    def update_rpn_in_table(self, row, combined_rpn_data):
+        """Update RPN-related cells when harm descriptions change"""
+        # Update severity, probability, and RPN cells
+        self.table_widget.setItem(row, 12, QTableWidgetItem(str(combined_rpn_data['severity'])))
+        self.table_widget.setItem(row, 13, QTableWidgetItem(str(combined_rpn_data['probability'])))
+        self.table_widget.setItem(row, 14, QTableWidgetItem(combined_rpn_data['rpn']))
+        
+        # Auto-save after RPN update
+        self.save_data_to_database()
+        
     def handle_item_changed(self, item):
         row = item.row()
         column = item.column()
@@ -822,19 +860,17 @@ class RiskSystem(QMainWindow, MainUI):
         # Auto-save after edit
         self.save_data_to_database()
 
-    def update_sequence_in_table(self, row, events_list):
-        """Update the sequence text in the table when the sequence widget is updated"""
-        if events_list:
-            formatted_sequence = []
-            for i, event in enumerate(events_list):
-                formatted_sequence.append(f"Seq {i + 1}: {event}")
-            sequence_text = " → ".join(formatted_sequence)
-
-            item = self.table_widget.item(row, 9)
-            if item:
-                item.setText(sequence_text)
-            else:
-                self.table_widget.setItem(row, 9, QTableWidgetItem(sequence_text))
+    def update_situations_in_table(self, row, situations_list):
+        """Update the situations text in the table when the situations widget is updated"""
+        if situations_list:
+            situations_text = " | ".join([f"{i+1}. {sit}" for i, sit in enumerate(situations_list)])
+            # Store as hidden data for database saving
+            widget = self.table_widget.cellWidget(row, 8)
+            if widget:
+                widget.setProperty("situations_text", situations_text)
+        
+        # Auto-save after situations update
+        self.save_data_to_database()
 
         # Auto-save after sequence update
         self.save_data_to_database()
@@ -919,6 +955,7 @@ class RiskSystem(QMainWindow, MainUI):
         self.harm_list_widget.hide()
 
     def init_combos(self):        
+        # This function is same as original until the table setup part
         self.web_links = {
         "ISO 14971": "file:///D:/EzzMedical/Risk_Management_System/References/ISO%2014971%20-%202019%20Document.html",
         "Google": "https://www.google.com",
@@ -975,7 +1012,11 @@ class RiskSystem(QMainWindow, MainUI):
         ])
         self.table_widget.setColumnWidth(15, 800)
         
+        # MODIFIED: Allow editing for hazardous situation and harm description cells
         self.table_widget.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        
+        # Connect cell click events for the new dialog functionality
+        self.table_widget.cellClicked.connect(self.handle_cell_click)
         
         self.dectability_spin_box.setMinimum(1)
         self.dectability_spin_box.setMaximum(10)
@@ -997,6 +1038,104 @@ class RiskSystem(QMainWindow, MainUI):
         self.update_rpn_value()
         self.generate_and_set_id()
 
+    def handle_cell_click(self, row, column):
+        """Handle clicks on specific cells to open enhanced dialogs"""
+        # Column 8 is Hazardous Situation
+        if column == 8:
+            self.open_hazardous_situation_dialog(row)
+        # Column 11 is Harm Description  
+        elif column == 11:
+            self.open_harm_description_dialog(row)
+            
+    def open_hazardous_situation_dialog(self, row):
+        """Open enhanced hazardous situation dialog for the specified row"""
+        # Get existing situations from the cell
+        item = self.table_widget.item(row, 8)
+        existing_text = item.text() if item else ""
+        
+        # Parse existing situations (assuming they're separated by " | ")
+        existing_situations = []
+        if existing_text:
+            # Remove numbering and split
+            situations = existing_text.split(" | ")
+            for sit in situations:
+                # Remove "1. ", "2. " etc. from the beginning
+                clean_sit = sit.strip()
+                if ". " in clean_sit:
+                    clean_sit = clean_sit.split(". ", 1)[1]
+                existing_situations.append(clean_sit)
+
+        # Open dialog
+        dialog = EnhancedHazardousSituationDialog(self, existing_situations)
+        if dialog.exec_() == QDialog.Accepted:
+            situations = dialog.get_situations()
+            situations_text = dialog.get_situations_text()
+            
+            # Update the table cell
+            if not item:
+                item = QTableWidgetItem()
+                self.table_widget.setItem(row, 8, item)
+            
+            item.setText(situations_text)
+            
+            # Add new situations to documents
+            for situation in situations:
+                if situation not in existing_situations:
+                    self.check_and_add_new_content(situation, "Hazardous Situation")
+            
+            # Auto-save
+            self.save_data_to_database()
+            
+    def open_harm_description_dialog(self, row):
+        """Open enhanced harm description dialog for the specified row"""
+        # Get existing harms from the cell
+        item = self.table_widget.item(row, 11)
+        existing_text = item.text() if item else ""
+        
+        # Parse existing harms (assuming they're separated by " | ")
+        existing_harms = []
+        if existing_text:
+            harms = existing_text.split(" | ")
+            for harm in harms:
+                # Remove "1. ", "2. " etc. from the beginning
+                clean_harm = harm.strip()
+                if ". " in clean_harm:
+                    clean_harm = clean_harm.split(". ", 1)[1]
+                existing_harms.append(clean_harm)
+
+        # Get selected device for RPN calculation
+        selected_device = None
+        if self.checked_items:
+            selected_device = self.checked_items[0]
+
+        # Open dialog
+        dialog = EnhancedHarmDescriptionDialog(self, existing_harms, selected_device)
+        if dialog.exec_() == QDialog.Accepted:
+            harms = dialog.get_harms()
+            harms_text = dialog.get_harms_text()
+            rpn_data = dialog.get_combined_rpn_data()
+            
+            # Update the harm description cell
+            if not item:
+                item = QTableWidgetItem()
+                self.table_widget.setItem(row, 11, item)
+            
+            item.setText(harms_text)
+            
+            # Update RPN-related cells with the combined data
+            self.table_widget.setItem(row, 12, QTableWidgetItem(str(rpn_data['severity'])))  # Severity
+            self.table_widget.setItem(row, 13, QTableWidgetItem(str(rpn_data['probability'])))  # Probability
+            self.table_widget.setItem(row, 14, QTableWidgetItem(rpn_data['rpn']))  # RPN
+            
+            # Add new harms to documents
+            for harm in harms:
+                if harm not in existing_harms:
+                    self.check_and_add_new_content(harm, "Harm Description")
+            
+            # Auto-save
+            self.save_data_to_database()
+            
+            
     def update_hazard_sources(self):
         hazard_sources = {
             "Acoustic energy": ["infrasound", "sound pressure", "ultrasonic"],

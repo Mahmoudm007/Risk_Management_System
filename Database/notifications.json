@@ -12,5 +12,54 @@
     "timestamp": "2025-07-20 13:46:58",
     "id": 2,
     "is_new": true
+  },
+  {
+    "content": "ID: 64 \n *ID:*  63  **ID:**  61  ***ID:***  57  ****ID:****  20  In  the  manufacturing  process  of  a  ventilator,  ****lead-based****  ****solder****  is  ****used****  to  join  electronic  components  on  circuit  ****boards****  ****and****  coatings  on  metal  parts.  Coatings  ****degrade****  over  time  *****due*****  to  wear  ****and****  corrosion.",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-21 12:21:37",
+    "id": 3,
+    "is_new": true
+  },
+  {
+    "content": "ID: 33 \n ID:  26  *Burn*",
+    "field_type": "Harm Description",
+    "timestamp": "2025-07-21 12:21:37",
+    "id": 4,
+    "is_new": true
+  },
+  {
+    "content": "As  a  result  of  the  compressed  power  cord,  the  electrical  connection  to  the  ventilator  is  disrupted.  This  leads  to  a  loss  of  power  supply  to  the  ventilator,  causing  it  to  shut  down  unexpectedly  and  interrupting  respiratory  support  to  the  patient.",
+    "field_type": "Hazardous Situation",
+    "timestamp": "2025-07-21 12:22:10",
+    "id": 5,
+    "is_new": true
+  },
+  {
+    "content": "add  new  one",
+    "field_type": "Harm Description",
+    "timestamp": "2025-07-21 12:22:33",
+    "id": 6,
+    "is_new": true
+  },
+  {
+    "content": "ID: 10 \n *A*  *ventilator's*  *internal*  *fan,*  responsible  for  *generating*  *airflow,*  develops  *an*  *imbalance,*  *leading*  to  excessive  *vibration*  of  the  *fan*  *blades*  *and*  surrounding  components.  Over  time,  the  *vibration*  becomes  more  pronounced,  *causing*  the  *ventilator*  housing  *and*  *nearby*  components  to  *vibrate*  *noticeably*  during  use.",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-21 12:34:41",
+    "id": 7,
+    "is_new": true
+  },
+  {
+    "content": "ID: 46 \n In  the  *assembly*  of  a  ventilator,  *adhesive*  *solvents*  are  *used*  to  bond  *various*  *components*  together,  *such*  *as*  *plastic*  *housing*  *panels*  or  electronic  circuitry.  *Solvent*  *vapors*  accumulate  in  the  air.",
+    "field_type": "Sequence of Event",
+    "timestamp": "2025-07-21 12:38:02",
+    "id": 8,
+    "is_new": true
+  },
+  {
+    "content": "The  overvoltage  condition  can  cause  damage  to  the  electrical  components  of  the  ventilator,  including  circuit  boards,  sensors,  and  control  mechanisms.",
+    "field_type": "Hazardous Situation",
+    "timestamp": "2025-07-21 12:38:10",
+    "id": 9,
+    "is_new": true
   }
 ]

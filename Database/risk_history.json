@@ -1139,580 +1139,174 @@
       "new_value": ""
     }
   ],
-  "RSK_US_7": [
+  "RSK_SW_1": [
     {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Risk Created",
-      "previous_value": "",
-      "new_value": "New risk entry created"
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Date",
-      "previous_value": "",
-      "new_value": "2025-07-20 13:46:58"
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Risk No.",
-      "previous_value": "",
-      "new_value": "RSK_US_7"
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Department",
-      "previous_value": "",
-      "new_value": "Usability Team"
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Device Affected",
-      "previous_value": "",
-      "new_value": "EzVent 202, EzVent 201"
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Components",
-      "previous_value": "",
-      "new_value": "Check Valve, Charging controller IC"
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Lifecycle",
-      "previous_value": "",
-      "new_value": "Post-Production"
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Hazard Category",
-      "previous_value": "",
-      "new_value": "Acoustic energy"
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Hazard Source",
-      "previous_value": "",
-      "new_value": "sound pressure"
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Hazardous Situation",
-      "previous_value": "",
-      "new_value": "ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.* "
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Sequence of Events",
-      "previous_value": "",
-      "new_value": "ID: 33 \n ID:  6  During  a  *power*  surge  or  electrical  malfunction,  the  voltage  supplied  to  the  ventilator  *exceeds*  safe  levels,  leading  to  an  overvoltage  condition  in  the  device. "
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Harm Influenced",
-      "previous_value": "",
-      "new_value": "User"
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Harm Description",
-      "previous_value": "",
-      "new_value": "ID: 4 \n *Burn* "
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Severity",
-      "previous_value": "",
-      "new_value": "3"
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "Probability",
-      "previous_value": "",
-      "new_value": "5"
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "Mahmoud",
-      "field": "RPN",
-      "previous_value": "",
-      "new_value": "High"
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "",
-      "new_value": ""
-    },
-    {
-      "timestamp": "2025-07-20 13:46:58",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "",
-      "new_value": ""
-    },
-    {
-      "timestamp": "2025-07-20 13:47:20",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "",
-      "new_value": "Eng. Ahmed El-Argawy"
-    },
-    {
-      "timestamp": "2025-07-20 13:47:20",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "",
-      "new_value": "Eng. Ahmed El-Argawy"
-    },
-    {
-      "timestamp": "2025-07-20 13:47:28",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "",
-      "new_value": "The process rejected because : 1111"
-    },
-    {
-      "timestamp": "2025-07-20 13:47:28",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "",
-      "new_value": "The process rejected because : 1111"
-    },
-    {
-      "timestamp": "2025-07-20 13:47:56",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "The process rejected because : 1111",
-      "new_value": ""
-    },
-    {
-      "timestamp": "2025-07-20 13:47:56",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "The process rejected because : 1111",
-      "new_value": ""
-    },
-    {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:20",
       "user": "Eng. Mahmoud",
       "field": "Risk No.",
       "previous_value": "",
-      "new_value": "RSK_US_7"
+      "new_value": "RSK_SW_1"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Risk No.",
       "previous_value": "",
-      "new_value": "RSK_US_7"
+      "new_value": "RSK_SW_1"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Department",
       "previous_value": "",
-      "new_value": "Usability Team"
+      "new_value": "Software Department"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Department",
       "previous_value": "",
-      "new_value": "Usability Team"
+      "new_value": "Software Department"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Device Affected",
       "previous_value": "",
-      "new_value": "EzVent 202, EzVent 201"
+      "new_value": "SleepEZ"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Device Affected",
       "previous_value": "",
-      "new_value": "EzVent 202, EzVent 201"
+      "new_value": "SleepEZ"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Components",
       "previous_value": "",
-      "new_value": "Check Valve, Charging controller IC"
+      "new_value": "Control Electronics"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Components",
       "previous_value": "",
-      "new_value": "Check Valve, Charging controller IC"
+      "new_value": "Control Electronics"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Lifecycle",
       "previous_value": "",
-      "new_value": "Post-Production"
+      "new_value": "Concept"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Lifecycle",
       "previous_value": "",
-      "new_value": "Post-Production"
+      "new_value": "Concept"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Hazard Category",
       "previous_value": "",
-      "new_value": "Acoustic energy"
+      "new_value": "Electric energy"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Hazard Category",
       "previous_value": "",
-      "new_value": "Acoustic energy"
+      "new_value": "Electric energy"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Hazard Source",
       "previous_value": "",
-      "new_value": "sound pressure"
+      "new_value": "Electric fields"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Hazard Source",
       "previous_value": "",
-      "new_value": "sound pressure"
+      "new_value": "Electric fields"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
-      "user": "Eng. Mahmoud",
-      "field": "Hazardous Situation",
-      "previous_value": "",
-      "new_value": "ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.*"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:12",
-      "user": "Eng. Mahmoud",
-      "field": "Hazardous Situation",
-      "previous_value": "",
-      "new_value": "ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.*"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Harm Influenced",
       "previous_value": "",
       "new_value": "User"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Harm Influenced",
       "previous_value": "",
       "new_value": "User"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
-      "user": "Eng. Mahmoud",
-      "field": "Harm Description",
-      "previous_value": "",
-      "new_value": "ID: 4 \n *Burn*"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:12",
-      "user": "Eng. Mahmoud",
-      "field": "Harm Description",
-      "previous_value": "",
-      "new_value": "ID: 4 \n *Burn*"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Severity",
       "previous_value": "",
       "new_value": "3"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Severity",
       "previous_value": "",
       "new_value": "3"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Probability",
       "previous_value": "",
-      "new_value": "5"
+      "new_value": "4"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "Probability",
       "previous_value": "",
-      "new_value": "5"
+      "new_value": "4"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "RPN",
       "previous_value": "",
       "new_value": "High"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "Eng. Mahmoud",
       "field": "RPN",
       "previous_value": "",
       "new_value": "High"
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
     },
     {
-      "timestamp": "2025-07-20 15:59:12",
+      "timestamp": "2025-07-21 12:39:21",
       "user": "System",
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
-    },
-    {
-      "timestamp": "2025-07-20 15:59:27",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "",
-      "new_value": "Eng. Ahmed El-Argawy"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:27",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "",
-      "new_value": "Eng. Ahmed El-Argawy"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:39",
-      "user": "Eng. Mahmoud",
-      "field": "Risk No.",
-      "previous_value": "",
-      "new_value": "RSK_US_7"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:39",
-      "user": "Eng. Mahmoud",
-      "field": "Risk No.",
-      "previous_value": "",
-      "new_value": "RSK_US_7"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:39",
-      "user": "Eng. Mahmoud",
-      "field": "Department",
-      "previous_value": "",
-      "new_value": "Usability Team"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:39",
-      "user": "Eng. Mahmoud",
-      "field": "Department",
-      "previous_value": "",
-      "new_value": "Usability Team"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:39",
-      "user": "Eng. Mahmoud",
-      "field": "Device Affected",
-      "previous_value": "",
-      "new_value": "EzVent 202, EzVent 201"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:39",
-      "user": "Eng. Mahmoud",
-      "field": "Device Affected",
-      "previous_value": "",
-      "new_value": "EzVent 202, EzVent 201"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:39",
-      "user": "Eng. Mahmoud",
-      "field": "Components",
-      "previous_value": "",
-      "new_value": "Check Valve, Charging controller IC"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:39",
-      "user": "Eng. Mahmoud",
-      "field": "Components",
-      "previous_value": "",
-      "new_value": "Check Valve, Charging controller IC"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Lifecycle",
-      "previous_value": "",
-      "new_value": "Post-Production"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Lifecycle",
-      "previous_value": "",
-      "new_value": "Post-Production"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Hazard Category",
-      "previous_value": "",
-      "new_value": "Acoustic energy"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Hazard Category",
-      "previous_value": "",
-      "new_value": "Acoustic energy"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Hazard Source",
-      "previous_value": "",
-      "new_value": "sound pressure"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Hazard Source",
-      "previous_value": "",
-      "new_value": "sound pressure"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Hazardous Situation",
-      "previous_value": "",
-      "new_value": "ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.*"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Hazardous Situation",
-      "previous_value": "",
-      "new_value": "ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.*"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Harm Influenced",
-      "previous_value": "",
-      "new_value": "User"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Harm Influenced",
-      "previous_value": "",
-      "new_value": "User"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Harm Description",
-      "previous_value": "",
-      "new_value": "ID: 4 \n *Burn*"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Harm Description",
-      "previous_value": "",
-      "new_value": "ID: 4 \n *Burn*"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Severity",
-      "previous_value": "",
-      "new_value": "3"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Severity",
-      "previous_value": "",
-      "new_value": "3"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Probability",
-      "previous_value": "",
-      "new_value": "5"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "Probability",
-      "previous_value": "",
-      "new_value": "5"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "RPN",
-      "previous_value": "",
-      "new_value": "High"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "Eng. Mahmoud",
-      "field": "RPN",
-      "previous_value": "",
-      "new_value": "High"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "",
-      "new_value": "Eng. Ahmed El-Argawy"
-    },
-    {
-      "timestamp": "2025-07-20 15:59:40",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "",
-      "new_value": "Eng. Ahmed El-Argawy"
     }
   ]
 }

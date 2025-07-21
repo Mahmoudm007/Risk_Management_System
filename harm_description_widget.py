@@ -1,197 +1,340 @@
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QScrollArea, QPushButton, QLabel, QFrame, QHBoxLayout, QSpinBox, QMessageBox, QDialog, QListWidget, QLineEdit
+from PyQt5.QtWidgets import *
 from PyQt5.QtCore import Qt, pyqtSignal
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QColor
+import json
+import os
 from search import *
+from enhanced_harm_description_dialog import EnhancedHarmDescriptionDialog
 
-class HarmDescriptionWidget(QWidget):
-    """Widget to manage multiple harm descriptions with severity/probability"""
-    
-    harms_updated = pyqtSignal(list)
-    
-    def __init__(self, initial_harm="", parent=None):
+class HarmDescriptionCardWidget(QWidget):
+    """Widget to display harm descriptions with RPN data as cards in table cells"""
+    harms_updated = pyqtSignal(list, dict)  # harms list, rpn_data dict
+    rpn_data_changed = pyqtSignal(dict)  # Signal for RPN data changes
+
+    def __init__(self, initial_harms=None, initial_rpn_data=None, selected_device=None, parent=None):
         super().__init__(parent)
-        self.harms = []
-        if initial_harm.strip():
-            self.harms.append({
-                'description': initial_harm.strip(),
-                'severity': 1,
-                'probability': 1,
-                'rpn': 'Low'
-            })
-        
+        self.harms = initial_harms or []
+        self.rpn_data = initial_rpn_data or {}
+        self.selected_device = selected_device
+        self.parent_window = parent
         self.setupUI()
         self.update_display()
-    
+
     def setupUI(self):
         self.main_layout = QVBoxLayout(self)
-        self.main_layout.setContentsMargins(5, 5, 5, 5)
-        self.main_layout.setSpacing(3)
-        
+        self.main_layout.setContentsMargins(3, 3, 3, 3)
+        self.main_layout.setSpacing(2)
+
         # Scroll area for harms
         self.scroll_area = QScrollArea()
         self.scroll_area.setWidgetResizable(True)
-        self.scroll_area.setMaximumHeight(250)
+        self.scroll_area.setMaximumHeight(150)
         self.scroll_area.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
-        
-        self.harm_container = QWidget()
-        self.harm_layout = QVBoxLayout(self.harm_container)
-        self.harm_layout.setContentsMargins(2, 2, 2, 2)
-        self.harm_layout.setSpacing(2)
-        
-        self.scroll_area.setWidget(self.harm_container)
-        self.main_layout.addWidget(self.scroll_area)
-        
-        # Add button
-        self.add_button = QPushButton("+ Add Harm Description")
-        self.add_button.setMaximumHeight(25)
-        self.add_button.clicked.connect(self.add_new_harm)
-        self.main_layout.addWidget(self.add_button)
-    
-    def update_display(self):
-        """Update the visual display of harms"""
-        # Clear existing widgets
-        for i in reversed(range(self.harm_layout.count())):
-            child = self.harm_layout.itemAt(i).widget()
-            if child:
-                child.setParent(None)
-        
-        # Add harm widgets
-        for i, harm in enumerate(self.harms):
-            harm_widget = self.create_harm_widget(harm, i)
-            self.harm_layout.addWidget(harm_widget)
-        
-        # Emit signal with updated harms
-        self.harms_updated.emit(self.harms)
-    
-    def create_harm_widget(self, harm_data, index):
-        """Create a widget for a single harm description with severity/probability"""
-        container = QFrame()
-        container.setFrameStyle(QFrame.Box)
-        container.setStyleSheet("""
-            QFrame {
-                background-color: #f8d7da;
-                border: 1px solid #dc3545;
-                border-radius: 5px;
-                padding: 5px;
-                margin: 2px;
+        self.scroll_area.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.scroll_area.setStyleSheet("""
+            QScrollArea {
+                border: none;
+                background-color: transparent;
             }
         """)
-        
-        main_layout = QVBoxLayout(container)
-        main_layout.setContentsMargins(5, 5, 5, 5)
-        
-        # Top row: Harm description and buttons
-        top_layout = QHBoxLayout()
-        
-        # Harm number
-        harm_label = QLabel(f"Harm {index + 1}:")
-        harm_label.setFont(QFont("Arial", 9, QFont.Bold))
-        harm_label.setStyleSheet("color: #721c24; background: transparent; border: none;")
-        harm_label.setMinimumWidth(60)
-        top_layout.addWidget(harm_label)
-        
-        # Harm text
-        harm_text_label = QLabel(harm_data['description'])
-        harm_text_label.setWordWrap(True)
-        harm_text_label.setStyleSheet("background: transparent; border: none; padding: 2px;")
-        top_layout.addWidget(harm_text_label, 1)
-        
-        # Edit button
-        edit_btn = QPushButton("Edit")
-        edit_btn.setMaximumSize(40, 20)
-        edit_btn.setStyleSheet("""
+
+        self.harms_container = QWidget()
+        self.harms_layout = QVBoxLayout(self.harms_container)
+        self.harms_layout.setContentsMargins(2, 2, 2, 2)
+        self.harms_layout.setSpacing(2)
+
+        self.scroll_area.setWidget(self.harms_container)
+        self.main_layout.addWidget(self.scroll_area)
+
+        # Summary bar
+        self.summary_label = QLabel("No harms")
+        self.summary_label.setStyleSheet("""
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            padding: 2px 4px;
+            border-radius: 2px;
+            font-size: 8px;
+            font-weight: bold;
+        """)
+        self.summary_label.setMaximumHeight(16)
+        self.main_layout.addWidget(self.summary_label)
+
+        # Add/Edit button
+        self.manage_button = QPushButton("⚙ Manage Harms")
+        self.manage_button.setMaximumHeight(22)
+        self.manage_button.setStyleSheet("""
             QPushButton {
-                background-color: #6c757d;
+                background-color: #e74c3c;
                 color: white;
                 border: none;
                 border-radius: 3px;
-                font-size: 8px;
+                font-size: 9px;
+                font-weight: bold;
             }
             QPushButton:hover {
-                background-color: #5a6268;
+                background-color: #c0392b;
             }
         """)
-        edit_btn.clicked.connect(lambda: self.edit_harm(index))
-        top_layout.addWidget(edit_btn)
+        self.manage_button.clicked.connect(self.open_management_dialog)
+        self.main_layout.addWidget(self.manage_button)
+
+    def update_display(self):
+        """Update the visual display of harm descriptions"""
+        # Clear existing widgets
+        for i in reversed(range(self.harms_layout.count())):
+            child = self.harms_layout.itemAt(i).widget()
+            if child:
+                child.setParent(None)
+
+        # Add harm cards
+        for i, harm in enumerate(self.harms):
+            harm_card = self.create_harm_card(harm, i)
+            self.harms_layout.addWidget(harm_card)
+
+        # Update summary
+        self.update_summary()
+
+        # Update button text
+        count = len(self.harms)
+        if count == 0:
+            self.manage_button.setText("+ Add Harms")
+        else:
+            self.manage_button.setText(f"⚙ Manage ({count})")
+
+        # Emit signals
+        self.harms_updated.emit(self.harms, self.rpn_data)
+        if self.rpn_data:
+            combined_rpn = self.get_combined_rpn_data()
+            self.rpn_data_changed.emit(combined_rpn)
+
+    def create_harm_card(self, harm_text, index):
+        """Create a card widget for a single harm description with RPN info"""
+        card = QFrame()
+        card.setFrameStyle(QFrame.Box)
         
-        # Remove button (only show if more than one harm)
-        if len(self.harms) > 1:
-            remove_btn = QPushButton("×")
-            remove_btn.setMaximumSize(20, 20)
-            remove_btn.setStyleSheet("""
-                QPushButton {
-                    background-color: #dc3545;
-                    color: white;
-                    border: none;
-                    border-radius: 3px;
-                    font-weight: bold;
-                    font-size: 12px;
-                }
-                QPushButton:hover {
-                    background-color: #c82333;
-                }
+        # Get RPN info for styling
+        rpn_info = self.rpn_data.get(harm_text, {})
+        rpn_value = rpn_info.get('rpn', 'Low')
+        
+        # Color based on RPN
+        colors = {
+            'High': '#ffebee',
+            'Medium': '#fff8e1', 
+            'Low': '#e8f5e8'
+        }
+        border_colors = {
+            'High': '#f44336',
+            'Medium': '#ff9800',
+            'Low': '#4caf50'
+        }
+        
+        bg_color = colors.get(rpn_value, '#f5f5f5')
+        border_color = border_colors.get(rpn_value, '#bdbdbd')
+        
+        card.setStyleSheet(f"""
+            QFrame {{
+                background-color: {bg_color};
+                border: 1px solid {border_color};
+                border-radius: 4px;
+                padding: 3px;
+                margin: 1px;
+            }}
+        """)
+
+        layout = QVBoxLayout(card)
+        layout.setContentsMargins(4, 3, 4, 3)
+        layout.setSpacing(2)
+
+        # Header with harm number and RPN
+        header_layout = QHBoxLayout()
+        
+        num_label = QLabel(f"H{index + 1}:")
+        num_label.setFont(QFont("Arial", 8, QFont.Bold))
+        num_label.setStyleSheet("background: transparent; border: none;")
+        header_layout.addWidget(num_label)
+
+        header_layout.addStretch()
+
+        if rpn_info:
+            rpn_label = QLabel(rpn_value)
+            rpn_label.setFont(QFont("Arial", 7, QFont.Bold))
+            rpn_label.setStyleSheet(f"""
+                background-color: {border_color};
+                color: white;
+                padding: 1px 4px;
+                border-radius: 2px;
             """)
-            remove_btn.clicked.connect(lambda: self.remove_harm(index))
-            top_layout.addWidget(remove_btn)
+            header_layout.addWidget(rpn_label)
+
+        layout.addLayout(header_layout)
+
+        # Harm text (truncated if too long)
+        display_text = harm_text
+        if len(display_text) > 45:
+            display_text = display_text[:42] + "..."
         
-        main_layout.addLayout(top_layout)
+        text_label = QLabel(display_text)
+        text_label.setWordWrap(True)
+        text_label.setStyleSheet("""
+            background: transparent; 
+            border: none; 
+            padding: 1px;
+            font-size: 9px;
+        """)
+        text_label.setToolTip(harm_text)  # Show full text on hover
+        layout.addWidget(text_label)
+
+        # RPN details
+        if rpn_info:
+            details_layout = QHBoxLayout()
+            details_layout.setSpacing(4)
+            
+            sev_label = QLabel(f"S:{rpn_info.get('severity', 1)}")
+            sev_label.setStyleSheet("font-size: 7px; color: #666; background: transparent; border: none;")
+            details_layout.addWidget(sev_label)
+
+            prob_label = QLabel(f"P:{rpn_info.get('probability', 1)}")
+            prob_label.setStyleSheet("font-size: 7px; color: #666; background: transparent; border: none;")
+            details_layout.addWidget(prob_label)
+
+            details_layout.addStretch()
+            layout.addLayout(details_layout)
+
+        return card
+
+    def update_summary(self):
+        """Update the summary label"""
+        if not self.harms:
+            self.summary_label.setText("No harms")
+            return
+
+        rpn_counts = {'High': 0, 'Medium': 0, 'Low': 0}
+        for harm_text in self.harms:
+            if harm_text in self.rpn_data:
+                rpn_info = self.rpn_data[harm_text]
+                rpn_counts[rpn_info['rpn']] += 1
+
+        summary_text = f"Total: {len(self.harms)} | H:{rpn_counts['High']} M:{rpn_counts['Medium']} L:{rpn_counts['Low']}"
         
-        # Bottom row: Severity, Probability, RPN
-        bottom_layout = QHBoxLayout()
+        # Color based on highest risk
+        if rpn_counts['High'] > 0:
+            bg_color = "#ffcdd2"
+            text_color = "#c62828"
+        elif rpn_counts['Medium'] > 0:
+            bg_color = "#fff3e0"
+            text_color = "#ef6c00"
+        else:
+            bg_color = "#e8f5e8"
+            text_color = "#2e7d32"
+            
+        self.summary_label.setText(summary_text)
+        self.summary_label.setStyleSheet(f"""
+            background-color: {bg_color};
+            color: {text_color};
+            padding: 2px 4px;
+            border-radius: 2px;
+            font-size: 8px;
+            font-weight: bold;
+        """)
+
+    def open_management_dialog(self):
+        """Open the management dialog for harm descriptions"""
+        dialog = EnhancedHarmDescriptionDialog(
+            self.parent_window, 
+            self.harms.copy(), 
+            self.selected_device
+        )
         
-        # Severity
-        sev_label = QLabel("Severity:")
-        sev_label.setStyleSheet("background: transparent; border: none; font-weight: bold;")
-        bottom_layout.addWidget(sev_label)
+        # Set existing RPN data in dialog
+        dialog.rpn_data = self.rpn_data.copy()
         
-        severity_spin = QSpinBox()
-        severity_spin.setRange(1, 5)
-        severity_spin.setValue(harm_data['severity'])
-        severity_spin.valueChanged.connect(lambda v: self.update_harm_severity(index, v))
-        bottom_layout.addWidget(severity_spin)
-        
-        # Probability
-        prob_label = QLabel("Probability:")
-        prob_label.setStyleSheet("background: transparent; border: none; font-weight: bold;")
-        bottom_layout.addWidget(prob_label)
-        
-        probability_spin = QSpinBox()
-        probability_spin.setRange(1, 5)
-        probability_spin.setValue(harm_data['probability'])
-        probability_spin.valueChanged.connect(lambda v: self.update_harm_probability(index, v))
-        bottom_layout.addWidget(probability_spin)
-        
-        # RPN
-        rpn_label = QLabel("RPN:")
-        rpn_label.setStyleSheet("background: transparent; border: none; font-weight: bold;")
-        bottom_layout.addWidget(rpn_label)
-        
-        rpn_display = QLabel(harm_data['rpn'])
-        rpn_color = {"High": "red", "Medium": "yellow", "Low": "green"}.get(harm_data['rpn'], "lightgray")
-        rpn_display.setStyleSheet(f"background-color: {rpn_color}; border: 1px solid black; padding: 2px; border-radius: 3px;")
-        bottom_layout.addWidget(rpn_display)
-        
-        bottom_layout.addStretch()
-        main_layout.addLayout(bottom_layout)
-        
-        return container
-    
-    def update_harm_severity(self, index, severity):
-        """Update severity for a harm and recalculate RPN"""
-        if 0 <= index < len(self.harms):
-            self.harms[index]['severity'] = severity
-            self.harms[index]['rpn'] = self.calculate_rpn(severity, self.harms[index]['probability'])
+        if dialog.exec_() == QDialog.Accepted:
+            self.harms = dialog.get_harms()
+            self.rpn_data = dialog.get_rpn_data()
             self.update_display()
-    
-    def update_harm_probability(self, index, probability):
-        """Update probability for a harm and recalculate RPN"""
-        if 0 <= index < len(self.harms):
-            self.harms[index]['probability'] = probability
-            self.harms[index]['rpn'] = self.calculate_rpn(self.harms[index]['severity'], probability)
-            self.update_display()
-    
+            
+            # Add new harms to documents
+            for harm in self.harms:
+                self.check_and_add_to_documents(harm)
+
+    def check_and_add_to_documents(self, harm_text):
+        """Check if the harm is new and add it to the dynamic documents"""
+        global harm_description_documents
+        if add_new_document(harm_description_documents, harm_text, HARM_FILE, "Harm Description"):
+            refresh_indices()
+
+    def get_harms_list(self):
+        """Get the harms as a list"""
+        return self.harms.copy()
+
+    def get_rpn_data(self):
+        """Get RPN data dictionary"""
+        return self.rpn_data.copy()
+
+    def set_harms_and_rpn(self, harms_list, rpn_data_dict):
+        """Set the harms and RPN data"""
+        if isinstance(harms_list, list):
+            self.harms = [harm.strip() for harm in harms_list if harm.strip()]
+        if isinstance(rpn_data_dict, dict):
+            self.rpn_data = rpn_data_dict.copy()
+        self.update_display()
+
+    def get_harms_text(self):
+        """Get all harms as formatted text"""
+        if not self.harms:
+            return ""
+        return " | ".join([f"{i+1}. {harm}" for i, harm in enumerate(self.harms)])
+
+    def get_combined_rpn_data(self):
+        """Get combined RPN data for the main table"""
+        if not self.rpn_data:
+            return {'severity': 1, 'probability': 1, 'rpn': 'Low'}
+
+        # Calculate weighted average or highest risk
+        max_severity = max([data['severity'] for data in self.rpn_data.values()])
+        max_probability = max([data['probability'] for data in self.rpn_data.values()])
+        
+        # Use the highest risk combination
+        combined_rpn = self.calculate_rpn(max_severity, max_probability)
+        
+        return {
+            'severity': max_severity,
+            'probability': max_probability,
+            'rpn': combined_rpn
+        }
+
     def calculate_rpn(self, severity, probability):
-        """Calculate RPN based on severity and probability"""
+        """Calculate RPN based on device-specific matrix or default logic"""
+        if self.selected_device:
+            return self.get_rpn_from_matrix(self.selected_device, severity, probability)
+        else:
+            return self.get_default_rpn(severity, probability)
+
+    def get_rpn_from_matrix(self, device, severity, probability):
+        """Get RPN from device-specific matrix"""
+        matrix_file = os.path.join('Risk Matrix', f"{device.replace(' ', '_')}_matrix.json")
+        
+        try:
+            if os.path.exists(matrix_file):
+                with open(matrix_file, 'r') as f:
+                    matrix_data = json.load(f)
+                
+                row = severity - 1
+                col = probability - 1
+                
+                if 0 <= row <= 4 and 0 <= col <= 4:
+                    key = f"{row},{col}"
+                    if key in matrix_data:
+                        return matrix_data[key]["text"]
+            
+            return self.get_default_rpn(severity, probability)
+            
+        except Exception as e:
+            print(f"Error reading matrix for {device}: {e}")
+            return self.get_default_rpn(severity, probability)
+
+    def get_default_rpn(self, severity, probability):
+        """Default RPN calculation logic"""
         if (severity >= 4 and probability >= 3) or (severity == 3 and probability >= 4):
             return 'High'
         elif ((severity >= 4 and probability <= 3) or (severity < 3 and probability == 5)
@@ -202,139 +345,14 @@ class HarmDescriptionWidget(QWidget):
             return 'Low'
         else:
             return 'Unknown'
-    
-    def add_new_harm(self):
-        """Add a new harm description"""
-        dialog = HarmDescriptionDialog(self)
-        if dialog.exec_() == QDialog.Accepted:
-            new_harm = dialog.get_harm_text()
-            if new_harm.strip():
-                harm_data = {
-                    'description': new_harm.strip(),
-                    'severity': 1,
-                    'probability': 1,
-                    'rpn': 'Low'
-                }
-                self.harms.append(harm_data)
-                self.check_and_add_to_documents(new_harm.strip())
-                self.update_display()
-    
-    def edit_harm(self, index):
-        """Edit an existing harm"""
-        if 0 <= index < len(self.harms):
-            dialog = HarmDescriptionDialog(self, self.harms[index]['description'])
-            if dialog.exec_() == QDialog.Accepted:
-                new_harm = dialog.get_harm_text()
-                if new_harm.strip():
-                    self.harms[index]['description'] = new_harm.strip()
-                    self.check_and_add_to_documents(new_harm.strip())
-                    self.update_display()
-    
-    def remove_harm(self, index):
-        """Remove a harm"""
-        if 0 <= index < len(self.harms) and len(self.harms) > 1:
-            reply = QMessageBox.question(self, 'Remove Harm',
-                                       f'Are you sure you want to remove Harm {index + 1}?',
-                                       QMessageBox.Yes | QMessageBox.No,
-                                       QMessageBox.No)
-            if reply == QMessageBox.Yes:
-                self.harms.pop(index)
-                self.update_display()
-    
-    def check_and_add_to_documents(self, harm_text):
-        """Check if the harm is new and add it to the dynamic documents"""
-        global harm_description_documents
-        if add_new_document(harm_description_documents, harm_text, HARM_FILE, "Harm Description"):
-            refresh_indices()
-    
-    def get_harms_list(self):
-        """Get the harms as a list"""
-        return self.harms.copy()
-    
-    def set_harms(self, harms_list):
-        """Set the harms from a list"""
-        if isinstance(harms_list, list):
-            self.harms = harms_list.copy()
-            if not self.harms:
-                self.harms = [{'description': '', 'severity': 1, 'probability': 1, 'rpn': 'Low'}]
-            self.update_display()
 
-
-class HarmDescriptionDialog(QDialog):
-    """Dialog for adding/editing harm descriptions with search functionality"""
-    
-    def __init__(self, parent=None, initial_text=""):
-        super().__init__(parent)
-        self.setWindowTitle("Add/Edit Harm Description")
-        self.setGeometry(200, 200, 600, 400)
-        self.initial_text = initial_text
-        self.setupUI()
-        
-        if initial_text:
-            self.harm_edit.setText(initial_text)
-    
-    def setupUI(self):
-        layout = QVBoxLayout(self)
-        
-        # Title
-        title_label = QLabel("Enter Harm Description:")
-        title_label.setFont(QFont("Arial", 12, QFont.Bold))
-        layout.addWidget(title_label)
-        
-        # Harm input
-        self.harm_edit = QLineEdit()
-        self.harm_edit.setPlaceholderText("Enter the harm description...")
-        self.harm_edit.textChanged.connect(self.update_suggestions)
-        layout.addWidget(self.harm_edit)
-        
-        # Search suggestions
-        suggestions_label = QLabel("Suggestions:")
-        suggestions_label.setFont(QFont("Arial", 10, QFont.Bold))
-        layout.addWidget(suggestions_label)
-        
-        self.suggestions_list = QListWidget()
-        self.suggestions_list.setMaximumHeight(150)
-        self.suggestions_list.itemDoubleClicked.connect(self.select_suggestion)
-        layout.addWidget(self.suggestions_list)
-        
-        # Buttons
-        button_layout = QHBoxLayout()
-        
-        self.ok_button = QPushButton("OK")
-        self.ok_button.clicked.connect(self.accept)
-        button_layout.addWidget(self.ok_button)
-        
-        cancel_button = QPushButton("Cancel")
-        cancel_button.clicked.connect(self.reject)
-        button_layout.addWidget(cancel_button)
-        
-        layout.addLayout(button_layout)
-    
-    def update_suggestions(self):
-        """Update search suggestions based on input"""
-        search_terms = self.harm_edit.text()
-        
-        if not search_terms.strip():
-            self.suggestions_list.clear()
-            return
-        
-        # Search in harm description documents
-        results = search_documents(search_terms, harm_description_inverted_index, harm_description_documents)
-        highlighted_results = rank_and_highlight(results, search_terms, harm_description_documents, scores)
-        
-        self.suggestions_list.clear()
-        if highlighted_results:
-            for doc_id, content, score in highlighted_results[:10]:
-                clean_content = content.replace(" *", " ").replace("* ", " ")
-                self.suggestions_list.addItem(f"ID: {doc_id} - {clean_content}")
-    
-    def select_suggestion(self, item):
-        """Select a suggestion and populate the text field"""
-        text = item.text()
-        if " - " in text:
-            content = text.split(" - ", 1)[1]
-            self.harm_edit.setText(content)
-    
-    def get_harm_text(self):
-        """Get the entered harm text"""
-        return self.harm_edit.text().strip()
+    def set_selected_device(self, device):
+        """Update the selected device for RPN calculations"""
+        self.selected_device = device
+        # Recalculate RPN for all harms
+        for harm_text in self.harms:
+            if harm_text in self.rpn_data:
+                rpn_info = self.rpn_data[harm_text]
+                new_rpn = self.calculate_rpn(rpn_info['severity'], rpn_info['probability'])
+                self.rpn_data[harm_text]['rpn'] = new_rpn
+        self.update_display()

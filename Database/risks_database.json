@@ -1,31 +1,56 @@
 [
   {
     "row_id": 0,
-    "date": "2025-07-20 13:46:58",
-    "risk_no": "RSK_US_7",
-    "department": "Usability Team",
-    "device_affected": "EzVent 202, EzVent 201",
-    "components": "Check Valve, Charging controller IC",
-    "lifecycle": "Post-Production",
-    "hazard_category": "Acoustic energy",
-    "hazard_source": "sound pressure",
-    "hazardous_situation": "ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.* ",
+    "date": "2025-07-21 12:38:02",
+    "risk_no": "RSK_SW_1",
+    "department": "Software Department",
+    "device_affected": "SleepEZ",
+    "components": "Control Electronics",
+    "lifecycle": "Concept",
+    "hazard_category": "Electric energy",
+    "hazard_source": "Electric fields",
+    "hazardous_situation": {
+      "situations": [
+        "ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.* ",
+        "The  overvoltage  condition  can  cause  damage  to  the  electrical  components  of  the  ventilator,  including  circuit  boards,  sensors,  and  control  mechanisms."
+      ],
+      "formatted_text": "1. ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.*  | 2. The  overvoltage  condition  can  cause  damage  to  the  electrical  components  of  the  ventilator,  including  circuit  boards,  sensors,  and  control  mechanisms."
+    },
     "sequence_of_events": {
       "events": [
-        "ID: 33 \n ID:  6  During  a  *power*  surge  or  electrical  malfunction,  the  voltage  supplied  to  the  ventilator  *exceeds*  safe  levels,  leading  to  an  overvoltage  condition  in  the  device."
+        "ID: 46 \n In  the  *assembly*  of  a  ventilator,  *adhesive*  *solvents*  are  *used*  to  bond  *various*  *components*  together,  *such*  *as*  *plastic*  *housing*  *panels*  or  electronic  circuitry.  *Solvent*  *vapors*  accumulate  in  the  air."
       ],
-      "formatted_text": "Seq 1: ID: 33 \n ID:  6  During  a  *power*  surge  or  electrical  malfunction,  the  voltage  supplied  to  the  ventilator  *exceeds*  safe  levels,  leading  to  an  overvoltage  condition  in  the  device."
+      "formatted_text": "Seq 1: ID: 46 \n In  the  *assembly*  of  a  ventilator,  *adhesive*  *solvents*  are  *used*  to  bond  *various*  *components*  together,  *such*  *as*  *plastic*  *housing*  *panels*  or  electronic  circuitry.  *Solvent*  *vapors*  accumulate  in  the  air."
     },
     "harm_influenced": "User",
-    "harm_description": "ID: 4 \n *Burn* ",
+    "harm_description": {
+      "harms": [
+        "ID: 33 \n ID:  26  *Burn* ",
+        "Damage  to  the  healthcare  provider's  reputation.",
+        "ID:  26  Burn"
+      ],
+      "rpn_data": {
+        "Damage  to  the  healthcare  provider's  reputation.": {
+          "severity": 3,
+          "probability": 4,
+          "rpn": "High"
+        },
+        "ID:  26  Burn": {
+          "severity": 3,
+          "probability": 2,
+          "rpn": "Medium"
+        }
+      },
+      "formatted_text": "1. ID: 33 \n ID:  26  *Burn*  | 2. Damage  to  the  healthcare  provider's  reputation. | 3. ID:  26  Burn"
+    },
     "severity": "3",
-    "probability": "5",
+    "probability": "4",
     "rpn": "High",
     "risk_control_actions": {
       "controls": []
     },
-    "approved_by": "Eng. Ahmed El-Argawy",
-    "created_timestamp": "2025-07-20T15:59:51.598943",
-    "last_modified": "2025-07-20T15:59:51.598943"
+    "approved_by": "",
+    "created_timestamp": "2025-07-21T12:39:33.411006",
+    "last_modified": "2025-07-21T12:39:33.411006"
   }
 ]
