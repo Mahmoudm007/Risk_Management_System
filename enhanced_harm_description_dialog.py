@@ -4,6 +4,9 @@ from PyQt5.QtGui import QFont, QColor
 import json
 import os
 from search import *
+from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox, QListWidget,
+                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
+                             QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
 
 class EnhancedHarmDescriptionDialog(QDialog):
     """Enhanced dialog for managing multiple harm descriptions with RPN calculation"""
@@ -327,7 +330,7 @@ class EnhancedHarmDescriptionDialog(QDialog):
         # Harm text
         text_label = QLabel(harm_text)
         text_label.setWordWrap(True)
-        text_label.setStyleSheet("font-size: 11px; margin-bottom: 5px;")
+        text_label.setStyleSheet("font-size: 15px; margin-bottom: 5px;")
         layout.addWidget(text_label)
 
         # RPN info
@@ -336,15 +339,15 @@ class EnhancedHarmDescriptionDialog(QDialog):
             rpn_layout = QHBoxLayout()
             
             sev_label = QLabel(f"Severity: {rpn_info['severity']}")
-            sev_label.setStyleSheet("font-size: 9px; color: #2c3e50;")
+            sev_label.setStyleSheet("font-size: 15px; color: #2c3e50;")
             rpn_layout.addWidget(sev_label)
 
             prob_label = QLabel(f"Probability: {rpn_info['probability']}")
-            prob_label.setStyleSheet("font-size: 9px; color: #2c3e50;")
+            prob_label.setStyleSheet("font-size: 15px; color: #2c3e50;")
             rpn_layout.addWidget(prob_label)
 
             rpn_label = QLabel(f"RPN: {rpn_info['rpn']}")
-            rpn_label.setStyleSheet("font-size: 9px; font-weight: bold; color: #2c3e50;")
+            rpn_label.setStyleSheet("font-size: 15px; font-weight: bold; color: #2c3e50;")
             rpn_layout.addWidget(rpn_label)
 
             layout.addLayout(rpn_layout)

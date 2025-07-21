@@ -4,6 +4,9 @@ from PyQt5.QtGui import QFont, QPalette
 import json
 from search import *
 from enhanced_hazardous_situation_dialog import EnhancedHazardousSituationDialog
+from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox,
+                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
+                             QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
 
 class HazardousSituationCardWidget(QWidget):
     """Widget to display hazardous situations as cards in table cells"""
@@ -43,7 +46,7 @@ class HazardousSituationCardWidget(QWidget):
         self.main_layout.addWidget(self.scroll_area)
 
         # Add/Edit button
-        self.manage_button = QPushButton("⚙ Manage Situations")
+        self.manage_button = QPushButton("⚙ Manage")
         self.manage_button.setMaximumHeight(22)
         self.manage_button.setStyleSheet("""
             QPushButton {
@@ -119,7 +122,7 @@ class HazardousSituationCardWidget(QWidget):
             background: transparent; 
             border: none; 
             padding: 1px;
-            font-size: 9px;
+            font-size: 15px;
         """)
         text_label.setToolTip(situation_text)  # Show full text on hover
         layout.addWidget(text_label, 1)

@@ -25,7 +25,6 @@
     "harm_influenced": "User",
     "harm_description": {
       "harms": [
-        "ID: 33 \n ID:  26  *Burn* ",
         "Damage  to  the  healthcare  provider's  reputation.",
         "ID:  26  Burn"
       ],
@@ -41,16 +40,16 @@
           "rpn": "Medium"
         }
       },
-      "formatted_text": "1. ID: 33 \n ID:  26  *Burn*  | 2. Damage  to  the  healthcare  provider's  reputation. | 3. ID:  26  Burn"
+      "formatted_text": "1. Damage  to  the  healthcare  provider's  reputation. | 2. ID:  26  Burn"
     },
     "severity": "3",
-    "probability": "4",
-    "rpn": "High",
+    "probability": "1",
+    "rpn": "Low",
     "risk_control_actions": {
       "controls": []
     },
     "approved_by": "",
-    "created_timestamp": "2025-07-21T12:39:33.411006",
-    "last_modified": "2025-07-21T12:39:33.411006"
+    "created_timestamp": "2025-07-21T12:58:51.424268",
+    "last_modified": "2025-07-21T12:58:51.424268"
   }
 ]

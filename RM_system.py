@@ -47,8 +47,10 @@ from traceability_dialog import TraceabilityDialog
 from Gemini_app import ChatDialog as GeminiChatDialog
 from enhanced_matrix_dialog import EnhancedMatrixDialog
 from harm_description_widget import HarmDescriptionCardWidget
-from hazardous_situation_widget import HazardousSituationCardWidget
 from component_selection_dialog import ComponentSelectionDialog
+from hazardous_situation_widget import HazardousSituationCardWidget
+from enhanced_harm_description_dialog import EnhancedHarmDescriptionDialog
+from enhanced_hazardous_situation_dialog import EnhancedHazardousSituationDialog
 
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))

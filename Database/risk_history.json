@@ -1307,6 +1307,615 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_1"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_1"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "SleepEZ"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "SleepEZ"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Control Electronics"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Control Electronics"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Electric fields"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Electric fields"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-21 12:46:24",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_1"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_1"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "SleepEZ"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "SleepEZ"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Control Electronics"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Control Electronics"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Electric fields"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:27",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Electric fields"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:28",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:28",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:28",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:28",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:28",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:28",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:28",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:28",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-21 12:49:28",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-21 12:49:28",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-21 12:49:43",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-21 12:49:43",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-21 12:49:44",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-21 12:49:51",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "1. ID:  47  *ID:*  15  As  a  result  of  the  **compressed**  power  *cord,*  the  electrical  connection  to  the  ventilator  is  **disrupted.**  This  **leads**  to  a  loss  of  power  supply  to  the  ventilator,  causing  it  to  shut  *down*  *unexpectedly*  *and*  interrupting  respiratory  support  to  the  patient."
+    },
+    {
+      "timestamp": "2025-07-21 12:49:51",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "1. ID:  47  *ID:*  15  As  a  result  of  the  **compressed**  power  *cord,*  the  electrical  connection  to  the  ventilator  is  **disrupted.**  This  **leads**  to  a  loss  of  power  supply  to  the  ventilator,  causing  it  to  shut  *down*  *unexpectedly*  *and*  interrupting  respiratory  support  to  the  patient."
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_1"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_SW_1"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Software Department"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "SleepEZ"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "SleepEZ"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Control Electronics"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Control Electronics"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Concept"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Electric energy"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Electric fields"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:09",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "Electric fields"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:10",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:10",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:10",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:10",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:10",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:10",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:10",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:10",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:10",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-21 12:51:10",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-21 12:51:33",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-21 12:51:33",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-21 12:51:33",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "1. add  new  one"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:33",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "1. add  new  one"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:33",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:33",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:34",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:34",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:34",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-21 12:51:34",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
     }
   ]
 }
