@@ -179,7 +179,7 @@ class HarmDescriptionCardWidget(QWidget):
         text_label = QLabel(display_text)
         text_label.setWordWrap(True)
         text_label.setStyleSheet("""
-            background: transparent; 
+            background: white; 
             border: none; 
             padding: 1px;
             font-size: 15px;

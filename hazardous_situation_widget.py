@@ -119,14 +119,13 @@ class HazardousSituationCardWidget(QWidget):
         text_label = QLabel(display_text)
         text_label.setWordWrap(True)
         text_label.setStyleSheet("""
-            background: transparent; 
+            background: white; 
             border: none; 
             padding: 1px;
             font-size: 15px;
         """)
         text_label.setToolTip(situation_text)  # Show full text on hover
         layout.addWidget(text_label, 1)
-
         return card
 
     def open_management_dialog(self):

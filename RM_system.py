@@ -64,7 +64,6 @@ class RiskSystem(QMainWindow, MainUI):
         self.setWindowTitle("Risk Management System")   
         self.setWindowIcon(QIcon("UI/icons/ezz.png"))
         
-        
         # Initialize database manager
         self.db_manager = DatabaseManager()
         
@@ -814,7 +813,7 @@ class RiskSystem(QMainWindow, MainUI):
             if risk_id:
                 history_entry = {
                     'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                    'user': 'System',  # Use 'System' for approval changes
+                    'user': 'Mahmoud',  # Use 'System' for approval changes
                     'field': field_name,
                     'previous_value': previous_value,
                     'new_value': new_value
