@@ -1116,7 +1116,6 @@ class RiskSystem(QMainWindow, MainUI):
             harms_text = dialog.get_harms_text()
             rpn_data = dialog.get_combined_rpn_data()
             
-            # Update the harm description cell
             if not item:
                 item = QTableWidgetItem()
                 self.table_widget.setItem(row, 11, item)
