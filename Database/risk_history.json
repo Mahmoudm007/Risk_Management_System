@@ -62,6 +62,447 @@
       "field": "RPN",
       "previous_value": "",
       "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-16 16:15:26",
+      "user": "j",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-16 16:15:26",
+      "user": "j",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-16 16:15:26"
+    },
+    {
+      "timestamp": "2025-07-16 16:15:26",
+      "user": "j",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:15:26",
+      "user": "j",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-16 16:15:26",
+      "user": "j",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:15:26",
+      "user": "j",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:15:26",
+      "user": "j",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:15:26",
+      "user": "j",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:15:26",
+      "user": "j",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-16 16:16:25",
+      "user": "s",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-16 16:16:25",
+      "user": "s",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-16 16:16:25"
+    },
+    {
+      "timestamp": "2025-07-16 16:16:25",
+      "user": "s",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:16:25",
+      "user": "s",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-16 16:16:25",
+      "user": "s",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:16:25",
+      "user": "s",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:16:25",
+      "user": "s",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:16:25",
+      "user": "s",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:16:25",
+      "user": "s",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:24",
+      "user": "yh",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:24",
+      "user": "yh",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-16 16:19:24"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:24",
+      "user": "yh",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:24",
+      "user": "yh",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:24",
+      "user": "yh",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:24",
+      "user": "yh",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:24",
+      "user": "yh",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:24",
+      "user": "yh",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:24",
+      "user": "yh",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:29",
+      "user": "s",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:29",
+      "user": "s",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-16 16:19:29"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:29",
+      "user": "s",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:29",
+      "user": "s",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:29",
+      "user": "s",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:29",
+      "user": "s",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:29",
+      "user": "s",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:29",
+      "user": "s",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:29",
+      "user": "s",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:50",
+      "user": "s",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:50",
+      "user": "s",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-16 16:19:50"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:50",
+      "user": "s",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:50",
+      "user": "s",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:50",
+      "user": "s",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:50",
+      "user": "s",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:50",
+      "user": "s",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:50",
+      "user": "s",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:50",
+      "user": "s",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:53",
+      "user": "a",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:53",
+      "user": "a",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-16 16:19:52"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:53",
+      "user": "a",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:53",
+      "user": "a",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:53",
+      "user": "a",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:53",
+      "user": "a",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:19:53",
+      "user": "a",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:53",
+      "user": "a",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:19:53",
+      "user": "a",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
+    },
+    {
+      "timestamp": "2025-07-16 16:20:43",
+      "user": "k",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-16 16:20:43",
+      "user": "k",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-16 16:20:43"
+    },
+    {
+      "timestamp": "2025-07-16 16:20:43",
+      "user": "k",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:20:43",
+      "user": "k",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "   "
+    },
+    {
+      "timestamp": "2025-07-16 16:20:43",
+      "user": "k",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:20:43",
+      "user": "k",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "  "
+    },
+    {
+      "timestamp": "2025-07-16 16:20:43",
+      "user": "k",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:20:43",
+      "user": "k",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "1"
+    },
+    {
+      "timestamp": "2025-07-16 16:20:43",
+      "user": "k",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "Low"
     }
   ],
   "RSK_TEST_4": [
@@ -190,113 +631,6 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
-    }
-  ],
-  "RSK_MEC_8": [
-    {
-      "timestamp": "2025-07-16 13:44:07",
-      "user": "c",
-      "field": "Enhanced Risk Created",
-      "previous_value": "",
-      "new_value": "New enhanced risk entry created"
-    },
-    {
-      "timestamp": "2025-07-16 13:44:07",
-      "user": "c",
-      "field": "Date",
-      "previous_value": "",
-      "new_value": "2025-07-16 13:44:07"
-    },
-    {
-      "timestamp": "2025-07-16 13:44:07",
-      "user": "c",
-      "field": "Base Risk No.",
-      "previous_value": "",
-      "new_value": "RSK_MEC_8"
-    },
-    {
-      "timestamp": "2025-07-16 13:44:07",
-      "user": "c",
-      "field": "Department",
-      "previous_value": "",
-      "new_value": "Mechanical Department"
-    },
-    {
-      "timestamp": "2025-07-16 13:44:07",
-      "user": "c",
-      "field": "Lifecycle",
-      "previous_value": "",
-      "new_value": "Production"
-    },
-    {
-      "timestamp": "2025-07-16 13:44:07",
-      "user": "c",
-      "field": "Hazard Category",
-      "previous_value": "",
-      "new_value": "  "
-    },
-    {
-      "timestamp": "2025-07-16 13:44:07",
-      "user": "c",
-      "field": "Sequence of Events",
-      "previous_value": "",
-      "new_value": "ID: 19 \n In  the  *assembly*  of  a  ventilator,  *adhesive*  *solvents*  are  *used*  to  bond  *various*  *components*  together,  *such*  *as*  *plastic*  *housing*  *panels*  or  electronic  circuitry.  *Solvent*  *vapors*  accumulate  in  the  air. "
-    },
-    {
-      "timestamp": "2025-07-16 13:44:07",
-      "user": "c",
-      "field": "Hazardous Situations",
-      "previous_value": "",
-      "new_value": "ID: 47 \n *ID:*  15  *As*  a  *result*  of  the  **compressed**  power  *cord,*  the  electrical  connection  to  the  ventilator  *is*  **disrupted.**  *This*  **leads**  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  *down*  *unexpectedly*  *and*  interrupting  *respiratory*  *support*  to  the  patient. "
-    },
-    {
-      "timestamp": "2025-07-16 13:44:07",
-      "user": "c",
-      "field": "Harm Influenced",
-      "previous_value": "",
-      "new_value": "Patient"
-    },
-    {
-      "timestamp": "2025-07-16 13:44:07",
-      "user": "c",
-      "field": "Harm Descriptions",
-      "previous_value": "",
-      "new_value": "ID: 32 \n No  results  found "
-    },
-    {
-      "timestamp": "2025-07-16 13:44:07",
-      "user": "c",
-      "field": "Generated Risk Numbers",
-      "previous_value": "",
-      "new_value": "\nRisk Number: RSK_MEC_DEFAULT_1_1_1\n\u251c\u2500 Department: MEC\n\u251c\u2500 Component: DEFAULT\n\u251c\u2500 Sequence ID: 1 \u2192 ID: 19 \n In  the  *assembly*  of  a  ventilator,  ...\n\u251c\u2500 Situation ID: 1 \u2192 ID: 47 \n *ID:*  15  *As*  a  *result*  of  the  **...\n\u2514\u2500 Harm ID: 1 \u2192 ID: 32 \n No  results  found"
-    },
-    {
-      "timestamp": "2025-07-16 13:44:07",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "",
-      "new_value": ""
-    },
-    {
-      "timestamp": "2025-07-16 13:44:07",
-      "user": "System",
-      "field": "Approved By",
-      "previous_value": "",
-      "new_value": ""
-    },
-    {
-      "timestamp": "2025-07-16 13:44:19",
-      "user": "d",
-      "field": "Generated Risk Numbers",
-      "previous_value": "",
-      "new_value": "Risk Number: RSK_MEC_DEFAULT_1_1_1\n\u251c\u2500 Department: MEC\n\u251c\u2500 Component: DEFAULT\n\u251c\u2500 Sequence ID: 1 \u2192 ID: 19 \n In  the  *assembly*  of  a  ventilator,  ...\n\u251c\u2500 Situation ID: 1 \u2192 ID: 47 \n *ID:*  15  *As*  a  *result*  of  the  **...\n\u2514\u2500 Harm ID: 1 \u2192 ID: 32 \n No  results  found"
-    },
-    {
-      "timestamp": "2025-07-16 13:44:21",
-      "user": "d",
-      "field": "Generated Risk Numbers",
-      "previous_value": "",
-      "new_value": "Risk Number: RSK_MEC_DEFAULT_1_1_1\n\u251c\u2500 Department: MEC\n\u251c\u2500 Component: DEFAULT\n\u251c\u2500 Sequence ID: 1 \u2192 ID: 19 \n In  the  *assembly*  of  a  ventilator,  ...\n\u251c\u2500 Situation ID: 1 \u2192 ID: 47 \n *ID:*  15  *As*  a  *result*  of  the  **...\n\u2514\u2500 Harm ID: 1 \u2192 ID: 32 \n No  results  found"
     }
   ],
   "RSK_ELC_3": [
@@ -607,6 +941,778 @@
       "field": "Approved By",
       "previous_value": "",
       "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_3"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_ELC_3"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Electrical Department"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Design"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Potential energy"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Potential energy"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "bending"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "bending"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 15 \n *As*  a  *result*  of  the  *compressed*  power  cord,  the  electrical  connection  to  the  ventilator  *is*  *disrupted.*  *This*  *leads*  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  down  unexpectedly  and  interrupting  *respiratory*  *support*  to  the  patient."
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 15 \n *As*  a  *result*  of  the  *compressed*  power  cord,  the  electrical  connection  to  the  ventilator  *is*  *disrupted.*  *This*  *leads*  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  down  unexpectedly  and  interrupting  *respiratory*  *support*  to  the  patient."
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Property"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "Property"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 34 \n Damage  to  the  healthcare  *provider's*  reputation."
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 34 \n Damage  to  the  healthcare  *provider's*  reputation."
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "4"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-16 13:58:23",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    }
+  ],
+  "RSK_US_7": [
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Risk Created",
+      "previous_value": "",
+      "new_value": "New risk entry created"
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Date",
+      "previous_value": "",
+      "new_value": "2025-07-20 13:46:58"
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_7"
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202, EzVent 201"
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Check Valve, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Post-Production"
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Acoustic energy"
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "sound pressure"
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.* "
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Sequence of Events",
+      "previous_value": "",
+      "new_value": "ID: 33 \n ID:  6  During  a  *power*  surge  or  electrical  malfunction,  the  voltage  supplied  to  the  ventilator  *exceeds*  safe  levels,  leading  to  an  overvoltage  condition  in  the  device. "
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 4 \n *Burn* "
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-20 13:46:58",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-20 13:47:20",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "Eng. Ahmed El-Argawy"
+    },
+    {
+      "timestamp": "2025-07-20 13:47:20",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "Eng. Ahmed El-Argawy"
+    },
+    {
+      "timestamp": "2025-07-20 13:47:28",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "The process rejected because : 1111"
+    },
+    {
+      "timestamp": "2025-07-20 13:47:28",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "The process rejected because : 1111"
+    },
+    {
+      "timestamp": "2025-07-20 13:47:56",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "The process rejected because : 1111",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-20 13:47:56",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "The process rejected because : 1111",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_7"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_7"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202, EzVent 201"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202, EzVent 201"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Check Valve, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Check Valve, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Post-Production"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Post-Production"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Acoustic energy"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Acoustic energy"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "sound pressure"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "sound pressure"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.*"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.*"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 4 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 4 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-20 15:59:12",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": ""
+    },
+    {
+      "timestamp": "2025-07-20 15:59:27",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "Eng. Ahmed El-Argawy"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:27",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "Eng. Ahmed El-Argawy"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:39",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_7"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:39",
+      "user": "Eng. Mahmoud",
+      "field": "Risk No.",
+      "previous_value": "",
+      "new_value": "RSK_US_7"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:39",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:39",
+      "user": "Eng. Mahmoud",
+      "field": "Department",
+      "previous_value": "",
+      "new_value": "Usability Team"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:39",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202, EzVent 201"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:39",
+      "user": "Eng. Mahmoud",
+      "field": "Device Affected",
+      "previous_value": "",
+      "new_value": "EzVent 202, EzVent 201"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:39",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Check Valve, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:39",
+      "user": "Eng. Mahmoud",
+      "field": "Components",
+      "previous_value": "",
+      "new_value": "Check Valve, Charging controller IC"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Post-Production"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Lifecycle",
+      "previous_value": "",
+      "new_value": "Post-Production"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Acoustic energy"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Category",
+      "previous_value": "",
+      "new_value": "Acoustic energy"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "sound pressure"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Hazard Source",
+      "previous_value": "",
+      "new_value": "sound pressure"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.*"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Hazardous Situation",
+      "previous_value": "",
+      "new_value": "ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.*"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Influenced",
+      "previous_value": "",
+      "new_value": "User"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 4 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Harm Description",
+      "previous_value": "",
+      "new_value": "ID: 4 \n *Burn*"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Severity",
+      "previous_value": "",
+      "new_value": "3"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "Probability",
+      "previous_value": "",
+      "new_value": "5"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "Eng. Mahmoud",
+      "field": "RPN",
+      "previous_value": "",
+      "new_value": "High"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "Eng. Ahmed El-Argawy"
+    },
+    {
+      "timestamp": "2025-07-20 15:59:40",
+      "user": "System",
+      "field": "Approved By",
+      "previous_value": "",
+      "new_value": "Eng. Ahmed El-Argawy"
     }
   ]
 }

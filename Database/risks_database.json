@@ -1,31 +1,31 @@
 [
   {
     "row_id": 0,
-    "date": "2025-07-16 13:45:48",
-    "risk_no": "RSK_ELC_3",
-    "department": "Electrical Department",
-    "device_affected": "",
-    "components": "",
-    "lifecycle": "Design",
-    "hazard_category": "Potential energy",
-    "hazard_source": "bending",
-    "hazardous_situation": "ID: 15 \n *As*  a  *result*  of  the  *compressed*  power  cord,  the  electrical  connection  to  the  ventilator  *is*  *disrupted.*  *This*  *leads*  to  a  *loss*  of  power  *supply*  to  the  ventilator,  *causing*  it  to  *shut*  down  unexpectedly  and  interrupting  *respiratory*  *support*  to  the  patient. ",
+    "date": "2025-07-20 13:46:58",
+    "risk_no": "RSK_US_7",
+    "department": "Usability Team",
+    "device_affected": "EzVent 202, EzVent 201",
+    "components": "Check Valve, Charging controller IC",
+    "lifecycle": "Post-Production",
+    "hazard_category": "Acoustic energy",
+    "hazard_source": "sound pressure",
+    "hazardous_situation": "ID: 15 \n *As*  *a*  result  of  the  compressed  power  cord,  the  *electrical*  connection  to  the  *ventilator*  is  disrupted.  This  *leads*  to  *a*  loss  of  power  supply  to  the  *ventilator,*  *causing*  it  to  shut  down  unexpectedly  *and*  interrupting  *respiratory*  support  to  the  *patient.* ",
     "sequence_of_events": {
       "events": [
-        "ID: 61 \n *ID:*  57  **ID:**  20  In  the  manufacturing  process  of  a  ventilator,  **lead-based**  **solder**  is  **used**  to  join  electronic  components  on  circuit  **boards**  **and**  coatings  on  metal  parts.  Coatings  **degrade**  over  time  ***due***  to  wear  **and**  corrosion."
+        "ID: 33 \n ID:  6  During  a  *power*  surge  or  electrical  malfunction,  the  voltage  supplied  to  the  ventilator  *exceeds*  safe  levels,  leading  to  an  overvoltage  condition  in  the  device."
       ],
-      "formatted_text": "Seq 1: ID: 61 \n *ID:*  57  **ID:**  20  In  the  manufacturing  process  of  a  ventilator,  **lead-based**  **solder**  is  **used**  to  join  electronic  components  on  circuit  **boards**  **and**  coatings  on  metal  parts.  Coatings  **degrade**  over  time  ***due***  to  wear  **and**  corrosion."
+      "formatted_text": "Seq 1: ID: 33 \n ID:  6  During  a  *power*  surge  or  electrical  malfunction,  the  voltage  supplied  to  the  ventilator  *exceeds*  safe  levels,  leading  to  an  overvoltage  condition  in  the  device."
     },
-    "harm_influenced": "Property",
-    "harm_description": "ID: 34 \n Damage  to  the  healthcare  *provider's*  reputation. ",
-    "severity": "4",
-    "probability": "3",
+    "harm_influenced": "User",
+    "harm_description": "ID: 4 \n *Burn* ",
+    "severity": "3",
+    "probability": "5",
     "rpn": "High",
     "risk_control_actions": {
       "controls": []
     },
-    "approved_by": "",
-    "created_timestamp": "2025-07-16T13:47:03.746839",
-    "last_modified": "2025-07-16T13:47:03.746839"
+    "approved_by": "Eng. Ahmed El-Argawy",
+    "created_timestamp": "2025-07-20T15:59:51.598943",
+    "last_modified": "2025-07-20T15:59:51.598943"
   }
 ]
