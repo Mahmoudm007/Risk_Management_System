@@ -6,16 +6,18 @@ from search import *
 from hazardous_situation_dialog import HazardousSituationDialog
 from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox, QListWidget,
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
-                             QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog, QFrame)
+                             QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
 
 class HazardousSituationCardWidget(QWidget):
-    """Widget to display hazardous situations as cards in table cells"""
-    situations_updated = pyqtSignal(list)
+    """Enhanced widget to display hazardous situations as cards with numbering support"""
+    situations_updated = pyqtSignal(list, int)  # situations list, count
 
-    def __init__(self, initial_situations=None, parent=None):
+    def __init__(self, initial_situations=None, parent=None, numbering_manager=None, component_name=""):
         super().__init__(parent)
         self.situations = initial_situations or []
         self.parent_window = parent
+        self.numbering_manager = numbering_manager
+        self.component_name = component_name
         self.setupUI()
         self.update_display()
 
@@ -46,7 +48,7 @@ class HazardousSituationCardWidget(QWidget):
         self.main_layout.addWidget(self.scroll_area)
 
         # Add/Edit button
-        self.manage_button = QPushButton("⚙ Manage")
+        self.manage_button = QPushButton("⚙ Manage Situations")
         self.manage_button.setMaximumHeight(22)
         self.manage_button.setStyleSheet("""
             QPushButton {
@@ -63,6 +65,10 @@ class HazardousSituationCardWidget(QWidget):
         """)
         self.manage_button.clicked.connect(self.open_management_dialog)
         self.main_layout.addWidget(self.manage_button)
+
+    def set_component_name(self, component_name):
+        """Set the component name for numbering"""
+        self.component_name = component_name
 
     def update_display(self):
         """Update the visual display of situations"""
@@ -84,8 +90,12 @@ class HazardousSituationCardWidget(QWidget):
         else:
             self.manage_button.setText(f"⚙ Manage ({count})")
 
-        # Emit signal with updated situations
-        self.situations_updated.emit(self.situations)
+        # Update numbering manager if available
+        if self.numbering_manager and self.component_name:
+            self.numbering_manager.update_hazardous_situation_count(self.component_name, count)
+
+        # Emit signal with updated situations and count
+        self.situations_updated.emit(self.situations, count)
 
     def create_situation_card(self, situation_text, index):
         """Create a card widget for a single hazardous situation"""
@@ -119,13 +129,14 @@ class HazardousSituationCardWidget(QWidget):
         text_label = QLabel(display_text)
         text_label.setWordWrap(True)
         text_label.setStyleSheet("""
-            background: white; 
+            background: transparent; 
             border: none; 
             padding: 1px;
-            font-size: 15px;
+            font-size: 9px;
         """)
         text_label.setToolTip(situation_text)  # Show full text on hover
         layout.addWidget(text_label, 1)
+
         return card
 
     def open_management_dialog(self):
@@ -160,3 +171,7 @@ class HazardousSituationCardWidget(QWidget):
         if not self.situations:
             return ""
         return " | ".join([f"{i+1}. {sit}" for i, sit in enumerate(self.situations)])
+
+    def get_situations_count(self):
+        """Get the count of situations"""
+        return len(self.situations)

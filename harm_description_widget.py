@@ -7,20 +7,22 @@ from search import *
 from harm_description_dialog import HarmDescriptionDialog
 from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox, QListWidget,
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
-                             QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog, QFrame)
-
+                             QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
 
 class HarmDescriptionCardWidget(QWidget):
-    """Widget to display harm descriptions with RPN data as cards in table cells"""
-    harms_updated = pyqtSignal(list, dict)  # harms list, rpn_data dict
+    """Enhanced widget to display harm descriptions with RPN data and numbering support"""
+    harms_updated = pyqtSignal(list, dict, int)  # harms list, rpn_data dict, count
     rpn_data_changed = pyqtSignal(dict)  # Signal for RPN data changes
 
-    def __init__(self, initial_harms=None, initial_rpn_data=None, selected_device=None, parent=None):
+    def __init__(self, initial_harms=None, initial_rpn_data=None, selected_device=None, 
+                 parent=None, numbering_manager=None, component_name=""):
         super().__init__(parent)
         self.harms = initial_harms or []
         self.rpn_data = initial_rpn_data or {}
         self.selected_device = selected_device
         self.parent_window = parent
+        self.numbering_manager = numbering_manager
+        self.component_name = component_name
         self.setupUI()
         self.update_display()
 
@@ -57,14 +59,14 @@ class HarmDescriptionCardWidget(QWidget):
             color: #2c3e50;
             padding: 2px 4px;
             border-radius: 2px;
-            font-size: 15px;
+            font-size: 8px;
             font-weight: bold;
         """)
         self.summary_label.setMaximumHeight(16)
         self.main_layout.addWidget(self.summary_label)
 
         # Add/Edit button
-        self.manage_button = QPushButton("⚙ Manage")
+        self.manage_button = QPushButton("⚙ Manage Harms")
         self.manage_button.setMaximumHeight(22)
         self.manage_button.setStyleSheet("""
             QPushButton {
@@ -81,6 +83,10 @@ class HarmDescriptionCardWidget(QWidget):
         """)
         self.manage_button.clicked.connect(self.open_management_dialog)
         self.main_layout.addWidget(self.manage_button)
+
+    def set_component_name(self, component_name):
+        """Set the component name for numbering"""
+        self.component_name = component_name
 
     def update_display(self):
         """Update the visual display of harm descriptions"""
@@ -105,8 +111,12 @@ class HarmDescriptionCardWidget(QWidget):
         else:
             self.manage_button.setText(f"⚙ Manage ({count})")
 
+        # Update numbering manager if available
+        if self.numbering_manager and self.component_name:
+            self.numbering_manager.update_harm_description_count(self.component_name, count)
+
         # Emit signals
-        self.harms_updated.emit(self.harms, self.rpn_data)
+        self.harms_updated.emit(self.harms, self.rpn_data, count)
         if self.rpn_data:
             combined_rpn = self.get_combined_rpn_data()
             self.rpn_data_changed.emit(combined_rpn)
@@ -180,10 +190,10 @@ class HarmDescriptionCardWidget(QWidget):
         text_label = QLabel(display_text)
         text_label.setWordWrap(True)
         text_label.setStyleSheet("""
-            background: white; 
+            background: transparent; 
             border: none; 
             padding: 1px;
-            font-size: 15px;
+            font-size: 9px;
         """)
         text_label.setToolTip(harm_text)  # Show full text on hover
         layout.addWidget(text_label)
@@ -194,11 +204,11 @@ class HarmDescriptionCardWidget(QWidget):
             details_layout.setSpacing(4)
             
             sev_label = QLabel(f"S:{rpn_info.get('severity', 1)}")
-            sev_label.setStyleSheet("font-size: 15px; color: #666; background: transparent; border: none;")
+            sev_label.setStyleSheet("font-size: 7px; color: #666; background: transparent; border: none;")
             details_layout.addWidget(sev_label)
 
             prob_label = QLabel(f"P:{rpn_info.get('probability', 1)}")
-            prob_label.setStyleSheet("font-size: 15px; color: #666; background: transparent; border: none;")
+            prob_label.setStyleSheet("font-size: 7px; color: #666; background: transparent; border: none;")
             details_layout.addWidget(prob_label)
 
             details_layout.addStretch()
@@ -237,7 +247,7 @@ class HarmDescriptionCardWidget(QWidget):
             color: {text_color};
             padding: 2px 4px;
             border-radius: 2px;
-            font-size: 14px;
+            font-size: 8px;
             font-weight: bold;
         """)
 
@@ -288,6 +298,10 @@ class HarmDescriptionCardWidget(QWidget):
         if not self.harms:
             return ""
         return " | ".join([f"{i+1}. {harm}" for i, harm in enumerate(self.harms)])
+
+    def get_harms_count(self):
+        """Get the count of harms"""
+        return len(self.harms)
 
     def get_combined_rpn_data(self):
         """Get combined RPN data for the main table"""

@@ -5,10 +5,10 @@ import json
 from search import *
 from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox, QListWidget,
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
-                             QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog, QFrame)
+                             QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
 
 class HazardousSituationDialog(QDialog):
-    """dialog for managing multiple hazardous situations with search"""
+    """Enhanced dialog for managing multiple hazardous situations with search"""
     situations_updated = pyqtSignal(list)
 
     def __init__(self, parent=None, existing_situations=None):
