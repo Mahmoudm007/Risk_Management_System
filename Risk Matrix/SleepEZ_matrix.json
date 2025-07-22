@@ -48,8 +48,8 @@
     "color": "#f1c40f"
   },
   "2,2": {
-    "text": "Medium",
-    "color": "#f1c40f"
+    "text": "High",
+    "color": "#e74c3c"
   },
   "2,3": {
     "text": "High",
@@ -60,12 +60,12 @@
     "color": "#e74c3c"
   },
   "3,0": {
-    "text": "Low",
-    "color": "#2ecc71"
-  },
-  "3,1": {
     "text": "Medium",
     "color": "#f1c40f"
+  },
+  "3,1": {
+    "text": "High",
+    "color": "#e74c3c"
   },
   "3,2": {
     "text": "High",
@@ -80,8 +80,8 @@
     "color": "#e74c3c"
   },
   "4,0": {
-    "text": "Low",
-    "color": "#2ecc71"
+    "text": "High",
+    "color": "#e74c3c"
   },
   "4,1": {
     "text": "High",

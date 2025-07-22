@@ -59,7 +59,7 @@ class HarmDescriptionCardWidget(QWidget):
             color: #2c3e50;
             padding: 2px 4px;
             border-radius: 2px;
-            font-size: 8px;
+            font-size: 11px;
             font-weight: bold;
         """)
         self.summary_label.setMaximumHeight(16)
@@ -74,7 +74,7 @@ class HarmDescriptionCardWidget(QWidget):
                 color: white;
                 border: none;
                 border-radius: 3px;
-                font-size: 9px;
+                font-size: 15px;
                 font-weight: bold;
             }
             QPushButton:hover {
@@ -163,7 +163,7 @@ class HarmDescriptionCardWidget(QWidget):
         header_layout = QHBoxLayout()
         
         num_label = QLabel(f"H{index + 1}:")
-        num_label.setFont(QFont("Arial", 8, QFont.Bold))
+        num_label.setFont(QFont("Arial", 13, QFont.Bold))
         num_label.setStyleSheet("background: transparent; border: none;")
         header_layout.addWidget(num_label)
 
@@ -171,7 +171,7 @@ class HarmDescriptionCardWidget(QWidget):
 
         if rpn_info:
             rpn_label = QLabel(rpn_value)
-            rpn_label.setFont(QFont("Arial", 7, QFont.Bold))
+            rpn_label.setFont(QFont("Arial", 13, QFont.Bold))
             rpn_label.setStyleSheet(f"""
                 background-color: {border_color};
                 color: white;
@@ -190,10 +190,10 @@ class HarmDescriptionCardWidget(QWidget):
         text_label = QLabel(display_text)
         text_label.setWordWrap(True)
         text_label.setStyleSheet("""
-            background: transparent; 
+            background: white; 
             border: none; 
             padding: 1px;
-            font-size: 9px;
+            font-size: 15px;
         """)
         text_label.setToolTip(harm_text)  # Show full text on hover
         layout.addWidget(text_label)
@@ -204,11 +204,11 @@ class HarmDescriptionCardWidget(QWidget):
             details_layout.setSpacing(4)
             
             sev_label = QLabel(f"S:{rpn_info.get('severity', 1)}")
-            sev_label.setStyleSheet("font-size: 7px; color: #666; background: transparent; border: none;")
+            sev_label.setStyleSheet("font-size: 14px; color: #666; background: transparent; border: none;")
             details_layout.addWidget(sev_label)
 
             prob_label = QLabel(f"P:{rpn_info.get('probability', 1)}")
-            prob_label.setStyleSheet("font-size: 7px; color: #666; background: transparent; border: none;")
+            prob_label.setStyleSheet("font-size: 14px; color: #666; background: transparent; border: none;")
             details_layout.addWidget(prob_label)
 
             details_layout.addStretch()
@@ -247,7 +247,7 @@ class HarmDescriptionCardWidget(QWidget):
             color: {text_color};
             padding: 2px 4px;
             border-radius: 2px;
-            font-size: 8px;
+            font-size: 15px;
             font-weight: bold;
         """)
 

@@ -156,7 +156,7 @@ class HazardousSituationDialog(QDialog):
 
         # Situation number
         num_label = QLabel(f"{index + 1}.")
-        num_label.setFont(QFont("Arial", 9, QFont.Bold))
+        num_label.setFont(QFont("Arial", 14, QFont.Bold))
         num_label.setMinimumWidth(20)
         layout.addWidget(num_label)
 

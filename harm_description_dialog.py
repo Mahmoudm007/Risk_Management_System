@@ -123,7 +123,7 @@ class HarmDescriptionDialog(QDialog):
 
         # Total RPN summary
         self.summary_label = QLabel("Total RPN Summary: No harms added")
-        self.summary_label.setFont(QFont("Arial", 12, QFont.Bold))
+        self.summary_label.setFont(QFont("Arial", 14, QFont.Bold))
         self.summary_label.setStyleSheet("background-color: #ecf0f1; padding: 10px; border-radius: 5px;")
         layout.addWidget(self.summary_label)
 
@@ -302,7 +302,7 @@ class HarmDescriptionDialog(QDialog):
         header_layout = QHBoxLayout()
         
         num_label = QLabel(f"Harm {index + 1}:")
-        num_label.setFont(QFont("Arial", 10, QFont.Bold))
+        num_label.setFont(QFont("Arial", 14, QFont.Bold))
         header_layout.addWidget(num_label)
 
         header_layout.addStretch()

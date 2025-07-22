@@ -56,7 +56,7 @@ class HazardousSituationCardWidget(QWidget):
                 color: white;
                 border: none;
                 border-radius: 3px;
-                font-size: 9px;
+                font-size: 15px;
                 font-weight: bold;
             }
             QPushButton:hover {
@@ -116,7 +116,7 @@ class HazardousSituationCardWidget(QWidget):
 
         # Situation number
         num_label = QLabel(f"S{index + 1}:")
-        num_label.setFont(QFont("Arial", 8, QFont.Bold))
+        num_label.setFont(QFont("Arial", 13, QFont.Bold))
         num_label.setStyleSheet("color: #856404; background: transparent; border: none;")
         num_label.setMinimumWidth(20)
         layout.addWidget(num_label)
@@ -129,10 +129,10 @@ class HazardousSituationCardWidget(QWidget):
         text_label = QLabel(display_text)
         text_label.setWordWrap(True)
         text_label.setStyleSheet("""
-            background: transparent; 
+            background: white; 
             border: none; 
             padding: 1px;
-            font-size: 9px;
+            font-size: 15px;
         """)
         text_label.setToolTip(situation_text)  # Show full text on hover
         layout.addWidget(text_label, 1)

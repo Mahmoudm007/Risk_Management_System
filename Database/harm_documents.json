@@ -38,5 +38,18 @@
   "37": "ID: 1 \n *Hearing*  impairment",
   "38": "ID: 4 \n *Burn*",
   "39": "ID: 33 \n ID:  26  *Burn*",
-  "40": "add  new  one"
+  "40": "add  new  one",
+  "41": "ID: 8 \n Striking  the  patient's  body,  limbs,  or  face.",
+  "42": "ID: 10 \n *Deterioration*  of  *health*",
+  "43": "ID: 34 \n Damage  to  the  healthcare  provider's  reputation.",
+  "44": "ID: 43 \n *ID:*  34  *Damage*  to  the  healthcare  *provider's*  reputation.",
+  "45": "ID: 8 \n *Striking*  the  patient's  body,  limbs,  *or*  face.",
+  "46": "ID: 35 \n ID:  32  No  results  found",
+  "47": "ID:  34  Damage  to  the  healthcare  *provider's*  reputation.",
+  "48": "ID:  34  Damage  to  the  healthcare  provider's  reputation.",
+  "49": "Tissue  damage",
+  "50": "Add  new  harm  description",
+  "51": "ID: 44 \n *ID:*  43  **ID:**  34  **Damage**  to  the  healthcare  **provider's**  reputation.",
+  "52": "ID:  43  *ID:*  34  *Damage*  to  the  healthcare  *provider's*  reputation.",
+  "53": "ID: 11 \n Repetitive  strain  injuries  (RSIs)/  discomfort"
 }
