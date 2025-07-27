@@ -14,9 +14,6 @@ from PyQt5.uic import loadUiType
 from PyQt5.QtGui import QColor, QIcon, QFont, QPalette
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtCore import QDateTime, QPropertyAnimation, QEasingCurve, QUrl, QTimer
-from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox,
-                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem, 
-                             QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
 from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox, QListWidget,
                              QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
                              QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
@@ -36,11 +33,11 @@ from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
 from search import *
 from RiskChat import ChatDialog
 from Dashboard import Dashboard
-from Calendar import CalendarDialog
-from filter_dialog import FilterDialog
 from pdf_dialog import PDFDialog
+from Calendar import CalendarDialog
+from matrix_dialog import MatrixDialog
+from filter_dialog import FilterDialog
 from DeviceSelection import DeviceSelected
-
 from user_input_dialog import UserInputDialog
 from sequence_widget import SequenceEventWidget
 from ControlAndRequirement import AddControlClass
@@ -48,7 +45,6 @@ from risk_history_dialog import RiskHistoryDialog
 from notification_dialog import NotificationDialog
 from traceability_dialog import TraceabilityDialog
 from Gemini_app import ChatDialog as GeminiChatDialog
-from matrix_dialog import MatrixDialog
 from component_selection_dialog import ComponentSelectionDialog
 
 
@@ -57,7 +53,6 @@ from database_manager import DatabaseManager
 from risk_numbering_manager import RiskNumberingManager
 from hazardous_situation_widget import HazardousSituationCardWidget
 from hazardous_situation_dialog import HazardousSituationDialog
-
 from harm_description_widget import HarmDescriptionCardWidget
 from harm_description_dialog import HarmDescriptionDialog
 
@@ -460,6 +455,7 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
             self.current_session_user = None
 
             print(f"✅ Successfully added new risk: {rsk_no} for component: {component_name}")
+            self.clear_risk_fields()
 
         except Exception as e:
             print(f"❌ Error in add_entry: {e}")
@@ -469,6 +465,22 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
             self.is_initial_creation = False
             self.current_session_user = None
 
+    def clear_risk_fields(self):
+        self.department_combo.setCurrentText("  ")
+        self.lifecycle_combo.setCurrentText("   ")
+        self.harm_influenced_combo.setCurrentText("  ")
+        self.hazard_category_combo.setCurrentText("  ")
+        self.hazard_source_combo.setCurrentText("")
+        self.severity_spinbox.setValue(1)
+        self.probability_spinbox.setValue(1)
+        self.risk_no_line_edit.clear()
+        self.hazardous_situation_edit.clear()
+        self.sequence_of_event_edit.clear()
+        self.harm_desc_line.clear()
+        self.hazardous_situation_edit.clear()
+        self.sequence_of_event_edit.clear()
+    
+    
     def update_situations_and_numbering(self, row, situations_list, count, component_name):
         """Update situations and regenerate risk number"""
         try:
@@ -1482,7 +1494,6 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
         chat_dialog.setGeometry(100, 100, 400, 300)
         chat_dialog.exec_()
         
-        # Save chat data after dialog closes
         self.db_manager.save_chat_data(self.chat_data)
         print(f"Chat dialog should be visible now.")
 
