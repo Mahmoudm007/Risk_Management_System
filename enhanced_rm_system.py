@@ -474,12 +474,9 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
         self.severity_spinbox.setValue(1)
         self.probability_spinbox.setValue(1)
         self.risk_no_line_edit.clear()
-        self.hazardous_situation_edit.clear()
         self.sequence_of_event_edit.clear()
         self.harm_desc_line.clear()
-        self.hazardous_situation_edit.clear()
-        self.sequence_of_event_edit.clear()
-    
+        self.hazardous_situation_edit.clear()    
     
     def update_situations_and_numbering(self, row, situations_list, count, component_name):
         """Update situations and regenerate risk number"""
@@ -614,6 +611,41 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
         
         # Add traceability button signal
         self.trace_btn.clicked.connect(self.open_traceability_dialog)
+        self.table_widget.clicked.connect(lambda index: self.fetch_row_data(index.row()))
+    
+    def fetch_row_data(self, row):
+        try:
+            # Get data from table cells
+            risk_number = self.table_widget.item(row, 1).text() if self.table_widget.item(row, 1) else ""
+            department = self.table_widget.item(row, 2).text() if self.table_widget.item(row, 2) else ""
+            lifecycle = self.table_widget.item(row, 5).text() if self.table_widget.item(row, 5) else ""
+            hazard_category = self.table_widget.item(row, 6).text() if self.table_widget.item(row, 6) else ""
+            hazard_source = self.table_widget.item(row, 7).text() if self.table_widget.item(row, 7) else ""
+            harm_influenced = self.table_widget.item(row, 10).text() if self.table_widget.item(row, 10) else ""
+            
+            # Get severity and probability values
+            severity = self.table_widget.item(row, 12).text() if self.table_widget.item(row, 12) else "1"
+            probability = self.table_widget.item(row, 13).text() if self.table_widget.item(row, 13) else "1"
+
+            # Update combo boxes
+            self.department_combo.setCurrentText(department)
+            self.lifecycle_combo.setCurrentText(lifecycle)
+            self.harm_influenced_combo.setCurrentText(harm_influenced)
+            self.hazard_category_combo.setCurrentText(hazard_category)
+            self.hazard_source_combo.setCurrentText(hazard_source)
+
+            # Update spin boxes (convert to int with fallback to 1)
+            self.severity_spinbox.setValue(int(severity) if severity.isdigit() else 1)
+            self.probability_spinbox.setValue(int(probability) if probability.isdigit() else 1)
+
+            # Update risk number line edit
+            self.risk_no_line_edit.setText(risk_number)
+
+            print(f"✅ Successfully loaded data from row {row}")
+
+        except Exception as e:
+            print(f"❌ Error loading row data: {e}")
+            QMessageBox.warning(self, "Error", f"Failed to load row data: {e}")
 
     def update_risk_number_preview(self):
         """FIXED: Update risk number preview when department changes (preview only)"""
