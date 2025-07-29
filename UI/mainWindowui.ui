@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1266</width>
-    <height>1553</height>
+    <height>1586</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1491,8 +1491,6 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
            <property name="font">
             <font>
              <pointsize>-1</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
             </font>
            </property>
            <property name="text">

@@ -38,6 +38,7 @@ from Calendar import CalendarDialog
 from matrix_dialog import MatrixDialog
 from filter_dialog import FilterDialog
 from DeviceSelection import DeviceSelected
+from database_manager import DatabaseManager
 from user_input_dialog import UserInputDialog
 from sequence_widget import SequenceEventWidget
 from ControlAndRequirement import AddControlClass
@@ -45,16 +46,13 @@ from risk_history_dialog import RiskHistoryDialog
 from notification_dialog import NotificationDialog
 from traceability_dialog import TraceabilityDialog
 from Gemini_app import ChatDialog as GeminiChatDialog
-from component_selection_dialog import ComponentSelectionDialog
-
-
-# FIXED IMPORTS
-from database_manager import DatabaseManager
 from risk_numbering_manager import RiskNumberingManager
-from hazardous_situation_widget import HazardousSituationCardWidget
-from hazardous_situation_dialog import HazardousSituationDialog
-from harm_description_widget import HarmDescriptionCardWidget
 from harm_description_dialog import HarmDescriptionDialog
+from harm_description_widget import HarmDescriptionCardWidget
+from hazardous_situation_dialog import HazardousSituationDialog
+from component_selection_dialog import ComponentSelectionDialog
+from enhanced_database_manager import FixedEnhancedDatabaseManager
+from hazardous_situation_widget import HazardousSituationCardWidget
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 MainUI, _ = loadUiType('UI/mainWindowui.ui')
