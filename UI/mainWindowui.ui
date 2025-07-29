@@ -81,6 +81,15 @@ QPushButton {
     padding: 6px 10px;
     font-size: 15px;
 }
+QCheckBox {
+    color: #ffffff;
+    background-color: #1976d2;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 15px;
+}
+
 
 QPushButton:hover {
     background-color: #1565c0;
@@ -1474,6 +1483,20 @@ QCheckBox::indicator:hover, QRadioButton::indicator:hover {
              <width>50</width>
              <height>35</height>
             </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="edit_chech_box">
+           <property name="font">
+            <font>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Edit</string>
            </property>
           </widget>
          </item>

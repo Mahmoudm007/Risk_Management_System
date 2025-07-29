@@ -136,6 +136,8 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
         
         self.table_widget.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
 
+        self.is_edit_mode = False  # Flag for edit mode
+        
         # Initialize counters
         self.num_risks = 0
         self.num_approved_risks = 0
@@ -260,210 +262,213 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
             return False
 
     def add_entry(self):
-        """FIXED add_entry with proper error handling and numbering"""
-        try:
-            # Get user name ONCE at the very beginning for the entire risk entry
-            user_name = self.get_user_name_for_new_risk()
-            if not user_name:
-                return  # User cancelled, don't add the entry
+        if not self.is_edit_mode:
+            print("🔄 Edit mode is ON, using add_entry for editing")
+            
+            """FIXED add_entry with proper error handling and numbering"""
+            try:
+                # Get user name ONCE at the very beginning for the entire risk entry
+                user_name = self.get_user_name_for_new_risk()
+                if not user_name:
+                    return  # User cancelled, don't add the entry
 
-            # Set flag to indicate we're in initial creation mode
-            self.is_initial_creation = True
-            self.current_session_user = user_name
+                # Set flag to indicate we're in initial creation mode
+                self.is_initial_creation = True
+                self.current_session_user = user_name
 
-            # Get component name for numbering
-            component_name = self.selected_components[0] if self.selected_components else ""
-            if not component_name:
-                QMessageBox.warning(self, "No Component Selected", 
-                                  "Please select a component before adding a risk.")
+                # Get component name for numbering
+                component_name = self.selected_components[0] if self.selected_components else ""
+                if not component_name:
+                    QMessageBox.warning(self, "No Component Selected", 
+                                    "Please select a component before adding a risk.")
+                    self.is_initial_creation = False
+                    self.current_session_user = None
+                    return
+
+                print(f"🔄 Adding risk for component: {component_name}")
+
+                # Increment sequence counter for this component (this also assigns component number if needed)
+                sequence_count = self.numbering_manager.increment_sequence_counter(component_name)
+                print(f"🔢 Sequence count for {component_name}: {sequence_count}")
+
+                row_position = self.table_widget.rowCount()
+                self.table_widget.insertRow(row_position)
+
+                # Collect all field data for history recording
+                field_data = []
+
+                current_datetime = QDateTime.currentDateTime().toString("yyyy-MM-dd HH:mm:ss")
+                self.table_widget.setItem(row_position, 0, QTableWidgetItem(current_datetime))
+                field_data.append(current_datetime)
+
+                # Generate new risk number using the enhanced numbering system
+                department = self.department_combo.currentText()
+                hazardous_count = 1  # Initial count
+                harm_count = 1  # Initial count
+                
+                rsk_no = self.numbering_manager.generate_risk_number(
+                    department, component_name, sequence_count, hazardous_count, harm_count
+                )
+                self.table_widget.setItem(row_position, 1, QTableWidgetItem(rsk_no))
+                field_data.append(rsk_no)
+
+                self.table_widget.setItem(row_position, 2, QTableWidgetItem(department))
+                field_data.append(department)
+
+                devices_text = ', '.join(self.checked_items)
+                self.table_widget.setItem(row_position, 3, QTableWidgetItem(devices_text))
+                field_data.append(devices_text)
+
+                components_text = ", ".join(self.selected_components)
+                self.table_widget.setItem(row_position, 4, QTableWidgetItem(components_text))
+                field_data.append(components_text)
+
+                lifecycle = self.lifecycle_combo.currentText()
+                self.table_widget.setItem(row_position, 5, QTableWidgetItem(lifecycle))
+                field_data.append(lifecycle)
+
+                hazard_category = self.hazard_category_combo.currentText()
+                self.table_widget.setItem(row_position, 6, QTableWidgetItem(hazard_category))
+                field_data.append(hazard_category)
+
+                hazard_source = self.hazard_source_combo.currentText()
+                self.table_widget.setItem(row_position, 7, QTableWidgetItem(hazard_source))
+                field_data.append(hazard_source)
+
+                # ENHANCED: Use enhanced card widget for hazardous situation with numbering
+                hazardous_situation = self.hazardous_situation_edit.text()
+                initial_situations = [hazardous_situation] if hazardous_situation.strip() else []
+                
+                try:
+                    hazardous_situation_widget = HazardousSituationCardWidget(
+                        initial_situations, self, self.numbering_manager, component_name
+                    )
+                    # FIXED: Use lambda with default arguments to avoid late binding issues
+                    hazardous_situation_widget.situations_updated.connect(
+                        lambda situations, count, r=row_position, c=component_name: 
+                        self.update_situations_and_numbering(r, situations, count, c)
+                    )
+                    self.table_widget.setCellWidget(row_position, 8, hazardous_situation_widget)
+                    print(f"✅ Created hazardous situation widget for row {row_position}")
+                except Exception as e:
+                    print(f"❌ Error creating hazardous situation widget: {e}")
+                    # Fallback to simple text item
+                    self.table_widget.setItem(row_position, 8, QTableWidgetItem(hazardous_situation))
+                
+                field_data.append(hazardous_situation)
+
+                if hazardous_situation.strip():
+                    self.check_and_add_new_content(hazardous_situation, "Hazardous Situation")
+
+                # Sequence of events (unchanged)
+                sequence_of_event = self.sequence_of_event_edit.text()
+                try:
+                    sequence_widget = SequenceEventWidget(sequence_of_event)
+                    sequence_widget.sequence_updated.connect(
+                        lambda events, r=row_position: self.update_sequence_in_table(r, events)
+                    )
+                    self.table_widget.setCellWidget(row_position, 9, sequence_widget)
+                    print(f"✅ Created sequence widget for row {row_position}")
+                except Exception as e:
+                    print(f"❌ Error creating sequence widget: {e}")
+                    # Fallback to simple text item
+                    self.table_widget.setItem(row_position, 9, QTableWidgetItem(sequence_of_event))
+                
+                field_data.append(sequence_of_event)
+
+                if sequence_of_event.strip():
+                    self.check_and_add_new_content(sequence_of_event, "Sequence of Event")
+
+                harm_influenced = self.harm_influenced_combo.currentText()
+                self.table_widget.setItem(row_position, 10, QTableWidgetItem(harm_influenced))
+                field_data.append(harm_influenced)
+
+                # ENHANCED: Use enhanced card widget for harm description with numbering
+                harm_desc = self.harm_desc_line.text()
+                initial_harms = [harm_desc] if harm_desc.strip() else []
+                selected_device = self.checked_items[0] if self.checked_items else None
+                
+                try:
+                    harm_description_widget = HarmDescriptionCardWidget(
+                        initial_harms, {}, selected_device, self, self.numbering_manager, component_name
+                    )
+                    # FIXED: Use lambda with default arguments to avoid late binding issues
+                    harm_description_widget.harms_updated.connect(
+                        lambda harms, rpn_data, count, r=row_position, c=component_name: 
+                        self.update_harms_and_numbering(r, harms, rpn_data, count, c)
+                    )
+                    harm_description_widget.rpn_data_changed.connect(
+                        lambda rpn_data, r=row_position: self.update_rpn_in_table(r, rpn_data)
+                    )
+                    self.table_widget.setCellWidget(row_position, 11, harm_description_widget)
+                    print(f"✅ Created harm description widget for row {row_position}")
+                except Exception as e:
+                    print(f"❌ Error creating harm description widget: {e}")
+                    # Fallback to simple text item
+                    self.table_widget.setItem(row_position, 11, QTableWidgetItem(harm_desc))
+                
+                field_data.append(harm_desc)
+
+                if harm_desc.strip():
+                    self.check_and_add_new_content(harm_desc, "Harm Description")
+
+                severity = self.severity_spinbox.value()
+                self.table_widget.setItem(row_position, 12, QTableWidgetItem(str(severity)))
+                field_data.append(str(severity))
+
+                probability = self.probability_spinbox.value()
+                self.table_widget.setItem(row_position, 13, QTableWidgetItem(str(probability)))
+                field_data.append(str(probability))
+
+                RPN = self.update_rpn_value()
+                self.table_widget.setItem(row_position, 14, QTableWidgetItem(RPN))
+                field_data.append(RPN)
+
+                try:
+                    tree_widget_cell = AddControlClass()
+                    self.table_widget.setCellWidget(row_position, 15, tree_widget_cell)
+                    print(f"✅ Created control widget for row {row_position}")
+                except Exception as e:
+                    print(f"❌ Error creating control widget: {e}")
+                    # Fallback to empty text item
+                    self.table_widget.setItem(row_position, 15, QTableWidgetItem(""))
+                
+                self.table_widget.setRowHeight(row_position, 200)
+
+                # Record all initial field values with the same user name
+                self.record_initial_risk_creation(rsk_no, user_name, field_data)
+
+                self.num_risks += 1
+                
+                self.highlight_missing_cells(row_position)
+                
+                self.generate_and_set_id()
+                self.update_rsk_number_combo()
+                self.update_notification_count()
+                
+                # Save the history after adding the entry
+                self.save_risk_history()
+
+                # Auto-save to database after adding new risk
+                self.save_data_to_database()
+
+                # Sort table by component after adding new risk
+                self.sort_table_by_component()
+
+                # Clear the session flags
                 self.is_initial_creation = False
                 self.current_session_user = None
-                return
 
-            print(f"🔄 Adding risk for component: {component_name}")
+                print(f"✅ Successfully added new risk: {rsk_no} for component: {component_name}")
+                self.clear_risk_fields()
 
-            # Increment sequence counter for this component (this also assigns component number if needed)
-            sequence_count = self.numbering_manager.increment_sequence_counter(component_name)
-            print(f"🔢 Sequence count for {component_name}: {sequence_count}")
-
-            row_position = self.table_widget.rowCount()
-            self.table_widget.insertRow(row_position)
-
-            # Collect all field data for history recording
-            field_data = []
-
-            current_datetime = QDateTime.currentDateTime().toString("yyyy-MM-dd HH:mm:ss")
-            self.table_widget.setItem(row_position, 0, QTableWidgetItem(current_datetime))
-            field_data.append(current_datetime)
-
-            # Generate new risk number using the enhanced numbering system
-            department = self.department_combo.currentText()
-            hazardous_count = 1  # Initial count
-            harm_count = 1  # Initial count
-            
-            rsk_no = self.numbering_manager.generate_risk_number(
-                department, component_name, sequence_count, hazardous_count, harm_count
-            )
-            self.table_widget.setItem(row_position, 1, QTableWidgetItem(rsk_no))
-            field_data.append(rsk_no)
-
-            self.table_widget.setItem(row_position, 2, QTableWidgetItem(department))
-            field_data.append(department)
-
-            devices_text = ', '.join(self.checked_items)
-            self.table_widget.setItem(row_position, 3, QTableWidgetItem(devices_text))
-            field_data.append(devices_text)
-
-            components_text = ", ".join(self.selected_components)
-            self.table_widget.setItem(row_position, 4, QTableWidgetItem(components_text))
-            field_data.append(components_text)
-
-            lifecycle = self.lifecycle_combo.currentText()
-            self.table_widget.setItem(row_position, 5, QTableWidgetItem(lifecycle))
-            field_data.append(lifecycle)
-
-            hazard_category = self.hazard_category_combo.currentText()
-            self.table_widget.setItem(row_position, 6, QTableWidgetItem(hazard_category))
-            field_data.append(hazard_category)
-
-            hazard_source = self.hazard_source_combo.currentText()
-            self.table_widget.setItem(row_position, 7, QTableWidgetItem(hazard_source))
-            field_data.append(hazard_source)
-
-            # ENHANCED: Use enhanced card widget for hazardous situation with numbering
-            hazardous_situation = self.hazardous_situation_edit.text()
-            initial_situations = [hazardous_situation] if hazardous_situation.strip() else []
-            
-            try:
-                hazardous_situation_widget = HazardousSituationCardWidget(
-                    initial_situations, self, self.numbering_manager, component_name
-                )
-                # FIXED: Use lambda with default arguments to avoid late binding issues
-                hazardous_situation_widget.situations_updated.connect(
-                    lambda situations, count, r=row_position, c=component_name: 
-                    self.update_situations_and_numbering(r, situations, count, c)
-                )
-                self.table_widget.setCellWidget(row_position, 8, hazardous_situation_widget)
-                print(f"✅ Created hazardous situation widget for row {row_position}")
             except Exception as e:
-                print(f"❌ Error creating hazardous situation widget: {e}")
-                # Fallback to simple text item
-                self.table_widget.setItem(row_position, 8, QTableWidgetItem(hazardous_situation))
-            
-            field_data.append(hazardous_situation)
-
-            if hazardous_situation.strip():
-                self.check_and_add_new_content(hazardous_situation, "Hazardous Situation")
-
-            # Sequence of events (unchanged)
-            sequence_of_event = self.sequence_of_event_edit.text()
-            try:
-                sequence_widget = SequenceEventWidget(sequence_of_event)
-                sequence_widget.sequence_updated.connect(
-                    lambda events, r=row_position: self.update_sequence_in_table(r, events)
-                )
-                self.table_widget.setCellWidget(row_position, 9, sequence_widget)
-                print(f"✅ Created sequence widget for row {row_position}")
-            except Exception as e:
-                print(f"❌ Error creating sequence widget: {e}")
-                # Fallback to simple text item
-                self.table_widget.setItem(row_position, 9, QTableWidgetItem(sequence_of_event))
-            
-            field_data.append(sequence_of_event)
-
-            if sequence_of_event.strip():
-                self.check_and_add_new_content(sequence_of_event, "Sequence of Event")
-
-            harm_influenced = self.harm_influenced_combo.currentText()
-            self.table_widget.setItem(row_position, 10, QTableWidgetItem(harm_influenced))
-            field_data.append(harm_influenced)
-
-            # ENHANCED: Use enhanced card widget for harm description with numbering
-            harm_desc = self.harm_desc_line.text()
-            initial_harms = [harm_desc] if harm_desc.strip() else []
-            selected_device = self.checked_items[0] if self.checked_items else None
-            
-            try:
-                harm_description_widget = HarmDescriptionCardWidget(
-                    initial_harms, {}, selected_device, self, self.numbering_manager, component_name
-                )
-                # FIXED: Use lambda with default arguments to avoid late binding issues
-                harm_description_widget.harms_updated.connect(
-                    lambda harms, rpn_data, count, r=row_position, c=component_name: 
-                    self.update_harms_and_numbering(r, harms, rpn_data, count, c)
-                )
-                harm_description_widget.rpn_data_changed.connect(
-                    lambda rpn_data, r=row_position: self.update_rpn_in_table(r, rpn_data)
-                )
-                self.table_widget.setCellWidget(row_position, 11, harm_description_widget)
-                print(f"✅ Created harm description widget for row {row_position}")
-            except Exception as e:
-                print(f"❌ Error creating harm description widget: {e}")
-                # Fallback to simple text item
-                self.table_widget.setItem(row_position, 11, QTableWidgetItem(harm_desc))
-            
-            field_data.append(harm_desc)
-
-            if harm_desc.strip():
-                self.check_and_add_new_content(harm_desc, "Harm Description")
-
-            severity = self.severity_spinbox.value()
-            self.table_widget.setItem(row_position, 12, QTableWidgetItem(str(severity)))
-            field_data.append(str(severity))
-
-            probability = self.probability_spinbox.value()
-            self.table_widget.setItem(row_position, 13, QTableWidgetItem(str(probability)))
-            field_data.append(str(probability))
-
-            RPN = self.update_rpn_value()
-            self.table_widget.setItem(row_position, 14, QTableWidgetItem(RPN))
-            field_data.append(RPN)
-
-            try:
-                tree_widget_cell = AddControlClass()
-                self.table_widget.setCellWidget(row_position, 15, tree_widget_cell)
-                print(f"✅ Created control widget for row {row_position}")
-            except Exception as e:
-                print(f"❌ Error creating control widget: {e}")
-                # Fallback to empty text item
-                self.table_widget.setItem(row_position, 15, QTableWidgetItem(""))
-            
-            self.table_widget.setRowHeight(row_position, 200)
-
-            # Record all initial field values with the same user name
-            self.record_initial_risk_creation(rsk_no, user_name, field_data)
-
-            self.num_risks += 1
-            
-            self.highlight_missing_cells(row_position)
-            
-            self.generate_and_set_id()
-            self.update_rsk_number_combo()
-            self.update_notification_count()
-            
-            # Save the history after adding the entry
-            self.save_risk_history()
-
-            # Auto-save to database after adding new risk
-            self.save_data_to_database()
-
-            # Sort table by component after adding new risk
-            self.sort_table_by_component()
-
-            # Clear the session flags
-            self.is_initial_creation = False
-            self.current_session_user = None
-
-            print(f"✅ Successfully added new risk: {rsk_no} for component: {component_name}")
-            self.clear_risk_fields()
-
-        except Exception as e:
-            print(f"❌ Error in add_entry: {e}")
-            QMessageBox.critical(self, "Error Adding Risk", 
-                               f"An error occurred while adding the risk:\n{e}\n\nPlease try again.")
-            # Clear the session flags on error
-            self.is_initial_creation = False
-            self.current_session_user = None
+                print(f"❌ Error in add_entry: {e}")
+                QMessageBox.critical(self, "Error Adding Risk", 
+                                f"An error occurred while adding the risk:\n{e}\n\nPlease try again.")
+                # Clear the session flags on error
+                self.is_initial_creation = False
+                self.current_session_user = None
 
     def clear_risk_fields(self):
         self.department_combo.setCurrentText("  ")
@@ -557,8 +562,14 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
             self.save_data_to_database()
         except Exception as e:
             print(f"❌ Error updating RPN: {e}")
-
+        
+    def toggle_edit_mode(self):
+        self.is_edit_mode = self.edit_chech_box.isChecked()
+        print(f"🔄 Edit mode is now {'ON' if self.is_edit_mode else 'OFF'}"
+              )
     def buttons_signals(self):
+        self.edit_chech_box.setChecked(False)
+        self.edit_chech_box.stateChanged.connect(self.toggle_edit_mode)
         """ENHANCED button signals with new functionality"""
         self.open_chat_button.clicked.connect(self.open_chat)
         self.hazardous_situation_edit.textChanged.connect(self.update_sit_ver_layout)
@@ -609,7 +620,6 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
         self.component_btn.clicked.connect(self.open_component_selection_dialog)
         self.notification_btn.clicked.connect(self.show_notifications)
         
-        # Add traceability button signal
         self.trace_btn.clicked.connect(self.open_traceability_dialog)
         self.table_widget.clicked.connect(lambda index: self.fetch_row_data(index.row()))
     
