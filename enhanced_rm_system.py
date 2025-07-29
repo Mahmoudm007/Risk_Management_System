@@ -111,22 +111,10 @@ class RiskManagementSystem(QMainWindow, MainUI):
         self.harm_list_widget = QtWidgets.QListWidget()
 
         # Initialize notification system
+        self.set_StyleSheet_edit_checkbox()
         self.notification_counter_label = None
         self.setup_notification_counter()
-
-        # Initialize auto-hide timers for search layouts
-        self.seq_hide_timer = QTimer()
-        self.seq_hide_timer.setSingleShot(True)
-        self.seq_hide_timer.timeout.connect(lambda: self.hide_search_widget(self.seq_list_widget))
-
-        self.sit_hide_timer = QTimer()
-        self.sit_hide_timer.setSingleShot(True)
-        self.sit_hide_timer.timeout.connect(lambda: self.hide_search_widget(self.sit_list_widget))
-
-        self.harm_hide_timer = QTimer()
-        self.harm_hide_timer.setSingleShot(True)
-        self.harm_hide_timer.timeout.connect(lambda: self.hide_search_widget(self.harm_list_widget))
-        
+        self.init_hide_search_timers()
         self.init_search_lists()
         self.init_combos()
         self.buttons_signals()
@@ -152,7 +140,7 @@ class RiskManagementSystem(QMainWindow, MainUI):
         # Auto-save timer (save every 5 minutes)
         self.auto_save_timer = QTimer()
         self.auto_save_timer.timeout.connect(self.auto_save_data)
-        self.auto_save_timer.start(300000)
+        self.auto_save_timer.start(60000)  # 60000 ms = 1 minute
 
         # Load existing data from database
         self.load_data_from_database()
@@ -164,6 +152,47 @@ class RiskManagementSystem(QMainWindow, MainUI):
         self.show_database_stats()
         self.update_rsk_number_combo()
 
+    def set_StyleSheet_edit_checkbox(self):
+        self.edit_chech_box.setStyleSheet("""
+            QCheckBox {
+                font-size: 15px;
+                font-weight: bold;
+                padding: 5px;
+                spacing: 10px;  /* Space between checkbox and text */
+            }
+            QCheckBox::indicator {
+                width: 20px;
+                height: 20px;
+                margin-left: 5px;  /* Center the checkbox */
+            }
+            QCheckBox::indicator:unchecked {
+                background-color: #808080;  /* Gray when unchecked */
+                border: 2px solid #666666;
+                border-radius: 4px;
+            }
+            QCheckBox::indicator:checked {
+                background-color: #4CAF50;  /* Green when checked */
+                border: 2px solid #45a049;
+                border-radius: 4px;
+            }
+            QCheckBox:hover {
+                color: #2196F3;  /* Blue on hover */
+            }
+        """)
+        
+    def init_hide_search_timers(self):
+        self.seq_hide_timer = QTimer()
+        self.seq_hide_timer.setSingleShot(True)
+        self.seq_hide_timer.timeout.connect(lambda: self.hide_search_widget(self.seq_list_widget))
+
+        self.sit_hide_timer = QTimer()
+        self.sit_hide_timer.setSingleShot(True)
+        self.sit_hide_timer.timeout.connect(lambda: self.hide_search_widget(self.sit_list_widget))
+
+        self.harm_hide_timer = QTimer()
+        self.harm_hide_timer.setSingleShot(True)
+        self.harm_hide_timer.timeout.connect(lambda: self.hide_search_widget(self.harm_list_widget))
+        
     def show_database_stats(self):
         """Show database statistics on startup"""
         stats = self.db_manager.get_database_stats()
