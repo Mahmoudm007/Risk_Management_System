@@ -123,7 +123,62 @@ class RiskManagementSystem(QMainWindow, MainUI):
         self.update_notification_count()
         self.show_database_stats()
         self.update_rsk_number_combo()
+        
+    def buttons_signals(self):
+        self.edit_chech_box.setChecked(False)
+        self.edit_chech_box.stateChanged.connect(self.toggle_edit_mode)
+        self.open_chat_button.clicked.connect(self.open_chat)
+        self.hazardous_situation_edit.textChanged.connect(self.update_sit_ver_layout)
+        self.sit_list_widget.itemDoubleClicked.connect(self.add_to_hazardous_situation_edit)
+        self.sit_list_widget.itemClicked.connect(lambda: self.sit_hide_timer.stop())
 
+        self.sequence_of_event_edit.textChanged.connect(self.update_seq_ver_layout)
+        self.seq_list_widget.itemDoubleClicked.connect(self.add_to_sequence_of_event_edit)
+        self.seq_list_widget.itemClicked.connect(lambda: self.seq_hide_timer.stop())
+
+        self.harm_desc_line.textChanged.connect(self.update_harm_vec_layout)
+        self.harm_list_widget.itemDoubleClicked.connect(self.add_to_harm_desc_line)
+        self.harm_list_widget.itemClicked.connect(lambda: self.harm_hide_timer.stop())
+
+        self.hazard_category_combo.currentIndexChanged.connect(self.update_hazard_sources)
+
+        self.add_button.clicked.connect(self.add_entry)
+        self.department_combo.currentIndexChanged.connect(self.update_risk_number_preview)
+
+        self.severity_spinbox.valueChanged.connect(self.update_severity_label)
+        self.severity_spinbox.valueChanged.connect(self.update_rpn_value)
+
+        self.probability_spinbox.valueChanged.connect(self.update_probability_label)
+        self.probability_spinbox.valueChanged.connect(self.update_rpn_value)
+
+        self.dectability_spin_box.valueChanged.connect(self.update_dectability_label)
+        self.show_charts_button.clicked.connect(self.show_charts)
+        self.pdf_gen.clicked.connect(self.open_pdf_dialog)
+
+        self.table_widget.customContextMenuRequested.connect(self.show_context_menu)
+        self.source_combo.currentIndexChanged.connect(self.check_standards)
+        self.add_source.clicked.connect(self.add_reference)
+
+        self.sun_charts.clicked.connect(self.open_relation_chart)
+        self.show_matrix.clicked.connect(self.show_rpn_matrix)
+
+        self.modeSideBar.toggled.connect(self.toggle_side_bar)
+
+        self.table_widget.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
+        self.table_widget.itemDoubleClicked.connect(self.open_chat_dialog)
+
+        self.dashboardbtn.clicked.connect(self.open_dashboard)
+
+        self.calendar.clicked.connect(self.open_calendar_dialog)
+        self.accept_meeting.clicked.connect(self.toggle_meeting_frame)
+
+        self.add_devices_affected.clicked.connect(self.select_devices_widget)
+        self.component_btn.clicked.connect(self.open_component_selection_dialog)
+        self.notification_btn.clicked.connect(self.show_notifications)
+        
+        self.trace_btn.clicked.connect(self.open_traceability_dialog)
+        self.table_widget.clicked.connect(lambda index: self.fetch_row_data(index.row()))
+    
     def init_seq_sit_harm_widgets(self):
         self.seq_list_widget = QtWidgets.QListWidget()
         self.sit_list_widget = QtWidgets.QListWidget()
@@ -733,61 +788,6 @@ class RiskManagementSystem(QMainWindow, MainUI):
         print(f"🔄 Edit mode is now {'ON' if self.is_edit_mode else 'OFF'}"
               )
         
-    def buttons_signals(self):
-        self.edit_chech_box.setChecked(False)
-        self.edit_chech_box.stateChanged.connect(self.toggle_edit_mode)
-        self.open_chat_button.clicked.connect(self.open_chat)
-        self.hazardous_situation_edit.textChanged.connect(self.update_sit_ver_layout)
-        self.sit_list_widget.itemDoubleClicked.connect(self.add_to_hazardous_situation_edit)
-        self.sit_list_widget.itemClicked.connect(lambda: self.sit_hide_timer.stop())
-
-        self.sequence_of_event_edit.textChanged.connect(self.update_seq_ver_layout)
-        self.seq_list_widget.itemDoubleClicked.connect(self.add_to_sequence_of_event_edit)
-        self.seq_list_widget.itemClicked.connect(lambda: self.seq_hide_timer.stop())
-
-        self.harm_desc_line.textChanged.connect(self.update_harm_vec_layout)
-        self.harm_list_widget.itemDoubleClicked.connect(self.add_to_harm_desc_line)
-        self.harm_list_widget.itemClicked.connect(lambda: self.harm_hide_timer.stop())
-
-        self.hazard_category_combo.currentIndexChanged.connect(self.update_hazard_sources)
-
-        self.add_button.clicked.connect(self.add_entry)
-        self.department_combo.currentIndexChanged.connect(self.update_risk_number_preview)
-
-        self.severity_spinbox.valueChanged.connect(self.update_severity_label)
-        self.severity_spinbox.valueChanged.connect(self.update_rpn_value)
-
-        self.probability_spinbox.valueChanged.connect(self.update_probability_label)
-        self.probability_spinbox.valueChanged.connect(self.update_rpn_value)
-
-        self.dectability_spin_box.valueChanged.connect(self.update_dectability_label)
-        self.show_charts_button.clicked.connect(self.show_charts)
-        self.pdf_gen.clicked.connect(self.open_pdf_dialog)
-
-        self.table_widget.customContextMenuRequested.connect(self.show_context_menu)
-        self.source_combo.currentIndexChanged.connect(self.check_standards)
-        self.add_source.clicked.connect(self.add_reference)
-
-        self.sun_charts.clicked.connect(self.open_relation_chart)
-        self.show_matrix.clicked.connect(self.show_rpn_matrix)
-
-        self.modeSideBar.toggled.connect(self.toggle_side_bar)
-
-        self.table_widget.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
-        self.table_widget.itemDoubleClicked.connect(self.open_chat_dialog)
-
-        self.dashboardbtn.clicked.connect(self.open_dashboard)
-
-        self.calendar.clicked.connect(self.open_calendar_dialog)
-        self.accept_meeting.clicked.connect(self.toggle_meeting_frame)
-
-        self.add_devices_affected.clicked.connect(self.select_devices_widget)
-        self.component_btn.clicked.connect(self.open_component_selection_dialog)
-        self.notification_btn.clicked.connect(self.show_notifications)
-        
-        self.trace_btn.clicked.connect(self.open_traceability_dialog)
-        self.table_widget.clicked.connect(lambda index: self.fetch_row_data(index.row()))
-    
     def fetch_row_data(self, row):
         try:
             # Get data from table cells
