@@ -71,6 +71,7 @@ class RiskManagementSystem(QMainWindow, MainUI):
         
         # Initialize risk history storage
         self.risk_history = {}
+        self.matrix_file = 'Risk Matrix/matrix_state.json'
         self.history_file = 'Database/risk_history.json'
         self.load_risk_history()
         
@@ -82,56 +83,58 @@ class RiskManagementSystem(QMainWindow, MainUI):
         self.is_initial_creation = False
         self.current_session_user = None
         
+        self.is_edit_mode = False  # Flag for edit mode
+        # Initialize counters
+        self.num_risks = 0
+        self.num_approved_risks = 0
+        self.num_unapproved_risks = 0
+        self.num_rejected_risks = 0
+        
         # Load counters from database
         self.sw_counter, self.elc_counter, self.mec_counter, self.us_counter, self.test_counter = self.db_manager.load_counters()
         
         self.table_widget.setFixedHeight(400)
         self.table_widget.setEditTriggers(QAbstractItemView.DoubleClicked | QAbstractItemView.SelectedClicked)
         self.table_widget.itemChanged.connect(self.handle_item_changed)
+        self.table_widget.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
 
         self.component_btn.setEnabled(False)
         self.selected_device = None
         self.selected_components = []
-
+        self.notification_counter_label = None
+        
         # Load chat data from database
         self.chat_data = self.db_manager.load_chat_data()
         self.chat_widgets = {}
         
         self.chat_dialog = None
         self.chat_history = ""
-
         self.checked_items = []
-
-        self.first_axis = QComboBox()
-        self.second_axis = QComboBox()
-        self.webEngineView = QWebEngineView()
-
-        self.seq_list_widget = QtWidgets.QListWidget()
-        self.sit_list_widget = QtWidgets.QListWidget()
-        self.harm_list_widget = QtWidgets.QListWidget()
-
-        # Initialize notification system
-        self.set_StyleSheet_edit_checkbox()
-        self.notification_counter_label = None
+        self.init_axis_comboboxes()
+        self.init_seq_sit_harm_widgets()
         self.setup_notification_counter()
         self.init_hide_search_timers()
         self.init_search_lists()
         self.init_combos()
         self.buttons_signals()
         self.web_application()
+        self.init_timers_periodically()
+        self.load_data_from_database()
+        self.update_notification_count()
+        self.show_database_stats()
+        self.update_rsk_number_combo()
+
+    def init_seq_sit_harm_widgets(self):
+        self.seq_list_widget = QtWidgets.QListWidget()
+        self.sit_list_widget = QtWidgets.QListWidget()
+        self.harm_list_widget = QtWidgets.QListWidget()
         
-        self.table_widget.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
-
-        self.is_edit_mode = False  # Flag for edit mode
+    def init_axis_comboboxes(self):
+        self.first_axis = QComboBox()
+        self.second_axis = QComboBox()
+        self.webEngineView = QWebEngineView()
         
-        # Initialize counters
-        self.num_risks = 0
-        self.num_approved_risks = 0
-        self.num_unapproved_risks = 0
-        self.num_rejected_risks = 0
-
-        self.matrix_file = 'Risk Matrix/matrix_state.json'
-
+    def init_timers_periodically(self):
         # Timer to update notification count periodically
         self.notification_timer = QTimer()
         self.notification_timer.timeout.connect(self.update_notification_count)
@@ -141,17 +144,7 @@ class RiskManagementSystem(QMainWindow, MainUI):
         self.auto_save_timer = QTimer()
         self.auto_save_timer.timeout.connect(self.auto_save_data)
         self.auto_save_timer.start(60000)  # 60000 ms = 1 minute
-
-        # Load existing data from database
-        self.load_data_from_database()
-
-        # Initial notification count update
-        self.update_notification_count()
-
-        # Show database stats on startup
-        self.show_database_stats()
-        self.update_rsk_number_combo()
-
+        
     def set_StyleSheet_edit_checkbox(self):
         self.edit_chech_box.setStyleSheet("""
             QCheckBox {
@@ -176,7 +169,7 @@ class RiskManagementSystem(QMainWindow, MainUI):
                 border-radius: 4px;
             }
             QCheckBox:hover {
-                color: #2196F3;  /* Blue on hover */
+                color: red;  /* Blue on hover */
             }
         """)
         
