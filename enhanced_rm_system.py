@@ -29,7 +29,7 @@ import plotly.graph_objects as go
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
 
-# Project Modular Classes - including new enhanced components
+# Project Modular Classes
 from search import *
 from RiskChat import ChatDialog
 from Dashboard import Dashboard
@@ -57,15 +57,15 @@ from hazardous_situation_widget import HazardousSituationCardWidget
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 MainUI, _ = loadUiType('UI/mainWindowui.ui')
 
-class FixedEnhancedRiskSystem(QMainWindow, MainUI):
+class RiskManagementSystem(QMainWindow, MainUI):
     def __init__(self):
-        super(FixedEnhancedRiskSystem, self).__init__()
+        super(RiskManagementSystem, self).__init__()
         self.setupUi(self)
         self.setGeometry(0, 0, 1900, 950)
-        self.setWindowTitle("Fixed Enhanced Risk Management System")   
+        self.setWindowTitle("Risk Management System")   
         self.setWindowIcon(QIcon("UI/icons/ezz.png"))
         
-        # Initialize enhanced database manager and numbering manager
+        # Initialize database manager and numbering manager
         self.db_manager = DatabaseManager()
         self.numbering_manager = RiskNumberingManager()
         
@@ -178,7 +178,7 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
                 print(f"🕒 Last modified: {stats['last_modified']}")
 
     def load_data_from_database(self):
-        """Load all data from database on startup - ENHANCED with numbering manager"""
+        """Load all data from database on startup"""
         try:
             # Load risks with numbering manager
             if self.db_manager.load_all_risks(self.table_widget, self.numbering_manager):
@@ -233,7 +233,7 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
             print(f"❌ Auto-save failed: {e}")
 
     def save_data_to_database(self):
-        """Save all current data to database - ENHANCED with numbering manager"""
+        """Save all current data to database"""
         try:
             # Save risks
             self.db_manager.save_all_risks(self.table_widget)
@@ -311,7 +311,7 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
             self.table_widget.setItem(row_position, 0, QTableWidgetItem(current_datetime))
             field_data.append(current_datetime)
 
-            # Generate new risk number using the enhanced numbering system
+            # Generate new risk number using the numbering system
             department = self.department_combo.currentText()
             hazardous_count = 1  # Initial count
             harm_count = 1  # Initial count
@@ -345,7 +345,7 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
             self.table_widget.setItem(row_position, 7, QTableWidgetItem(hazard_source))
             field_data.append(hazard_source)
 
-            # ENHANCED: Use enhanced card widget for hazardous situation with numbering
+            # Use card widget for hazardous situation with numbering
             hazardous_situation = self.hazardous_situation_edit.text()
             initial_situations = [hazardous_situation] if hazardous_situation.strip() else []
             
@@ -393,7 +393,7 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
             self.table_widget.setItem(row_position, 10, QTableWidgetItem(harm_influenced))
             field_data.append(harm_influenced)
 
-            # ENHANCED: Use enhanced card widget for harm description with numbering
+            # Use card widget for harm description with numbering
             harm_desc = self.harm_desc_line.text()
             initial_harms = [harm_desc] if harm_desc.strip() else []
             selected_device = self.checked_items[0] if self.checked_items else None
@@ -714,7 +714,6 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
     def buttons_signals(self):
         self.edit_chech_box.setChecked(False)
         self.edit_chech_box.stateChanged.connect(self.toggle_edit_mode)
-        """ENHANCED button signals with new functionality"""
         self.open_chat_button.clicked.connect(self.open_chat)
         self.hazardous_situation_edit.textChanged.connect(self.update_sit_ver_layout)
         self.sit_list_widget.itemDoubleClicked.connect(self.add_to_hazardous_situation_edit)
@@ -821,7 +820,6 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
             self.risk_no_line_edit.setText("Error in preview")
 
     def show_context_menu(self, position):
-        """ENHANCED context menu with component sorting option"""
         menu = QMenu(self)
         edit_action = menu.addAction("Edit Cell")
         approved_by = menu.addAction("Approve")
@@ -2064,7 +2062,7 @@ class FixedEnhancedRiskSystem(QMainWindow, MainUI):
 
 def main():
     app = QApplication(sys.argv)
-    window = FixedEnhancedRiskSystem()
+    window = RiskManagementSystem()
     window.show()
     sys.exit(app.exec_())
 
