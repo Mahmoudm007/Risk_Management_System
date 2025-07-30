@@ -2,6 +2,9 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import Qt, QPointF, QRectF, pyqtSignal
 from PyQt5.QtGui import QPainter, QPen, QBrush, QColor, QFont, QPolygonF
 import math
+from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox, QListWidget, QTextEdit,
+                             QAbstractItemView, QMenu, QDialog, QHBoxLayout, QScrollArea, QTreeWidget, QTreeWidgetItem,
+                             QCheckBox, QGroupBox, QMessageBox, QTableWidgetItem, QTableWidget, QLineEdit, QSpinBox, QAction, QFileDialog)
 
 class TraceabilityGraphWidget(QWidget):
     """Clean, organized traceability graph matching the reference design"""
