@@ -12,6 +12,7 @@ from PyQt5 import QtCore
 from PyQt5.QtWidgets import *
 from PyQt5.uic import loadUiType
 from PyQt5.QtGui import QColor, QIcon, QFont, QPalette
+from PyQt5.QtCore import Qt, QPointF, QRectF, pyqtSignal
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtCore import QDateTime, QPropertyAnimation, QEasingCurve, QUrl, QTimer
 from PyQt5.QtWidgets import (QPushButton, QLabel, QApplication, QMainWindow, QWidget, QVBoxLayout, QComboBox, QListWidget,
@@ -31,6 +32,10 @@ from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
 
 # Project Modular Classes
 from search import *
+
+from tree_sidebar import TreeSidebar
+from traceability_graph import TraceabilityGraphDialog
+
 from RiskChat import ChatDialog
 from Dashboard import Dashboard
 from pdf_dialog import PDFDialog
@@ -89,6 +94,9 @@ class RiskManagementSystem(QMainWindow, MainUI):
         self.num_approved_risks = 0
         self.num_unapproved_risks = 0
         self.num_rejected_risks = 0
+        # Initialize tree components
+        self.tree_sidebar = None
+        self.traceability_dialog = None
         
         # Load counters from database
         self.sw_counter, self.elc_counter, self.mec_counter, self.us_counter, self.test_counter = self.db_manager.load_counters()
@@ -125,6 +133,9 @@ class RiskManagementSystem(QMainWindow, MainUI):
         self.update_rsk_number_combo()
         
     def buttons_signals(self):
+        self.tree_bar_btn.clicked.connect(self.toggle_tree_sidebar)
+        self.tree_view_graph_btn.clicked.connect(self.open_traceability_graph)
+    
         self.edit_chech_box.setChecked(False)
         self.edit_chech_box.stateChanged.connect(self.toggle_edit_mode)
         self.open_chat_button.clicked.connect(self.open_chat)
@@ -163,6 +174,37 @@ class RiskManagementSystem(QMainWindow, MainUI):
         self.notification_btn.clicked.connect(self.show_notifications)
         self.trace_btn.clicked.connect(self.open_traceability_dialog)
         self.table_widget.clicked.connect(lambda index: self.fetch_row_data(index.row()))
+    
+    def toggle_tree_sidebar(self):
+        """Toggle the tree sidebar visibility"""
+        if not self.tree_sidebar:
+            self.tree_sidebar = TreeSidebar(self, self.db_manager, self.numbering_manager)
+            
+            # Position the sidebar on the left side of the main window
+            main_geometry = self.geometry()
+            sidebar_x = main_geometry.x() - 400 if main_geometry.x() >= 400 else main_geometry.x() + main_geometry.width()
+            sidebar_y = main_geometry.y()
+            
+            self.tree_sidebar.setGeometry(sidebar_x, sidebar_y, 400, main_geometry.height())
+            self.tree_sidebar.setWindowFlags(Qt.Tool | Qt.WindowStaysOnTopHint)
+            self.tree_sidebar.setWindowTitle("Risk Tree View")
+        
+        if self.tree_sidebar.isVisible():
+            self.tree_sidebar.hide()
+        else:
+            self.tree_sidebar.show()
+            self.tree_sidebar.raise_()
+            self.tree_sidebar.activateWindow()
+
+    def open_traceability_graph(self):
+        """Open the traceability graph dialog"""
+        if self.traceability_dialog and self.traceability_dialog.isVisible():
+            self.traceability_dialog.raise_()
+            self.traceability_dialog.activateWindow()
+            return
+        
+        self.traceability_dialog = TraceabilityGraphDialog(self, self.db_manager)
+        self.traceability_dialog.show()
     
     def init_seq_sit_harm_widgets(self):
         self.seq_list_widget = QtWidgets.QListWidget()
@@ -243,7 +285,7 @@ class RiskManagementSystem(QMainWindow, MainUI):
         """Load all data from database on startup"""
         try:
             # Load risks with numbering manager
-            if self.db_manager.load_all_risks(self.table_widget, self.numbering_manager):
+            if self.db_manager.load_all_risks(self.table_widget):
                 self.num_risks = self.table_widget.rowCount()
                 print(f"✅ Loaded {self.num_risks} risks from database")
                 
@@ -534,6 +576,12 @@ class RiskManagementSystem(QMainWindow, MainUI):
             print(f"✅ Successfully added new risk: {rsk_no} for component: {component_name}")
             self.clear_risk_fields()
 
+            if self.tree_sidebar and self.tree_sidebar.isVisible():
+                self.tree_sidebar.refresh_tree()
+        
+            if self.traceability_dialog and self.traceability_dialog.isVisible():
+                self.traceability_dialog.refresh_graph()
+            
         except Exception as e:
             print(f"❌ Error in add_entry: {e}")
             QMessageBox.critical(self, "Error Adding Risk", 
@@ -696,10 +744,19 @@ class RiskManagementSystem(QMainWindow, MainUI):
             self.update_risk_number_in_row(row, component_name)
             
             # Auto-save after situations update
+            self.refresh_tree_views()
             self.save_data_to_database()
         except Exception as e:
             print(f"❌ Error updating situations and numbering: {e}")
 
+    def refresh_tree_views(self):
+        """Refresh both tree views if they are open"""
+        if self.tree_sidebar and self.tree_sidebar.isVisible():
+            self.tree_sidebar.refresh_tree()
+        
+        if self.traceability_dialog and self.traceability_dialog.isVisible():
+            self.traceability_dialog.refresh_graph()
+        
     def update_harms_and_numbering(self, row, harms_list, rpn_data, count, component_name):
         """Update harms and regenerate risk number"""
         try:
@@ -931,6 +988,12 @@ class RiskManagementSystem(QMainWindow, MainUI):
     def closeEvent(self, event):
         """Handle application close event"""
         # Ask user if they want to save before closing
+        if self.tree_sidebar:
+            self.tree_sidebar.close()
+    
+        if self.traceability_dialog:
+            self.traceability_dialog.close()
+            
         reply = QMessageBox.question(self, 'Save Before Exit', 
                                    'Do you want to save your work before exiting?',
                                    QMessageBox.Yes | QMessageBox.No | QMessageBox.Cancel,
@@ -1747,6 +1810,12 @@ class RiskManagementSystem(QMainWindow, MainUI):
             if risk_id and risk_id in self.risk_history:
                 del self.risk_history[risk_id]
                 self.save_risk_history()
+                
+        if self.tree_sidebar and self.tree_sidebar.isVisible():
+            self.tree_sidebar.refresh_tree()
+    
+        if self.traceability_dialog and self.traceability_dialog.isVisible():
+            self.traceability_dialog.refresh_graph()
             
             # Auto-save after removal
             self.save_data_to_database()
