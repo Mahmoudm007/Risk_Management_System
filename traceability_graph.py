@@ -82,7 +82,7 @@ class TraceabilityGraphWidget(QWidget):
         self.HORIZONTAL_SPACING = 250
         self.VERTICAL_SPACING = 100
         self.LEVEL_SPACING = 300
-        self.MARGIN = 50
+        self.MARGIN = 200
         
         self.setMinimumSize(1200, 800)
         self.setMouseTracking(True)
